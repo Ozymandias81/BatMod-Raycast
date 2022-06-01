@@ -226,18 +226,18 @@ ACTOR BatFist : Weapon
 	AltFire:
 		BKIK A 3 
 		BKIK B 3
-		BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	Fire:
-		FIST B 4 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		FIST B 4 A_CustomPunch(2 * random(1, 5), FALSE, 0)
 		FIST A 3
-		FIST C 4 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		FIST C 4 A_CustomPunch(2 * random(1, 5), FALSE, 0)
 		FIST A 2 A_ReFire
 		Goto Uppercut
 	Uppercut:
-		FIST E 4 A_CustomPunch(6 * random(1, 10), FALSE, 0)
-		FIST F 3 A_CustomPunch(6 * random(1, 10), FALSE, 0)
+		FIST E 4 A_CustomPunch(6 * random(1, 5), FALSE, 0)
+		FIST F 3 A_CustomPunch(6 * random(1, 5), FALSE, 0)
 		FIST E 2 
 		Goto Ready
 	}
@@ -265,7 +265,7 @@ ACTOR GAFist : Weapon
 	AltFire:
 		GKIK A 3 
 		GKIK B 3
-		GKIK C 3 A_CustomPunch(4 * random(1, 10), TRUE)
+		GKIK C 3 A_CustomPunch(4 * random(1, 5), TRUE)
 		GKIK DE 2 A_ReFire
 		Goto Ready
 
@@ -307,7 +307,7 @@ ACTOR BowNormal : Weapon
 	AltFire:
 		GKIK A 3 
 		GKIK B 3
-		GKIK C 3 A_CustomPunch(4 * random(1, 10), TRUE)
+		GKIK C 3 A_CustomPunch(4 * random(1, 5), TRUE)
 		GKIK DE 2 A_ReFire
 		Goto Ready
 	}
@@ -343,7 +343,7 @@ ACTOR BowFire : Weapon
 	AltFire:
 		GKIK A 3 
 		GKIK B 3
-		GKIK C 3 A_CustomPunch(4 * random(1, 10), TRUE)
+		GKIK C 3 A_CustomPunch(4 * random(1, 5), TRUE)
 		GKIK DE 2 A_ReFire
 		Goto Ready
 
@@ -379,7 +379,7 @@ ACTOR BowIce : Weapon
 	AltFire:
 		GKIK A 3 
 		GKIK B 3
-		GKIK C 3 A_CustomPunch(4 * random(1, 10), TRUE)
+		GKIK C 3 A_CustomPunch(4 * random(1, 5), TRUE)
 		GKIK DE 2 A_ReFire
 		Goto Ready
 
@@ -440,7 +440,7 @@ ACTOR Bola : Weapon
 	AltFire:
 		BKIK A 3 
 		BKIK B 3
-		BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	}
@@ -540,7 +540,7 @@ ACTOR Baterang : Weapon
 	AltFire:
 		BKIK A 3 
 		BKIK B 3
-		BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	}
@@ -584,7 +584,7 @@ ACTOR RemoteBaterang : Weapon
 	AltFire:
 		BKIK A 3 
 		BKIK B 3
-		BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	}
@@ -632,7 +632,7 @@ ACTOR TriBaterang : Weapon
 	AltFire:
 		BKIK A 3 
 		BKIK B 3
-		BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	}
@@ -856,7 +856,7 @@ ACTOR Tazer : DoomWeapon Replaces PlasmaRifle
 	AltFire:
 		BKIK A 3 
 		BKIK B 3
-		BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	}
@@ -923,7 +923,7 @@ ACTOR EMPGun : DoomWeapon replaces bfg9000
   AltFire:
 		BKIK A 3 
 		BKIK B 3
-		BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
   Spawn:
@@ -1002,7 +1002,7 @@ actor GasGun : Weapon
 		AltFire:
 			BKIK A 3 
 			BKIK B 3
-			BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+			BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 			BKIK DE 2 A_ReFire
 			Goto Ready
 			//A_FireCustomMissile (string missiletype[, float angle[, bool useammo[, int spawnoffset[, int spawnheight[, bool aim[, float pitch]]]]]]) 
@@ -1055,7 +1055,7 @@ actor GasGunGreen : Weapon
 		AltFire:
 			BKIK A 3 
 			BKIK B 3
-			BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
+			BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 			BKIK DE 2 A_ReFire
 			Goto Ready
 	}
