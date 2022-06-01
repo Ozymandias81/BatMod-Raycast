@@ -886,7 +886,7 @@ ACTOR TazerPlasma
 		Stop
 	}
 }
-ACTOR EMPGun : DoomWeapon
+ACTOR EMPGun : DoomWeapon replaces bfg9000
 {
   //Height 20
   Weapon.SlotNumber 7
