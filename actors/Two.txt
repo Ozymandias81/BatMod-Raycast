@@ -3390,7 +3390,7 @@ ACTOR ExitCar : CustomInventory
   Inventory.InterHubAmount "1"
   Inventory.maxamount "1"
   Inventory.usesound ""
-  Inventory.Icon "EXVHA0"
+  Inventory.Icon "UNKNA0" //"EXVHA0"
   States
   {
   Use:

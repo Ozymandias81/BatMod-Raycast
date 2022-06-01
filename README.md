@@ -12,6 +12,10 @@ Write a description.
 ## CREDITS:
 
 Insert team members and others.
+
+- Ivory Duke: ZMovement Codes;
+- Ijon: Source of inspiration;
+- Michaelis and DoomKrakken: cool dudes, help, support, and answers to my ZScript questions.
 --------------------------------------------------------------------------------
 
 ### EDITORS USED:

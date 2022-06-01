@@ -6,7 +6,7 @@ Sprite "FISTA0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -52
-	Graphic "FISTA0", 0, 0
+	Graphic "sprites/Weapons/FISTA0.png", 0, 0
 }
 
 Sprite "FISTB0", 192, 192
@@ -14,7 +14,7 @@ Sprite "FISTB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -42
-	Graphic "FISTB0", 0, 0
+	Graphic "sprites/Weapons/FISTB0.png", 0, 0
 }
 
 Sprite "FISTC0", 192, 192
@@ -22,7 +22,7 @@ Sprite "FISTC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -42
-	Graphic "FISTC0", 0, 0
+	Graphic "sprites/Weapons/FISTC0.png", 0, 0
 }
 
 Sprite "GRNFA0", 192, 192
@@ -30,7 +30,7 @@ Sprite "GRNFA0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -5
-	Graphic "GRNFA0", 0, 0
+	Graphic "sprites/Weapons/GRNFA0.png", 0, 0
 }
 
 Sprite "GRNFB0", 192, 192
@@ -38,7 +38,7 @@ Sprite "GRNFB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -4
-	Graphic "GRNFB0", 0, 0
+	Graphic "sprites/Weapons/GRNFB0.png", 0, 0
 }
 
 Sprite "GRNFC0", 192, 192
@@ -46,7 +46,7 @@ Sprite "GRNFC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -4
-	Graphic "GRNFC0", 0, 0
+	Graphic "sprites/Weapons/GRNFC0.png", 0, 0
 }
 
 Sprite "BOWAA0", 192, 192
@@ -54,7 +54,7 @@ Sprite "BOWAA0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -5
-	Graphic "BOWAA0", 0, 0
+	Graphic "sprites/Weapons/BOWAA0.png", 0, 0
 }
 
 Sprite "BOWAB0", 192, 192
@@ -62,7 +62,7 @@ Sprite "BOWAB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "BOWAB0", 0, 0
+	Graphic "sprites/Weapons/BOWAB0.png", 0, 0
 }
 
 Sprite "BOWAC0", 192, 192
@@ -70,14 +70,14 @@ Sprite "BOWAC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "BOWAC0", 0, 0
+	Graphic "sprites/Weapons/BOWAC0.png", 0, 0
 }
 Sprite "BOWAD0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "BOWAD0", 0, 0
+	Graphic "sprites/Weapons/BOWAD0.png", 0, 0
 }
 
 Sprite "BOWAE0", 192, 192
@@ -85,7 +85,7 @@ Sprite "BOWAE0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "BOWAE0", 0, 0
+	Graphic "sprites/Weapons/BOWAE0.png", 0, 0
 }
 
 Sprite "BOWAF0", 192, 192
@@ -93,137 +93,137 @@ Sprite "BOWAF0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "BOWAF0", 0, 0
+	Graphic "sprites/Weapons/BOWAF0.png", 0, 0
 }
 Sprite "BOWAG0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "BOWAG0", 0, 0
+	Graphic "sprites/Weapons/BOWAG0.png", 0, 0
 }
 Sprite "BOWAH0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "BOWAH0", 0, 0
+	Graphic "sprites/Weapons/BOWAH0.png", 0, 0
 }
 //ice arrow
-Sprite "boweA0", 192, 192
+Sprite "BOWEA0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -5
-	Graphic "boweA0", 0, 0
+	Graphic "sprites/Weapons/BOWEA0.png", 0, 0
 }
 
-Sprite "boweB0", 192, 192
+Sprite "BOWEB0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "boweB0", 0, 0
+	Graphic "sprites/Weapons/BOWEB0.png", 0, 0
 }
 
-Sprite "boweC0", 192, 192
+Sprite "BOWEC0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "boweC0", 0, 0
+	Graphic "sprites/Weapons/BOWEC0.png", 0, 0
 }
-Sprite "boweD0", 192, 192
+Sprite "BOWED0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "boweD0", 0, 0
-}
-
-Sprite "boweE0", 192, 192
-{
-	XScale 0.400
-	YScale 0.400
-	Offset -36, -1
-	Graphic "boweE0", 0, 0
+	Graphic "sprites/Weapons/BOWED0.png", 0, 0
 }
 
-Sprite "boweF0", 192, 192
+Sprite "BOWEE0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "boweF0", 0, 0
+	Graphic "sprites/Weapons/BOWEE0.png", 0, 0
 }
-Sprite "boweG0", 192, 192
+
+Sprite "BOWEF0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "boweG0", 0, 0
+	Graphic "sprites/Weapons/BOWEF0.png", 0, 0
+}
+Sprite "BOWEG0", 192, 192
+{
+	XScale 0.400
+	YScale 0.400
+	Offset -36, -1
+	Graphic "sprites/Weapons/BOWEG0.png", 0, 0
 }
 
 //fire arrow
-Sprite "bowfA0", 192, 192
+Sprite "BOWFA0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -5
-	Graphic "bowfA0", 0, 0
+	Graphic "sprites/Weapons/BOWFA0.png", 0, 0
 }
 
-Sprite "bowfB0", 192, 192
+Sprite "BOWFB0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -5
-	Graphic "bowfB0", 0, 0
+	Graphic "sprites/Weapons/BOWFB0.png", 0, 0
 }
 
-Sprite "bowfC0", 192, 192
+Sprite "BOWFC0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "bowfC0", 0, 0
+	Graphic "sprites/Weapons/BOWFC0.png", 0, 0
 }
-Sprite "bowfD0", 192, 192
+Sprite "BOWFD0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "bowfD0", 0, 0
-}
-
-Sprite "bowfE0", 192, 192
-{
-	XScale 0.400
-	YScale 0.400
-	Offset -36, -1
-	Graphic "bowfE0", 0, 0
+	Graphic "sprites/Weapons/BOWFD0.png", 0, 0
 }
 
-Sprite "bowfF0", 192, 192
+Sprite "BOWFE0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "bowfF0", 0, 0
+	Graphic "sprites/Weapons/BOWFE0.png", 0, 0
 }
-Sprite "bowfG0", 192, 192
+
+Sprite "BOWFF0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "bowfG0", 0, 0
+	Graphic "sprites/Weapons/BOWFF0.png", 0, 0
 }
-Sprite "bowfH0", 192, 192
+Sprite "BOWFG0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -36, -1
-	Graphic "BOWFH0", 0, 0
+	Graphic "sprites/Weapons/BOWFG0.png", 0, 0
+}
+Sprite "BOWFH0", 192, 192
+{
+	XScale 0.400
+	YScale 0.400
+	Offset -36, -1
+	Graphic "sprites/Weapons/BOWFH0.png", 0, 0
 }
 
 Sprite "BKIKA0", 192, 192
@@ -231,7 +231,7 @@ Sprite "BKIKA0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -7
-	Graphic "BKIKA0", 0, 0
+	Graphic "sprites/Weapons/BKIKA0.png", 0, 0
 }
 
 Sprite "BKIKB0", 192, 192
@@ -239,7 +239,7 @@ Sprite "BKIKB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -4
-	Graphic "BKIKB0", 0, 0
+	Graphic "sprites/Weapons/BKIKB0.png", 0, 0
 }
 
 Sprite "BKIKC0", 192, 192
@@ -247,7 +247,7 @@ Sprite "BKIKC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -4
-	Graphic "BKIKC0", 0, 0
+	Graphic "sprites/Weapons/BKIKC0.png", 0, 0
 }
 
 Sprite "BKIKD0", 192, 192
@@ -255,7 +255,7 @@ Sprite "BKIKD0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -4
-	Graphic "BKIKD0", 0, 0
+	Graphic "sprites/Weapons/BKIKD0.png", 0, 0
 }
 
 Sprite "BKIKE0", 192, 192
@@ -263,14 +263,14 @@ Sprite "BKIKE0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -7
-	Graphic "BKIKE0", 0, 0
+	Graphic "sprites/Weapons/BKIKE0.png", 0, 0
 }
 Sprite "GKIKA0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -7
-	Graphic "GKIKA0", 0, 0
+	Graphic "sprites/Weapons/GKIKA0.png", 0, 0
 }
 
 Sprite "GKIKB0", 192, 192
@@ -278,7 +278,7 @@ Sprite "GKIKB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -4
-	Graphic "GKIKB0", 0, 0
+	Graphic "sprites/Weapons/GKIKB0.png", 0, 0
 }
 
 Sprite "GKIKC0", 192, 192
@@ -286,7 +286,7 @@ Sprite "GKIKC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -4
-	Graphic "GKIKC0", 0, 0
+	Graphic "sprites/Weapons/GKIKC0.png", 0, 0
 }
 
 Sprite "GKIKD0", 192, 192
@@ -294,7 +294,7 @@ Sprite "GKIKD0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -4
-	Graphic "GKIKD0", 0, 0
+	Graphic "sprites/Weapons/GKIKD0.png", 0, 0
 }
 
 Sprite "GKIKE0", 192, 192
@@ -302,14 +302,14 @@ Sprite "GKIKE0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -7
-	Graphic "GKIKE0", 0, 0
+	Graphic "sprites/Weapons/GKIKE0.png", 0, 0
 }
 Sprite "BOLAA0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -52
-	Graphic "BOLAA0", 0, 0
+	Graphic "sprites/Weapons/BOLAA0.png", 0, 0
 }
 
 Sprite "BOLAB0", 192, 192
@@ -317,7 +317,7 @@ Sprite "BOLAB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -52
-	Graphic "BOLAB0", 0, 0
+	Graphic "sprites/Weapons/BOLAB0.png", 0, 0
 }
 
 Sprite "BOLAC0", 192, 192
@@ -325,7 +325,7 @@ Sprite "BOLAC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -52
-	Graphic "BOLAC0", 0, 0
+	Graphic "sprites/Weapons/BOLAC0.png", 0, 0
 }
 
 Sprite "BOLAD0", 192, 192
@@ -333,7 +333,7 @@ Sprite "BOLAD0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -55
-	Graphic "BOLAD0", 0, 0
+	Graphic "sprites/Weapons/BOLAD0.png", 0, 0
 }
 
 Sprite "BOLAE0", 192, 192
@@ -341,7 +341,7 @@ Sprite "BOLAE0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -57
-	Graphic "BOLAE0", 0, 0
+	Graphic "sprites/Weapons/BOLAE0.png", 0, 0
 }
 
 Sprite "RANGA0", 192, 192
@@ -349,7 +349,7 @@ Sprite "RANGA0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -43
-	Graphic "RANGA0", 0, 0
+	Graphic "sprites/Weapons/RANGA0.png", 0, 0
 }
 
 Sprite "RANGB0", 192, 192
@@ -357,7 +357,7 @@ Sprite "RANGB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -43
-	Graphic "RANGB0", 0, 0
+	Graphic "sprites/Weapons/RANGB0.png", 0, 0
 }
 
 Sprite "RANGC0", 192, 192
@@ -365,7 +365,7 @@ Sprite "RANGC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -50//47
-	Graphic "RANGC0", 0, 0
+	Graphic "sprites/Weapons/RANGC0.png", 0, 0
 }
 
 Sprite "RANGD0", 192, 192
@@ -373,7 +373,7 @@ Sprite "RANGD0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -58
-	Graphic "RANGD0", 0, 0
+	Graphic "sprites/Weapons/RANGD0.png", 0, 0
 }
 
 Sprite "RANGE0", 192, 192
@@ -381,7 +381,7 @@ Sprite "RANGE0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -61
-	Graphic "RANGE0", 0, 0
+	Graphic "sprites/Weapons/RANGE0.png", 0, 0
 }
 
 Sprite "BTRIA0", 192, 192
@@ -389,7 +389,7 @@ Sprite "BTRIA0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -12, -4
-	Graphic "BTRIA0", 0, 0
+	Graphic "sprites/Weapons/BTRIA0.png", 0, 0
 }
 
 Sprite "BTRIB0", 192, 192
@@ -397,7 +397,7 @@ Sprite "BTRIB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -12, -4
-	Graphic "BTRIB0", 0, 0
+	Graphic "sprites/Weapons/BTRIB0.png", 0, 0
 }
 
 Sprite "BTRIC0", 192, 192
@@ -405,7 +405,7 @@ Sprite "BTRIC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -12, -4
-	Graphic "BTRIC0", 0, 0
+	Graphic "sprites/Weapons/BTRIC0.png", 0, 0
 }
 
 Sprite "BTRID0", 192, 192
@@ -413,7 +413,7 @@ Sprite "BTRID0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -12, -17
-	Graphic "BTRID0", 0, 0
+	Graphic "sprites/Weapons/BTRID0.png", 0, 0
 }
 
 Sprite "BTRIE0", 192, 192
@@ -421,14 +421,14 @@ Sprite "BTRIE0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -12, -16
-	Graphic "BTRIE0", 0, 0
+	Graphic "sprites/Weapons/BTRIE0.png", 0, 0
 }
 Sprite "GASGA0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -40, -45
-	Graphic "GASGA0", 0, 0
+	Graphic "sprites/Weapons/GASGA0.png", 0, 0
 }
 
 Sprite "GASGB0", 192, 192
@@ -436,14 +436,14 @@ Sprite "GASGB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -42, -50
-	Graphic "GASGB0", 0, 0
+	Graphic "sprites/Weapons/GASGB0.png", 0, 0
 }
 Sprite "GASGC0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -40, -45
-	Graphic "GASGC0", 0, 0
+	Graphic "sprites/Weapons/GASGC0.png", 0, 0
 }
 
 Sprite "GASGD0", 192, 192
@@ -451,14 +451,14 @@ Sprite "GASGD0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -40, -45
-	Graphic "GASGD0", 0, 0
+	Graphic "sprites/Weapons/GASGD0.png", 0, 0
 }
 Sprite "GASGE0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -40, -45
-	Graphic "GASGE0", 0, 0
+	Graphic "sprites/Weapons/GASGE0.png", 0, 0
 }
 
 Sprite "GASGF0", 192, 192
@@ -466,14 +466,14 @@ Sprite "GASGF0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -40, -45
-	Graphic "GASGF0", 0, 0
+	Graphic "sprites/Weapons/GASGF0.png", 0, 0
 }
 Sprite "BGASA0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -10
-	Graphic "BGASA0", 0, 0
+	Graphic "sprites/Weapons/BGASA0.png", 0, 0
 }
 
 Sprite "BGASB0", 192, 192
@@ -481,14 +481,14 @@ Sprite "BGASB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -13
-	Graphic "BGASB0", 0, 0
+	Graphic "sprites/Weapons/BGASB0.png", 0, 0
 }
 Sprite "BGASC0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -10
-	Graphic "BGASC0", 0, 0
+	Graphic "sprites/Weapons/BGASC0.png", 0, 0
 }
 
 Sprite "BGASD0", 192, 192
@@ -496,14 +496,14 @@ Sprite "BGASD0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -10
-	Graphic "BGASD0", 0, 0
+	Graphic "sprites/Weapons/BGASD0.png", 0, 0
 }
 Sprite "BGASE0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -10
-	Graphic "BGASE0", 0, 0
+	Graphic "sprites/Weapons/BGASE0.png", 0, 0
 }
 
 Sprite "BGASF0", 192, 192
@@ -511,14 +511,14 @@ Sprite "BGASF0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -32, -10
-	Graphic "BGASF0", 0, 0
+	Graphic "sprites/Weapons/BGASF0.png", 0, 0
 }
 Sprite "TAZEA0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -56, -50
-	Graphic "TAZEA0", 0, 0
+	Graphic "sprites/Weapons/TAZEA0.png", 0, 0
 }
 
 Sprite "TAZEH0", 192, 192
@@ -526,7 +526,7 @@ Sprite "TAZEH0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -56, -50
-	Graphic "TAZEH0", 0, 0
+	Graphic "sprites/Weapons/TAZEH0.png", 0, 0
 }
 
 Sprite "TAZEB0", 192, 192
@@ -534,7 +534,7 @@ Sprite "TAZEB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -48
-	Graphic "TAZEB0", 0, 0
+	Graphic "sprites/Weapons/TAZEB0.png", 0, 0
 }
 
 Sprite "TAZEC0", 192, 192
@@ -542,14 +542,14 @@ Sprite "TAZEC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -48
-	Graphic "TAZEC0", 0, 0
+	Graphic "sprites/Weapons/TAZEC0.png", 0, 0
 }
 Sprite "SHRPA0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -50
-	Graphic "SHRPA0", 0, 0
+	Graphic "sprites/Weapons/SHRPA0.png", 0, 0
 }
 
 Sprite "SHRPB0", 192, 192
@@ -557,7 +557,7 @@ Sprite "SHRPB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -48
-	Graphic "SHRPB0", 0, 0
+	Graphic "sprites/Weapons/SHRPB0.png", 0, 0
 }
 
 Sprite "SHRPC0", 192, 192
@@ -565,14 +565,14 @@ Sprite "SHRPC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -48
-	Graphic "SHRPC0", 0, 0
+	Graphic "sprites/Weapons/SHRPC0.png", 0, 0
 }
 Sprite "SHRPD0", 192, 192
 {
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -50
-	Graphic "SHRPD0", 0, 0
+	Graphic "sprites/Weapons/SHRPD0.png", 0, 0
 }
 
 Sprite "SHRPE0", 192, 192
@@ -580,7 +580,7 @@ Sprite "SHRPE0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -52, -48
-	Graphic "SHRPE0", 0, 0
+	Graphic "sprites/Weapons/SHRPE0.png", 0, 0
 }
 
 Sprite "ELECA0", 192, 192
@@ -588,7 +588,7 @@ Sprite "ELECA0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -56, -50
-	Graphic "ELECA0", 0, 0
+	Graphic "sprites/Weapons/ELECA0.png", 0, 0
 }
 
 Sprite "ELECB0", 192, 192
@@ -596,7 +596,7 @@ Sprite "ELECB0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -53, -37
-	Graphic "ELECB0", 0, 0
+	Graphic "sprites/Weapons/ELECB0.png", 0, 0
 }
 
 Sprite "ELECC0", 192, 192
@@ -604,7 +604,7 @@ Sprite "ELECC0", 192, 192
 	XScale 0.400
 	YScale 0.400
 	Offset -46, -17
-	Graphic "ELECC0", 0, 0
+	Graphic "sprites/Weapons/ELECC0.png", 0, 0
 }
 //batmobile setup here
 /*

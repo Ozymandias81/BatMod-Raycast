@@ -1125,7 +1125,7 @@ actor GasProj
 	deathsound "weapons/gasbreak"
 	PROJECTILE
 	DamageType "Smoke"
-+ADDITIVEPOISONDAMAGE
+	+ADDITIVEPOISONDAMAGE
 	states
 	{
 		Spawn:
@@ -1133,7 +1133,7 @@ actor GasProj
 			 loop
 			
         Death:
-			PELT B 0 A_Explode(20,24,0,0,0,"GasDamage")
+			PELT B 0 A_Explode(20,24,0,0,0,0,0,"BulletPuff","GasDamage") //requires fitting new puff
 			PELT C 0 A_CustomMissile("GasSpark", 0, 0, 85, 0)
 			PELT D 0 A_CustomMissile("GasSpark", 0, 0, -85, 0)
 			PELT E 0 A_CustomMissile("GasSpark", 0, 0, 50, 0)
@@ -1191,7 +1191,7 @@ actor GasProjAltFire
         Death:
 			PILL B 1 A_Fall
 			//PILL CDE 5 
-			PILL B 5 A_Explode(20,24,0,0,0,"GasDamage")
+			PILL B 5 A_Explode(20,24,0,0,0,0,0,"BulletPuff","GasDamage") //requires fitting new puff
 			PILL C 5 A_CustomMissile("GasSpark", 0, 0, 85, 0)
 			PILL D 5 A_CustomMissile("GasSpark", 0, 0, -85, 0)
 			PILL E 5 A_CustomMissile("GasSpark", 0, 0, 50, 0)
@@ -4485,7 +4485,7 @@ Actor Joker replaces SpiderMastermind
 		Stop
 	}
 }
-ACTOR FireBall Replaces DoomImpBall
+ACTOR BatFireBall Replaces DoomImpBall
 {
   Radius 6
   Height 8
@@ -4506,7 +4506,7 @@ ACTOR FireBall Replaces DoomImpBall
 	loop
   Death:
 	FLAM A 0 A_PlaySound("fire/flameexplosion")
-	FLAM A 3 bright A_Explode(20,24,0,0,0,"FireDamage") 
+	FLAM A 3 bright A_Explode(20,24,0,0,0,0,0,"BulletPuff","FireDamage") //requires fitting new puff
 	FLAM B 3 bright A_CustomMissile("FireDrop", 0, 0, 85, 0)
 	FLAM C 3 bright A_CustomMissile("FireDrop", 0, 0, -85, 0)
 	FLAM D 1 bright A_CustomMissile("FireDrop", 0, 0, 50, 0)
@@ -4533,7 +4533,7 @@ DamageType "Firey"
 			loop
 		Death:
 		    FIRA A 7 BRIGHT A_PlaySound("fire/flameloop")
-			FIRA BCABCABCABCABCABCABCABCABC 7 BRIGHT A_Explode(2,24,0,0,0,"FireDamage")
+			FIRA BCABCABCABCABCABCABCABCABC 7 BRIGHT A_Explode(2,24,0,0,0,0,0,"BulletPuff","FireDamage") //requires fitting new puff
 			stop
 	}
 }
@@ -4555,7 +4555,7 @@ DamageType "Firey"
 			loop
 		Death:
 			FIRB A 7 BRIGHT A_PlaySound("fire/flameloop")
-			FIRB BCABCABCABCABCABCABCABCABC 7 BRIGHT A_Explode(2,32,0,0,0,"FireDamage")
+			FIRB BCABCABCABCABCABCABCABCABC 7 BRIGHT A_Explode(2,32,0,0,0,0,0,"BulletPuff","FireDamage") //requires fitting new puff
 			FIRB A 1 BRIGHT A_SpawnItem("FireSmallDropped",0,3)
 			stop
 	}
@@ -4572,7 +4572,7 @@ DamageType "Firey"
 	states
 	{
 		Spawn:
-			FFLK ABCDEF 5 BRIGHT A_Explode(1,32,0,0,0,"FireDamage")
+			FFLK ABCDEF 5 BRIGHT A_Explode(1,32,0,0,0,0,0,"BulletPuff","FireDamage") //requires fitting new puff
 			FFLK G 5 BRIGHT //A_SpawnItem("FireSmallDropped")
 			FFLK H 5
 			stop
@@ -6267,7 +6267,7 @@ speed 8
 			loop
 		Death:
 			FIRB A 7 BRIGHT A_PlaySound("fire/flameloop")
-			FIRB BCABCABCABCABCABCABCABCABC 7 BRIGHT A_Explode(2,32,0,0,0,"FireDamage")
+			FIRB BCABCABCABCABCABCABCABCABC 7 BRIGHT A_Explode(2,32,0,0,0,0,0,"BulletPuff","FireDamage") //requires fitting new puff
 			FIRB A 1 BRIGHT A_SpawnItem("FireSmallDropped",0,3)
 			loop
 	}
