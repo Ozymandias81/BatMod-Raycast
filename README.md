@@ -11,11 +11,15 @@ Write a description.
 --------------------------------------------------------------------------------
 ## CREDITS:
 
-Insert team members and others.
+MAIN TEAM:
+- mcnairrobotics: Main Programmer & Mapper, Resources Handler
+- Ozymandias81: Programmer, Resources Coordinator, Repository Master
+- DoomJedi: Sprites, Graphics & Textures Artist
 
+- DoomJuan: Mapper
 - Ivory Duke: ZMovement Codes;
 - Ijon: Source of inspiration;
-- Michaelis and DoomKrakken: cool dudes, help, support, and answers to my ZScript questions.
+- Michaelis and DoomKrakken: help, support, and answers to my ZScript questions.
 --------------------------------------------------------------------------------
 
 ### EDITORS USED:
