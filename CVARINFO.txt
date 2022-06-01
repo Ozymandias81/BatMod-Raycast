@@ -1,0 +1,111 @@
+//===============================================
+//General
+server	int		zm_movetype				= 2;
+server	float	zm_friction				= 8.0;
+server 	float	zm_maxgroundspeed		= 12;
+server 	float	zm_maxhopspeed			= 28;
+server	float	zm_walkspeed			= 0.7;
+server	float	zm_crouchspeed			= 0.7;
+server 	float	zm_strafemodifier		= 1.0;
+server	bool	zm_wallfriction			= false;
+server	bool	zm_dropprevention		= false;
+
+//==============
+//Jumping
+server 	float 	zm_jumpheight			= 5.5;
+server	float	zm_setgravity			= 0.56;
+server 	float 	pk_bhopjumpheight		= 0.85;
+server 	bool 	zm_autojump 			= true;
+
+//Double Jump
+server 	int 	zm_doublejump 			= 1;
+server 	float 	zm_doublejumpheight 	= 1.2;
+server 	bool 	zm_wjdoublejumprenew	= true;
+
+//Ramp Jump
+server 	bool 	zm_rampjump				= true;
+server 	float 	zm_rjumpmulti			= 0.7;
+
+//Elevator Jump
+server 	bool 	zm_elevatorjump			= true;
+server 	float 	zm_ejumpmultiplier		= 1.0;
+
+//Jump Landing
+server  bool 	zm_landing				= true;
+server	float	zm_landingsens			= 6.0;
+server	float	zm_landingspeed			= 0.25;
+server	float	zm_minlanding			= 0.5;
+
+//==============
+//Dashing
+server	bool	zm_dash					= true;
+user	bool	zm_doubletap			= true;		
+user	int		zm_maxtaptime			= 10;
+server	float	zm_dashboost			= 1.5;
+server	float	zm_dashheight			= 0.75;
+
+server	bool	zm_airdash				= false;
+server	float	zm_adashboost			= 10;
+server	float	zm_adashfriction		= 1;
+
+server	bool	zm_wjump				= true;
+server	float	zm_wjumpboost			= 1.5;
+server	float	zm_multipledashes		= 0.0;
+server	float	zm_wjumpheight			= 0.75;
+
+server	bool	zm_wslide				= true;
+server	float	zm_wslidevelz			= 0.9;
+
+//==============
+//CrouchSliding
+server	int		zm_crouchslide			= 1;
+server 	float 	zm_cslidestrength		= 1.5;
+server 	int 	zm_cslideduration		= 13;
+server 	float 	zm_qslideaccel			= 6.0;
+server 	int 	zm_qslideduration		= 8;
+
+//==============
+//Ledge Grabbing
+server	bool	zm_ledgegrab			= true;
+
+//==============
+//Grappling Hook
+server	int		zm_hook					= 1;
+server 	float 	zm_hookboost			= 1.5;
+
+//==============
+//Bobbing
+
+//Sway
+user	bool	zm_sway					= false;
+user 	float	zm_swayspeed			= 2;
+user 	float	zm_swayrange			= 25;
+user	bool	zm_swaydirection		= false;
+
+//Y Offset
+user	bool	zm_offset				= false;
+user 	float	zm_offsetspeed			= 2;
+user 	int		zm_offsetrange			= 25;
+user 	bool	zm_offsetdirection		= false;
+
+//==============
+//Other
+server	int		zm_speedometer			= 0;
+
+//===============================================
+//Dusk
+server 	float	dsk_acceleration		= 1.5;
+
+//===============================================
+//Painkiller
+server 	float	pk_acceleration			= 1.0;
+
+//===============================================
+//Build Engine
+server	float	be_jumpanim				= 6.0;
+
+//===============================================
+// Quake
+server	int		q_strafetype			= 0;
+server	float	q_3airaccel				= 0.75;
+server	float	q_1airaccel				= 1.5;

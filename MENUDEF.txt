@@ -1,0 +1,432 @@
+AddOptionMenu "OptionsMenu"
+{
+	StaticText ""
+	Submenu "Most Wanted", "MostWanted"
+	Submenu "ZMove Options", "ZMoveOptions"
+}
+OptionMenu "MostWanted"
+{	
+	Title "Gotham's Most Wanted"
+	
+	StaticText ""
+	Submenu "The Joker", "Joker"
+	Submenu "Bane", "Bane"
+	Submenu "Two-face", "Twoface"
+	Submenu "The Riddler", "Riddler"
+	Submenu "The Penguin", "Penguin"
+	Submenu "Deathstroke", "Slade"
+	Submenu "Hugo Strange", "Hugo"
+	Submenu "Zsasz", "Zsasz"
+	Submenu "Killer Croc", "Croc"
+	Submenu "Clayface", "Clayface"
+	Submenu "Mr. Freeze", "Freeze"
+	Submenu "Deadshot", "Deadshot"
+	Submenu "Lock Up", "Lockup"
+	Submenu "Mad Hatter", "MadHatter"
+	Submenu "Fire Fly", "Firefly"
+	Submenu "Scarecrow", "Scarecrow"
+	Submenu "Black Mask", "BlackMask"
+	Submenu "Professor Pyg", "Pyg"
+	Submenu "Clock King", "ClockKing"
+	Submenu "Ra's Al Ghul", "Ghul"
+	Submenu "The Calculator", "Calculator"
+	Submenu "Solomon Grundy", "Grundy"
+	Submenu "Eraser", "Eraser"
+	Submenu "Killer Moth", "Moth"
+	Submenu "Calendar Man", "CalendarMan"
+}
+ListMenu "Joker"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "JOKRA0"
+	StaticTextCentered 160, 155, "The Joker"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Unknown Priority: Highest"
+}
+ListMenu "Bane"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "BANEA0"
+	StaticTextCentered 160, 155, "Bane"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Unknown Priority: Highest"
+}
+ListMenu "Twoface"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "TWOFA0"
+	StaticTextCentered 160, 155, "Two-face"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Harvey Dent Priority: High"
+}
+ListMenu "Riddler"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "RIDDA0"
+	StaticTextCentered 160, 155, "The Riddler"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Edward Nigma Priority: High"
+}
+ListMenu "Penguin"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "PENGA0"
+	StaticTextCentered 160, 155, "The Penguin"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Oswald Cobblepot Priority: High"
+}
+ListMenu "Slade"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "DTRKA0"
+	StaticTextCentered 160, 155, "Deathstroke"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Slade Wilson Priority: Highest"
+}
+ListMenu "Hugo"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "HUGOA0"
+	StaticTextCentered 160, 155, "Hugo Strange"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Doctor Strange Priority: High"
+}
+ListMenu "Zsasz"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "ZsazA0"
+	StaticTextCentered 160, 155, "Zsasz"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Victor Zsasz Priority: High"
+}
+ListMenu "Croc"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "CROCA0"
+	StaticTextCentered 160, 155, "Killer Croc"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Waylon Jones Priority: Medium"
+}
+ListMenu "Clayface"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "CFACA0"
+	StaticTextCentered 160, 155, "Clayface"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Basil Karlo Priority: High"
+}
+ListMenu "Freeze"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "FREZA0"
+	StaticTextCentered 160, 155, "Mr. Freeze"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Victor Fries Priority: Medium"
+}
+ListMenu "Deadshot"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "DEADA0"
+	StaticTextCentered 160, 155, "Deadshot"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Floyd Lawton Priority: Low"
+}
+ListMenu "LockUp"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "LOCKR0"
+	StaticTextCentered 160, 155, "Lock Up"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Lyle Bolton Priority: Low"
+}
+ListMenu "MadHatter"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "MHATA0"
+	StaticTextCentered 160, 155, "Mad Hatter"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Jervis Tetch Priority: Highest"
+}
+ListMenu "FireFly"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "FIRFA0"
+	StaticTextCentered 160, 155, "Fire Fly"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Garfield Lynns Priority: Highest"
+}
+ListMenu "Scarecrow"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "SCARA0"
+	StaticTextCentered 160, 155, "Scarecrow"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Jonathan Crane Priority: High"
+}
+ListMenu "BlackMask"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "BLAKA0"
+	StaticTextCentered 160, 155, "Black Mask"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Roman Sionis Priority: Medium"
+}
+ListMenu "PYG"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "PPYGA0"
+	StaticTextCentered 160, 155, "Professor Pyg"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Lazlo Valentin Priority: High"
+}
+ListMenu "ClockKing"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "CKNGA0"
+	StaticTextCentered 160, 155, "Clock King"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Temple Fugate Priority: Low"
+}
+ListMenu "Ghul"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "GHULA0"
+	StaticTextCentered 160, 155, "Ra's Al Ghoul"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Demon's Head Priority: High"
+}
+ListMenu "Calculator"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "CALCA0"
+	StaticTextCentered 160, 155, "The Calculator"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Noah Kuttler Priority: Low"
+}
+ListMenu "Grundy"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "SMONA0"
+	StaticTextCentered 160, 155, "Solomon Grundy"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Cyrus Gold Priority: Medium"
+}
+ListMenu "Eraser"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "ERASA0"
+	StaticTextCentered 160, 155, "The Eraser"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Lenny Fiasco Priority: Low"
+}
+ListMenu "Moth"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "MOTHA0"
+	StaticTextCentered 160, 155, "Killer Moth"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Drury Walker Priority: Low"
+}
+ListMenu "CalendarMan"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "CMANA0"
+	StaticTextCentered 160, 155, "Calendar Man"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Jullian Day Priority: Low"
+}
+OptionMenu "ZMoveOptions"
+{
+	Class "ZMoveMenu"
+	Title "ZMove Options"
+	
+	StaticText	"Speed & Acceleration", 1
+	ZMoveOption	"Movement Type",						"Pick your Movement Type",																"zm_movetype",				"MoveType"
+	ZMoveSlider "Ground Friction Strength", 			"Set ground friction strength",															"zm_friction",				0.5,	10.0,	0.1
+	ZMoveSlider	"Maximum Ground Speed",					"Maximum ground speed (u/s)",															"zm_maxgroundspeed",		10,		15,		0.1
+	ZMoveSlider "Maximum Hopping Speed", 				"Maximum hopping speed (u/s)",															"zm_maxhopspeed",			24,		36,		1,		0
+	ZMoveSlider	"Walk Speed",							"How fast you move when walking",														"zm_walkspeed",				0.5,	1.0,	0.1
+	ZMoveSlider	"Crouch Speed",							"How fast you move when crouching",														"zm_crouchspeed",			0.1,	1.0,	0.1
+	ZMoveSlider "StrafeRunning Speed Bonus",			"Ground straferunning speed boost",														"zm_strafemodifier",		1.0,	1.5,	0.05,	2
+	ZMoveOption	"Quake Wall Friction",					"Prevents player from slowing down when touching walls",								"zm_wallfriction",			"OnOff"
+	ZMoveOption	"Drop Prevention",						"Helps not fall off ledges when you are walking",										"zm_dropprevention",		"OnOff"
+	StaticText	""
+	StaticText	"Dusk Movement", Orange
+	ZMoveSlider "Strafejumping Acceleration", 			"How fast you gain speed when you strafejump",											"dsk_acceleration",			1.0,	2.5,	0.1
+	StaticText	""
+	StaticText	"Painkiller Movement", Orange
+	ZMoveSlider "BHop Acceleration", 					"How fast you gain speed when bunnyhopping",											"pk_acceleration",			1.0,	2.0,	0.05,	2
+	StaticText	""
+	StaticText	"Quake Movement", Orange
+	ZMoveOption	"Strafe Jumping Type",					"Pick your strafe jumping type",														"q_strafetype",				"StrafeType"
+	ZMoveSlider "Q3 Acceleration", 						"How fast you gain speed when strafejumping Q3 style",									"q_3airaccel",				0.5,	1.0,	0.05,	2
+	ZMoveSlider "Q1 Acceleration", 						"How fast you gain speed when strafejumping Q1 style",									"q_1airaccel",				1.0,	2.0,	0.05,	2
+	StaticText	""
+	
+	StaticText	"Jumping", 1
+	ZMoveSlider "Jump Height", 							"Player jump height",																	"zm_jumpheight",			5,		8,		0.5
+	ZMoveSlider "Gravity", 								"Set player gravity",																	"zm_setgravity",			0.1,	1.5,	0.1,	2
+	ZMoveOption "Auto Jump", 							"Enable auto jump",																		"zm_autojump",				"OnOff"
+	StaticText	""
+	StaticText	"Build Engine Movement", Orange
+	ZMoveSlider "Jump Animation ViewHeight", 			"How much your viewpoint lowers when executing a jump",									"be_jumpanim",				4.0,	8.0,	0.5
+	StaticText	""
+	StaticText	"Painkiller Movement", Orange
+	ZMoveSlider "BHop Jump Height", 					"Bunny hop jump height (% of regular jump height)",										"pk_bhopjumpheight",		0.5,	1,		0.1,	2
+	StaticText	""
+	StaticText	"Double Jump", Orange
+	ZMoveOption "Double Jump Type", 					"Enable and choose Double Jumping style",												"zm_doublejump",			"DoubleJump"
+	ZMoveSlider "Double Jump Height", 					"Double jump height (% of regular jump height)",										"zm_doublejumpheight",		0.5,	1.5,	0.1
+	ZMoveOption "Wall Jump Renewal", 					"Grants double jump everytime you execute a consecutive wall jump",						"zm_wjdoublejumprenew",		"OnOff"
+	StaticText	""
+	StaticText	"Ramp Jumps", Orange
+	ZMoveSlider "Ramp Jump Multiplier", 				"How beneficial a ramp jump is to the overall jump height",								"zm_rjumpmulti",			0.5,	1.2,	0.1,	2
+	StaticText	""
+	StaticText	"Elevator Jumps", Orange
+	ZMoveOption "Elevator Jumps Enabled", 				"When on you can perform UT style elevator jumps",										"zm_elevatorjump",			"OnOff"
+	ZMoveSlider "Elevator Jumps Bonus Multiplier", 		"Multiplier of the elevator jump bonus",												"zm_ejumpmultiplier",		1.0,	2.0,	0.05,	2
+	StaticText	""
+	StaticText	"Jump landing height animation", Orange
+	ZMoveOption	"Jump Landing Enabled",					"Enable Build style jump landing view height animation",								"zm_landing",				"OnOff"
+	ZMoveSlider	"Landing Velocity Sensitivity",			"How sensitive the height change is to the landing velocity",							"zm_landingsens",			4.0,	8.0,	0.1
+	ZMoveSlider	"Animation Speed",						"How quickly your viewheight returns to normal",										"zm_landingspeed",			0.25,	1.0,	0.05,	2
+	ZMoveSlider	"Minimum Height",						"The minimum viewheight you reach during a landing",									"zm_minlanding",			0.5,	0.75,	0.05,	2
+	StaticText	""
+	
+	StaticText	"Dashing", 1
+	Control		"Dash - Wall Jump Bind",				"Dash"
+	ZMoveOption	"Dash Enabled",							"Enable dashing",																		"zm_dash",					"OnOff"
+	ZMoveOption	"Double Tap Dash",						"Enable dashing double tapping trigger",												"zm_doubletap",				"OnOff"
+	ZMoveSlider "Max Double Tap Time", 					"Maximum double tapping time",															"zm_maxtaptime",			2,		20,		1,		0
+	ZMoveSlider "Dash Boost", 							"Set how fast you dash",																"zm_dashboost",				1.2,	1.5,	0.05,	2
+	ZMoveSlider "Dash Jump Height", 					"Set how high you jump when dashing",													"zm_dashheight",			0.5,	1.0,	0.05,	2
+	StaticText	""
+	StaticText	"Wall Jumping", Orange
+	ZMoveOption	"Wall Jump Enabled",					"Enable wall jumping",																	"zm_wjump",					"OnOff"
+	ZMoveSlider "Wall Jump Boost", 						"Set how fast you walljump",															"zm_wjumpboost",			1.5,	2.0,	0.05,	2
+	ZMoveSlider "Consecutive Jumps Bonus", 				"Speed bonus per each consecutive wall jump",											"zm_multipledashes",		0.0,	2.0,	0.05,	2
+	ZMoveSlider "Wall Jump Height", 					"Set how high you jump when wall jumping",												"zm_wjumpheight",			0.5,	1.0,	0.05,	2
+	StaticText	""
+	StaticText	"Air Dashing", Orange
+	ZMoveOption	"Air Dash Enabled",						"Enable air dashing",																	"zm_airdash",				"OnOff"
+	ZMoveSlider	"Air Dash Boost",						"How strong air dashing boost is",														"zm_adashboost",			5,		15,		1,		0
+	ZMoveSlider	"Air Dash Friction",					"How quickly you will loose speed after an air dash",									"zm_adashfriction",			0.5,	1.5,	0.05,	2
+	StaticText	""
+	
+	StaticText	"Wall Sliding", 1
+	Control		"Wall Slide Bind",						"WallSlide"
+	ZMoveOption	"Wall Slide Enabled",					"Enable wall sliding",																	"zm_wslide",				"OnOff"
+	ZMoveSlider "Wall Sliding Gravity", 				"How strong gravity is when wall sliding",												"zm_wslidevelz",			0.5,	1.0,	0.05,	2
+	StaticText	""
+	
+	StaticText	"CrouchSlide", 1
+	ZMoveOption "Crouch Slide", 						"Choose crouchslide type",																"zm_crouchslide",			"SlideType"
+	StaticText	""
+	StaticText	"Regular Crouch Slide", Orange
+	ZMoveSlider "Slide Speed Boost", 					"Set the initial crouch slide speed boost",												"zm_cslidestrength",		1.5,	2.5,	0.05,	2
+	ZMoveSlider "Slide duration", 						"Maximum slide duration in tics",														"zm_cslideduration",		10,		15,		1,		0
+	StaticText	""
+	StaticText	"Quake Crouch Slide", Orange
+	ZMoveSlider "Slide Acceleration", 					"How strong the crouch slide acceleration is",											"zm_qslideaccel",			5.0,	7.0,	0.05,	2
+	ZMoveSlider "Slide duration", 						"Multiplier of the crouch slide duration",												"zm_qslideduration",		6,		10,		1,		0
+	StaticText	""
+	
+	StaticText	"Ledge Grabbing", 1
+	ZMoveOption "Ledge Grabbing Enabled", 				"Turn on and off ledge grabbing",														"zm_ledgegrab",				"OnOff"
+	StaticText	""
+	
+	StaticText	"Grappling Hook", 1
+	Control		"Grappling Hook Bind",					"GrapplingHook"
+	ZMoveOption "Grappling Hook Enabled", 				"Enable and choose grappling hook style",												"zm_hook",					"GHook"
+	ZMoveSlider "Hook speed boost", 					"Intensity of the hook's speed boost",													"zm_hookboost",				1.0,	2.0,	0.1
+	StaticText	""
+	
+	StaticText	"Bobbing", 1
+	ZMoveSlider	"Walk/Run View Bobbing",				"Adjust view bobbing's intensity when moving",											"movebob",					0.0,	1.0,	0.1
+	ZMoveSlider	"Still View Bobbing",					"Adjust view bobbing's intensity when not moving",										"stillbob",					0.0,	1.0,	0.1
+	ZMoveSlider	"Walk/Run Weapon Bobbing",				"Adjust weapon bobbing's intensity when moving",										"wbobspeed",				0.0,	2.0,	0.1
+	ZMoveOption	"Still Weapon Bobbing",					"Turn on/off the weapon bobbing when standing still",									"zm_stillbob",				"OnOff"
+	StaticText 	""
+	StaticText	"Weapon Sway", Orange
+	ZMoveOption "Yaw Weapon Sway", 						"Allow weapons to sway according to your mouse yaw",									"zm_sway",					"OnOff"
+	ZMoveSlider "Sway Speed", 							"How fast weapons sway",																"zm_swayspeed",				0,		4,		0.5
+	ZMoveSlider "Sway Range", 							"Maximum distance weapons can sway",													"zm_swayrange",				0,		50,		1,		0
+	ZMoveOption "Sway Direction", 						"Set wherever weapons sway in the direction you turn or the opposite",					"zm_swaydirection",			"SwayDirection"
+	StaticText 	""
+	StaticText	"Vertical Offset", Orange
+	ZMoveOption "Vertical Weapon Offset", 				"Allow weapons to offset vertically while in the air",									"zm_offset",				"OnOff"
+	ZMoveSlider "Offset Speed", 						"How fast weapons raise and fall depending on your vertical velocity",					"zm_offsetspeed",			0,		4,		0.5
+	ZMoveSlider "Offset Range", 						"Maximum height weapons can fall",														"zm_offsetrange",			0,		50,		1,		0
+	ZMoveOption "Offset Direction", 					"Set wherever the sprites are offset according to your vertical direction",				"zm_offsetdirection",		"OffsetDirection"
+	StaticText 	""
+	
+	StaticText	"Others", 1
+	ZMoveOption "Speedometer", 							"Enable speedOMeter",																	"zm_speedometer",			"Speedometer"
+	Control		"Reset to default values",				"zmove_reset"
+}
+
+OptionValue "MoveType"
+{
+	0, "Doom"
+	1, "Build Engine"
+	2, "Dusk"
+	3, "Painkiller"
+	4, "Quake"
+	5, "Unreal Tournament"
+}
+
+OptionValue "StrafeType"
+{
+	0, "Quake 3"
+	1, "Quake 1"
+	2, "CPMA"
+}
+
+OptionValue "DoubleJump"
+{
+	0, "Off"
+	1, "Unreal Tournament"
+	2, "Doom 4"
+}
+
+OptionValue "SlideType"
+{
+	0, "Off"
+	1, "Regular"
+	2, "Quake"
+}
+
+OptionValue "BobType"
+{
+	0, "Doom"
+	1, "Build Engine"
+	2, "Dusk"
+	3, "Painkiller"
+	4, "Unreal Tournament"
+}
+
+OptionValue "GHook"
+{
+	0, "Off"
+	1, "Pull Only"
+	2, "Pull & Pendulum"
+}
+
+OptionValue "SwayDirection"
+{
+	0, "Opposite Direction"
+	1, "Same Direction"
+}
+
+OptionValue "OffsetDirection"
+{
+	0, "Opposite Direction"
+	1, "Same Direction"
+}
+
+OptionValue "Speedometer"
+{
+	0, "Off"
+	1, "Doom Units"
+	2, "Quake Units"
+}

@@ -1,0 +1,125 @@
+
+$playersound	Player	male	*jump	"DSKJump.ogg"
+$playersound	Player	male	*land	"Land.ogg"
+$playersound	Player	male	*grunt	"Land.ogg"
+
+$random thug/death		{ thug/death1  thug/death2  thug/death3  thug/death4  thug/death5  thug/death6}
+thug/death1			DEATHSC1
+thug/death2			DEATHSC2
+thug/death3			DEATHSC3
+thug/death4			DEATHSC4
+thug/death5			DEATHSC5
+thug/death6			DEATHSC6
+thug/sight			haltsnd
+badguy/sight		WHODA
+badguy/death		AHHHGSND
+guard/sight	    	BMBGSIGH
+Hench/sight	    	ALERTSND
+Hench/death	    	henchdie
+trashbreak			trshbrk
+trashdamage			trshdmg
+Weapon/handgun		handgun
+Weapon/machinegun	ssfiresn
+Weapon/shotgun		DSSHOTGN
+Weapon/chaingun		DSBOSSAT
+Weapon/punch		atkpunch
+Weapon/batthrow		atkbatra
+Weapon/mini			ATKMINIB
+Weapon/tazer		atktaser
+Weapon/emp			ATKEMPGU
+misc/w_pkup			dsitemup
+Ambient/Rain		AMBRAIN
+ACT					ACTIVATE
+Weapon/batbreak		minibata
+weapons/batswing    BATSWING
+switchon			switchsn
+hostage/free1		HOSFREES
+hostage/free2		LADYPR1
+hostage/free3		LADYPR2
+hostage/cop1		HCOP1FRE
+hostage/cop2		HCOPFREE
+fire/flameloop              FLAMLOOP
+fire/flameexplosion         FLAMEXP
+fire/shootflame             FIRESHOT
+jokerbox					JOKEBOX
+world/thunder		THNDR1
+
+$random gunguy/death		{ gunguy/death1  gunguy/death2  gunguy/death3  gunguy/death4  gunguy/death5}
+gunguy/death1			DIE1
+gunguy/death2			DIE2
+gunguy/death3			DIE6
+gunguy/death4			DIE4
+gunguy/death5			DIE5
+$random conv/death		{ conv/death1  conv/death2  conv/death3}
+conv/death1			SCREAM1
+conv/death2			SCREAM2
+conv/death3			SCREAM3
+
+clay/die			claydie
+clay/see			claysee
+croc/die			crocdie
+croc/see			crocsee
+bane/die			banedie
+bane/see			banesee
+dead/die			deaddie
+dead/see			deadsee
+frez/die			frezdie
+frez/see			frezsee
+tfac/die			tfacdie
+tfac/see			tfacsee
+hugo/die			hugodie
+hugo/see			hugosee
+lock/die			lockdie
+lock/see			locksee
+zsas/die			zsasdie
+zsas/see			zsassee
+bmak/die			bmakdie
+bmak/see			bmaksee
+scar/die			scardie
+scar/see			scarsee
+cking/die			ckingdie
+cking/see			ckingsee
+rdlr/die			rdlrdie
+rdlr/see			rdlrsee
+frcf/de				frcfde
+frcf/ac				frcfac
+
+Slide		"Slide.ogg"
+WallSlide	"WallSlide.ogg"
+Climb		"Climb.ogg"
+
+HookWall	"HookWall.ogg"
+HookMeat	"HookMeat.ogg"
+HookFailed	"HookFailed.ogg"
+HookLaunch	"HookLaunch.ogg"
+
+missile/fire		DSMISSF
+missile/hit		DSMISSX
+scare/fire	SCARECRO
+clock/fire	CLOCKKIN
+clock/hit		CLOCKPRO
+glass/break   GLASSBRE
+$limit    glass/break 0
+$pitchshift    glass/break 3
+$rolloff    glass/break 1000 2000
+
+//car explosion stuff
+weapons/explode1	        dspipex1
+weapons/explode2	        dspipex2
+weapons/explode3	        dspipex3
+weapons/explode4	        dspipex4
+$random weapons/explode  { weapons/explode1 weapons/explode2 weapons/explode3 weapons/explode4 }
+
+//bike
+BIKE1 BIKE1
+BIKE1A BIKE1A
+BIKE1B BIKE1B
+BIKE1C BIKE1C
+BIKE1D BIKE1D
+BIKE1E BIKE1E
+BIKE1F BIKE1F
+BIKE1G BIKE1G
+BIKESK BIKESK
+BIKESK2 BIKESK2
+BIKECLW BIKECLW
+EBIKECLS EBIKECLS

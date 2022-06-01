@@ -1,0 +1,3 @@
+#include "actors/One.txt"
+#include "actors/Two.txt"
+#include "actors/Three.txt"

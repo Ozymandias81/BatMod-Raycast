@@ -1,0 +1,146 @@
+gameinfo
+{
+	AddEventHandlers = "DashHandler", "GrapplingHookHandler", "SpeedoMeterHandler", "WallSlideHandler"
+	NormForwardMove = 0x32, 0x32	//Walk speed is modulated through
+	NormSideMove = 0x32, 0x32		//CVar in the menu options
+	PlayerClasses = "Batman", "Biker"
+	NoRandomPlayerClass = true
+}
+defaultmap
+{
+	sky1 = "CITYSCAP"
+}
+clearEpisodes
+episode map01
+{
+   name = "Batman 3"
+   key = "3"
+}
+map C1M1 "Level1"
+{
+	sky1 = "DOCKSCAP"
+	MUSIC = "D_RUNNIN"
+	cluster = 5
+}
+/*map MAP01 "Gotham City"
+{
+	sky1 = "CITYSCAP"
+	MUSIC = "D_RUNNIN"
+}
+*/
+map MAP01 "Shipping Yard"
+{
+	sky1 = "DOCKSCAP"
+	MUSIC = "D_RUNNIN"
+	Next = "MAP02"
+	cluster = 5
+}
+map MAP02 "Sewer"
+{
+	sky1 = "DOCKSCAP"
+	MUSIC = "GOTHMGEN"
+	Next = "MAP03"
+	cluster = 6
+}
+map MAP03 "Arkham Asylum"
+{
+	sky1 = "DOCKSCAP"
+	MUSIC = "UNDRGNES"
+	Next = "MAP04"
+	cluster = 6
+}
+map MAP04 "Mad Hatter's Lair"
+{
+	sky1 = "CITYSCAP"
+	MUSIC = "LABORNES"
+	Lightning
+	Next = "MAP05"
+	cluster = 7
+	//SpecialAction = "MyMonster", "Exit_Normal"
+}
+map MAP05 "Apprehend the Mad Hatter"
+{
+	sky1 = "madsky"
+	MUSIC = "FUNHOU"
+	Lightning
+	Next = "CITYMAP"
+	cluster = 8
+}
+map CITYMAP "Restore order in West Gotham"
+{
+	sky1 = "CITYSCAP"
+	MUSIC = "B2DANGER"
+	Lightning
+	Next = "MAP06"
+	cluster = 9
+}
+map MAP06 "Track down The Joker"
+{
+	sky1 = "DOCKSCAP"
+	MUSIC = "ROJ_URGT"
+	Next = "MAP07"
+	Lightning
+}
+map MAP07 "Apprehend the Joker"//will change this map number since it is the last level
+{
+	sky1 = "CITYSCAP"
+	MUSIC = "CATHEDRL"
+	Lightning
+}
+//CATHEDRL.ogg
+//UNDRGNES.ogg
+map MAP10 "Joker's Funhouse"
+{
+	sky1 = "CITYSCAP"
+	MUSIC = "FUNHOU"
+}
+
+skill baby
+{
+	AutoUseHealth
+	AmmoFactor = 2
+	DamageFactor = 0.45
+	EasyBossBrain
+	SpawnFilter = Baby
+	Name = "Winged Vigilante"
+	Key = "w"
+}
+
+skill easy
+{
+	EasyBossBrain
+	SpawnFilter = Easy
+	DamageFactor = 0.55
+	Name = "Greatest Detective"
+	Key = "g"
+}
+
+skill normal
+{
+	SpawnFilter = Normal
+	Key = "k"
+	DamageFactor = 0.75
+	Name = "Dark Knight"
+	DefaultSkill
+}
+
+skill hard
+{
+	SpawnFilter = Hard
+	Name = "The Batman"
+	Key = "b"
+}
+
+skill nightmare
+{
+	AmmoFactor = 2
+	FastMonsters
+	DisableCheats
+	Aggressiveness = 0.7
+	//RespawnTime = 12
+	SpawnFilter = Nightmare
+	Name = "Knightfall"
+	Key = "k"
+	MustConfirm
+	Key = "n"
+}

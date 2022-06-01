@@ -1,0 +1,46 @@
+switch SWITCH1 on sound Switchon pic SWITCH2 tics 0
+switch SWITCH2 off sound Switchon pic SWITCH1 tics 0
+switch ELEVSW1 on sound Switchon pic ELEVSW2 tics 0
+switch ELEVSW2 off sound Switchon pic ELEVSW1 tics 0
+
+switch GLAS_1
+   on sound glass/break
+   pic EMPTA0 tics 0
+   //pic OVERLA13 tics 0
+   
+   off
+   pic GLAS_1 tics 0
+switch GLAS_3
+   on sound glass/break
+   pic EMPTA0 tics 0
+   //pic OVERLA13 tics 0
+   
+   off
+   pic GLAS_3 tics 0
+
+switch OVERLA12
+   on sound glass/break
+   pic EMPTA0 tics 0
+   //pic OVERLA13 tics 0
+   
+   off
+   pic OVERLA12 tics 0
+
+switch IMAG_12
+   on //sound glass/break
+   pic IMAG_11 tics 1
+   pic IMAG_09 tics 1
+   //pic OVERLA13 tics 0
+   
+   off
+   pic IMAG_12 tics 0
+
+texture mh0
+    allowdecals
+	//RANDOM
+    pic mh0 rand 32 128
+    pic mh0g1 rand 5 8
+    pic mh0g2 rand 5 8
+    pic mh0g3 rand 3 7
+    pic mh0g4 rand 3 7
+    pic mh0g5 rand 3 7

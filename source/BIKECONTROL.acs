@@ -1,0 +1,138 @@
+#library "BIKECONTROL"
+#include "zcommon.acs"
+
+int isBiker = 0;
+
+script 522 OPEN
+{
+ConsoleCommand("compat_clientssendfullbuttoninfo 1");
+}
+
+
+//FORWARD
+script 421 ENTER
+{
+ int buttons;
+
+ while (TRUE)
+ {
+   buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+   
+if (buttons & BT_FORWARD)
+{
+   GiveInventory("Accelerate", 1);
+}
+   delay(1);
+ }
+}
+
+
+//BACKPEDAL
+script 422 ENTER
+{
+ int buttons;
+
+ while (TRUE)
+ {
+   buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+   
+if (buttons & BT_BACK)
+{
+    GiveInventory("BackPedal", 1);
+	delay(2);
+	TakeInventory("BackPedal", 1);
+}
+
+   delay(2);
+   TakeInventory("BackPedal", 1);
+ }
+}
+
+
+//LEFT
+script 423 ENTER
+{
+ int buttons;
+
+ while (TRUE)
+ {
+   buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+   
+if (buttons & (BT_MOVELEFT|BT_LEFT))
+{
+    GiveInventory("TurnLeft", 1);
+}
+
+   delay(1);
+ }
+}
+
+
+//RIGHT
+script 424 ENTER
+{
+ int buttons;
+
+ while (TRUE)
+ {
+   buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+   
+if (buttons & (BT_MOVERIGHT|BT_RIGHT))
+{
+    GiveInventory("TurnRight", 1);
+}
+
+   delay(1);
+ }
+}
+
+//get off
+script 425 ENTER
+{
+ int buttons;
+
+ while (TRUE)
+ {
+   buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+   
+	if (buttons & BT_USE)
+	{
+		if (isBiker == 1)//set this number to bike class in keyconf
+		{
+			Spawn("AcsDropBike",GetActorX(0),GetActorY(0),GetActorFloorZ(0) + 64,0,GetActorAngle(0) >> 8);
+			delay(1);
+			isBiker = 0;
+		}
+		SetPlayerProperty(1,0,4);
+		UnMorphActor (0);
+	}
+
+   delay(1);
+ }
+}
+script 426 (void)
+{
+	//print(s:"\cd Hopped On Bike");
+	isBiker = 1;
+}
+script 427 ENTER
+{
+ int buttons;
+
+ while (TRUE)
+ {
+   buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+   
+	if (buttons & BT_ATTACK)
+	{
+		if (isBiker == 1)
+		{
+			GiveInventory("BatShooting", 1);
+			//Spawn("BatMissile",GetActorX(0),GetActorY(0),GetActorFloorZ(0),0,GetActorAngle(0) >> 8);
+			delay(3);
+		}
+	}
+
+   delay(1);
+ }
+}

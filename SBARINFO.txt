@@ -1,0 +1,183 @@
+Base Doom;
+
+Height 33;
+CompleteBorder True;
+LowerHealthCap True;
+
+Mugshot "Normal", Health2
+{
+	ST00 30;
+	ST02 35;
+	ST01 35;
+	ST02 35;
+}
+
+Mugshot "Pain", Health2
+{
+	ST00 0;
+}
+
+Mugshot "Rampage", Health2
+{
+	ST00 0;
+}
+
+Mugshot "Ouch"
+{
+	SCRM 15;
+}
+
+Mugshot "Grin"
+{
+	GRIN 70;
+}
+
+Mugshot "Glare" //If you pick up a berserk pack.  Just because.
+{
+	GLAR 70;
+}
+
+Mugshot "God" //No gold-eyed God face in Wolf - only in Spear - just use the standard 100% face
+{
+	ST00 30;
+	ST02 35;
+	ST01 35;
+	ST02 35;
+}
+
+Mugshot "GodAnimated"
+{
+	GOD0 30;
+	GOD2 35;
+	GOD1 35;
+	GOD2 35;
+}
+
+Mugshot "Death"
+{
+	DEAD -1;
+}
+
+Mugshot "Death.WolfNaziSyringe"
+{
+	MUT -1;
+}
+
+Mugshot "WolfIdle"
+{
+	{STT1, STT2} 35;
+}
+
+Statusbar Normal //, ForceScaled
+{
+	GameMode deathmatch, teamgame
+	{
+		DrawImage "BARDM", 160, 202, centerbottom;
+		DrawNumber 2, WOLFNUM, Untranslated, Frags, 125, 176;
+	}
+
+	Gamemode cooperative, singleplayer
+	{
+		DrawImage "BAR", 160, 201, centerbottom;
+		DrawNumber 1, WOLFNUM, Untranslated, Life, 119, 176;
+	}
+
+	InInventory Not Generic_Map_Marker
+		DrawNumber 2, WOLFNUM, Untranslated, GlobalVar 2, 31, 176;
+	Else
+		DrawImage "QM", 23, 176;
+
+	DrawNumber 6, WOLFNUM, Untranslated, GlobalArray 17, 95, 176;
+	DrawNumber 3, WOLFNUM, Untranslated, Health, 191, 176;
+
+	InInventory SoD_Game_Marker
+		DrawMugshot 7, animatedgodmode, disablegrin, disablepain, disablerampage, 136, 165;
+	Else
+		DrawMugshot 7, disablegrin, disableouch, disablepain, disablerampage, 136, 165;
+
+	GameMode deathmatch, teamgame, cooperative
+		DrawImage translatable "HUDBKG", 134, 166;
+
+	DrawSwitchableImage YellowCard, "NOKEY", "KEYPY0", 244, 173, center;
+	DrawSwitchableImage BlueCard, "NOKEY", "KEYPB0", 244, 189, center;
+
+	//DrawSwitchableImage YellowKeyLost, "nullimage", "YKEY", 244, 173, center;
+	//DrawSwitchableImage BlueKeyLost, "nullimage", "BKEY", 244, 189, center;
+
+	DrawSwitchableImage BlueSkull, "nullimage", "STKEYS3", 312, 0;
+	DrawSwitchableImage YellowSkull, "nullimage", "KEYPG0", 252, 173, center;
+	DrawSwitchableImage RedSkull, "nullimage", "STKEYS5", 312, 16;
+	DrawSwitchableImage RedCard, "nullimage", "KEYPR0", 252, 189, center;
+
+	UsesAmmo not
+		DrawNumber 3, WOLFNUM, Untranslated, Ammo WolfClip, 231, 176;
+
+	DrawImage weaponicon, 280, 180, center, 48, 24;
+	DrawNumber 3, WOLFNUM, Untranslated, Ammo1, 231, 176;
+	DrawSelectedInventory CONFONT, 5, 127;
+}
+
+Statusbar Fullscreen, FullScreenOffsets
+{
+	InInventory Not AtariJaguar
+	{
+		DrawNumber 8, HUDFONT_DOOM, WHITE, GlobalArray 17, -2, -25;
+
+		Gamemode cooperative, singleplayer
+		{
+			DrawImage "LIFEA0", 14, -1;
+			DrawNumber 1, HUDFONT_DOOM, WHITE, Life, 35, -10;
+		}
+
+		GameMode deathmatch, teamgame
+		{
+			DrawImage "FRAG", 14, -1;
+			DrawNumber 3, HUDFONT_DOOM, WHITE, Frags, 35, -10;
+		}
+
+		DrawSwitchableImage YellowCard, "nullimage", "STKEYS1", -8, 0;
+		DrawSwitchableImage BlueCard, "nullimage", "STKEYS4", -8, 14;
+
+		//DrawSwitchableImage YellowKeyLost, "nullimage", "I_YKEY", -8, 0;
+		//DrawSwitchableImage BlueKeyLost, "nullimage", "I_BKEY", -8, 14;
+
+		//DrawSwitchableImage BlueSkull, "nullimage", "STKEYS3", -16, 0;
+		DrawSwitchableImage YellowSkull, "nullimage", "STKEYS2", -16, 10;
+		//DrawSwitchableImage RedSkull, "nullimage", "STKEYS5", -16, 20;
+		DrawSwitchableImage RedCard, "nullimage", "STKEYS3", -16, 30;
+
+		DrawImage AmmoIcon1, -110, -1, centerbottom;
+		DrawNumber 3, HUDFONT_DOOM, WHITE, Ammo1, alignment(left), -95, -10;
+
+		DrawImage "HLTHE0", -50, -1;
+		DrawNumber 3, HUDFONT_DOOM, WHITE, Health, -2, -10;
+
+		DrawSelectedInventory CONFONT, 5, 175;
+	}
+	Else
+	{
+		DrawMugshot 7, animatedgodmode, disableouch, disablerampage, 14, -45;
+		DrawNumber 3, HUDFONT_DOOM, Untranslated, Health, alignment(right), 96, -36;
+
+		GameMode deathmatch, teamgame
+		{
+			DrawNumber 3, HUDFONT_DOOM, RED, Frags, 14, -76;
+		}
+
+		DrawSwitchableImage YellowCard, "nullimage", "STKEYS1", -106, -36;
+		DrawSwitchableImage BlueCard, "nullimage", "STKEYS4", -100, -36;
+
+		//DrawSwitchableImage YellowKeyLost, "nullimage", "I_YKEY", -8, 0;
+		//DrawSwitchableImage BlueKeyLost, "nullimage", "I_BKEY", -8, 14;
+
+		//DrawSwitchableImage BlueSkull, "nullimage", "STKEYS3", -16, 0;
+		DrawSwitchableImage YellowSkull, "nullimage", "STKEYS2", -16, 10;
+		//DrawSwitchableImage RedSkull, "nullimage", "STKEYS5", -16, 20;
+		DrawSwitchableImage RedCard, "nullimage", "STKEYS3", -16, 30;
+
+		DrawImage AmmoIcon1, -40, -45;
+		DrawNumber 3, HUDFONT_DOOM, Untranslated, Ammo1, alignment(right), -45, -36;
+
+		DrawSelectedInventory CONFONT, 5, 5;
+	}
+}

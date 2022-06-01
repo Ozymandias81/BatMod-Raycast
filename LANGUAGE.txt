@@ -1,0 +1,109 @@
+[enu default]
+
+SECRETMESSAGE = "A Riddler secret has been found!";
+
+PD_BLUEC = "You need the silver key to open this door";
+PD_REDC = "You need the red key to open this door";
+PD_YELLOWC = "You need the yellow key to open this door";
+PD_BLUES = "You need the special key to open this door";
+PD_REDS = "You need more clues to open this door";
+PD_YELLOWS = "You need the green key to open this door";
+
+AM_MONSTERS			= "Convicts:";
+AM_SECRETS			= "Riddles:";
+AM_ITEMS			= "Hostages:";
+KILLTOTAL = "Convicts";
+SECRETTOTAL = "Riddles";
+TREASURETOTAL = "Hostages";
+
+// Quit Doom 1 messages
+QUITMSG1 = "What's the matter Batman?\nScared?";
+QUITMSG2 = "Where are you Batman?\nAfraid to show your face?";
+QUITMSG3 = "Come out you coward!";
+QUITMSG4 = "Thomas and Martha Wayne would be dissapointed in you.";
+QUITMSG5 = "Batman, don't leave those civilians to die!";
+QUITMSG6 = "Run, hide, I'll find you, and beat the living crap outta ya.";
+QUITMSG7 = "It's ok to give up. \nI'm sure the hostages won't mind";
+
+// Quit Doom II messages
+QUITMSG8 = "So you admit that I, the Riddler, /nam better than you?";
+QUITMSG9 = "Chicken man, or Batman!";
+QUITMSG10 = "Don't go all this way to give up now master bruce.";
+QUITMSG11 = "I'll be waiting here for you bats!";
+QUITMSG12 = "You know, I thought you'd last longer.";
+QUITMSG13 = "Who's going to take care of the city now? /n Robin?";
+QUITMSG14 = "As the symbol of hope fades, /nso too will law and order.";
+
+C1TEXT =
+	"Hearing about the break in at the docs,\n"
+	"you had expected it to be a normal robbery.\n"
+	"You were wrong. The trap set by firefly had\n"
+	"nearly ended you, but you managed to win the\n"
+	"battle. "
+	"\n"
+	"You search the area for clues. As you \n"
+	"explore, you discover that their is a secret\n"
+	"entrance leading to the sewers. Suddenly you're\n"
+	"messaged by Alfred. \"Sir, the Joker has escaped\n"
+	"Arkham Asylum. If you go now, you can have a\n"
+	"chance to catch him.\" \n"
+	"\n"
+	"Checking your map, you find going through the\n"
+	"sewers is the quickest way to Arkham. However\n"
+	"Killer Croc is bound to have escaped into them,\n"
+	"so you must tread with caution.";
+C2TEXT =
+	"You have managed to control the riot\n"
+	"at the asylum. Running through the cell\n"
+	"block reveals that most of the other \n"
+	"prisoners have escaped, though you have \n"
+	"detained a few. Outside awaits a large \n"
+	"squadron of GCPD officers, who thank you for\n"
+	"the help. After things settle down, it is\n"
+	"revealed that fire fly and killer croc have\n"
+	"escaped their temporary holding cells. \n"
+	"Suddenly a officer shouts to you urgently.\n"
+	"\n"
+	" \"Batman, the Mad Hatter's crew have taken\n"
+	"over a large city block in Kingston. They've\n"
+	"opened it up to several other gangs as well. \n"
+	"It's pure chaos down their, all of our men are\n"
+	"shot down before we can get close.\" How have \n"
+	"Jervis's goons obtain so much fire power and support? \n"
+	"You'll have to dwell on it later. Time for justice. ";
+C3TEXT =
+	"YOU ARE AT THE CORRUPT HEART OF THE CITY,\n"
+	"SURROUNDED BY THE CORPSES OF YOUR ENEMIES.\n"
+	"YOU SEE NO WAY TO DESTROY THE CREATURES'\n"
+	"ENTRYWAY ON THIS SIDE, SO YOU CLENCH YOUR\n"
+	"TEETH AND PLUNGE THROUGH IT.\n"
+	"\n"
+	"THERE MUST BE A WAY TO CLOSE IT ON THE\n"
+	"OTHER SIDE. WHAT DO YOU CARE IF YOU'VE\n"
+	"GOT TO GO THROUGH HELL TO GET TO IT?";
+C4TEXT =
+	"THE HORRENDOUS VISAGE OF THE BIGGEST\n"
+	"DEMON YOU'VE EVER SEEN CRUMBLES BEFORE\n"
+	"YOU, AFTER YOU PUMP YOUR ROCKETS INTO\n"
+	"HIS EXPOSED BRAIN. THE MONSTER SHRIVELS\n"
+	"UP AND DIES, ITS THRASHING LIMBS\n"
+	"DEVASTATING UNTOLD MILES OF HELL'S\n"
+	"SURFACE.\n"
+	"\n"
+	"YOU'VE DONE IT. THE INVASION IS OVER.\n"
+	"EARTH IS SAVED. HELL IS A WRECK. YOU\n"
+	"WONDER WHERE BAD FOLKS WILL GO WHEN THEY\n"
+	"DIE, NOW. WIPING THE SWEAT FROM YOUR\n"
+	"FOREHEAD YOU BEGIN THE LONG TREK BACK\n"
+	"HOME. REBUILDING EARTH OUGHT TO BE A\n"
+	"LOT MORE FUN THAN RUINING IT WAS.\n";
+C5TEXT =
+	"CONGRATULATIONS, YOU'VE FOUND THE SECRET\n"
+	"LEVEL! LOOKS LIKE IT'S BEEN BUILT BY\n"
+	"HUMANS, RATHER THAN DEMONS. YOU WONDER\n"
+	"WHO THE INMATES OF THIS CORNER OF HELL\n"
+	"WILL BE.";
+C6TEXT =
+	"CONGRATULATIONS, YOU'VE FOUND THE\n"
+	"SUPER SECRET LEVEL!  YOU'D BETTER\n"
+	"BLAZE THROUGH THIS ONE!\n";
