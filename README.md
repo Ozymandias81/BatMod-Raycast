@@ -19,7 +19,7 @@ MAIN TEAM:
 - DoomJuan: Mapper
 - Ivory Duke: ZMovement Codes;
 - Ijon: Source of inspiration;
-- Michaelis and DoomKrakken: help, support, and answers to my ZScript questions.
+- Michaelis and DoomKrakken: programming help & support
 --------------------------------------------------------------------------------
 
 ### EDITORS USED:
