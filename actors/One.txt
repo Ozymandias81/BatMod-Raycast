@@ -205,6 +205,7 @@ ACTOR BatFist : Weapon
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
+	AttackSound "*fist"
 	//Scale 3
 	+WEAPON.MELEEWEAPON
 	+NoAlert
@@ -225,14 +226,19 @@ ACTOR BatFist : Weapon
 	AltFire:
 		BKIK A 3 
 		BKIK B 3
-		BKIK C 3 A_CustomPunch(4 * random(1, 10), TRUE)
+		BKIK C 3 A_CustomPunch(4 * random(1, 10), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	Fire:
-		FIST B 4 A_Punch
+		FIST B 4 A_CustomPunch(4 * random(1, 10), FALSE, 0)
 		FIST A 3
-		FIST C 4 A_Punch
+		FIST C 4 A_CustomPunch(4 * random(1, 10), FALSE, 0)
 		FIST A 2 A_ReFire
+		Goto Uppercut
+	Uppercut:
+		FIST E 4 A_CustomPunch(6 * random(1, 10), FALSE, 0)
+		FIST F 3 A_CustomPunch(6 * random(1, 10), FALSE, 0)
+		FIST E 2 
 		Goto Ready
 	}
 }
@@ -406,6 +412,7 @@ ACTOR Bola : Weapon
 	Weapon.AmmoGive 20
 	Weapon.AmmoType "BolaAmmo"
 	Weapon.AmmoType2 "BolaAmmo"
+	AttackSound "*fist"
 	//Scale 3
 	+WEAPON.MELEEWEAPON
 	+WEAPON.NOAUTOAIM
@@ -501,6 +508,7 @@ ACTOR Baterang : Weapon
 	//Scale 3
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 20
+	AttackSound "*fist"
 	Weapon.AmmoUse2 1
 	Weapon.AmmoType "BaterangAmmo"
 	Weapon.AmmoType2 "BaterangAmmo"
@@ -544,6 +552,7 @@ ACTOR RemoteBaterang : Weapon
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
 	Weapon.AmmoUse 1
+	AttackSound "*fist"
 	Weapon.AmmoGive 10
 	Weapon.AmmoUse2 1
 	Weapon.AmmoType "RECBaterangAmmo"
@@ -587,6 +596,7 @@ ACTOR TriBaterang : Weapon
 	Weapon.slotNumber 3
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 0
+	AttackSound "*fist"
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
 	Weapon.AmmoUse2 3
@@ -818,6 +828,7 @@ ACTOR Tazer : DoomWeapon Replaces PlasmaRifle
 	Weapon.AmmoGive 10
 	Weapon.slotNumber 4
 	Weapon.AmmoType "Cell"
+	AttackSound "*fist"
 	Weapon.AmmoType2 "Cell"
 	Weapon.AmmoUse2 1
 	+WEAPON.NOAUTOAIM
@@ -882,6 +893,7 @@ ACTOR EMPGun : DoomWeapon
   Weapon.AmmoUse 40
   Weapon.AmmoGive 40
   Weapon.AmmoType2 "Cell"
+  AttackSound "*fist"
   Weapon.AmmoUse2 40
   Weapon.AmmoType "Cell"
   +WEAPON.NOAUTOFIRE
@@ -954,6 +966,7 @@ actor GasGun : Weapon
     weapon.bobrangey 0.7
     weapon.bobspeed 1.8
 	Weapon.BobStyle "Alpha"
+	AttackSound "*fist"
 	-WEAPON.DONTBOB
 	attacksound "weapon/pistol/attack"
 	Weapon.ammotype1 "GasGunAmmo"

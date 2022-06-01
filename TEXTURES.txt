@@ -24,7 +24,21 @@ Sprite "FISTC0", 192, 192
 	Offset -32, -42
 	Graphic "sprites/Weapons/FISTC0.png", 0, 0
 }
+Sprite "FISTD0", 192, 192
+{
+	XScale 0.400
+	YScale 0.400
+	Offset -32, -1
+	Graphic "sprites/Weapons/FISTD0.png", 0, 0
+}
 
+Sprite "FISTE0", 192, 192
+{
+	XScale 0.400
+	YScale 0.400
+	Offset -32, -5
+	Graphic "sprites/Weapons/FISTE0.png", 0, 0
+}
 Sprite "GRNFA0", 192, 192
 {
 	XScale 0.400
