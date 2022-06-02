@@ -966,9 +966,8 @@ actor GasGun : Weapon
     weapon.bobrangey 0.7
     weapon.bobspeed 1.8
 	Weapon.BobStyle "Alpha"
-	AttackSound "*fist"
 	-WEAPON.DONTBOB
-	attacksound "weapon/pistol/attack"
+	//attacksound "weapon/pistol/attack"
 	Weapon.ammotype1 "GasGunAmmo"
 	Weapon.ammotype2 "GasGunAmmo"
 	Weapon.ammouse1 1
@@ -977,6 +976,7 @@ actor GasGun : Weapon
 	//+WEAPON.NOGRIN
 	+WEAPON.NOAUTOFIRE
 	+WEAPON.NOAUTOAIM
+	 AttackSound "*fist"
 	
 	states
 	{
@@ -1382,7 +1382,7 @@ actor Theif
 	Missile:
 		THEF FG 4 A_FaceTarget
 		THEF H 0 A_PlaySound("Weapon/handgun")
-		THEF H 8 bright A_CPosAttack
+		THEF H 8 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		THEF FG 2 A_FaceTarget
 		goto See
 	Pain:
@@ -1514,10 +1514,10 @@ actor Thug
 	Missile:
 		THUG F 4 A_FaceTarget
 		THUG G 0 A_PlaySound("Weapon/handgun")
-		THUG G 6 bright A_CPosAttack
+		THUG G 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		THUG F 2 A_FaceTarget
 		THUG H 0 A_PlaySound("Weapon/handgun")
-		THUG H 6 bright A_CPosAttack
+		THUG H 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		THUG F 4 A_FaceTarget
 		goto See
 	Pain:
@@ -1598,10 +1598,10 @@ actor Thug2 : thug
 	Missile:
 		GOON F 4 A_FaceTarget
 		GOON G 0 A_PlaySound("Weapon/handgun")
-		GOON G 6 bright A_CPosAttack
+		GOON G 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		GOON F 2 A_FaceTarget
 		GOON H 0 A_PlaySound("Weapon/handgun")
-		GOON H 6 bright A_CPosAttack
+		GOON H 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		GOON F 4 A_FaceTarget
 		goto See
 	Pain:
@@ -1681,7 +1681,7 @@ actor RiddlerThug
 	Missile:
 		rhen FG 4 A_FaceTarget
 		rhen H  0 A_PlaySound("Weapon/handgun")
-		rhen H  6 bright A_CPosAttack
+		rhen H  6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		rhen FG 2 A_FaceTarget
 		goto See
 	Pain:
@@ -1761,7 +1761,7 @@ actor Prisoner replaces spectre
 	Missile:
 		pris FG 4 A_FaceTarget
 		pris H  0 A_PlaySound("Weapon/handgun")
-		pris H 8 bright A_CPosAttack
+		pris H 8 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		pris FG 4 A_CposRefire
 		goto See
 	Pain:
@@ -1995,7 +1995,7 @@ actor BodyGuard replaces chaingunguy
 	Missile:
 		gard FG 8 A_FaceTarget
 		gard H  0 A_PlaySound("Weapon/machinegun")
-		gard H  2 bright A_CPosAttack
+		gard H  2 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		gard G 1 A_CposRefire
 		goto Missile+1
 	Pain:
@@ -2076,7 +2076,7 @@ actor TwoFaceHenchmen replaces stealthchaingunguy
 	Missile:
 		then FG 8 A_FaceTarget
 		then H  0 A_PlaySound("Weapon/machinegun")
-		then H  4 bright A_CPosAttack
+		then H  4 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		then G 1 A_CposRefire
 		goto Missile+1
 	Pain:
@@ -2158,7 +2158,7 @@ actor Soilder replaces stealthzombieman
 	Missile:
 		sldr FG 4 A_FaceTarget
 		sldr H  0 A_PlaySound("Weapon/machinegun")
-		sldr H  3 bright A_CPosAttack
+		sldr H  3 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		sldr G 1 A_CposRefire
 		goto Missile+1
 	Pain:
@@ -2403,7 +2403,8 @@ actor JokerGoon //replaces wolfensteinss
 	Missile:
 		clwn LM 8 A_FaceTarget
 		clwn N  0 A_PlaySound("shotguy/attack")
-		clwn N  4 bright A_SPosAttack
+		clwn NNNN  0 bright A_CustomMissile("ShotgunParticles", 36, 0, random(-9, 9), 6, random(-9, 9))//A_SPosAttack
+		clwn N 4 A_CustomMissile("ShotgunguyTracer", 36, 0, random(-7, 7), 1, random(-4, 4))
 		clwn M 2 //A_CposRefire
 		goto See
 	Pain:
@@ -2530,7 +2531,7 @@ actor HatterGoon replaces stealthdoomimp
 	Missile:
 		madr LM 8 A_FaceTarget
 		madr N  0 A_PlaySound("Weapon/machinegun")
-		madr N  4 bright A_CPosAttack
+		madr N  4 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		madr M 1 A_CposRefire
 		goto Missile+1
 	Pain:
@@ -2610,7 +2611,7 @@ actor SladeGoon replaces marineChaingun
 	Missile:
 		assa LM 8 A_FaceTarget
 		assa N  0 A_PlaySound("Weapon/machinegun")
-		assa N  4 bright A_CPosAttack
+		assa N  4 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		assa M 1 A_CposRefire
 		goto Missile+1
 	Pain:
@@ -2690,7 +2691,7 @@ actor EvilDoctor replaces stealthShotgunguy
 	Missile:
 		doct FG 4 A_FaceTarget
 		doct H  0 A_PlaySound("Weapon/handgun")
-		doct H  8 bright A_CPosAttack
+		doct H  8 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		doct FG 2 A_FaceTarget
 		goto See
 	Pain:
@@ -3458,7 +3459,7 @@ Actor KillerMoth replaces BetaSkull
 	Missile:
 		MOTH E 10 A_FaceTarget
 		MOTH F  0 A_PlaySound("Weapon/chaingun")
-		MOTH FG  2 bright A_CPosAttack
+		MOTH FG  2 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		MOTH F 1 A_CposRefire
 		goto Missile+1
 	Pain:
@@ -3599,7 +3600,7 @@ Actor Calculator replaces MarineRailgun
 	Missile:
 		CALC E 10 A_FaceTarget
 		CALC F  0 A_PlaySound("Weapon/chaingun")
-		CALC FGH  2 bright A_CPosAttack
+		CALC FGH  2 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		CALC F 1 A_CposRefire
 		goto Missile+1
 	Pain:
@@ -3931,7 +3932,7 @@ Actor Penguin replaces MarineBFG
 	Missile:
 		PENG A 1 A_FaceTarget
 		PENG E  0 A_PlaySound("Weapon/chaingun")
-		PENG EF 2 bright A_CPosAttack
+		PENG EF 2 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		PENG E 1 A_CposRefire
 		goto Missile+1
 	Pain:
@@ -4370,7 +4371,7 @@ Actor DeathStroke replaces Cyberdemon
 	Missile:
 		DTRK E 10 A_FaceTarget
 		DTRK F  0 A_PlaySound("Weapon/chaingun")
-		DTRK FG  2 bright A_CPosAttack
+		DTRK FG  2 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		DTRK F 1 A_CposRefire
 		goto Missile+1
 	Pain:
