@@ -1,0 +1,1039 @@
+//Decorations here
+
+ACTOR DangerousBarrel replaces ExplosiveBarrel
+{
+  Health 20
+  Radius 20
+  Height 42
+  +SOLID
+  +SHOOTABLE
+  +NOBLOOD
+  +ACTIVATEMCROSS
+  +DONTGIB
+  +NOICEDEATH
+  +OLDRADIUSDMG
+  DeathSound "world/barrelx"
+  Obituary "$OB_BARREL" // "%o went boom."
+  States
+  {
+  Spawn:
+    BOOM A 6
+    Loop
+  Death:
+    BOOM B 5 Bright A_Scream
+    BOOM C 5 Bright A_Explode
+    BOOM D 5 Bright A_NoBlocking
+    BOOM E 5 Bright 
+    BOOM F -1 
+    Wait
+  }
+}
+ACTOR TrashCan replaces HangNoGuts
+{
+  Health 10
+  Radius 20
+  Height 42
+  +SOLID
+  +SHOOTABLE
+  +NOBLOOD
+  +ACTIVATEMCROSS
+  +DONTGIB
+  +NOICEDEATH
+  dropitem "baterang"
+  //+OLDRADIUSDMG
+  DeathSound "trashbreak"
+  Obituary "$OB_BARREL" // "%o went boom."
+  States
+  {
+  Spawn:
+    TBIN A 6
+    Loop
+  Death:
+    TBIN B 5 A_Scream
+    TBIN C 5 //A_Explode
+    TBIN D 5 A_NoBlocking
+    TBIN EF 5 
+    TBIN G -1 
+    Wait
+  }
+}
+actor Alarm  replaces HeartColumn
+{
+	//radius 32
+	//+SOLID
+	states
+	{
+		Spawn:
+			ALRM AB 7
+			loop
+	}
+}
+
+actor Fountain replaces TechPillar
+{
+	radius 32
+	+SOLID
+	states
+	{
+		Spawn:
+			FNTN AB 7
+			loop
+	}
+}
+actor PhoneBooth replaces TallRedColumn
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			CALA A -1
+			stop
+	}
+}
+
+
+actor PhoneBoothBroken replaces TallGreenColumn
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			CALB A -1
+			stop
+	}
+}
+
+
+actor Camera replaces Stalagtite
+{
+	radius 32
+	
+	states
+	{
+		Spawn:
+			CAM1 A -1
+			stop
+	}
+}
+
+
+actor ToySoilder replaces stalagmite
+{
+	radius 8
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			OLOV B -1
+			stop
+	}
+}
+
+actor SubwayColumn replaces ShortGreenColumn
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			COL1 A -1
+			stop
+	}
+}
+
+
+actor ComputerDesk replaces SmallBloodPool
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			COMP A -1
+			stop
+	}
+}
+
+
+actor StreetLightOn replaces Meat2
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			FONA A -1
+			stop
+	}
+}
+
+
+actor CaveColumn replaces Meat3
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			RCOL A -1
+			stop
+	}
+}
+
+
+actor WheelChair replaces Meat4
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			MADC A -1
+			stop
+	}
+}
+
+
+actor DeadEndSign replaces Meat5
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			DEND A -1
+			stop
+	}
+}
+
+
+actor McDesk replaces LiveStick
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			DESK A -1
+			stop
+	}
+}
+
+
+actor DrinkCooler replaces NonSolidMeat2
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			DRNK A -1
+			stop
+	}
+}
+
+actor StreetLightFallen replaces NonSolidMeat3
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			FONB A -1
+			stop
+	}
+}
+
+actor StreetLightBroken replaces NonSolidMeat4
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			FOND A -1
+			stop
+	}
+}
+
+actor StreetLightTotalLoss replaces NonSolidMeat5
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			FONG A -1
+			stop
+	}
+}
+
+actor StreetLight replaces NonSolidTwitch
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			FONR A -1
+			stop
+	}
+}
+
+actor TrafficLight replaces FloatingSkull
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			TRAF ABC 35
+			stop
+	}
+}
+
+actor GreenTreeFallen replaces GibbedMarine
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			FTRE A -1
+			stop
+	}
+}
+
+actor OneDirectionSign replaces GibbedMarineExtra
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			FWRD A -1
+			stop
+	}
+}
+
+actor GreenTrashBin replaces Gibs
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			GBIN A -1
+			stop
+	}
+}
+
+actor SewerLight replaces HeadOnAStick
+{
+	radius 32
+	//+SOLID
+	
+	states
+	{
+		Spawn:
+			SBUL A -1 bright 
+			stop
+	}
+}
+
+actor GrassTall replaces HeadsOnAStick
+{
+	radius 32
+	
+	states
+	{
+		Spawn:
+			GRAB A -1
+			stop
+	}
+}
+
+actor TrunkFallen replaces HangBNoBrain
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			GTRE A -1
+			stop
+	}
+}
+
+actor HydrantBroken replaces HangTLookingDown
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			HYDB A -1
+			stop
+	}
+}
+
+actor Hydrant replaces HangTLookingUp
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			HYDR A -1
+			stop
+	}
+}
+
+actor Manequinn replaces HangTNoBrain
+{
+	radius 32
+	
+	states
+	{
+		Spawn:
+			MANQ A -1
+			stop
+	}
+}
+
+actor McRegister replaces HangTSkull
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			MACD A -1
+			stop
+	}
+}
+
+
+actor McPriceList replaces ColonGibs
+{
+	radius 32
+	
+	states
+	{
+		Spawn:
+			MCMC A -1
+			stop
+	}
+}
+
+actor SewerColumnMossy replaces BrainStem
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			MCOL A -1
+			stop
+	}
+}
+
+actor CrossingSign replaces BloodyTwitch
+{
+	radius 32
+	
+	states
+	{
+		Spawn:
+			CROS A -1
+			stop
+	}
+}
+
+actor SurgeryTable replaces DeadStick
+{
+	radius 32
+	
+	states
+	{
+		Spawn:
+			SURG A -1
+			stop
+	}
+}
+
+actor GreenLamp replaces DeadZombieman
+{
+	radius 32
+	-solid
+	states
+	{
+		Spawn:
+			LAMG A -1
+			stop
+	}
+}
+
+actor SonderLampOn replaces DeadShotgunguy
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SLIT A -1
+			stop
+	}
+}
+
+actor OilBarrel replaces DeadMarine
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			OILB A -1
+			stop
+	}
+}
+
+actor Oven replaces DeadLostsoul
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			OVEN A -1
+			stop
+	}
+}
+
+actor Pebble1 replaces DeadDoomImp
+{
+	radius 32
+	//+SOLID
+	
+	states
+	{
+		Spawn:
+			PEB2 A -1
+			stop
+	}
+}
+
+actor BigBomb replaces DeadDemon
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			BOMB A -1
+			stop
+	}
+}
+
+actor ToiletDirty replaces DeadCacodemon
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			PISS A -1
+			stop
+	}
+}
+
+actor PlantBig replaces EvilEye
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			PLNT A -1
+			stop
+	}
+}
+
+actor PoolTable replaces RedTorch
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			POOL A -1
+			stop
+	}
+}
+
+actor PotTall replaces GreenTorch
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			POT1 A -1
+			stop
+	}
+}
+
+actor PotGrey replaces BlueTorch
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			POT2 A -1
+			stop
+	}
+}
+
+actor PotDry replaces ShortRedTorch
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			POT3 A -1
+			stop
+	}
+}
+
+actor CorpseSkel replaces ShortGreenTorch
+{
+	radius 32
+	//+SOLID
+	
+	states
+	{
+		Spawn:
+			POT4 A -1
+			stop
+	}
+}
+
+actor McTrays replaces ShortBlueTorch
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			PUSH A -1
+			stop
+	}
+}
+
+actor DeadCop replaces MegaSphere
+{
+	
+	radius 32
+	states
+	{
+		Spawn:
+			COPP D -1
+			stop
+	}
+}
+
+actor FireBigDroppedPermanent replaces ShortRedColumn
+{
+radius 32
+damage 0
+Height 8
+projectile
+-nogravity
+speed 8
+//
+	states
+	{
+		Spawn:
+			FFLK ABC 1
+			loop
+		Death:
+			FIRB A 7 BRIGHT A_PlaySound("fire/flameloop")
+			FIRB BCABCABCABCABCABCABCABCABC 7 BRIGHT A_Explode(2,32,0,0,0,0,0,"BulletPuff","FireDamage") //requires fitting new puff
+			FIRB A 1 BRIGHT A_SpawnItem("FireSmallDropped",0,3)
+			loop
+	}
+}
+
+actor StreetLightTallOff replaces HangingCorpse
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			RLIT A -1
+			stop
+	}
+}
+
+actor SmallBin 
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SBIN A -1
+			stop
+	}
+}
+
+actor SewerColumn
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SCOL A -1
+			stop
+	}
+}
+
+actor Scrap
+{
+	radius 32
+	
+	states
+	{
+		Spawn:
+			SCRP A -1
+			stop
+	}
+}
+
+actor WoodenCloset replaces candleStick
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SHKF A -1
+			stop
+	}
+}
+
+actor Shelves replaces SkullColumn
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SHLV A -1
+			stop
+	}
+}
+
+actor SinkNew replaces column
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SINK A -1
+			stop
+	}
+}
+
+actor ChairOffice replaces techLamp
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SITT A -1
+			stop
+	}
+}
+
+actor SnookerTable
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SNOO A -1
+			stop
+	}
+}
+
+actor Sofa replaces techLamp2
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SOFA A -1
+			stop
+	}
+}
+
+actor SewerCeilingPipe
+{
+	radius 32
+	
+	states
+	{
+		Spawn:
+			SPIP A -1
+			stop
+	}
+}
+
+actor BatSuit
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SUIT A -1
+			stop
+	}
+}
+
+actor Table replaces torchTree
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			TABL A -1
+			stop
+	}
+}
+
+actor TeaTable replaces bigTree
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			TEAT A -1
+			stop
+	}
+}
+
+actor TinBarrel
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			TINB A -1
+			stop
+	}
+}
+
+actor Register2 replaces HeadCandles
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			MACD B -1
+			stop
+	}
+}
+
+actor TVset replaces Candelabra
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			TVBX A -1
+			stop
+	}
+}
+
+actor WashingMachine replaces burningBarrel
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			WASH A -1
+			stop
+	}
+}
+actor Tree1 replaces MarineFist
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			TREE A -1
+			stop
+	}
+}
+actor Tree2 replaces MarineBerserk
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			TREE B -1
+			stop
+	}
+}
+actor Scarface replaces MarineChainsaw
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			SFAC A -1
+			stop
+	}
+}
+
+actor Nora replaces MarineShotgun
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			NORA A -1
+			stop
+	}
+}
+
+actor Chamber replaces MarineSSG
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			CHAM A -1
+			stop
+	}
+}
+actor BenchSpawner : RandomSpawner replaces MarinePistol
+{
+	DropItem "Bench"
+	DropItem "HoboBench"
+	states
+	{
+		Spawn:
+			HOBB A 0
+			stop
+	}
+}
+actor Bench 
+{
+	radius 32
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			BNCH A -1
+			stop
+	}
+}
+actor HoboBench 
+{
+	radius 32
+	+SOLID
+	+Ambush
+	
+	states
+	{
+		Spawn:
+			HOBB A 3 A_Look
+			loop
+		See:
+			HOBB BC 15
+			HOBB D 1 A_CustomMissile("Hobo")
+			HOBB D -1
+			Stop
+	}
+}
