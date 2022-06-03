@@ -84,6 +84,10 @@ rdlr/die			rdlrdie
 rdlr/see			rdlrsee
 frcf/de				frcfde
 frcf/ac				frcfac
+rico1				RICOCHE1	
+rico3				RICOCHE3	
+rico4				RICOCHE4			
+$random rico				{ rico1  rico3  rico4}	
 
 //OTHERS//
 Slide		"Slide.ogg"
