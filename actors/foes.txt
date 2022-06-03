@@ -2809,7 +2809,7 @@ Actor Clayface //replaces BossEye
 	Monster
 	Mass 100
 	Speed 8
-	painchance 120
+	painchance 35
 	+NoBlood
 	DamageFactor "Smoke", 1.8  //it's super effective! 
 	Health 800
