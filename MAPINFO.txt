@@ -146,3 +146,99 @@ skill nightmare
 	MustConfirm
 	Key = "n"
 }
+Intermission Inter_Cast
+{
+	Image
+	{
+		// This is only here to initialize the background and the music
+		Background = "CREDIT"
+		Time = -1
+		//Music = "BOSSSONG"
+	}
+	Link = Doom2Cast
+}
+
+Intermission Doom2Cast
+{
+	
+	Cast
+	{
+		CastClass = "Theif"
+		CastName = "Theif"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "Thug"
+		CastName = "Thug"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+		AttackSound = "Missile", 2, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "Hobo"
+		CastName = "Mugger"
+		//AttackSound = "Missile", 1, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "BodyGuard"
+		CastName = "Body Guard"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "TwoFaceHenchmen"
+		CastName = "TwoFace Henchman"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "Convict"
+		CastName = "Knife Prisoner"
+		//AttackSound = "Missile", 1, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "Prisoner"
+		CastName = "Pistol Prisoner"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "RiddlerThug"
+		CastName = "Riddler Henchman"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+	}//
+	Cast
+	{
+		CastClass = "Soilder"
+		CastName = "Militia"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "JokerGoon"
+		CastName = "Joker Goon"
+		AttackSound = "Missile", 1, "shotguy/attack"
+	}
+	Cast
+	{
+		CastClass = "HatterGoon"
+		CastName = "Mad Hatter Henchman"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "EvilDoctor"
+		CastName = "Mad Doctor"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "SladeGoon"
+		CastName = "Deathstroke Henchman"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Link = Inter_Titlescreen//Inter_Bunny
+}
