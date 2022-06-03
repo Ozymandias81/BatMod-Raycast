@@ -1,8 +1,9 @@
-
+//PLAYERS//
 $playersound	Player	male	*jump	"DSKJump.ogg"
 $playersound	Player	male	*land	"Land.ogg"
 $playersound	Player	male	*grunt	"Land.ogg"
 
+//FOES//
 $random thug/death		{ thug/death1  thug/death2  thug/death3  thug/death4  thug/death5  thug/death6}
 thug/death1			DEATHSC1
 thug/death2			DEATHSC2
@@ -84,6 +85,7 @@ rdlr/see			rdlrsee
 frcf/de				frcfde
 frcf/ac				frcfac
 
+//OTHERS//
 Slide		"Slide.ogg"
 WallSlide	"WallSlide.ogg"
 Climb		"Climb.ogg"
@@ -123,3 +125,11 @@ BIKESK BIKESK
 BIKESK2 BIKESK2
 BIKECLW BIKECLW
 EBIKECLS EBIKECLS
+
+//Debris - From FreeSFX.co.uk
+MTDBRS1 MTDBRS1
+MTDBRS2 MTDBRS2
+MTDBRS3 MTDBRS3
+MTDBRS4 MTDBRS4
+$random METLDBRS	{ MTDBRS1 MTDBRS2 MTDBRS3 MTDBRS4 }
+$limit	METLDBRS 1
