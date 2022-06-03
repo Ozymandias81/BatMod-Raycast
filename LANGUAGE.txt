@@ -17,22 +17,22 @@ SECRETTOTAL = "Riddles";
 TREASURETOTAL = "Hostages";
 
 // Quit Doom 1 messages
-QUITMSG1 = "What's the matter Batman?\nScared?";
-QUITMSG2 = "Where are you Batman?\nAfraid to show your face?";
+QUITMSG1 = "What's the matter Batman?\n Scared?";
+QUITMSG2 = "Where are you Batman?\n Afraid to show your face?";
 QUITMSG3 = "Come out you coward!";
 QUITMSG4 = "Thomas and Martha Wayne would be dissapointed in you.";
 QUITMSG5 = "Batman, don't leave those civilians to die!";
 QUITMSG6 = "Run, hide, I'll find you, and beat the living crap outta ya.";
-QUITMSG7 = "It's ok to give up. \nI'm sure the hostages won't mind";
+QUITMSG7 = "It's ok to give up. \n I'm sure the hostages won't mind";
 
 // Quit Doom II messages
-QUITMSG8 = "So you admit that I, the Riddler, /nam better than you?";
+QUITMSG8 = "So you admit that I, the Riddler, /n am better than you?";
 QUITMSG9 = "Chicken man, or Batman!";
 QUITMSG10 = "Don't go all this way to give up now master bruce.";
 QUITMSG11 = "I'll be waiting here for you bats!";
 QUITMSG12 = "You know, I thought you'd last longer.";
 QUITMSG13 = "Who's going to take care of the city now? /n Robin?";
-QUITMSG14 = "As the symbol of hope fades, /nso too will law and order.";
+QUITMSG14 = "As the symbol of hope fades, /n so too will law and order.";
 
 C1TEXT =
 	"Hearing about the break in at the docs,\n"
@@ -72,31 +72,35 @@ C2TEXT =
 	"Jervis's goons obtain so much fire power and support? \n"
 	"You'll have to dwell on it later. Time for justice. ";
 C3TEXT =
-	"YOU ARE AT THE CORRUPT HEART OF THE CITY,\n"
-	"SURROUNDED BY THE CORPSES OF YOUR ENEMIES.\n"
-	"YOU SEE NO WAY TO DESTROY THE CREATURES'\n"
-	"ENTRYWAY ON THIS SIDE, SO YOU CLENCH YOUR\n"
-	"TEETH AND PLUNGE THROUGH IT.\n"
+	"So that's how they got all the weapons.\n"
+	"They were being supported by Ra's Al Ghoul!\n"
+	"Suddenly Ra's Al Ghoul rises to his feet.\n"
+	" \"Batman, do you really think that this was\n"
+	"all I had in mind?\" Suddenly he disappears\n"
+	"in a cloud of smoke. \n"
 	"\n"
-	"THERE MUST BE A WAY TO CLOSE IT ON THE\n"
-	"OTHER SIDE. WHAT DO YOU CARE IF YOU'VE\n"
-	"GOT TO GO THROUGH HELL TO GET TO IT?";
+	"The smoke seems to mess with your head, and\n"
+	"you start to lose focus. However, you push \n"
+	"through. Mad hatter is in the nearbye stock \n"
+	"exchange, their's no time to waste!";
 C4TEXT =
-	"THE HORRENDOUS VISAGE OF THE BIGGEST\n"
-	"DEMON YOU'VE EVER SEEN CRUMBLES BEFORE\n"
-	"YOU, AFTER YOU PUMP YOUR ROCKETS INTO\n"
-	"HIS EXPOSED BRAIN. THE MONSTER SHRIVELS\n"
-	"UP AND DIES, ITS THRASHING LIMBS\n"
-	"DEVASTATING UNTOLD MILES OF HELL'S\n"
-	"SURFACE.\n"
+	"Jervis's twisted illusions are some\n"
+	"of the worst you have experienced, and\n"
+	"now you know why. His partnering with \n"
+	"scarecrow had nearly made your mind \n"
+	"crumble, but you are not new to their\n"
+	"deadly tricks. Mad Hatter reveals that\n"
+	"it had been a ruse to distract you from\n"
+	"the bigger picture.\n"
 	"\n"
-	"YOU'VE DONE IT. THE INVASION IS OVER.\n"
-	"EARTH IS SAVED. HELL IS A WRECK. YOU\n"
-	"WONDER WHERE BAD FOLKS WILL GO WHEN THEY\n"
-	"DIE, NOW. WIPING THE SWEAT FROM YOUR\n"
-	"FOREHEAD YOU BEGIN THE LONG TREK BACK\n"
-	"HOME. REBUILDING EARTH OUGHT TO BE A\n"
-	"LOT MORE FUN THAN RUINING IT WAS.\n";
+	"The other criminals have taken over the\n"
+	"rest of the city, no doubt from the help\n"
+	"of Ra's Al Ghoul, but that's not all. Bane\n"
+	"has set up secret camps for his soilders \n"
+	"through out the city, no doubt wanting a\n"
+	"repeat of the No Man's Land situation\n"
+	"in case all else fails. It's going to be\n"
+	"one hell of a night.\n";
 C5TEXT =
 	"CONGRATULATIONS, YOU'VE FOUND THE SECRET\n"
 	"LEVEL! LOOKS LIKE IT'S BEEN BUILT BY\n"
