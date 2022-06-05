@@ -383,16 +383,16 @@ actor GrassTall replaces HeadsOnAStick
 	}
 }
 
-actor TrunkFallen replaces HangBNoBrain
+actor GreenTube replaces HangBNoBrain
 {
-	radius 32
+	radius 8
 	+SOLID
 	
 	states
 	{
 		Spawn:
-			GTRE A -1
-			stop
+			tube ABC 6 bright
+			loop
 	}
 }
 

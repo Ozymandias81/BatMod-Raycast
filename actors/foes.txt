@@ -686,6 +686,84 @@ actor Hobo replaces MBFHelperDog
 		Stop
 	}
 }
+actor Ninja 6745
+{
+	health 80
+	Radius 20
+	Height 56
+	Speed 10
+	PainChance 75
+	dropItem "baterang"
+	Monster
+	//Scale 1.2
+	+NoBlood
+	+FLOORCLIP
+	+NOTARGET
+	//+MissileMore
+	+AVOIDMELEE
+	//Species "" set this for certain types of henchmen
+	//SeeSound "thug/sight"
+	ActiveSound "wolfguard/active"
+	PainSound "wolfguard/pain"
+	DeathSound "thug/death"
+	Obituary "%o was killed by a hobo."
+	DamageFactor "Bullet", 0 
+	states
+	{
+	Spawn:
+		NINJ A 10 A_Look
+		loop
+	See:
+		NINJ AAAAABBBBBBCCCCCDDDDDD 1 A_Chase
+		loop
+	Melee:
+		NINJ N 4 A_FaceTarget
+		NINJ O 4 A_SargAttack
+		NINJ P 4 A_FaceTarget
+		goto See
+	Missile:
+		NINJ U 8
+		NINJ T 0 A_Recoil(-12)
+		NINJ T 10 ThrustThingZ(0,90,0,0)
+		NINJ S 10
+		NINJ S 11
+		NINJ S 1 A_JumpIf(z-floorz <= 1,"See")
+		Goto Missile+5
+	Pain:
+		NINJ E 2 A_Pain
+		goto See
+	Death:
+		NINJ V 5
+		NINJ W 5 A_ScreamAndUnblock
+		NINJ X 2
+		NINJ Y -1
+		stop
+/*	Death.Electricity:
+		HOBO STSTSTSTST 3 BRIGHT A_PlaySound("Weapon/tazer")
+		HOBO E 5
+		HOBO F 5 A_ScreamAndUnblock
+		HOBO GH 2
+		HOBO I -1
+		stop
+		*/
+	Death.Firey:
+		BURN A 3 Bright A_PlaySoundEx("human/imonfire", "Voice")
+		BURN B 3 Bright A_DropFire
+		BURN C 3 Bright A_Wander
+		BURN D 3 Bright A_NoBlocking
+		BURN E 5 Bright A_DropFire
+		BURN FGH 5 Bright A_Wander
+		BURN I 5 Bright A_DropFire
+		BURN JKL 5 Bright A_Wander
+		BURN M 5 Bright A_DropFire
+		BURN NOPQPQ 5 Bright
+		BURN RSTU 7 Bright
+		BURN V -1
+		Stop
+	}
+}
+//
+
 actor BodyGuard replaces chaingunguy
 {
 	health 50
