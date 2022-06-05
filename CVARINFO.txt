@@ -1,3 +1,5 @@
+server int bat_lod = 2048;
+
 //===============================================
 //General
 server	int		zm_movetype				= 2;

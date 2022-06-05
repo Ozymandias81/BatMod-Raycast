@@ -4,6 +4,7 @@ actor 60sCarRed 10600
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "60's car - Red"
+	DistanceCheck "bat_lod"
 	
 	Radius 32
 	Height 39
@@ -46,7 +47,7 @@ actor 60sCarGreen : 60sCarRed 10602
 
 actor 60sCarOrange : 60sCarRed 10603
 {
-	//$Title "60's car - Orange"
+	//$Title "60's car - Two-Face"
 
 	States
 	{
@@ -215,6 +216,7 @@ actor ModernCarRed 10616
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Modern car - Red"
+	DistanceCheck "bat_lod"
 
 	Radius 28
 	Height 40
@@ -525,6 +527,7 @@ actor HatchBackRed 10641
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Hatchback - Red"
+	DistanceCheck "bat_lod"
 
 	Radius 26
 	Height 40
@@ -641,6 +644,7 @@ actor VanRed 10650
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Van - Red"
+	DistanceCheck "bat_lod"
 
 	Radius 32
 	Height 56
@@ -719,7 +723,7 @@ actor VanDirtyGreen : VanRed 10655
 
 actor VanOrange : VanRed 10656
 {
-	//$Title "Van - Orange"
+	//$Title "Van - Two-Face"
 
 	States
 	{
@@ -781,6 +785,7 @@ actor PickupRed 10661
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Pickup - Red"
+	DistanceCheck "bat_lod"
 
 	Radius 32
 	Height 48
@@ -909,6 +914,7 @@ actor PlaneRed 10671
 {
 	//$Category Voxel Vehicles Pack - Aircraft
 	//$Title "Plane - Red"
+	DistanceCheck "bat_lod"
 
 	Radius 26
 	Height 58
@@ -1013,6 +1019,7 @@ actor HelicopterRed 10679
 {
 	//$Category Voxel Vehicles Pack - Aircraft
 	//$Title "Helicopter - Red"
+	DistanceCheck "bat_lod"
 
 	Radius 22
 	Height 80
@@ -1117,6 +1124,7 @@ actor ArmoredUACtruckGreen 10687
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Armored UAC truck - Green"
+	DistanceCheck "bat_lod"
 
 	Radius 36
 	Height 64
@@ -1149,6 +1157,7 @@ actor VTOLgreen 10689
 {
 	//$Category Voxel Vehicles Pack - Aircraft
 	//$Title "VTOL - Green"
+	DistanceCheck "bat_lod"
 
 	Radius 32
 	Height 68
@@ -1181,6 +1190,7 @@ actor TankGreen 10691
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Tank - Green"
+	DistanceCheck "bat_lod"
 
 	Radius 40
 	Height 64
@@ -1225,6 +1235,7 @@ actor ForkliftOrange 10694
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Forklift - Orange"
+	DistanceCheck "bat_lod"
 
 	Radius 20
 	Height 64
@@ -1245,6 +1256,7 @@ actor BulldozerOrange 10695
 {
 	//$Category Voxel Vehicles Pack - Heavy equipment
 	//$Title "Bulldozer - Orange"
+	DistanceCheck "bat_lod"
 
 	Radius 28
 	Height 97
@@ -1409,6 +1421,7 @@ actor ExcavatorOrange 10708
 {
 	//$Category Voxel Vehicles Pack - Heavy equipment
 	//$Title "Excavator - Orange"
+	DistanceCheck "bat_lod"
 
 	Radius 36
 	Height 86
@@ -1513,6 +1526,7 @@ actor TractorRed 10716
 {
 	//$Category Voxel Vehicles Pack - Heavy equipment
 	//$Title "Tractor - Red"
+	DistanceCheck "bat_lod"
 
 	Radius 32
 	Height 88
@@ -1665,6 +1679,7 @@ actor AmbulanceOff 10728
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Ambulance - Off"
+	DistanceCheck "bat_lod"
 
 	Radius 32
 	Height 67
@@ -1697,6 +1712,7 @@ actor SemiRed 10730
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Semi truck - Red"
+	DistanceCheck "bat_lod"
 	
 	Radius 40
 	Height 96
@@ -1813,6 +1829,7 @@ actor SportsCarRed 10739
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Sports car - Red"
+	DistanceCheck "bat_lod"
 	
 	Radius 28
 	Height 32
@@ -1941,6 +1958,7 @@ actor LimousineDarkBlue 10749
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Limousine - Dark blue"
+	DistanceCheck "bat_lod"
 	
 	Radius 28
 	Height 40
@@ -1997,6 +2015,7 @@ actor SuvRed 10753
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "SUV - Red"
+	DistanceCheck "bat_lod"
 	
 	Radius 30
 	Height 56
@@ -2113,6 +2132,7 @@ actor SnowmobileRed 10762
 {
 	//$Category Voxel Vehicles Pack - Snow
 	//$Title "Snowmobile - Red"
+	DistanceCheck "bat_lod"
 	
 	Radius 12
 	Height 26
@@ -2229,6 +2249,7 @@ actor SnowcatRed 10771
 {
 	//$Category Voxel Vehicles Pack - Snow
 	//$Title "Snowcat - Red"
+	DistanceCheck "bat_lod"
 	
 	Radius 28
 	Height 65
@@ -2345,6 +2366,7 @@ actor HovercraftRed 10780
 {
 	//$Category Voxel Vehicles Pack - Watercraft
 	//$Title "Hovercraft - Red"
+	DistanceCheck "bat_lod"
 	
 	Radius 32
 	Height 64
@@ -2413,6 +2435,7 @@ actor MotorBoatRed 10785
 {
 	//$Category Voxel Vehicles Pack - Watercraft
 	//$Title "Motor boat - Red"
+	DistanceCheck "bat_lod"
 	
 	Radius 32
 	Height 28
@@ -2493,6 +2516,7 @@ actor FireTruckOff 10791
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Fire truck - Off"
+	DistanceCheck "bat_lod"
 
 	Radius 40
 	Height 96
@@ -2525,6 +2549,7 @@ actor FlyingCarRed 10793
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Flying car - Red"
+	DistanceCheck "bat_lod"
 
 	Radius 32
 	Height 32
@@ -2562,18 +2587,6 @@ actor FlyingCarBlue : FlyingCarRed 10795
 	{
 	Spawn:
 		BFLY A -1
-		Stop
-	}
-}
-
-actor FlyingCarDarkBlue : FlyingCarRed 10796
-{
-	//$Title "Flying car - Dark blue"
-
-	States
-	{
-	Spawn:
-		DBFL A -1
 		Stop
 	}
 }
@@ -2642,6 +2655,7 @@ actor FlyingCopOff 10802
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Flying cop - Off"
+	DistanceCheck "bat_lod"
 
 	Radius 32
 	Height 32
@@ -2670,6 +2684,20 @@ actor FlyingCopOn : FlyingCopOff 10803
 		Loop
 	}
 }
+
+actor FlyingBatmobile : FlyingCarRed 10796
+{
+	//$Category BatMod/Vehicles
+	//$Title "Flying Batmobile"
+
+	States
+	{
+	Spawn:
+		DBFL A -1
+		Stop
+	}
+}
+
 /*actor BatmobileBack : 60sCarRed 10804
 {
 	
@@ -2693,4 +2721,3 @@ actor BatmobileFront : 60sCarRed 10805
 	}
 }
 */
-
