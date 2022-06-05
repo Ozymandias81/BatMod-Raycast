@@ -700,13 +700,13 @@ actor Ninja 6745
 	+FLOORCLIP
 	+NOTARGET
 	//+MissileMore
-	+AVOIDMELEE
+	//+AVOIDMELEE
 	//Species "" set this for certain types of henchmen
 	//SeeSound "thug/sight"
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
 	DeathSound "thug/death"
-	Obituary "%o was killed by a hobo."
+	Obituary "%o was sliced by a ninja."
 	DamageFactor "Bullet", 0 
 	states
 	{
@@ -714,7 +714,7 @@ actor Ninja 6745
 		NINJ A 10 A_Look
 		loop
 	See:
-		NINJ AAAAABBBBBBCCCCCDDDDDD 1 A_Chase
+		NINJ AAABBBCCCDDD 1 A_Chase
 		loop
 	Melee:
 		NINJ N 4 A_FaceTarget
@@ -722,13 +722,19 @@ actor Ninja 6745
 		NINJ P 4 A_FaceTarget
 		goto See
 	Missile:
+		NINJ U 2 A_Jump(96, "Jump")
+		NINJ N 4 A_FaceTarget
+		NINJ O 4 A_SkullAttack
+		NINJ P 4 A_FaceTarget
+		goto See
+	Jump:
 		NINJ U 8
 		NINJ T 0 A_Recoil(-12)
 		NINJ T 10 ThrustThingZ(0,90,0,0)
-		NINJ S 10
-		NINJ S 11
+		NINJ S 3
+		NINJ S 3
 		NINJ S 1 A_JumpIf(z-floorz <= 1,"See")
-		Goto Missile+5
+		Goto Jump+5
 	Pain:
 		NINJ E 2 A_Pain
 		goto See

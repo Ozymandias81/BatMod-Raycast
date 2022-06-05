@@ -388,6 +388,7 @@ actor GreenTube replaces HangBNoBrain
 	radius 8
 	+SOLID
 	
+	HEIGHT 64
 	states
 	{
 		Spawn:
