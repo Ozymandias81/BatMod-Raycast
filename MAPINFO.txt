@@ -72,6 +72,7 @@ map CITYMAP "Restore order in West Gotham"
 	MUSIC = "B2DANGER"
 	Lightning
 	Next = "MAP06"
+	SecretNext = "MAP08"
 	cluster = 9
 }
 map MAP06 "Track down The Joker"
@@ -88,6 +89,13 @@ map MAP07 "Apprehend the Joker"//will change this map number since it is the las
 	MUSIC = "CATHEDRL"
 	Lightning
 	cluster = 10
+}
+map MAP08 "Sanctuary"
+{
+	sky1 = "DOCKSCAP"
+	MUSIC = "SKYGOTHM"
+	Next = "MAP06"
+	cluster = 6
 }
 //CATHEDRL.ogg
 //UNDRGNES.ogg

@@ -2553,7 +2553,7 @@ actor Bane replaces BaronOfHell
 	+NOTARGET
 	+NORADIUSDMG
 	//+MissileMore
-	 +AVOIDMELEE
+	 //+AVOIDMELEE
 	//Species "" set this for certain types of henchmen
 	//SeeSound "thug/sight"
 	Species "BaneGang"
@@ -2591,8 +2591,9 @@ actor Bane replaces BaronOfHell
 
 actor MrFreeze replaces fatso
 {
-	health 1000
-	+NoBlood
+	health 1200
+	BloodColor "LightBlue"//because coolant
+	//+NoBlood
 	//gibhealth 150
 	speed 14
 	+BOSS
