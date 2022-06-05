@@ -779,6 +779,7 @@ actor TwoFaceHenchmen replaces stealthchaingunguy
 	+NoBlood
 	+FLOORCLIP
 	+NOTARGET
+	+NoInfighting
 	+MissileMore
 	//+Frightened
 	Species "TwoFaceGang" //set this for certain types of henchmen
@@ -2306,7 +2307,7 @@ Actor Calculator replaces MarineRailgun
 	Mass 100
 	Speed 6
 	painchance 140
-	Health 500
+	Health 365
 	+NoBlood
 	//SeeSound "bmak/see"
 	AttackSound "weapon/shotgun"
@@ -2321,7 +2322,7 @@ Actor Calculator replaces MarineRailgun
 		CALC AABBCCDD 3 A_Chase
 		Loop
 	Missile:
-		CALC E 10 A_FaceTarget
+		CALC E 12 A_FaceTarget
 		CALC F  0 A_PlaySound("Weapon/chaingun")
 		CALC FGH  2 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		CALC F 1 A_CposRefire
@@ -2550,8 +2551,9 @@ actor Bane replaces BaronOfHell
 	+LOOKALLAROUND
 	+FLOORCLIP
 	+NOTARGET
+	+NORADIUSDMG
 	//+MissileMore
-	  //+AVOIDMELEE
+	 +AVOIDMELEE
 	//Species "" set this for certain types of henchmen
 	//SeeSound "thug/sight"
 	Species "BaneGang"
@@ -2589,7 +2591,7 @@ actor Bane replaces BaronOfHell
 
 actor MrFreeze replaces fatso
 {
-	health 1200
+	health 1000
 	+NoBlood
 	//gibhealth 150
 	speed 14
@@ -2638,7 +2640,7 @@ Actor Penguin replaces MarineBFG
 	Mass 50
 	Speed 6
 	painchance 140
-	Health 900
+	Health 700
 	+NoBlood
 	//SeeSound "bmak/see"
 	AttackSound "weapon/shotgun"
@@ -2674,7 +2676,7 @@ Actor Scarecrow replaces StealthArachnotron
 {
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	+NORADIUSDMG//BLOCKS SMOKE
 	Radius 20
 	Height 56
 	Monster
