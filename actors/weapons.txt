@@ -620,9 +620,9 @@ ACTOR shockBaterangProjectile
 		Stop
 	}
 }
-ACTOR Tazer : DoomWeapon Replaces PlasmaRifle
+ACTOR Tazer : Weapon Replaces PlasmaRifle
 {
-	Weapon.SelectionOrder 100
+	//Weapon.SelectionOrder 100
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 10
 	Weapon.slotNumber 4
