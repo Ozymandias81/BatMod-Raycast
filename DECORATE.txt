@@ -1,6 +1,6 @@
 #include "actors/base.txt"
 #include "actors/debris.txt"
-#include "actors/bike.txt"
+#include "actors/batcar.txt"
 #include "actors/weapons.txt"
 #include "actors/missiles.txt"
 #include "actors/foes.txt"

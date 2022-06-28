@@ -3,13 +3,6 @@
 
 int isBiker = 0;
 
-script "Maplaunch" ENTER
-{
-	If((GetLevelInfo(LEVELINFO_LEVELNUM)==99)) //prevent fading from following maps
-		terminate;
-	FadeRange(0,0,0,1.0,0,0,0,0.0,1.5);
-}
-
 //FORWARD
 script 421 ENTER
 {

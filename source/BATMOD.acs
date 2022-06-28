@@ -1,7 +1,14 @@
 #library "BATMOD"
 #include "zcommon.acs"
 
-Script 34 (void)
+script "Maplaunch" ENTER
+{
+	If((GetLevelInfo(LEVELINFO_LEVELNUM)==99)) //prevent fading from following maps defined on MAPINFO
+		terminate;
+	FadeRange(0,0,0,1.0,0,0,0,0.0,1.5);
+}
+
+Script 34 (void) //replace it with a namedscript for a better style - ozy81
 {
 	SetPlayerProperty(0,1,7);
 	SetPlayerProperty(0,1,1);
