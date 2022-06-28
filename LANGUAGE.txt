@@ -76,7 +76,7 @@ C3TEXT =
 	"They were being supported by Ra's Al Ghoul!\n"
 	"Suddenly Ra's Al Ghoul rises to his feet.\n"
 	" \"Batman, do you really think that this was\n"
-	"all I had in mind?\" Suddenly he disappears\n"
+	"all I had planned?\" Suddenly he disappears\n"
 	"in a cloud of smoke. \n"
 	"\n"
 	"The smoke seems to mess with your head, and\n"

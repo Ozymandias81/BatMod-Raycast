@@ -88,14 +88,14 @@ map MAP07 "Apprehend the Joker"//will change this map number since it is the las
 	sky1 = "CITYSCAP"
 	MUSIC = "CATHEDRL"
 	Lightning
-	cluster = 10
+	cluster = 9
 }
 map MAP08 "Sanctuary"
 {
 	sky1 = "DOCKSCAP"
 	MUSIC = "SKYGOTHM"
 	Next = "MAP06"
-	cluster = 6
+	cluster = 10
 }
 //CATHEDRL.ogg
 //UNDRGNES.ogg
@@ -248,5 +248,5 @@ Intermission Doom2Cast
 		CastName = "Deathstroke Henchman"
 		AttackSound = "Missile", 1, "Weapon/machinegun"
 	}
-	Link = Inter_Titlescreen//Inter_Bunny
+	Link = Inter_Bunny//Inter_Titlescreen
 }
