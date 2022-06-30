@@ -14,7 +14,7 @@ Actor RainSpawner  15555//DoomEdNum on this
     TNT1 A 0
     TNT1 A 0 A_JumpIf(Args[2] > 0, "NoSound")
     TNT1 A 0 A_JumpIf(Args[3] > 0, "Circle")
-    TNT1 A 0 A_PlaySoundEx("Ambient/Rain", "SoundSlot7", 1)
+    TNT1 A 0 A_PlaySound("Ambient/Rain", "SoundSlot7", 0.1)
     TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), Random(-Args[0], Args[0]), -2, 0, 0, 0, 0, 128, Args[1])
     Loop
   Circle:

@@ -1,6 +1,6 @@
 ACTOR BatFist : Weapon
 {
-	Weapon.SelectionOrder 3700
+	Weapon.SelectionOrder 8
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
@@ -202,7 +202,7 @@ actor BolaAmmo : Ammo
 
 ACTOR Bola : Weapon
 {
-	Weapon.SelectionOrder 4000
+	Weapon.SelectionOrder 18
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
@@ -300,7 +300,7 @@ actor RECBaterangAmmo : Ammo
 }
 ACTOR Baterang : Weapon
 {
-	Weapon.SelectionOrder 3700
+	Weapon.SelectionOrder 10
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
@@ -390,11 +390,11 @@ ACTOR RemoteBaterang : Weapon
 }
 ACTOR TriBaterang : Weapon
 {
-	Weapon.SelectionOrder 2
+	Weapon.SelectionOrder 4000
 	Weapon.Kickback 100
 	Weapon.slotNumber 3
 	Weapon.AmmoUse 1
-	+WEAPON.NO_AUTO_SWITCH
+	//+WEAPON.NO_AUTO_SWITCH
 	Weapon.AmmoGive 0
 	AttackSound "*fist"
 	Obituary "$OB_MPFIST"
