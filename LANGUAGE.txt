@@ -17,22 +17,22 @@ SECRETTOTAL = "Riddles";
 TREASURETOTAL = "Hostages";
 
 // Quit Doom 1 messages
-QUITMSG1 = "What's the matter Batman?\n Scared?";
-QUITMSG2 = "Where are you Batman?\n Afraid to show your face?";
+QUITMSG1 = "What's the matter Batman? Scared?";
+QUITMSG2 = "Where are you Batman? Afraid to show your face?";
 QUITMSG3 = "Come out you coward!";
 QUITMSG4 = "Thomas and Martha Wayne would be dissapointed in you.";
 QUITMSG5 = "Batman, don't leave those civilians to die!";
 QUITMSG6 = "Run, hide, I'll find you, and beat the living crap outta ya.";
-QUITMSG7 = "It's ok to give up. \n I'm sure the hostages won't mind";
+QUITMSG7 = "It's ok to give up. I'm sure the hostages won't mind";
 
 // Quit Doom II messages
-QUITMSG8 = "So you admit that I, the Riddler, /n am better than you?";
+QUITMSG8 = "So you admit that I, the Riddler, am better than you?";
 QUITMSG9 = "Chicken man, or Batman!";
 QUITMSG10 = "Don't go all this way to give up now master bruce.";
 QUITMSG11 = "I'll be waiting here for you bats!";
 QUITMSG12 = "You know, I thought you'd last longer.";
-QUITMSG13 = "Who's going to take care of the city now? /n Robin?";
-QUITMSG14 = "As the symbol of hope fades, /n so too will law and order.";
+QUITMSG13 = "Who's going to take care of the city now? Robin?";
+QUITMSG14 = "As the symbol of hope fades, so too will law and order.";
 
 C1TEXT =
 	"Hearing about the break in at the docs,\n"
@@ -111,3 +111,579 @@ C6TEXT =
 	"CONGRATULATIONS, YOU'VE FOUND THE\n"
 	"SUPER SECRET LEVEL!  YOU'D BETTER\n"
 	"BLAZE THROUGH THIS ONE!\n";
+NOAH_CORRECT = "Correct!";
+NOAH_INCORRECT = "Incorrect!";
+
+NOAH_QUIZ_Q01 = "What has a head, a tail,\n is brown, and has no legs?";
+NOAH_QUIZ_H01 = "";
+NOAH_QUIZ_A01A = "A Horse"; // Wrong
+NOAH_QUIZ_A01B = "A Penny"; // Correct
+NOAH_QUIZ_A01C = "A Clock"; // Wrong
+
+NOAH_QUIZ_Q02 = "When does Christmas come\n before Thanksgiving?";
+NOAH_QUIZ_H02 = "";
+NOAH_QUIZ_A02A = "Every leap year"; // Wrong
+NOAH_QUIZ_A02B = "In the dictionary"; // Correct
+NOAH_QUIZ_A02C = "Before it was changed"; // Wrong
+
+NOAH_QUIZ_Q03 = "What belongs to you, but other\n people use it more than you?";
+NOAH_QUIZ_H03 = "";
+NOAH_QUIZ_A03A = "Your Name"; // Correct
+NOAH_QUIZ_A03B = "Your Social Security Number"; // Wrong
+NOAH_QUIZ_A03C = "Your Birthday"; // Wrong
+
+NOAH_QUIZ_Q04 = "You live in a one story house made\n entirely of redwood.\n What color would the stairs be?";
+NOAH_QUIZ_H04 = "";
+NOAH_QUIZ_A04A = "Red"; // Wrong
+NOAH_QUIZ_A04B = "Brown"; // Wrong
+NOAH_QUIZ_A04C = "What Stairs?"; // Correct
+
+NOAH_QUIZ_Q05 = "What can point in every direction\n but can't reach the destination\n by itself.";
+NOAH_QUIZ_H05 = "";
+NOAH_QUIZ_A05A = "A Map"; // Wrong
+NOAH_QUIZ_A05B = "Your Finger"; // Correct
+NOAH_QUIZ_A05C = "A Compass"; // Wrong
+
+NOAH_QUIZ_Q06 = "My life can be measured in hours, I serve by being devoured. Thin, I am quick. Fat, I am slow. Wind is my foe. What am I?";
+NOAH_QUIZ_H06 = "";
+NOAH_QUIZ_A06A = "Candle"; // Correct
+NOAH_QUIZ_A06B = "Housefly"; // Wrong
+NOAH_QUIZ_A06C = "Time"; // Wrong
+
+NOAH_QUIZ_Q07 = "What is more useful when it is broken?";
+NOAH_QUIZ_H07 = "";
+NOAH_QUIZ_A07A = "Egg"; // Correct
+NOAH_QUIZ_A07B = "Glowstick"; // Wrong
+NOAH_QUIZ_A07C = "Clock"; // Wrong
+
+NOAH_QUIZ_Q08 = "What has six faces,\n But does not wear makeup.\n It also has twenty-one eyes,\n But cannot see?";
+NOAH_QUIZ_H08 = "";
+NOAH_QUIZ_A08A = "Watch"; // Wrong
+NOAH_QUIZ_A08B = "Dice"; // Correct
+NOAH_QUIZ_A08C = "Mountain"; // Wrong
+
+NOAH_QUIZ_Q09 = "I am taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by almost everybody.";
+NOAH_QUIZ_H09 = "";
+NOAH_QUIZ_A09A = "Pencil Lead"; // Correct
+NOAH_QUIZ_A09B = "Gold"; // Wrong
+NOAH_QUIZ_A09C = "Coal"; // Wrong
+
+NOAH_QUIZ_Q10 = "They have not flesh, nor feathers,\n nor scales, nor bone.\n Yet they have fingers and thumbs\n of their own. What are they?";
+NOAH_QUIZ_H10 = "";
+NOAH_QUIZ_A10A = "Clock"; // Wrong
+NOAH_QUIZ_A10B = "Compass"; // Wrong
+NOAH_QUIZ_A10C = "Gloves"; // Correct
+
+NOAH_QUIZ_Q11 = "This is as light as a feather,\n yet no man can hold it for long.\n What am I?";
+NOAH_QUIZ_H11 = "";
+NOAH_QUIZ_A11A = "Fire"; // Wrong
+NOAH_QUIZ_A11B = "Breath"; // Correct
+NOAH_QUIZ_A11C = "Water"; // Wrong
+
+NOAH_QUIZ_Q12 = "Poor people have it.\n Rich people need it.\n If you eat it you die.\n what is it?";
+NOAH_QUIZ_H12 = "";
+NOAH_QUIZ_A12A = "Everything"; // Wrong
+NOAH_QUIZ_A12B = "Nothing"; // Correct
+NOAH_QUIZ_A12C = "Vegetables"; // Wrong
+
+NOAH_QUIZ_Q13 = "What goes up when the rain comes down?";
+NOAH_QUIZ_H13 = "";
+NOAH_QUIZ_A13A = "Humidity"; // Wrong
+NOAH_QUIZ_A13B = "Sunglasses"; // Wrong
+NOAH_QUIZ_A13C = "Umbrella"; // Correct
+
+NOAH_QUIZ_Q14 = "What goes up but never comes down?";
+NOAH_QUIZ_H14 = "";
+NOAH_QUIZ_A14A = "Helium"; // Wrong
+NOAH_QUIZ_A14B = "Age"; // Correct
+NOAH_QUIZ_A14A = "Roller Coster"; // Wrong
+
+NOAH_QUIZ_Q15 = "What runs around the whole yard without moving?";
+NOAH_QUIZ_H15 = "";
+NOAH_QUIZ_A15A = "Hedges"; // Wrong
+NOAH_QUIZ_A15B = "Lawn Ornaments"; // Wrong
+NOAH_QUIZ_A15C = "Fence"; // Correct
+
+NOAH_QUIZ_Q16 = "AstroCreep is an innocent church boy.";
+NOAH_QUIZ_H16 = "";
+NOAH_QUIZ_A16A = "True"; // Wrong
+NOAH_QUIZ_A16B = "False"; // Correct
+
+NOAH_QUIZ_Q17 = "I make two people out of one.  What am I?";
+NOAH_QUIZ_H17 = "";
+NOAH_QUIZ_A17A = "Therapist"; // Wrong
+NOAH_QUIZ_A17B = "Geneticist"; // Wrong
+NOAH_QUIZ_A17C = "Mirror"; // Correct
+
+NOAH_QUIZ_Q18 = "Always in you, Sometimes on you,\nIf I surround you, I can kill you.\nWhat am I? ";
+NOAH_QUIZ_H18 = "";
+NOAH_QUIZ_A18A = "Germs"; // Wrong
+NOAH_QUIZ_A18B = "Water"; // Correct
+NOAH_QUIZ_A18C = "Air"; // Wrong
+
+NOAH_QUIZ_Q19 = "I am full of holes but I can still hold water.\nWhat am I?";
+NOAH_QUIZ_H19 = "";
+NOAH_QUIZ_A19A = "Sponge"; // Correct
+NOAH_QUIZ_A19B = "Coral"; // Wrong
+NOAH_QUIZ_A19C = "Barnacle"; // Wrong
+
+NOAH_QUIZ_Q20 = "When is a doctor most annoyed?";
+NOAH_QUIZ_H20 = "";
+NOAH_QUIZ_A20A = "Lots of Paperwork"; // Wrong
+NOAH_QUIZ_A20B = "Out of Patients"; // Correct
+NOAH_QUIZ_A20C = "Too Many Patients"; // Wrong
+
+NOAH_QUIZ_Q21 = "What can you catch but never throw?";
+NOAH_QUIZ_H21 = "";
+NOAH_QUIZ_A21A = "an eggplant"; // Wrong
+NOAH_QUIZ_A21B = "a cold"; // Correct
+NOAH_QUIZ_A21C = "the Mondays"; // Wrong
+
+NOAH_QUIZ_Q22 = "When is it bad luck to see a black cat?";
+NOAH_QUIZ_H22 = "";
+NOAH_QUIZ_A22A = "On Friday the 13th"; // Wrong
+NOAH_QUIZ_A22B = "if you are superstitious"; // Wrong
+NOAH_QUIZ_A22C = "if you are a mouse"; // Correct
+
+NOAH_QUIZ_Q23 = "Which part of a road do ghosts\n love to travel the most?";
+NOAH_QUIZ_H23 = "";
+NOAH_QUIZ_A23A = "Cul De Sac"; // Wrong
+NOAH_QUIZ_A23B = "Dead End"; // Correct
+NOAH_QUIZ_A23C = "Freeway"; // Wrong
+
+NOAH_QUIZ_Q24 = "Which is the only way a leopard can change his spots?";
+NOAH_QUIZ_H24 = "";
+NOAH_QUIZ_A24A = "By going from one spot to another"; // Correct
+NOAH_QUIZ_A24B = "Magic"; // Wrong
+NOAH_QUIZ_A24C = "Shedding Its Fur"; // Wrong
+
+NOAH_QUIZ_Q25 = "What time does a tennis player get up?";
+NOAH_QUIZ_H25 = "";
+NOAH_QUIZ_A25A = "8-ish"; // Wrong
+NOAH_QUIZ_A25B = "9-ish"; // Wrong
+NOAH_QUIZ_A25C = "10-ish"; // Correct
+
+NOAH_QUIZ_Q26 = "A prisoner is told If you lie we will hang you, if you tell the truth we will shoot you. What can he say to save himself?";
+NOAH_QUIZ_H26 = "";
+NOAH_QUIZ_A26A = "Eat my shorts"; // Wrong
+NOAH_QUIZ_A26B = "I'm innocent!"; // Wrong
+NOAH_QUIZ_A26C = "You will hang me"; // Correct
+
+NOAH_QUIZ_Q27 = "If a rooster laid a brown egg and a white egg, what kind of chicks would hatch?";
+NOAH_QUIZ_H27 = "";
+NOAH_QUIZ_A27A = "Roosters don't lay eggs."; // Correct
+NOAH_QUIZ_A27B = "Brown"; // Wrong
+NOAH_QUIZ_A27C = "White"; // Wrong
+
+NOAH_QUIZ_Q28 = "Until I am measured I am not known, Yet how you miss me when I have flown.  What Am I?";
+NOAH_QUIZ_H28 = "";
+NOAH_QUIZ_A28A = "Time"; // Correct
+NOAH_QUIZ_A28B = "Space"; // Wrong
+
+NOAH_QUIZ_Q29 = "I am the beginning of the end, and the end of time and space. I am essential to creation, and I surround every place.What am I?";
+NOAH_QUIZ_H29 = "";
+NOAH_QUIZ_A29A = "God"; // Wrong
+NOAH_QUIZ_A29B = "The Universe"; // Wrong
+NOAH_QUIZ_A29C = "E"; // Correct
+
+NOAH_QUIZ_Q30 = "What are moving left to right, right now?";
+NOAH_QUIZ_H30 = "";
+NOAH_QUIZ_A30A = "Your Eyes"; // Correct
+NOAH_QUIZ_A30B = "Your Arms"; // Wrong
+NOAH_QUIZ_A30C = "Your Fingers"; // Wrong
+
+NOAH_QUIZ_Q31 = "I reach for the sky, but clutch to the ground; sometimes I leave, but I am always around. What am I?";
+NOAH_QUIZ_H31 = "";
+NOAH_QUIZ_A31A = "AstroCreep"; // Wrong
+NOAH_QUIZ_A31B = "Insects"; // Wrong
+NOAH_QUIZ_A31C = "A Tree"; // Correct
+
+NOAH_QUIZ_Q32 = "What did the bee say to the flower?";
+NOAH_QUIZ_H32 = "";
+NOAH_QUIZ_A32A = "Yum"; // Wrong
+NOAH_QUIZ_A32B = "Buzz"; // Wrong
+NOAH_QUIZ_A32C = "Hello Honey!"; // Correct
+
+NOAH_QUIZ_Q33 = "When will water stop running down hill??";
+NOAH_QUIZ_H33 = "";
+NOAH_QUIZ_A33A = "When it gets cold"; // Wrong
+NOAH_QUIZ_A33B = "When it reaches the bottom."; // Correct
+NOAH_QUIZ_A33C = "THE APOCALYPSE!"; // Wrong
+
+NOAH_QUIZ_Q34 = "What weighs more? A pound of feathers or a pound of stones?";
+NOAH_QUIZ_H34 = "";
+NOAH_QUIZ_A34A = "Both"; // Correct
+NOAH_QUIZ_A34B = "Feathers"; // Wrong
+NOAH_QUIZ_A34C = "Stones"; // Wrong
+
+NOAH_QUIZ_Q35 = "What is the end of everything?";
+NOAH_QUIZ_H35 = "";
+NOAH_QUIZ_A35A = "THE APOCALYPSE!"; // Wrong
+NOAH_QUIZ_A35B = "A new beginning"; // Wrong
+NOAH_QUIZ_A35C = "G"; // Correct
+
+NOAH_QUIZ_Q36 = "What has 88 teeth but never brushes them?";
+NOAH_QUIZ_H36 = "";
+NOAH_QUIZ_A36A = "Piano"; // Correct
+NOAH_QUIZ_A36B = "Comb"; // Wrong
+NOAH_QUIZ_A36C = "Killer Croc"; // Wrong
+
+NOAH_QUIZ_Q37 = "What is bought by the yard and worn by the foot?";
+NOAH_QUIZ_H37 = "";
+NOAH_QUIZ_A37A = "Carpet"; // Correct
+NOAH_QUIZ_A37B = "Yarn"; // Wrong
+NOAH_QUIZ_A37C = "Socks"; // Wrong
+
+NOAH_QUIZ_Q38 = "Superman is better than Batman";
+NOAH_QUIZ_H38 = "";
+NOAH_QUIZ_A38A = "True"; // Wrong
+NOAH_QUIZ_A38B = "False"; // Correct
+
+NOAH_QUIZ_Q39 = "Marking mortal privation, when firmly in place. An enduring summation, inscribed in my face. What am I?";
+NOAH_QUIZ_H39 = "";
+NOAH_QUIZ_A39A = "Tombstone"; // Correct
+NOAH_QUIZ_A39B = "Statue"; // Wrong
+NOAH_QUIZ_A39C = "Mailbox"; // Wrong
+
+NOAH_QUIZ_Q40 = "When I'm used, I'm useless, once offered, soon rejected. In desperation oft expressed, the intended not protected.";
+NOAH_QUIZ_H40 = "";
+NOAH_QUIZ_A40A = "A Minecraft Sword"; // Wrong
+NOAH_QUIZ_A40B = "A Raincoat"; // Wrong
+NOAH_QUIZ_A40C = "An excuse"; // Correct
+
+NOAH_QUIZ_Q41 = "The answer I give is yes, but what I mean is no. What was the question?";
+NOAH_QUIZ_H41 = "";
+NOAH_QUIZ_A41A = "Do you mind?"; // Correct
+NOAH_QUIZ_A41B = "Will you share your fries?"; // Wrong
+NOAH_QUIZ_A41C = "Are you lost?"; // Wrong
+
+NOAH_QUIZ_Q42 = "Oh, what a surprise! Oh, what a miracle! It sprouted without a seed, It stood without a trunk.";
+NOAH_QUIZ_H42 = "";
+NOAH_QUIZ_A42A = "The Sun"; // Wrong
+NOAH_QUIZ_A42B = "The World"; // Correct
+NOAH_QUIZ_A42C = "The Moon"; // Wrong
+
+NOAH_QUIZ_Q43 = "Hickory-Dickory-Dock! The mouse ran up the clock. The clock struck one and down did come. Hickory-Dickory-Dock!  What am I?";
+NOAH_QUIZ_H43 = "";
+NOAH_QUIZ_A43A = "Guillotine"; // Correct
+NOAH_QUIZ_A43B = "Clock"; // Wrong
+NOAH_QUIZ_A43C = "Mouse"; // Wrong
+
+NOAH_QUIZ_Q44 = "My first is high, My second damp, My whole a tie, A writer's cramp.";
+NOAH_QUIZ_H44 = "";
+NOAH_QUIZ_A44A = "Hyphen"; // Correct
+NOAH_QUIZ_A44B = "Typewriter"; // Wrong
+NOAH_QUIZ_A44C = "Towel"; // Wrong
+
+NOAH_QUIZ_Q45 = "What did the baseball glove say to the ball?";
+NOAH_QUIZ_H45 = "";
+NOAH_QUIZ_A45A = "Hey"; // Wrong
+NOAH_QUIZ_A45B = "Sayonara"; // Wrong
+NOAH_QUIZ_A45C = "Catch you later"; // Correct
+
+NOAH_QUIZ_Q46 = "The more you take away, the more I become. What am I?";
+NOAH_QUIZ_H46 = "";
+NOAH_QUIZ_A46A = "A hole"; // Correct
+NOAH_QUIZ_A46B = "Regrets"; // Wrong
+
+NOAH_QUIZ_Q47 = "What's a lifeguard's favorite game?";
+NOAH_QUIZ_H47 = "";
+NOAH_QUIZ_A47A = "Water Polo"; // Wrong
+NOAH_QUIZ_A47B = "Pool"; // Correct
+NOAH_QUIZ_A47C = "Swim Racing"; // Wrong
+
+NOAH_QUIZ_Q48 = "What do you call cheese that belongs to somene else?";
+NOAH_QUIZ_H48 = "";
+NOAH_QUIZ_A48A = "Misplaced Cheese"; // Wrong
+NOAH_QUIZ_A48B = "Nacho Cheese"; // Correct
+NOAH_QUIZ_A48C = "Stolen Cheese"; // Wrong
+
+NOAH_QUIZ_Q49 = "How many seconds are there in one year?";
+NOAH_QUIZ_H49 = "";
+NOAH_QUIZ_A49A = "640000"; // Wrong
+NOAH_QUIZ_A49B = "36000"; // Wrong
+NOAH_QUIZ_A49C = "12"; // Correct
+
+NOAH_QUIZ_Q50 = "Flat as a leaf, round as a ring; Has two eyes, can't see a thing.?";
+NOAH_QUIZ_H50 = "";
+NOAH_QUIZ_A50A = "A button."; // Correct
+NOAH_QUIZ_A50B = "A penny"; // Wrong
+NOAH_QUIZ_A50C = "A sand dollar"; // Wrong
+
+NOAH_QUIZ_Q51 = "In MK vs DC Universe, who phased to the DC Universe to be arrested by Batman?";
+NOAH_QUIZ_H51 = "";
+NOAH_QUIZ_A51A = "Sub-Zero"; // Wrong
+NOAH_QUIZ_A51B = "Scorpion"; // Correct
+
+NOAH_QUIZ_Q52 = "In A Death In The Family, which Robin did Joker murder?";
+NOAH_QUIZ_H52 = "";
+NOAH_QUIZ_A52A = "Jason Todd"; // Correct
+NOAH_QUIZ_A52B = "Dick Grayson"; // Wrong
+NOAH_QUIZ_A52C = "Damian Wayne"; // Wrong
+
+NOAH_QUIZ_Q53 = "What kind of nut has no shell?";
+NOAH_QUIZ_H53 = "";
+NOAH_QUIZ_A53A = "Donut"; // Correct
+NOAH_QUIZ_A53B = "Almond"; // Wrong
+NOAH_QUIZ_A53C = "Pea"; // Wrong
+
+NOAH_QUIZ_Q54 = "What food lives at the beach?";
+NOAH_QUIZ_H54 = "";
+NOAH_QUIZ_A54A = "Crab Legs"; // Wrong
+NOAH_QUIZ_A54B = "Sandwich"; // Correct
+NOAH_QUIZ_A54C = "Popsicle"; // Wrong
+
+NOAH_QUIZ_Q55 = "What has a foot on each side and one in the middle?";
+NOAH_QUIZ_H55 = "";
+NOAH_QUIZ_A55A = "A weird bug"; // Wrong
+NOAH_QUIZ_A55B = "Yardstick"; // Correct
+NOAH_QUIZ_A55C = "Furniture"; // Wrong
+
+NOAH_QUIZ_Q56 = "I have hundreds of legs but I can only lean; You make me feel dirty so you feel clean; What am I?";
+NOAH_QUIZ_H56 = "";
+NOAH_QUIZ_A56A = "Scrub brush"; // Wrong
+NOAH_QUIZ_A56B = "Broom"; // Correct
+NOAH_QUIZ_A56C = "Centipede"; // Wrong
+
+NOAH_QUIZ_Q57 = "In the 1989 Batman movie, what was Joker's real name?";
+NOAH_QUIZ_H57 = "";
+NOAH_QUIZ_A57A = "Jack Napier"; // Correct
+NOAH_QUIZ_A57B = "Jerry Malone"; // Wrong
+NOAH_QUIZ_A57C = "Joe Kerr"; // Wrong
+
+NOAH_QUIZ_Q58 = "I am strong enough to smash ships, but I fear the Sun. What am I?";
+NOAH_QUIZ_H58 = "";
+NOAH_QUIZ_A58A = "Fire"; // Wrong
+NOAH_QUIZ_A58B = "Ice"; // Correct
+NOAH_QUIZ_A58C = "Wind"; // Wrong
+
+NOAH_QUIZ_Q59 = "What asks no questions but requires many answers?";
+NOAH_QUIZ_H59 = "";
+NOAH_QUIZ_A59A = "Dog"; // Wrong
+NOAH_QUIZ_A59B = "Doorbell"; // Correct
+NOAH_QUIZ_A59C = "Survey"; // Wrong
+
+NOAH_QUIZ_Q60 = "Which on of Santa's reindeer can you see in outer space?";
+NOAH_QUIZ_H60 = "";
+NOAH_QUIZ_A60A = "Rudolph"; // Wrong
+NOAH_QUIZ_A60B = "Comet"; // Correct
+NOAH_QUIZ_A60C = "Cupid"; // Wrong
+
+NOAH_QUIZ_Q61 = "Which bird does not belong in this group? Finch, gull, eagle, ostrich, or sparrow?";
+NOAH_QUIZ_H61 = "";
+NOAH_QUIZ_A61A = "Gull"; // Wrong
+NOAH_QUIZ_A61B = "Finch"; // Wrong
+NOAH_QUIZ_A61C = "Ostrich"; // Correct
+
+NOAH_QUIZ_Q62 = "You can touch me, You can break me, You should win me if you want to be mine. What am I?";
+NOAH_QUIZ_H62 = "";
+NOAH_QUIZ_A62A = "A stuffed animal"; // Wrong
+NOAH_QUIZ_A62B = "A Heart"; // Correct
+NOAH_QUIZ_A62C = "A Video Game"; // Wrong
+
+NOAH_QUIZ_Q63 = "Why did Snap, Crackle and Pop get scared?";
+NOAH_QUIZ_H63 = "";
+NOAH_QUIZ_A63A = "hungry kids"; // Wrong
+NOAH_QUIZ_A63B = "Tony the Tiger"; // Wrong
+NOAH_QUIZ_A63C = "Cereal Killer"; // Correct
+
+NOAH_QUIZ_Q64 = "A slender body, a tiny eye, no matter what happens, I never cry. What am I?";
+NOAH_QUIZ_H64 = "";
+NOAH_QUIZ_A64A = "Needle"; // Correct
+NOAH_QUIZ_A64B = "Lizard"; // Wrong
+NOAH_QUIZ_A64C = "Potato"; // Wrong
+
+NOAH_QUIZ_Q65 = "What falls down but never breaks?";
+NOAH_QUIZ_H65 = "";
+NOAH_QUIZ_A65A = "A rock"; // Wrong
+NOAH_QUIZ_A65B = "Nightfall"; // Correct
+NOAH_QUIZ_A65C = "Curtain"; // Wrong
+
+NOAH_QUIZ_Q66 = "I'm a god, a planet, and measurer of heat.";
+NOAH_QUIZ_H66 = "";
+NOAH_QUIZ_A66A = "Mercury"; // Correct
+NOAH_QUIZ_A66B = "Venus"; // Wrong
+NOAH_QUIZ_A66C = "Jupiter"; // Wrong
+
+NOAH_QUIZ_Q67 = "I was carried into a dark room, and set on fire. I wept, and then my head was cut off. What am I?";
+NOAH_QUIZ_H67 = "";
+NOAH_QUIZ_A67A = "Candle"; // Correct
+NOAH_QUIZ_A67B = "AstroCreep"; // Wrong
+NOAH_QUIZ_A67C = "Firewood"; // Wrong
+
+NOAH_QUIZ_Q68 = "In Batman Returns, The Penguin runs for president.";
+NOAH_QUIZ_H68 = "";
+NOAH_QUIZ_A68A = "True"; // Wrong
+NOAH_QUIZ_A68B = "False"; // Correct
+
+NOAH_QUIZ_Q69 = "Why didn't the monster eat the crazy person?";
+NOAH_QUIZ_H69 = "";
+NOAH_QUIZ_A69A = "Scared"; // Wrong
+NOAH_QUIZ_A69B = "Allergic to Nuts"; // Correct
+
+NOAH_QUIZ_Q70 = "How do you fix a jack-o-lantern?";
+NOAH_QUIZ_H70 = "";
+NOAH_QUIZ_A70A = "Pumpkin Patch"; // Correct
+NOAH_QUIZ_A70B = "Glue"; // Wrong
+
+NOAH_QUIZ_Q71 = "What did Adam say the day before Christmas?";
+NOAH_QUIZ_H71 = "";
+NOAH_QUIZ_A71A = "It's Christmas, Eve!"; // Correct
+NOAH_QUIZ_A71B = "Ho, ho, ho!"; // Wrong
+NOAH_QUIZ_A71C = "Don't forget my stocking!"; // Wrong
+
+NOAH_QUIZ_Q72 = "How did the beaver get online?";
+NOAH_QUIZ_H72 = "";
+NOAH_QUIZ_A72A = "He logged on"; // Correct
+NOAH_QUIZ_A72B = "Beavers don't use the computer"; // Wrong
+
+NOAH_QUIZ_Q73 = "Where do TVs go on vacation?";
+NOAH_QUIZ_H73 = "";
+NOAH_QUIZ_A73A = "Hawaii"; // Wrong
+NOAH_QUIZ_A73B = "Remote Places"; // Correct
+NOAH_QUIZ_A73C = "Gilligan's Island"; // Wrong
+
+NOAH_QUIZ_Q74 = "You can see me in water, but I never get wet.";
+NOAH_QUIZ_H74 = "";
+NOAH_QUIZ_A74A = "Fish"; // Wrong
+NOAH_QUIZ_A74B = "Reflection"; // Correct
+
+NOAH_QUIZ_Q75 = "How do you get a baby astronaut to sleep?";
+NOAH_QUIZ_H75 = ""; // Gen 7:20 in DOS version
+NOAH_QUIZ_A75A = "Feed it"; // Wrong
+NOAH_QUIZ_A75B = "Sing to it"; // Wrong
+NOAH_QUIZ_A75C = "Rock it"; // Correct
+
+NOAH_QUIZ_Q76 = "Linuxwolf could totally beat up Batman";
+NOAH_QUIZ_H76 = "";
+NOAH_QUIZ_A76A = "True"; // Wrong
+NOAH_QUIZ_A76B = "False"; // Correct
+
+NOAH_QUIZ_Q77 = "If you drop me, I'm sure to crack. Give me a smile, and I'll always smile back.";
+NOAH_QUIZ_H77 = "";
+NOAH_QUIZ_A77A = "Mirror"; // Correct
+NOAH_QUIZ_A77B = "Egg"; // Wrong
+
+NOAH_QUIZ_Q78 = "You pick it, You peel the outside, You cook the inside, You eat the outside, And throw away the inside.";
+NOAH_QUIZ_H78 = "";
+NOAH_QUIZ_A78A = "Pork"; // Wrong
+NOAH_QUIZ_A78B = "Chicken"; // Wrong
+NOAH_QUIZ_A78C = "Corn"; // Correct
+
+NOAH_QUIZ_Q79 = "A man in a car saw a Golden Door, Silver Door and a Bronze Door. What door did he open first?";
+NOAH_QUIZ_H79 = "";
+NOAH_QUIZ_A79A = "Bronze Door"; // Wrong
+NOAH_QUIZ_A79B = "Car Door"; // Correct
+NOAH_QUIZ_A79C = "Gold Door"; // Wrong
+
+NOAH_QUIZ_Q80 = "What bird is always out of breath?";
+NOAH_QUIZ_H80 = "";
+NOAH_QUIZ_A80A = "Ostrich"; // Wrong
+NOAH_QUIZ_A80B = "Parrot"; // Wrong
+NOAH_QUIZ_A80C = "Puffin"; // Correct
+
+NOAH_QUIZ_Q81 = "DoomJedi got his name from Star Trek";
+NOAH_QUIZ_H81 = "";
+NOAH_QUIZ_A81A = "False"; // Correct
+NOAH_QUIZ_A81B = "True"; // Wrong
+
+NOAH_QUIZ_Q82 = "Why can't the world ever come to an end?";
+NOAH_QUIZ_H82 = "";
+NOAH_QUIZ_A82A = "Because it's round"; // Correct
+NOAH_QUIZ_A82B = "Prophecy"; // Wrong
+NOAH_QUIZ_A82C = "AstroCreep"; // Wrong
+
+NOAH_QUIZ_Q83 = "What do you call a wizard from outer space that can fly?";
+NOAH_QUIZ_H83 = "";
+NOAH_QUIZ_A83A = "a Martian"; // Wrong
+NOAH_QUIZ_A83B = "a flying sorceror"; // Correct
+NOAH_QUIZ_A83C = "A Space Oddity"; // Wrong
+
+NOAH_QUIZ_Q84 = "Batman and Robin was the highest grossing Batman film";
+NOAH_QUIZ_H84 = "";
+NOAH_QUIZ_A84A = "True"; // Wrong
+NOAH_QUIZ_A84B = "False"; // Correct
+
+NOAH_QUIZ_Q85 = "Which one of Santa's reindeer is the fastest?";
+NOAH_QUIZ_H85 = "";
+NOAH_QUIZ_A85A = "Dasher"; // Correct
+NOAH_QUIZ_A85B = "Comet"; // Wrong
+NOAH_QUIZ_A85C = "Blitzen"; // Wrong
+
+NOAH_QUIZ_Q86 = "What always runs but never walks, often murmurs, never talks, has a bed but never sleeps, has a mouth but never eats?";
+NOAH_QUIZ_H86 = "";
+NOAH_QUIZ_A86A = "A clock"; // Wrong
+NOAH_QUIZ_A86B = "A river"; // Correct
+
+NOAH_QUIZ_Q87 = "Ron is the voice of The Riddler in this mod.";
+NOAH_QUIZ_H87 = "";
+NOAH_QUIZ_A87A = "True"; // Wrong
+NOAH_QUIZ_A87B = "False"; // Correct
+
+NOAH_QUIZ_Q88 = "I have a thousand needles but I do not sew.";
+NOAH_QUIZ_H88 = "";
+NOAH_QUIZ_A88A = "Cactus"; // Wrong
+NOAH_QUIZ_A88B = "Porcupine"; // Correct
+NOAH_QUIZ_A88C = "Doctor"; // Wrong
+
+NOAH_QUIZ_Q89 = "There is a clerk at the butcher shop, he is five feet ten inches tall, and he wears size 13 sneakers. He has a wife and 2 kids. What does he weigh?";
+NOAH_QUIZ_H89 = "";
+NOAH_QUIZ_A89A = "260"; // Wrong
+NOAH_QUIZ_A89B = "Meat"; // Correct
+
+NOAH_QUIZ_Q90 = "What has wheels and flies, but it is not an aircraft?";
+NOAH_QUIZ_H90 = "";
+NOAH_QUIZ_A90A = "Garbage Truck"; // Correct
+NOAH_QUIZ_A90B = "Hovercraft"; // Wrong
+NOAH_QUIZ_A90C = "A Car Flying Over A Cliff"; // Wrong
+
+NOAH_QUIZ_Q91 = "Who played Batman in Batman Forever?";
+NOAH_QUIZ_H91 = "";
+NOAH_QUIZ_A91A = "Val Kilmer"; // Correct
+NOAH_QUIZ_A91B = "Michael Keaton"; // Wrong
+
+NOAH_QUIZ_Q92 = "No matter how little or how much you use me, you change me every month. What am I?";
+NOAH_QUIZ_H92 = "";
+NOAH_QUIZ_A92A = "Underpants"; // Wrong
+NOAH_QUIZ_A92B = "Calendar"; // Correct
+NOAH_QUIZ_A92C = "Air Freshner"; // Wrong
+
+NOAH_QUIZ_Q93 = "What can go up and come down without moving?";
+NOAH_QUIZ_H93 = "";
+NOAH_QUIZ_A93A = "Temperature"; // Correct
+NOAH_QUIZ_A93B = "Elevator"; // Wrong
+NOAH_QUIZ_A93C = "TV/Radio Volume"; // Wrong
+
+NOAH_QUIZ_Q94 = "No sooner spoken than broken. What is it?";
+NOAH_QUIZ_H94 = "";
+NOAH_QUIZ_A94A = "Promise"; // Wrong
+NOAH_QUIZ_A94B = "Silence"; // Correct
+NOAH_QUIZ_A94C = "Trust"; // Wrong
+
+NOAH_QUIZ_Q95 = "What animal is most likely to eat a relative?";
+NOAH_QUIZ_H95 = "";
+NOAH_QUIZ_A95A = "spider"; // Wrong
+NOAH_QUIZ_A95B = "ant-eater"; // Correct
+NOAH_QUIZ_A95C = "snake"; // Wrong
+
+NOAH_QUIZ_Q96 = "Why did the king go to the dentist?";
+NOAH_QUIZ_H96 = "";
+NOAH_QUIZ_A96A = "Toothache"; // Wrong
+NOAH_QUIZ_A96B = "To get a crown"; // Correct
+
+NOAH_QUIZ_Q97 = "What do you call pigs that write letters to each other?";
+NOAH_QUIZ_H97 = "";
+NOAH_QUIZ_A97A = "Pen Pals"; // Correct
+NOAH_QUIZ_A97B = "Barnyard Friends"; // Wrong
+
+NOAH_QUIZ_Q98 = "I love to dance and twist and prance, I shake my tail, as away I sail, wingless I fly into the sky.";
+NOAH_QUIZ_H98 = "";
+NOAH_QUIZ_A98A = "Balloon"; // Wrong
+NOAH_QUIZ_A98B = "Kite"; // Correct
+NOAH_QUIZ_A98C = "Plastic Bag"; // Wrong
+
+NOAH_QUIZ_Q99 = "They are Dark, and always on the run. without the sun, would be none.";
+NOAH_QUIZ_H99 = "";
+NOAH_QUIZ_A99A = "Plants"; // Wrong
+NOAH_QUIZ_A99B = "Shadows"; // Correct
+NOAH_QUIZ_A99C = "Moon"; // Wrong

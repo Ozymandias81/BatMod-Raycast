@@ -248,5 +248,246 @@ Intermission Doom2Cast
 		CastName = "Deathstroke Henchman"
 		AttackSound = "Missile", 1, "Weapon/machinegun"
 	}
-	Link = Inter_Bunny//Inter_Titlescreen
+	Link = BatmanEndSequence//Inter_Titlescreen
 }
+intermission BatmanEndSequence //End Sequence
+{
+Fader
+	{
+		Music = "CATHEDRL"
+		Background = "ENDSCR01"
+		FadeType = FadeIn
+		Time = 15
+	}
+	Image
+	{
+		Time = -5
+	}
+	Image
+	{
+		background = "ENDSCR02"
+		Time = 1
+	}
+		Image
+	{
+		background = "ENDSCR03"
+		Time = 1
+	}
+		Image
+	{
+		background = "ENDSCR04"
+		Time = 1
+	}
+	Image
+	{
+		Background = "ENDSCR04"
+		//FadeType = FadeIn
+		Time = .5
+	}
+	Image
+	{
+		Time = -10
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	Fader
+	{
+		Background = "ENDSCR05"
+		FadeType = FadeIn
+		Time = .5
+	}
+	Image
+	{
+		Time = -5
+	}
+	Image
+	{
+		background = "ENDSCR06"
+		Time = 1
+	}
+		Image
+	{
+		background = "ENDSCR07"
+		Time = 1
+	}
+		Image
+	{
+		background = "ENDSCR08"
+		Time = 1
+	}
+	Image
+	{
+		Background = "ENDSCR08"
+		//FadeType = FadeIn
+		Time = .5
+	}
+	Image
+	{
+		Time = -5
+	}
+	Image
+	{
+		background = "ENDSCR09"
+		Time = 1
+	}
+		Image
+	{
+		background = "ENDSCR010"
+		Time = 1
+	}
+		Image
+	{
+		background = "ENDSCR011"
+		Time = 1
+	}
+	Image
+	{
+		Background = "ENDSCR11"
+		//FadeType = FadeIn
+		Time = .5
+	}
+	Image
+	{
+		Time = -10
+	}
+	Image
+	{
+		background = "ENDSCR12"
+		Time = 1
+	}
+		Image
+	{
+		background = "ENDSCR13"
+		Time = 1
+	}
+		Image
+	{
+		background = "ENDSCR14"
+		Time = 1
+	}
+	Fader
+	{
+		Background = "ENDSCR14"
+		FadeType = FadeIn
+		Time = .5
+	}
+	Image
+	{
+		Time = -10
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	Fader
+	{		
+		Background = "ENDSCR15"
+		Time = 5
+		FadeType = FadeIn
+	}
+	Image
+	{
+		Time = -10
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	Fader
+	{
+		Background = "ENDCRD01"
+		FadeType = FadeIn
+		Time = 5
+	}
+	Image
+	{
+		Time = -10
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	Fader
+	{
+		Background = "ENDCRD02"
+		FadeType = FadeIn
+		Time = 5
+	}
+	Image
+	{
+		Time = -10
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	Fader
+	{
+		Background = "ENDCRD03"
+		FadeType = FadeIn
+		Time = 5
+	}
+	Image
+	{
+		Time = -10
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	Fader
+	{
+		Background = "CREDITS"
+		FadeType = FadeIn
+		Time = 5
+	}
+	Image
+	{
+		Time = -15
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	Fader
+	{
+		Background = "CREDITV"
+		FadeType = FadeIn
+		Time = 5
+	}
+	Image
+	{
+		Time = -15
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	Fader
+	{
+		Background = "ENDSCR16"
+		FadeType = FadeIn
+		Time = 5
+	}
+	Image
+	{
+		Time = -24
+	}
+	Fader
+	{
+		FadeType = FadeOut
+		Time = 5
+	}
+	GotoTitle {}
+	}
+	
