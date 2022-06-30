@@ -202,7 +202,7 @@ actor BolaAmmo : Ammo
 
 ACTOR Bola : Weapon
 {
-	Weapon.SelectionOrder 3700
+	Weapon.SelectionOrder 4000
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
@@ -390,10 +390,11 @@ ACTOR RemoteBaterang : Weapon
 }
 ACTOR TriBaterang : Weapon
 {
-	//Weapon.SelectionOrder 3700
+	Weapon.SelectionOrder 2
 	Weapon.Kickback 100
 	Weapon.slotNumber 3
 	Weapon.AmmoUse 1
+	+WEAPON.NO_AUTO_SWITCH
 	Weapon.AmmoGive 0
 	AttackSound "*fist"
 	Obituary "$OB_MPFIST"
@@ -404,6 +405,7 @@ ACTOR TriBaterang : Weapon
 	//Scale 3
 	+WEAPON.MELEEWEAPON
 	+WEAPON.NOAUTOAIM
+	//+WEAPON.NOAUTOSWITCH
 	States
 	{
   Spawn:
@@ -685,7 +687,7 @@ ACTOR TazerPlasma
 		Stop
 	}
 }
-ACTOR EMPGun : DoomWeapon replaces bfg9000
+ACTOR EMPGun : weapon replaces bfg9000
 {
   //Height 20
   Weapon.SlotNumber 7
