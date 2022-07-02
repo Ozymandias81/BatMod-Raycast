@@ -1,6 +1,6 @@
 ACTOR BatFist : Weapon
 {
-	Weapon.SelectionOrder 8
+	Weapon.SelectionOrder 15
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
@@ -202,7 +202,7 @@ actor BolaAmmo : Ammo
 
 ACTOR Bola : Weapon
 {
-	Weapon.SelectionOrder 18
+	Weapon.SelectionOrder 12
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
