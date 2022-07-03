@@ -83,7 +83,7 @@ C3TEXT =
 	"you start to lose focus. However, you push \n"
 	"through. Mad hatter is in the nearbye stock \n"
 	"exchange, their's no time to waste!";
-C4TEXT =
+C5TEXT =
 	"Jervis's twisted illusions are some\n"
 	"of the worst you have experienced, and\n"
 	"now you know why. His partnering with \n"
@@ -101,7 +101,7 @@ C4TEXT =
 	"repeat of the No Man's Land situation\n"
 	"in case all else fails. It's going to be\n"
 	"one hell of a night.\n";
-C5TEXT =
+C4TEXT =
 	"CONGRATULATIONS, YOU'VE FOUND THE SECRET\n"
 	"LEVEL! LOOKS LIKE IT'S BEEN BUILT BY\n"
 	"HUMANS, RATHER THAN DEMONS. YOU WONDER\n"
