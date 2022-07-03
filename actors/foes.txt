@@ -221,6 +221,7 @@ actor Thug
 	  //+AVOIDMELEE
 	//Species "" set this for certain types of henchmen
 	//SeeSound "thug/sight"
+	SeeSound "badguy/sight"
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
 	DeathSound "badguy/death"
@@ -299,6 +300,7 @@ actor Thug2 : thug
 	Scale 1.2
 	dropItem "baterang"
 	+NoBlood
+	SeeSound "badguy/sight"
 	+FLOORCLIP
 	+NOTARGET
 	//+MissileMore
@@ -465,6 +467,7 @@ actor Prisoner replaces spectre
 	+FLOORCLIP
 	+NOTARGET
 	+MissileEvenMore
+	SeeSound "thug/sight"
 	dropItem "tazer"
 	  //+AVOIDMELEE
 	//Species "" set this for certain types of henchmen
@@ -551,6 +554,7 @@ actor Convict replaces demon
 	  //+AVOIDMELEE
 	//Species "" set this for certain types of henchmen
 	//SeeSound "thug/sight"
+	SeeSound "thug/sight"
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
 	DeathSound "conv/death"
@@ -1030,7 +1034,7 @@ actor JokerGoonCar 778//replaces wolfensteinss
 	+NOTARGET
 	+Frightened
 	Species "JokerGang" //set this for certain types of henchmen
-	SeeSound "guard/sight"
+	SeeSound "clwn/sight"
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
 	DeathSound "gunguy/death"
@@ -1108,7 +1112,7 @@ actor JokerGoonCarAgressive 777//replaces wolfensteinss
 	+FLOORCLIP
 	+NOTARGET
 	Species "JokerGang" //set this for certain types of henchmen
-	SeeSound "guard/sight"
+	SeeSound "clwn/sight"
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
 	DeathSound "gunguy/death"
@@ -1195,7 +1199,7 @@ actor JokerGoon //replaces wolfensteinss
 	+NOTARGET
 	//+Frightened
 	Species "JokerGang" //set this for certain types of henchmen
-	SeeSound "guard/sight"
+	SeeSound "clwn/sight"
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
 	DeathSound "gunguy/death"
@@ -1323,7 +1327,7 @@ actor HatterGoon replaces stealthdoomimp
 	+NOTARGET
 	//+Frightened
 	Species "HatterGang" //set this for certain types of henchmen
-	SeeSound "guard/sight"
+	SeeSound "clwn/sight"
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
 	DeathSound "conv/death"

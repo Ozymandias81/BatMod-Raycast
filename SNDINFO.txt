@@ -11,10 +11,20 @@ thug/death3			DEATHSC3
 thug/death4			DEATHSC4
 thug/death5			DEATHSC5
 thug/death6			DEATHSC6
-thug/sight			haltsnd
+$random thug/sight		{ thug/sight1  thug/sight2  thug/sight3}
+thug/sight1			HALTSND
+thug/sight2			HALTSNA
+thug/sight3			HALTSNB
 badguy/sight		WHODA
 badguy/death		AHHHGSND
-guard/sight	    	BMBGSIGH
+$random guard/sight		{ guard/sight1  guard/sight2  guard/sight3}
+guard/sight1	    BMBGSIGH
+guard/sight2	    GRDSIGHT
+guard/sight3	    sldrsit
+$random clwn/sight		{ clwn/sight1  clwn/sight2  clwn/sight3}
+clwn/sight1	  	 	jokgns1
+clwn/sight3	    	jokgns3
+clwn/sight2	    	jokgns2
 Hench/sight	    	ALERTSND
 Hench/death	    	henchdie
 trashbreak			trshbrk
