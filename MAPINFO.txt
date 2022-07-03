@@ -95,7 +95,7 @@ map MAP08 "Sanctuary"
 	sky1 = "DOCKSCAP"
 	MUSIC = "SKYGOTHM"
 	Next = "MAP06"
-	cluster = 10
+	cluster = 9
 }
 //CATHEDRL.ogg
 //UNDRGNES.ogg
