@@ -1,7 +1,7 @@
 //PLAYERS//
-$playersound	Player	male	*jump	"DSKJump.ogg"
-$playersound	Player	male	*land	"Land.ogg"
-$playersound	Player	male	*grunt	"Land.ogg"
+$playersound	Player	male	*jump	"DSKJUMP.ogg"
+$playersound	Player	male	*land	"LAND.ogg"
+$playersound	Player	male	*grunt	"LAND.ogg"
 
 //FOES//
 $random thug/death		{ thug/death1  thug/death2  thug/death3  thug/death4  thug/death5  thug/death6}
@@ -100,24 +100,25 @@ rico4				RICOCHE4
 $random rico				{ rico1  rico3  rico4}	
 
 //OTHERS//
-Slide		"Slide.ogg"
-WallSlide	"WallSlide.ogg"
-Climb		"Climb.ogg"
+Slide		"SLIDE.ogg"
+WallSlide	"WALLSLID.ogg"
+Climb		"CLIMB.ogg"
 
-HookWall	"HookWall.ogg"
-HookMeat	"HookMeat.ogg"
-HookFailed	"HookFailed.ogg"
-HookLaunch	"HookLaunch.ogg"
+HookWall	"HOOKWALL.ogg"
+HookMeat	"HOOKMEAT.ogg"
+HookFailed	"HOOKFAIL.ogg"
+HookLaunch	"HOOKLAUN.ogg"
 
-missile/fire		DSMISSF
+missile/fire	DSMISSF
 missile/hit		DSMISSX
-scare/fire	SCARECRO
-clock/fire	CLOCKKIN
+scare/fire		SCARECRO
+clock/fire		CLOCKKIN
 clock/hit		CLOCKPRO
-glass/break   GLASSBRE
-$limit    glass/break 0
-$pitchshift    glass/break 3
-$rolloff    glass/break 1000 2000
+
+glass/break   	GLASSBRE
+$limit    		glass/break 0
+$pitchshift    	glass/break 3
+$rolloff    	glass/break 1000 2000
 
 //car explosion stuff
 weapons/explode1	        dspipex1

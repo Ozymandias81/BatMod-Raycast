@@ -17,8 +17,8 @@ MAIN TEAM:
 - DoomJedi: Sprites, Graphics & Textures Artist
 
 - DoomJuan: Mapper
-- Ivory Duke: ZMovement Codes;
-- Ijon: Source of inspiration;
+- Ivory Duke: ZMovement Codes
+- Ijon: Source of inspiration
 - Michaelis and DoomKrakken: programming help & support
 --------------------------------------------------------------------------------
 
