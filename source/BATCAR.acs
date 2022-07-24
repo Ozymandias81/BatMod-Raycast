@@ -16,7 +16,8 @@ script 421 ENTER
 	{
 		GiveInventory("Accelerate", 1);
 	}
-	delay(1);
+	delay(2);
+	TakeInventory("Accelerate", 1);
 	}
 }
 
