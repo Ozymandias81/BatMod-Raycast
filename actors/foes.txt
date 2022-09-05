@@ -105,7 +105,7 @@ actor Theif
 	Missile:
 		THEF FG 4 A_FaceTarget
 		THEF H 0 A_PlaySound("Weapon/handgun")
-		THEF H 8 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
+		THEF H 8 bright A_CustomMissile("MonsterTracer", 32, 0, random(-5, 5), 1, random(-5, 5))//A_CPosAttack
 		THEF FG 2 A_FaceTarget
 		goto See
 	Pain:
@@ -238,10 +238,10 @@ actor Thug
 	Missile:
 		THUG F 4 A_FaceTarget
 		THUG G 0 A_PlaySound("Weapon/handgun")
-		THUG G 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
+		THUG G 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-7, 7), 1, random(-7, 7))//A_CPosAttack
 		THUG F 2 A_FaceTarget
 		THUG H 0 A_PlaySound("Weapon/handgun")
-		THUG H 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
+		THUG H 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-7, 7), 1, random(-7, 7))//A_CPosAttack
 		THUG F 4 A_FaceTarget
 		goto See
 	Pain:
