@@ -1602,6 +1602,7 @@ Actor Batsphere : SoulSphere Replaces SoulSphere
 ACTOR Freedom : Health //hostage add to counter
 {
   +COUNTITEM
+  +NoClip
   +INVENTORY.AUTOACTIVATE
   +INVENTORY.ALWAYSPICKUP
   +INVENTORY.FANCYPICKUPSOUND
@@ -2238,7 +2239,7 @@ Actor Eraser replaces LostSoul
 		Loop
 	Missile:
 		ERAS E 8 A_FaceTarget
-		ERAS F 8 A_CyberAttack
+		ERAS F 8 BRIGHT A_CyberAttack
 		Goto See
 	Pain:
 		ERAS a 2
@@ -2463,7 +2464,7 @@ Actor BlackMask replaces StealthHellKnight
 		Loop
 	Missile:
 		blak E 8 A_FaceTarget
-		blak F 8 A_CyberAttack
+		blak F 8 BRIGHT A_CyberAttack
 		Goto See
 	Pain:
 		blak a 2
@@ -2571,13 +2572,13 @@ Actor ElGhoul replaces StealthBaron //IDK about this dude, he is pretty lame wit
 		Loop
 	Missile:
 		GHUL E 4 A_FaceTarget
-		GHUL F 4 A_CyberAttack
+		GHUL F 4 BRIGHT A_CyberAttack
 		GHUL E 4 A_FaceTarget
-		GHUL F 4 A_CyberAttack
+		GHUL F 4 BRIGHT A_CyberAttack
 		GHUL E 4 A_FaceTarget
-		GHUL F 4 A_CyberAttack
+		GHUL F 4 BRIGHT A_CyberAttack
 		GHUL E 4 A_FaceTarget
-		GHUL F 4 A_CyberAttack
+		GHUL F 4 BRIGHT A_CyberAttack
 		Goto See
 	Death:
 		GHUL G 8 A_Scream
@@ -3077,11 +3078,11 @@ Actor TwoFace replaces HellKnight
 	Missile:
 		twof E 0 a_jump(127,"CoinToss")
 		twof E 4 A_FaceTarget
-		twof F 4 A_CyberAttack
+		twof F 4 BRIGHT A_CyberAttack
 		twof E 4 A_FaceTarget
-		twof F 4 A_CyberAttack
+		twof F 4 BRIGHT A_CyberAttack
 		twof E 4 A_FaceTarget
-		twof F 4 A_CyberAttack
+		twof F 4 BRIGHT A_CyberAttack
 		Goto See
 	CoinToss:
 		twof g 3
@@ -3090,7 +3091,7 @@ Actor TwoFace replaces HellKnight
 		twof j 3 a_jump(127,"Missile")
 		twof a 3 
 		twof E 8 A_FaceTarget
-		twof F 8 A_CyberAttack
+		twof F 8 BRIGHT A_CyberAttack
 		Goto See
 	Pain:
 		twof a  2

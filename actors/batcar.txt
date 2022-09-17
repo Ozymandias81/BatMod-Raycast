@@ -39,6 +39,7 @@ ACTOR Biker : PlayerPawn
 	PainChance 255
 	Player.DisplayName "Batmobile"
 	Player.CrouchSprite "PLYC"
+	deathsound "bat/death6"
 	//Player.StartItem "BikeHUD"
 	Player.Face "STF"
 	Player.MorphWeapon "BikeHUD"
@@ -615,6 +616,7 @@ ACTOR BatBike : PowerupGiver 10804
 	+INVENTORY.AUTOACTIVATE
 	//Inventory.PickupSound "Car/Start"
 	Inventory.PickupMessage "You got on the Batbike!"
+	-COUNTITEM
 	States
 	{
 	Spawn:
@@ -636,6 +638,7 @@ ACTOR PowerVehicalPlayer : PowerMorph
 ACTOR RunningCar : CustomInventory 614
 {
 	Health 2500
+	-COUNTITEM
 	+NOBLOOD
 	+SOLID
 	+SHOOTABLE

@@ -158,3 +158,5 @@ bat/death2			bded2
 bat/death3			bded3
 bat/death4			bded4
 bat/death5			bded5
+//batmobile death
+bat/death6			bded6
