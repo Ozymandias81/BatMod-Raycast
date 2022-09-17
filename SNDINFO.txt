@@ -66,6 +66,8 @@ conv/death1			SCREAM1
 conv/death2			SCREAM2
 conv/death3			SCREAM3
 
+jokr/see			JOKRLAF
+jokr/die			JOKROCH
 clay/die			claydie
 clay/see			claysee
 croc/die			crocdie
@@ -148,3 +150,10 @@ MTDBRS3 MTDBRS3
 MTDBRS4 MTDBRS4
 $random METLDBRS	{ MTDBRS1 MTDBRS2 MTDBRS3 MTDBRS4 }
 $limit	METLDBRS 1
+
+$random bat/death		{ bat/death1  bat/death2  bat/death3  bat/death4  bat/death5}
+bat/death1			bded1
+bat/death2			bded2
+bat/death3			bded3
+bat/death4			bded4
+bat/death5			bded5

@@ -3267,6 +3267,7 @@ Actor Joker replaces SpiderMastermind
 {
 	+BOSS
 	+JUMPDOWN
+	-NODROPOFF
 	//+LOOKALLAROUND
 	//+NORADIUSDMG
 	//+SHIELDREFLECT
@@ -3280,9 +3281,9 @@ Actor Joker replaces SpiderMastermind
 	WOundHealth 600
 	+AvoidMelee
 	+NoBlood
-	//SeeSound "rdlr/see"
+	SeeSound "jokr/see"
 	AttackSound "weapon/shotgun"
-	//DeathSound "rdlr/die"
+	DeathSound "jokr/die"
 	Obituary "The Joker got the last laugh"
 	States
 	{

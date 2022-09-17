@@ -8,6 +8,7 @@ Class Batman : ZMovePlayer
 	Height 50;
 	Mass 100;
 	PainChance 255;
+	DeathSound "bat/death";
 	Player.DisplayName "Batman";
 	//Player.CrouchSprite "PLYC";
 	Player.StartItem "Bola", 15;
