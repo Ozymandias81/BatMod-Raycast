@@ -54,7 +54,10 @@ fire/flameexplosion         FLAMEXP
 fire/shootflame             FIRESHOT
 jokerbox					JOKEBOX
 world/thunder		THNDR1
+doors/dr1_open		WOODOPEN
+doors/dr1_clos		WOODCLOS
 
+human/imonfire			FLAMEDIE
 $random gunguy/death		{ gunguy/death1  gunguy/death2  gunguy/death3  gunguy/death4  gunguy/death5}
 gunguy/death1			DIE1
 gunguy/death2			DIE2
@@ -73,6 +76,9 @@ clay/see			claysee
 croc/die			crocdie
 croc/see			crocsee
 croc/see2			crocsee2
+ffly/die			fflydie
+ffly/see			fflysee1
+ffly/see2			fflysee2
 bane/die			banedie
 bane/see			banesee
 dead/die			deaddie

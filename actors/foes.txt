@@ -274,7 +274,7 @@ actor Thug
 		THUG V -1
 		stop
 	Death.Firey:
-		BURN A 3 Bright A_PlaySoundEx("human/imonfire", "Voice")
+		BURN A 3 Bright A_PlaySound("human/imonfire")
 		BURN B 3 Bright A_DropFire
 		BURN C 3 Bright A_Wander
 		BURN D 3 Bright A_NoBlocking
@@ -2065,7 +2065,8 @@ actor FireFlyBurnDoorIntroLand replaces StealthArchvile
 			FSP1 A 5 A_Chase
 			loop
 		Melee:
-			FSP1 BCDEF 5 A_SargAttack
+			FSP1 B 5 A_PlaySound("ffly/see2")
+			FSP1 CDEF 5 A_SargAttack
 			FSP1 G 5 A_NoBlocking
 			FSP1 H 5 A_SpawnItem("FireFlyLand")
 			FSP1 I -1
@@ -2088,7 +2089,7 @@ actor FireFlyLand //replaces StealthArchvile
 	Height 56
 	obituary "%o was burned to death by FireFly"
 	attacksound "wolfss/attack"
-	//deathsound "frez/die"
+	deathsound "ffly/die"
 	//seesound "frez/see"
 	MONSTER
 	states
@@ -2132,8 +2133,8 @@ actor FireFlyAir replaces Archvile
 	Height 56
 	obituary "%o was burned to death by FireFly"
 	attacksound "wolfss/attack"
-	//deathsound "frez/die"
-	//seesound "frez/see"
+	deathsound "ffly/die"
+	seesound "ffly/see"
 	MONSTER
 	states
 	{
