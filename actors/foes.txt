@@ -3133,20 +3133,20 @@ Actor Riddler replaces BossBrain
 	Missile:
 		RIDD E 0 A_Jump(100,"Shield")
 		RIDD E 8 A_FaceTarget
-		RIDD F 8 A_CustomMissile("WolfRocket")
+		RIDD F 8 BRIGHT A_CustomMissile("WolfRocket")
 		Goto See
 	Shield:
 		RIDD G 6 A_SetReflectiveInvulnerable
 		RIDD G 0 A_PlaySound("frcf/ac")
-		RIDD H 6 A_CentaurDefend
+		RIDD H 6 BRIGHT  A_CentaurDefend
 		Goto PSee
 	PSee:
-		RIDD HHIIJJKK 3 A_Chase("","PMissile")
+		RIDD HHIIJJKK 3 BRIGHT A_Chase("","PMissile")
 		Loop
 	PMissile:
-		RIDD L 0 A_Jump(75,"Unshield")
-		RIDD L 8 A_FaceTarget
-		RIDD M 8 A_CustomMissile("WolfRocket")
+		RIDD L 0 BRIGHT A_Jump(75,"Unshield")
+		RIDD L 8 BRIGHT A_FaceTarget
+		RIDD M 8 BRIGHT A_CustomMissile("WolfRocket")
 		Goto PSee
 	Unshield:
 		RIDD A 0 A_PlaySound("frcf/de")
@@ -3266,6 +3266,7 @@ Actor DeathStrokeSwords
 Actor Joker replaces SpiderMastermind
 {
 	+BOSS
+	+JUMPDOWN
 	//+LOOKALLAROUND
 	//+NORADIUSDMG
 	//+SHIELDREFLECT
