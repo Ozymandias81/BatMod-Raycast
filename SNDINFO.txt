@@ -72,6 +72,7 @@ clay/die			claydie
 clay/see			claysee
 croc/die			crocdie
 croc/see			crocsee
+croc/see2			crocsee2
 bane/die			banedie
 bane/see			banesee
 dead/die			deaddie
@@ -94,6 +95,12 @@ cking/die			ckingdie
 cking/see			ckingsee
 rdlr/die			rdlrdie
 rdlr/see			rdlrsee
+pyg/die				pygdie
+pyg/see				pygsee
+peng/see			pengsee
+peng/die			pengdie
+mhat/see			mhatsee
+mhat/die			mhatdie
 frcf/de				frcfde
 frcf/ac				frcfac
 rico1				RICOCHE1	
