@@ -151,6 +151,7 @@ MTDBRS4 MTDBRS4
 $random METLDBRS	{ MTDBRS1 MTDBRS2 MTDBRS3 MTDBRS4 }
 $limit	METLDBRS 1
 
+gordon/Save			gorwarn
 $random bat/death		{ bat/death1  bat/death2  bat/death3  bat/death4  bat/death5}
 bat/death1			bded1
 bat/death2			bded2
