@@ -260,7 +260,7 @@ ACTOR WolfRocket replaces rocket
 		MISL A 1 BRIGHT A_SpawnItemEx("WolfRocketSmoke", 0, 0, -40)
 		Loop
 	Death:
-		BAL3 CDE 4 A_Explode(16, 32, 1)
+		BAL3 CDE 4 BRIGHT A_Explode(16, 32, 1)
 		Stop
 	}
 }

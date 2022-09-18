@@ -452,6 +452,9 @@ actor RiddlerThug
 		BURN RSTU 7 Bright
 		BURN V -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 actor Prisoner replaces spectre
@@ -935,6 +938,9 @@ actor TwoFaceHenchmen replaces stealthchaingunguy
 		BURN RSTU 7 Bright
 		BURN V -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 actor Soilder replaces stealthzombieman
@@ -1017,6 +1023,9 @@ actor Soilder replaces stealthzombieman
 		BURN RSTU 7 Bright
 		BURN V -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 actor JokerGoonCar 778//replaces wolfensteinss
@@ -1270,6 +1279,9 @@ actor JokerGoon //replaces wolfensteinss
 		BURN RSTU 7 Bright
 		BURN V -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 actor ClwnHairRed : JokerGoon
@@ -3051,7 +3063,7 @@ Actor ClockKing replaces Arachnotron
 }
 Actor TwoFace replaces HellKnight
 {
-	//+BOSS
+	+BOSS
 	+LOOKALLAROUND
 	+NORADIUSDMG
 	+MissileMore
@@ -3155,10 +3167,12 @@ Actor Riddler replaces BossBrain
 		RIDD A 6 A_UnsetReflectiveInvulnerable
 		Goto See
 	Pain:
+		//RIDD A 0 A_PlaySound("frcf/de")
 		RIDD N 6 A_Pain
+		RIDD A 1 A_UnsetReflectiveInvulnerable
 		//CKNG G 6 A_SetReflectiveInvulnerable
 		//CKNG GGG 15 A_CentaurDefend
-		//CKNG G 1 A_UnsetReflectiveInvulnerable
+		
 		Goto See
 	Death:
 		RIDD N 8 A_Scream
