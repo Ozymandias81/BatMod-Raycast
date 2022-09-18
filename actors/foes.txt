@@ -1225,7 +1225,7 @@ actor JokerGoon //replaces wolfensteinss
 		CLWN LM 8 A_FaceTarget
 		CLWN N  0 A_PlaySound("shotguy/attack")
 		CLWN NNNN  0 bright A_CustomMissile("ShotgunParticles", 36, 0, random(-9, 9), 6, random(-9, 9))//A_SPosAttack
-		CLWN N 4 A_CustomMissile("ShotgunguyTracer", 36, 0, random(-7, 7), 1, random(-4, 4))
+		CLWN N 4 bright A_CustomMissile("ShotgunguyTracer", 36, 0, random(-7, 7), 1, random(-4, 4))
 		CLWN M 2 //A_CposRefire
 		goto See
 	Pain:
