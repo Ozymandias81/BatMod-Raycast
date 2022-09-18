@@ -3051,7 +3051,7 @@ Actor ClockKing replaces Arachnotron
 }
 Actor TwoFace replaces HellKnight
 {
-	+BOSS
+	//+BOSS
 	+LOOKALLAROUND
 	+NORADIUSDMG
 	+MissileMore
@@ -3260,7 +3260,7 @@ Actor DeathStrokeSwords
 	Death:
 		DTRK S 8 A_Scream
 		DTRK T 8 A_NoBlocking
-		DTRK U 8
+		DTRK U 8 Acs_Execute(3)
 		DTRK V -1
 		Stop
 	}
