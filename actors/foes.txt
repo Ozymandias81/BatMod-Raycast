@@ -3341,7 +3341,35 @@ Actor Joker replaces SpiderMastermind
 		Stop
 	}
 }
-
+Actor HarleyQuinn 500
+{
+	//+BOSS
+	//+LOOKALLAROUND
+	//+NORADIUSDMG
+	Radius 20
+	Height 56
+	Monster
+	Mass 100
+	Speed 8
+	painchance 120
+	Health 1
+	+NoBlood
+	AttackSound "weapon/shotgun"
+	DeathSound "hrly/die"
+	Obituary "%o was somehow killed by Harley Quinn."
+	States
+	{
+	Spawn:
+		HRLY A 10
+		Loop	
+	Death:
+		HRLY A 4 A_Scream
+		HRLY C 4 A_NoBlocking
+		HRLY D 4
+		HRLY B -1
+		Stop
+	}
+}
 actor Rabbit : MBFHelperDog
 {
 	health 1

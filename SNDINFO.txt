@@ -71,6 +71,7 @@ conv/death3			SCREAM3
 
 jokr/see			JOKRLAF
 jokr/die			JOKROCH
+hrly/die			hrlydie
 clay/die			claydie
 clay/see			claysee
 croc/die			crocdie
