@@ -10,6 +10,7 @@ OptionMenu "MostWanted"
 	
 	StaticText ""
 	Submenu "The Joker", "Joker"
+	Submenu "Harley Quinn", "Harley"
 	Submenu "Bane", "Bane"
 	Submenu "Two-face", "Twoface"
 	Submenu "The Riddler", "Riddler"
@@ -42,6 +43,14 @@ ListMenu "Joker"
 	StaticTextCentered 160, 155, "The Joker"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Unknown Priority: Highest"
+}
+ListMenu "Harley"
+{
+	Font "BIGFONT", Red
+	StaticPatch 160, 145, "HRLYA0"
+	StaticTextCentered 160, 155, "Harley Quinn"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Harleen Quinzel Priority: Low"
 }
 ListMenu "Bane"
 {
