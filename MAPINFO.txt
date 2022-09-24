@@ -104,7 +104,15 @@ map MAP10 "Joker's Funhouse"
 	sky1 = "CITYSCAP"
 	MUSIC = "FUNHOU"
 }
-
+map MAP11 "Tower"
+{
+	sky1 = "CITYSCAP"
+	MUSIC = "AXISCHEM"
+	Lightning
+	Next = "MAP06"
+	SecretNext = "MAP08"
+	cluster = 9
+}
 skill baby
 {
 	AutoUseHealth
