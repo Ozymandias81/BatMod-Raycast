@@ -1,8 +1,8 @@
 gameinfo
 {
 	AddEventHandlers = "DashHandler", "GrapplingHookHandler", "SpeedoMeterHandler", "WallSlideHandler"
-	NormForwardMove = 0x32, 0x32	//Walk speed is modulated through
-	NormSideMove = 0x32, 0x32		//CVar in the menu options
+	//NormForwardMove = 0x32, 0x32	//Walk speed is modulated through
+	//NormSideMove = 0x32, 0x32		//CVar in the menu options
 	PlayerClasses = "Batman" 		//, "Biker", "GreenArrow"
 	NoRandomPlayerClass = true
 }
