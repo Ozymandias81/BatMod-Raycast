@@ -1911,7 +1911,7 @@ actor ProfessorPyg replaces revenant
 	PainChance 200
 	Monster
 	//Scale 1.2
-	//+NoBlood
+	+NoBlood
 	+FLOORCLIP
 	+NOTARGET
 	+BOSS
@@ -2131,7 +2131,7 @@ actor FireFlyLand //replaces StealthArchvile
 }
 actor FireFlyAir replaces Archvile
 {
-	health 800
+	health 650
 	+NoBlood
 	//gibhealth 150
 	speed 20
