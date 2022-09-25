@@ -13,8 +13,13 @@ defaultmap
 clearEpisodes
 episode map01
 {
-   name = "Batman 3"
-   key = "3"
+   name = "Rogue City"
+   key = "R"
+}
+episode tutorial
+{
+   name = "Tutorial"
+   key = "T"
 }
 map C1M1 "Level1"
 {
@@ -28,6 +33,13 @@ map C1M1 "Level1"
 	MUSIC = "D_RUNNIN"
 }
 */
+map TUTORIAL "Tutorial"
+{
+	sky1 = "DOCKSCAP"
+	MUSIC = "BATMAN!!"
+	Next = "MAP01"
+	cluster = 5
+}
 map MAP01 "Shipping Yard"
 {
 	sky1 = "DOCKSCAP"

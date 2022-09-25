@@ -3355,13 +3355,17 @@ Actor HarleyQuinn 500
 	Health 1
 	+NoBlood
 	AttackSound "weapon/shotgun"
+	SeeSound "hrly/see"
 	DeathSound "hrly/die"
 	Obituary "%o was somehow killed by Harley Quinn."
 	States
 	{
 	Spawn:
-		HRLY A 10
+		HRLY A 10 A_Look
 		Loop	
+	See:
+		HRLY FA 10
+		Loop
 	Death:
 		HRLY A 4 A_Scream
 		HRLY C 4 A_NoBlocking
