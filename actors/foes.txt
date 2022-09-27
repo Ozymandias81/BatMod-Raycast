@@ -1863,6 +1863,7 @@ actor Zsasz replaces stealthdemon
 	Speed 6
 	PainChance 200
 	Monster
+	MeleeThreshold 196
 	+NoBlood
 	//Scale 1.2
 	+FLOORCLIP
