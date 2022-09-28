@@ -1863,7 +1863,8 @@ actor Zsasz replaces stealthdemon
 	Speed 6
 	PainChance 200
 	Monster
-	MeleeThreshold 196
+	MeleeThreshold 120
+	//MeleeRange 40
 	+NoBlood
 	//Scale 1.2
 	+FLOORCLIP
@@ -1971,10 +1972,13 @@ actor KillerCrocLand replaces cacodemon
 	PainChance 150
 	Monster
 	Scale 1.2
+	Mass 200
 	+BOSS
 	+LOOKALLAROUND
 	+FLOORCLIP
 	+NOTARGET
+	MeleeThreshold 56
+	MeleeRange 56
 	//+MissileMore
 	  //+AVOIDMELEE
 	//Species "" set this for certain types of henchmen
@@ -1995,7 +1999,7 @@ actor KillerCrocLand replaces cacodemon
 		loop
 	Melee:
 		CROC EF 4 A_FaceTarget
-		CROC G 4 A_SkelFist
+		CROC G 2 A_SkelFist
 		CROC H 2 A_FaceTarget
 		goto See
 	Pain:
@@ -2041,10 +2045,12 @@ actor KillerCrocWater replaces stealthcacodemon
 		loop
 	See:
 		KROC AAAAABBBBBBCCCCCDDDDDD 1 A_Chase
+		TNT1 AAAAAAAAAAAAA 1 A_Chase
 		loop
 	Melee:
-		KROC EFG 4 A_FaceTarget
-		KROC HI 4 A_SargAttack
+		KROC EF 3 A_FaceTarget
+		KROC G 2 A_Recoil(-15)
+		KROC HI 2 A_SargAttack
 		KROC J 2 A_FaceTarget
 		goto See
 	Pain:
