@@ -72,6 +72,7 @@ map MAP04 "Mad Hatter's Lair"
 }
 map MAP05 "Apprehend the Mad Hatter"
 {
+	DisableShadowmap
 	sky1 = "madsky"
 	MUSIC = "FUNHOU"
 	Lightning

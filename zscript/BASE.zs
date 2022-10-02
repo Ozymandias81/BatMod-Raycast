@@ -207,3 +207,48 @@ Class GreenArrow : ZMovePlayer
 		Stop;
 	}
 }
+
+Class Freedom : Health
+{
+	Default{
+	+COUNTITEM;
+  +NoClip;
+  +INVENTORY.AUTOACTIVATE;
+  +INVENTORY.ALWAYSPICKUP;
+  +INVENTORY.FANCYPICKUPSOUND;
+  Inventory.Amount 0;
+  Inventory.MaxAmount 200;
+  Inventory.PickupMessage "";//so the console dosent display anything
+  //Inventory.PickupSound "misc/p_pkup"
+  +INVENTORY.NOSCREENFLASH;
+  }
+  States
+  {
+  Spawn:
+    TNT1 ABCDCB 6 Bright;
+    Loop;
+  }
+	
+    Override void Tick()
+    { //Tick override gets called every tick
+        Super.Tick();
+        GlideToPlayer(); //Call the function
+    }
+    void GlideToPlayer()
+    { //Function definition
+        For(let i = BlockThingsIterator.Create(self,9999); i.Next();)
+        { //Iterate through all actors in a 9999 unit range
+            Actor other = i.thing;
+            If(other==self)
+            {Continue;} //If the actor is the item, skip
+            double distance = Distance3D(other);
+            If(distance>9999)
+            {Continue;} //If it's above the specified distance, skip
+            If(other is "PlayerPawn")
+            { //If it's a player, continue
+                A_Face(other); //Face the player
+                VelFromAngle(10.0); //Move towards the player with a speed of 10 units per tick
+            }
+        }
+    }
+} 

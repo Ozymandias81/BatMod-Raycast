@@ -1611,6 +1611,7 @@ Actor Batsphere : SoulSphere Replaces SoulSphere
 {
 	-COUNTITEM
 }
+/* defined in zscript base now
 ACTOR Freedom : Health //hostage add to counter
 {
   +COUNTITEM
@@ -1630,6 +1631,7 @@ ACTOR Freedom : Health //hostage add to counter
     Loop
   }
 }
+*/ 
 Actor hostage : SwitchableDecoration replaces BlurSphere
 {
 	Radius 16
