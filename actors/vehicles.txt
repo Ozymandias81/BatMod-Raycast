@@ -207,6 +207,9 @@ actor 80sCopOn : 60sCarRed 10615
 	States
 	{
 	Spawn:
+		OCOP A 5 NoDelay A_PlaySound("siren1",0, 1, true, ATTN_STATIC)
+		Goto Siren
+	Siren:
 		OCOP ABAC 5
 		Loop
 	}
@@ -1703,6 +1706,9 @@ actor AmbulanceOn : AmbulanceOff 10729
 	States
 	{
 	Spawn:
+		AMBU A 5 NoDelay A_PlaySound("ambulanc",0, 1, true, ATTN_STATIC)
+		Goto Siren
+	Siren:
 		AMBU ABAC 5
 		Loop
 	}
@@ -2540,6 +2546,9 @@ actor FireTruckOn : FireTruckOff 10792
 	States
 	{
 	Spawn:
+		FTRU A 5 NoDelay A_PlaySound("ftruck",0, 1, true, ATTN_STATIC)
+		Goto Siren
+	Siren:
 		FTRU ABAC 5
 		Loop
 	}

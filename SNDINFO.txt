@@ -175,3 +175,11 @@ bat/death4			bded4
 bat/death5			bded5
 //batmobile death
 bat/death6			bded6
+
+alrmjail			alrmjail
+alrmstor			alrmstor
+alrmbig				alrmbig	
+ambi				ambi
+ambulance			police2//ambulanc
+ftruck				police2//ftruck
+siren1				police2

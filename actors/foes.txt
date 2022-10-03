@@ -1734,7 +1734,7 @@ Actor Lady : SwitchableDecoration replaces Berserk
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
 		LADY b 2 A_PlaySound("hostage/free2")
-		LADY b 1 A_GiveToTarget("Health", 20)
+		LADY b 1 A_GiveToTarget("Health", 15)
 		LADY b -1
 		stop
 	}
@@ -1817,7 +1817,8 @@ Actor Cop : SwitchableDecoration //replaces infrared
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
 		COPP C 2 A_PlaySound("hostage/cop2")
-		COPP C 1 A_GiveToTarget("Health", 20)
+		COPP CCCCCCCCCC 0 A_GiveToTarget("ArmorBonus", 1)//done this way because armor bonus are special
+		COPP C 1 A_GiveToTarget("Health", 10)
 		COPP C -1
 		stop
 	}
@@ -1852,7 +1853,8 @@ Actor CopNoHat : SwitchableDecoration //replaces infrared
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
 		COPP C 2 A_PlaySound("hostage/cop1")
-		COPP C 1 A_GiveToTarget("Health", 20)
+		COPP CCCCCCCCCC 0 A_GiveToTarget("ArmorBonus", 1)//done this way because armor bonus are special
+		COPP C 1 A_GiveToTarget("Health", 10)
 		COPP C -1
 		stop
 	}

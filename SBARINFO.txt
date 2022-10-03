@@ -83,11 +83,11 @@ Statusbar Normal //, ForceScaled
 	}
 
 	InInventory Not Generic_Map_Marker
-		DrawNumber 2, WOLFNUM, Untranslated, GlobalVar 2, 31, 176;
+		DrawNumber 2, WOLFNUM, Untranslated, globalVar 0, 31, 176;
 	Else
 		DrawImage "QM", 23, 176;
 
-	DrawNumber 6, WOLFNUM, Untranslated, GlobalArray 17, 95, 176;
+	DrawNumber 6, WOLFNUM, Untranslated, Armor, 70, 176;
 	DrawNumber 3, WOLFNUM, Untranslated, Health, 191, 176;
 
 	InInventory SoD_Game_Marker

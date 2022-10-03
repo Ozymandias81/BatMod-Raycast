@@ -73,8 +73,11 @@ actor Alarm  replaces HeartColumn
 	states
 	{
 		Spawn:
-			ALRM AB 7
-			loop
+			ALRM A 5 NoDelay A_PlaySound("alrmjail",0, 0.6, true, ATTN_STATIC)
+			Goto Siren
+		Siren:
+			ALRM AB 5
+			Loop
 	}
 }
 
@@ -145,7 +148,7 @@ actor ToySoilder replaces stalagmite
 
 actor SubwayColumn replaces ShortGreenColumn
 {
-	radius 32
+	radius 16
 	+SOLID
 	
 	states
@@ -588,7 +591,7 @@ actor ToiletDirty replaces DeadCacodemon
 	}
 }
 
-actor PlantBig replaces EvilEye
+actor Money replaces EvilEye
 {
 	radius 32
 	+SOLID
@@ -789,6 +792,19 @@ actor Shelves replaces SkullColumn
 			stop
 	}
 }
+//BlackParticleFountain
+actor SubwayTicket replaces BlackParticleFountain
+{
+	radius 8
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			STKT A -1
+			stop
+	}
+}
 
 actor SinkNew replaces column
 {
@@ -805,7 +821,7 @@ actor SinkNew replaces column
 
 actor ChairOffice replaces techLamp
 {
-	radius 32
+	radius 8
 	+SOLID
 	
 	states

@@ -1,11 +1,13 @@
 #library "BATMOD"
 #include "zcommon.acs"
+global int 0:level;
 
 script "Maplaunch" ENTER
 {
 	If((GetLevelInfo(LEVELINFO_LEVELNUM)==99)) //prevent fading from following maps defined on MAPINFO
 		terminate;
 	FadeRange(0,0,0,1.0,0,0,0,0.0,1.5);
+	level = GetLevelInfo(LEVELINFO_LEVELNUM);
 }
 
 Script 34 (void) //replace it with a namedscript for a better style - ozy81

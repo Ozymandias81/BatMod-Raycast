@@ -83,6 +83,7 @@ map CITYMAP "Restore order in West Gotham"
 {
 	sky1 = "CITYSCAP"
 	MUSIC = "B2DANGER"
+	LevelNum = 6
 	Lightning
 	Next = "MAP06"
 	SecretNext = "MAP08"
@@ -92,6 +93,7 @@ map MAP06 "Track down The Joker"
 {
 	sky1 = "DOCKSCAP"
 	MUSIC = "ROJ_URGT"
+	LevelNum = 7
 	Next = "MAP07"
 	Lightning
 	cluster = 9
@@ -100,6 +102,7 @@ map MAP07 "Apprehend the Joker"//will change this map number since it is the las
 {
 	sky1 = "CITYSCAP"
 	MUSIC = "CATHEDRL"
+	LevelNum = 8
 	Lightning
 	cluster = 9
 }
@@ -107,6 +110,7 @@ map MAP08 "Sanctuary"
 {
 	sky1 = "DOCKSCAP"
 	MUSIC = "SKYGOTHM"
+	LevelNum = 9
 	Next = "MAP06"
 	cluster = 9
 }

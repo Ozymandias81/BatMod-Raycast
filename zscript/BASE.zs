@@ -35,7 +35,10 @@ Class Batman : ZMovePlayer
 	Player.WeaponSlot 6, "RemoteBaterang";
 	Player.WeaponSlot 7, "EMPGun";
 	+NOBLOOD
-	DamageFactor "Firey", 0.6;
+	DamageFactor "Firey", 0.8;
+	DamageFactor "Smoke", 0.2;
+	PainChance "Smoke", 0;
+	//Player.DamageScreenColor "Grey", 0.8, "Smoke";
 	Player.DamageScreenColor "00 de 00", 0.8, "Poison";
 	Player.DamageScreenColor "Light Blue", 0.8, "Ice";
 	Player.DamageScreenColor "8c 4f 0d", 1, "Clay";
