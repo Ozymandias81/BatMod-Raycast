@@ -188,15 +188,15 @@ actor StreetLightOn replaces Meat2
 }
 
 
-actor CaveColumn replaces Meat3
+actor CaveColumn replaces NonSolidTwitch
 {
 	radius 32
 	+SOLID
-	
+	//+SPAWNCEILING
 	states
 	{
 		Spawn:
-			RCOL A -1
+			STLC a -1
 			stop
 	}
 }
@@ -296,7 +296,7 @@ actor StreetLightTotalLoss replaces NonSolidMeat5
 	}
 }
 
-actor StreetLight replaces NonSolidTwitch
+actor StreetLight 
 {
 	radius 32
 	+SOLID
@@ -334,7 +334,31 @@ actor GreenTreeFallen replaces GibbedMarine
 			stop
 	}
 }
+actor Knight replaces WhiteParticleFountain
+{
+	radius 16
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			neee a -1
+			stop
+	}
+}
 
+actor SkullTorch replaces YellowParticleFountain
+{
+	radius 16
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			skut abcd 3 BRIGHT
+			loop
+	}
+}
 actor OneDirectionSign replaces GibbedMarineExtra
 {
 	radius 32
@@ -808,7 +832,7 @@ actor SubwayTicket replaces BlackParticleFountain
 
 actor SinkNew replaces column
 {
-	radius 32
+	radius 8
 	+SOLID
 	
 	states

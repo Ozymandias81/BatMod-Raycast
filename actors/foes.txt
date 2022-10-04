@@ -752,14 +752,16 @@ actor Ninja 6745
 		NINJ X 2
 		NINJ Y -1
 		stop
-/*	Death.Electricity:
-		HOBO STSTSTSTST 3 BRIGHT A_PlaySound("Weapon/tazer")
-		HOBO E 5
-		HOBO F 5 A_ScreamAndUnblock
-		HOBO GH 2
-		HOBO I -1
+	Pain.Electricity:
+		NINK ABABA 3 BRIGHT A_PlaySound("Weapon/tazer")
+		goto see
+	Death.Electricity:
+		NINK ABABABAB 3 BRIGHT A_PlaySound("Weapon/tazer")
+		NINJ V 5
+		NINJ W 5 A_ScreamAndUnblock
+		NINJ X 2
+		NINJ Y -1
 		stop
-		*/
 	Death.Firey:
 		BURN A 3 Bright A_PlaySoundEx("human/imonfire", "Voice")
 		BURN B 3 Bright A_DropFire
