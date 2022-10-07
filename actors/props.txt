@@ -476,18 +476,50 @@ actor McRegister replaces HangTSkull
 }
 
 
-actor McPriceList replaces ColonGibs
+
+actor ShoppingCart replaces ColonGibs
 {
-	radius 32
-	
-	states
+	Health 10
+	Radius 20
+	Height 42
+	+DONTGIB
+	+NOBLOOD
+	+NOICEDEATH
+	+NOTAUTOAIMED
+	+PUSHABLE
+	+SHOOTABLE
+	+SOLID
+	DropItem "healthbonus"
+	DeathSound "trashbreak"	
+	States
 	{
-		Spawn:
-			MCMC A -1
-			stop
+	Spawn:
+		GROC A -1
+		Stop
+	Death:
+		TNT1 A 0 A_UnSetSolid
+		//"####" A 0 A_PlaySound("METALBRK")
+		GROC B 5 A_Scream
+		GROC C 5
+		GROC D 5 A_NoBlocking
+		GROC E -1 
+		Stop
 	}
 }
-
+ACTOR BatSoda : Health replaces healthBonus
+{
+  +COUNTITEM
+  +INVENTORY.ALWAYSPICKUP
+  Inventory.Amount 3
+  Inventory.MaxAmount 250
+  Inventory.PickupMessage "Drank a bat soda" // "Picked up a health bonus."
+  States
+  {
+  Spawn:
+    BON1 ABCDCB 6
+    Loop
+  }
+}
 actor SewerColumnMossy replaces BrainStem
 {
 	radius 32
