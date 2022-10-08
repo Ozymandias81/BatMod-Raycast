@@ -1978,13 +1978,13 @@ actor KillerCrocLand replaces cacodemon
 	PainChance 150
 	Monster
 	Scale 1.2
-	Mass 200
+	Mass 400
 	+BOSS
 	+LOOKALLAROUND
 	+FLOORCLIP
 	+NOTARGET
-	MeleeThreshold 56
-	MeleeRange 56
+	MeleeThreshold 60
+	MeleeRange 60
 	//+MissileMore
 	  //+AVOIDMELEE
 	//Species "" set this for certain types of henchmen
@@ -2004,7 +2004,8 @@ actor KillerCrocLand replaces cacodemon
 		CROC AAAAABBBBBBCCCCCDDDDDD 1 A_Chase
 		loop
 	Melee:
-		CROC EF 4 A_FaceTarget
+		CROC E 4 A_FaceTarget
+		CROC F 4 a_RECOIL(-10)
 		CROC G 2 A_SkelFist
 		CROC H 2 A_FaceTarget
 		goto See
@@ -2696,10 +2697,16 @@ actor Bane replaces BaronOfHell
 		BANE AAAAABBBBBBCCCCCDDDDDD 1 A_Chase
 		loop
 	Melee:
-		BANE E 2 A_FaceTarget
+		BANE E 4 A_FaceTarget
 		BANE F 2 A_SkelFist
 		BANE G 2 A_SkullAttack
 		BANE F 2 A_SkelFist
+		goto See
+	Missile:
+		BANE E 3 A_FaceTarget
+		BANE E 3 A_recoil(50)
+		BANE E 3 A_FaceTarget
+		BANE F 3 A_recoil(-200)
 		goto See
 	Pain:
 		BANE H 6 A_Pain
@@ -2730,6 +2737,8 @@ actor MrFreeze replaces fatso
 	deathsound "frez/die"
 	seesound "frez/see"
 	MONSTER
+	DamageFactor "Electricty", 0.6 
+	DamageFactor "Smoke", 1.2 
 	states
 	{
 		Spawn:
