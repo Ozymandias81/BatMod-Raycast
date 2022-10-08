@@ -27,7 +27,27 @@ Actor Tracer: FastProjectile
 		Stop
 	}
 }
-
+ACTOR BatPuff replaces BulletPuff // replaced for more satisfying melee
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  RenderStyle Translucent
+  Alpha 0.5
+  VSpeed 1
+  Mass 5
+  States
+  {
+  Spawn:
+    PUFF A 4 Bright
+    PUFF BCD 4
+	Stop
+  Melee:
+    PPUF CD 4 BRIGHT
+    Stop
+  }
+}
 Actor DecorativeTracer: Tracer
 {
 	//-DONTSPLASH
