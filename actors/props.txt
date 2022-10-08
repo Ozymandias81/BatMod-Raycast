@@ -96,7 +96,7 @@ actor PhoneBooth replaces TallRedColumn
 {
 	radius 32
 	+SOLID
-	
+	height 64
 	states
 	{
 		Spawn:
@@ -110,7 +110,7 @@ actor PhoneBoothBroken replaces TallGreenColumn
 {
 	radius 32
 	+SOLID
-	
+	height 64
 	states
 	{
 		Spawn:
@@ -150,7 +150,7 @@ actor SubwayColumn replaces ShortGreenColumn
 {
 	radius 16
 	+SOLID
-	
+	height 64
 	states
 	{
 		Spawn:
@@ -524,7 +524,7 @@ actor SewerColumnMossy replaces BrainStem
 {
 	radius 32
 	+SOLID
-	
+	height 64
 	states
 	{
 		Spawn:
@@ -827,7 +827,7 @@ actor WoodenCloset replaces candleStick
 {
 	radius 32
 	+SOLID
-	
+	height 64
 	states
 	{
 		Spawn:
@@ -982,7 +982,7 @@ actor Register2 replaces HeadCandles
 {
 	radius 32
 	+SOLID
-	
+	height 32
 	states
 	{
 		Spawn:
@@ -1057,7 +1057,7 @@ actor Nora replaces MarineShotgun
 {
 	radius 32
 	+SOLID
-	
+	height 32
 	states
 	{
 		Spawn:
@@ -1070,7 +1070,7 @@ actor Chamber replaces MarineSSG
 {
 	radius 32
 	+SOLID
-	
+	height 32
 	states
 	{
 		Spawn:
@@ -1092,6 +1092,7 @@ actor BenchSpawner : RandomSpawner replaces MarinePistol
 actor Bench 
 {
 	radius 32
+	height 8
 	+SOLID
 	
 	states
@@ -1104,6 +1105,7 @@ actor Bench
 actor HoboBench 
 {
 	radius 32
+	height 8
 	+SOLID
 	+Ambush
 	
