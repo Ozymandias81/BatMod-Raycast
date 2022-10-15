@@ -470,8 +470,11 @@ actor McRegister replaces HangTSkull
 	states
 	{
 		Spawn:
-			MACD A -1
-			stop
+			MACD A 5 NoDelay A_PlaySound("alrmstor",0, 0.6, true, ATTN_STATIC)
+			Goto Siren
+		Siren:
+			MACD A 5
+			Loop
 	}
 }
 
