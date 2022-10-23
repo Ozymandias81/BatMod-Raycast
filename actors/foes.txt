@@ -1033,12 +1033,13 @@ actor Soilder replaces stealthzombieman
 actor JokerGoonCar 778//replaces wolfensteinss
 {
 	+AvoidMelee
-	health 100
+	health 200
 	Radius 55
 	Height 56
 	Speed 15
 	PainChance 0
 	Monster
+	+CANTLEAVEFLOORPIC
 	+NoBlood
 	//Scale 1.2
 	+FLOORCLIP
@@ -1051,6 +1052,8 @@ actor JokerGoonCar 778//replaces wolfensteinss
 	DeathSound "gunguy/death"
 	Obituary "%o was killed by a Joker Henchmen."
 	DamageFactor "Bullet", 0 
+	DamageFactor "Electricty", 0.5
+	DamageFactor "Smoke", 0
 	states
 	{
 	Spawn:
@@ -1115,7 +1118,8 @@ actor JokerGoonCar 778//replaces wolfensteinss
 actor JokerGoonCarAgressive 777//replaces wolfensteinss
 {
 	//+AvoidMelee
-	health 100
+	health 200
+	+CANTLEAVEFLOORPIC
 	Radius 55
 	Height 56
 	Speed 15
@@ -1133,6 +1137,8 @@ actor JokerGoonCarAgressive 777//replaces wolfensteinss
 	DeathSound "gunguy/death"
 	Obituary "%o was killed by a Joker Henchmen."
 	DamageFactor "Bullet", 0 
+	DamageFactor "Electricty", 0.5
+	DamageFactor "Smoke", 0
 	states
 	{
 	Spawn:

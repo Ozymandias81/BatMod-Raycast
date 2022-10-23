@@ -176,6 +176,20 @@ bat/death5			bded5
 //batmobile death
 bat/death6			bded6
 
+//gordon dialouge
+gorbanex			gorbanex
+gorcrime			gorcrime
+gorfrzes			gorfrzes
+gorfrzsp			gorfrzsp
+gorinmte			gorinmte
+gorwhrbn			gorwhrbn
+gorwhrjk			gorwhrjk
+msg/kidn			jokkidna
+joknofnd			joknofnd
+jokunlst			jokunlst
+jokwarmr			jokwarmr
+alfgreet			alfgreet
+
 alrmjail			alrmjail
 alrmstor			alrmstor
 alrmbig				alrmbig	
