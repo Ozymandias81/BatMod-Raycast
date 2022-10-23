@@ -3,6 +3,7 @@ Class Batman : ZMovePlayer
 	Default
 	{
 	Speed 1;
+	Species "notEnemy";
 	Health 100;
 	Radius 16;
 	Height 50;
@@ -39,8 +40,8 @@ Class Batman : ZMovePlayer
 	DamageFactor "Smoke", 0.2;
 	PainChance "Smoke", 0;
 	//Player.DamageScreenColor "Grey", 0.8, "Smoke";
-	Player.DamageScreenColor "00 de 00", 0.8, "Poison";
-	Player.DamageScreenColor "Light Blue", 0.8, "Ice";
+	Player.DamageScreenColor "00 de 00", 0.6, "Poison";
+	Player.DamageScreenColor "Light Blue", 1, "Ice";
 	Player.DamageScreenColor "8c 4f 0d", 1, "Clay";
 
 	Player.ColorRange 112, 127;
@@ -117,6 +118,7 @@ Class GreenArrow : ZMovePlayer
 	Health 100;
 	Radius 16;
 	Height 56;
+	Species "notEnemy";
 	Mass 100;
 	PainChance 255;
 	Player.DisplayName "GreenArrow";

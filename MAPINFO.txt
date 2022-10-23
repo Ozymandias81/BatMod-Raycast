@@ -74,7 +74,7 @@ map MAP05 "Apprehend the Mad Hatter"
 {
 	DisableShadowmap
 	sky1 = "madsky"
-	MUSIC = "FUNHOU"
+	MUSIC = "AXISCHEM"//funhou
 	Lightning
 	Next = "CITYMAP"
 	cluster = 8

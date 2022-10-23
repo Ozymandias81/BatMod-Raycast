@@ -92,11 +92,11 @@ script 425 ENTER
 	if (isBiker == 1)//set this number to bike class in keyconf
 	{
 		Spawn("AcsDropBike",GetActorX(0),GetActorY(0),GetActorFloorZ(0) + 64,0,GetActorAngle(0) >> 8);
-		delay(1);
 		isBiker = 0;
+		SetPlayerProperty(1,0,4);
+		UnMorphActor (0);
 	}
-	SetPlayerProperty(1,0,4);
-	UnMorphActor (0);
+	
 	}
 
 	delay(1);

@@ -36,6 +36,7 @@ ACTOR Biker : PlayerPawn
 	Height 56
 	Mass 100
 	Speed 0
+	Species "notEnemy"
 	PainChance 255
 	Player.DisplayName "Batmobile"
 	Player.CrouchSprite "PLYC"
@@ -673,8 +674,8 @@ ACTOR ExitCar : CustomInventory
 	States
 	{
 	Use:
-		TNT1 A 0 ACS_ExecuteAlways(998,0)
-		TNT1 A 0 A_SpawnItemEx("RunningCar", 0, 115)
+		TNT1 A 1 ACS_ExecuteAlways(998,0)
+		TNT1 A 1 A_SpawnItemEx("RunningCar", 0, 115)
 		Stop
 	Spawn:
 		TNT1 A -1

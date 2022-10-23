@@ -27,6 +27,7 @@ Actor Tracer: FastProjectile
 		Stop
 	}
 }
+
 ACTOR BatPuff replaces BulletPuff // replaced for more satisfying melee
 {
   +NOBLOCKMAP
@@ -37,6 +38,7 @@ ACTOR BatPuff replaces BulletPuff // replaced for more satisfying melee
   Alpha 0.5
   VSpeed 1
   Mass 5
+  DamageType BatPuff
   States
   {
   Spawn:
@@ -703,7 +705,7 @@ height 56
 // damageresistance "GasDamage", 10
 speed 35 
 DeathSound "guard/death"   
-seesound "guard/sight"    
+//seesound "guard/sight"    
 activesound "guard/sight"    
 painsound "weapons/batswing"
 attacksound "weapons/batswing"  
@@ -762,7 +764,7 @@ gibhealth 200
 // damageresistance "GasDamage", 10
 speed 35
 DeathSound "guard/death"   
-seesound "guard/sight"    
+//seesound "guard/sight"    
 activesound "guard/sight"    
 painsound "weapons/batswing"
 attacksound "weapons/batswing"   
@@ -816,7 +818,7 @@ gibhealth 200
 speed 35
 height 56
 DeathSound "guard/death"   
-seesound "guard/sight"    
+//seesound "guard/sight"    
 activesound "guard/sight"    
 painsound "weapons/batswing"
 attacksound "weapons/batswing" 
@@ -876,7 +878,7 @@ gibhealth 200
 speed 35
 height 56
 DeathSound "guard/death"   
-seesound "guard/sight"    
+//seesound "guard/sight"    
 activesound "guard/sight"    
 painsound "weapons/batswing"
 attacksound "weapons/batswing"   
@@ -930,7 +932,7 @@ gibhealth 200
 height 56
 speed 35
 DeathSound "guard/death"   
-seesound "guard/sight"    
+//seesound "guard/sight"    
 activesound "guard/sight"    
 painsound "weapons/batswing"
 +NoBlood
@@ -989,7 +991,7 @@ gibhealth 200
 // damageresistance "GasDamage", 10
 speed 35
 DeathSound "guard/death"   
-seesound "guard/sight"    
+//seesound "guard/sight"    
 activesound "guard/sight"    
 painsound "weapons/batswing"
 +LOOKALLAROUND
@@ -1043,7 +1045,7 @@ gibhealth 200
 height 56
 speed 35
 DeathSound "guard/death"   
-seesound "guard/sight"    
+//seesound "guard/sight"    
 activesound "guard/sight"    
 painsound "weapons/batswing"
 attacksound "weapons/batswing"
@@ -1102,7 +1104,7 @@ gibhealth 200
 // damageresistance "GasDamage", 10
 speed 35
 DeathSound "guard/death"   
-seesound "guard/sight"    
+//seesound "guard/sight"    
 activesound "guard/sight"    
 painsound "weapons/batswing"
 attacksound "weapons/batswing"
