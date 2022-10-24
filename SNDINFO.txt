@@ -109,6 +109,8 @@ peng/see			pengsee
 peng/die			pengdie
 mhat/see			mhatsee
 mhat/die			mhatdie
+pivy/see			pivysee
+pivy/die			pivydie
 frcf/de				frcfde
 frcf/ac				frcfac
 rico1				RICOCHE1	

@@ -2794,9 +2794,9 @@ actor MrFreeze replaces fatso
 			FREZ E 5 A_CposRefire
 			goto See
 		Death:
-			FREZ H 12 A_Fall
-			FREZ I 12 A_Scream
-			FREZ J 12
+			FREZ H 10 A_Fall
+			FREZ I 8 A_Scream
+			FREZ J 8
 			FREZ K -1
 			stop
 	}
@@ -3161,7 +3161,7 @@ Actor TwoFace replaces HellKnight
 		Goto See
 	CoinToss:
 		twof g 3 
-		twof h 3 a_playSound("tfac/see")
+		twof h 3 //a_playSound("tfac/see")
 		twof i 3
 		twof j 3 a_jump(127,"Missile")
 		twof a 3 
@@ -3427,6 +3427,40 @@ Actor HarleyQuinn 500
 		Loop	
 	See:
 		HRLY FA 10
+		Loop
+	Death:
+		HRLY A 4 A_Scream
+		HRLY C 4 A_NoBlocking
+		HRLY D 4
+		HRLY B -1
+		Stop
+	}
+}
+
+Actor PoisonIvy 501
+{
+	//+BOSS
+	//+LOOKALLAROUND
+	//+NORADIUSDMG
+	Radius 20
+	Height 56
+	Monster
+	Mass 100
+	Speed 8
+	painchance 120
+	Health 1
+	+NoBlood
+	AttackSound "weapon/shotgun"
+	SeeSound "pivy/see"
+	DeathSound "pivy/die"
+	Obituary "%o was poisoned by Poison Ivy."
+	States
+	{
+	Spawn:
+		PIVY A 10 A_Look
+		Loop	
+	See:
+		PIVY B 10
 		Loop
 	Death:
 		HRLY A 4 A_Scream
