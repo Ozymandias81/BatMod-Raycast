@@ -3460,7 +3460,7 @@ Actor PoisonIvy 501
 		PIVY A 10 A_Look
 		Loop	
 	See:
-		PIVY B 10
+		PIVY CBA 16
 		Loop
 	Death:
 		HRLY A 4 A_Scream
