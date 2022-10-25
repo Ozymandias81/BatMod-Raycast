@@ -334,7 +334,7 @@ actor GreenTreeFallen replaces GibbedMarine
 			stop
 	}
 }
-actor Knight replaces WhiteParticleFountain
+actor BatKnight replaces WhiteParticleFountain
 {
 	radius 16
 	+SOLID
@@ -342,7 +342,7 @@ actor Knight replaces WhiteParticleFountain
 	states
 	{
 		Spawn:
-			neee a -1
+			NEEE A -1
 			stop
 	}
 }

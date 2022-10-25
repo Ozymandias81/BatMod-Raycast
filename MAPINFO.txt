@@ -514,5 +514,4 @@ Fader
 		Time = 5
 	}
 	GotoTitle {}
-	}
-	
+}
