@@ -103,10 +103,10 @@ actor Theif
 		THEF BBBBBBCCCCCDDDDDDEEEEE 1 A_Chase
 		loop
 	Missile:
-		THEF FG 4 A_FaceTarget
+		THEF FG 6 A_FaceTarget
 		THEF H 0 A_PlaySound("Weapon/handgun")
 		THEF H 8 bright A_CustomMissile("MonsterTracer", 32, 0, random(-5, 5), 1, random(-5, 5))//A_CPosAttack
-		THEF FG 2 A_FaceTarget
+		THEF FG 4 A_FaceTarget
 		goto See
 	Pain:
 		THEF I 6 A_Pain
@@ -236,13 +236,13 @@ actor Thug
 		THUG BBBBBBCCCCCDDDDDDEEEEE 1 A_Chase
 		loop
 	Missile:
-		THUG F 4 A_FaceTarget
+		THUG F 6 A_FaceTarget
 		THUG G 0 A_PlaySound("Weapon/handgun")
 		THUG G 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-7, 7), 1, random(-7, 7))//A_CPosAttack
-		THUG F 2 A_FaceTarget
+		THUG F 4 A_FaceTarget
 		THUG H 0 A_PlaySound("Weapon/handgun")
 		THUG H 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-7, 7), 1, random(-7, 7))//A_CPosAttack
-		THUG F 4 A_FaceTarget
+		THUG F 6 A_FaceTarget
 		goto See
 	Pain:
 		THUG I 6 A_Pain
@@ -321,10 +321,10 @@ actor Thug2 : thug
 		GOON BBBBBBCCCCCDDDDDDEEEEE 1 A_Chase
 		loop
 	Missile:
-		GOON F 4 A_FaceTarget
+		GOON F 6 A_FaceTarget
 		GOON G 0 A_PlaySound("Weapon/handgun")
 		GOON G 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
-		GOON F 2 A_FaceTarget
+		GOON F 4 A_FaceTarget
 		GOON H 0 A_PlaySound("Weapon/handgun")
 		GOON H 6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		GOON F 4 A_FaceTarget
@@ -3213,6 +3213,7 @@ Actor Riddler replaces BossBrain
 		Goto See
 	Shield:
 		RIDD G 6 A_SetReflectiveInvulnerable
+		RIDD G 0 A_ChangeFlag(NORADIUSDMG, true)//blocks smoke attacks
 		RIDD G 0 A_PlaySound("frcf/ac")
 		RIDD H 6 BRIGHT  A_CentaurDefend
 		Goto PSee
@@ -3226,12 +3227,14 @@ Actor Riddler replaces BossBrain
 		Goto PSee
 	Unshield:
 		RIDD A 0 A_PlaySound("frcf/de")
+		RIDD A 0 A_ChangeFlag(NORADIUSDMG, false)
 		RIDD A 6 A_UnsetReflectiveInvulnerable
 		Goto See
 	Pain:
 		//RIDD A 0 A_PlaySound("frcf/de")
+		RIDD N 1 A_UnsetReflectiveInvulnerable
 		RIDD N 6 A_Pain
-		RIDD A 1 A_UnsetReflectiveInvulnerable
+		
 		//CKNG G 6 A_SetReflectiveInvulnerable
 		//CKNG GGG 15 A_CentaurDefend
 		

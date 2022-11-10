@@ -134,18 +134,19 @@ skill baby
 {
 	AutoUseHealth
 	AmmoFactor = 2
-	DamageFactor = 0.45
+	DamageFactor = 0.35
 	EasyBossBrain
 	SpawnFilter = Baby
-	Name = "Winged Vigilante"
-	Key = "w"
+	Name = "Vigilante"
+	Key = "v"
 }
 
 skill easy
 {
 	EasyBossBrain
 	SpawnFilter = Easy
-	DamageFactor = 0.55
+	AmmoFactor = 2
+	DamageFactor = 0.45
 	Name = "Greatest Detective"
 	Key = "g"
 }
@@ -153,8 +154,8 @@ skill easy
 skill normal
 {
 	SpawnFilter = Normal
-	Key = "k"
-	DamageFactor = 0.75
+	Key = "d"
+	DamageFactor = 0.55
 	Name = "Dark Knight"
 	DefaultSkill
 }
@@ -162,6 +163,7 @@ skill normal
 skill hard
 {
 	SpawnFilter = Hard
+	DamageFactor = 0.75
 	Name = "The Batman"
 	Key = "b"
 }
@@ -171,7 +173,7 @@ skill nightmare
 	AmmoFactor = 2
 	FastMonsters
 	DisableCheats
-	Aggressiveness = 0.7
+	Aggressiveness = 0.5
 	//RespawnTime = 12
 	SpawnFilter = Nightmare
 	Name = "Knightfall"
