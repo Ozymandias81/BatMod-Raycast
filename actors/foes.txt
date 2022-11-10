@@ -3466,10 +3466,10 @@ Actor PoisonIvy 501
 		PIVY CBDA 16
 		Loop
 	Death:
-		HRLY A 4 A_Scream
-		HRLY C 4 A_NoBlocking
-		HRLY D 4
-		HRLY B -1
+		PIVY E 4 A_Scream
+		PIVY F 4 A_NoBlocking
+		PIVY GHI 4
+		PIVY J -1
 		Stop
 	}
 }

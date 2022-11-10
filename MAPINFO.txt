@@ -185,6 +185,15 @@ Intermission Inter_Cast
 {
 	Image
 	{
+		Time = -1
+		//Music = "BOSSSONG"
+	}
+	Link = BatmanEndSequence
+}
+Intermission Inter_VillainRoll
+{
+	Image
+	{
 		// This is only here to initialize the background and the music
 		Background = "CREDIT"
 		Time = -1
@@ -275,7 +284,7 @@ Intermission Doom2Cast
 		CastName = "Deathstroke Henchman"
 		AttackSound = "Missile", 1, "Weapon/machinegun"
 	}
-	Link = BatmanEndSequence//Inter_Titlescreen
+	GotoTitle {}
 }
 intermission BatmanEndSequence //End Sequence
 {
@@ -284,7 +293,7 @@ Fader
 		Music = "CATHEDRL"
 		Background = "ENDSCR01"
 		FadeType = FadeIn
-		Time = 15
+		Time = 5
 	}
 	Image
 	{
@@ -293,23 +302,23 @@ Fader
 	Image
 	{
 		background = "ENDSCR02"
-		Time = 1
+		Time = .25
 	}
 		Image
 	{
 		background = "ENDSCR03"
-		Time = 1
+		Time = .25
 	}
 		Image
 	{
 		background = "ENDSCR04"
-		Time = 1
+		Time = 6
 	}
 	Image
 	{
 		Background = "ENDSCR04"
 		//FadeType = FadeIn
-		Time = .5
+		Time = 1
 	}
 	Image
 	{
@@ -333,41 +342,37 @@ Fader
 	Image
 	{
 		background = "ENDSCR06"
-		Time = 1
+		Time = 0.25
 	}
 		Image
 	{
 		background = "ENDSCR07"
-		Time = 1
+		Time = 0.25
 	}
 		Image
 	{
 		background = "ENDSCR08"
-		Time = 1
+		Time = 0.25
 	}
 	Image
 	{
 		Background = "ENDSCR08"
 		//FadeType = FadeIn
-		Time = .5
-	}
-	Image
-	{
-		Time = -5
+		Time = 1
 	}
 	Image
 	{
 		background = "ENDSCR09"
-		Time = 1
+		Time = 0.25
 	}
 		Image
 	{
-		background = "ENDSCR010"
-		Time = 1
+		background = "ENDSCR10"
+		Time = 0.25
 	}
 		Image
 	{
-		background = "ENDSCR011"
+		background = "ENDSCR11"
 		Time = 1
 	}
 	Image
@@ -378,17 +383,13 @@ Fader
 	}
 	Image
 	{
-		Time = -10
-	}
-	Image
-	{
 		background = "ENDSCR12"
-		Time = 1
+		Time = 0.25
 	}
 		Image
 	{
 		background = "ENDSCR13"
-		Time = 1
+		Time = 0.25
 	}
 		Image
 	{
@@ -398,7 +399,6 @@ Fader
 	Fader
 	{
 		Background = "ENDSCR14"
-		FadeType = FadeIn
 		Time = .5
 	}
 	Image
@@ -442,28 +442,235 @@ Fader
 	}
 	Fader
 	{
-		Background = "ENDCRD02"
+		Background = "ENDCRD04"
 		FadeType = FadeIn
 		Time = 5
 	}
-	Image
+	
+	//enemies cast
+	/*Cast
 	{
-		Time = -10
+		CastClass = "Theif"
+		CastName = "Theif"
+		AttackSound = "Missile", 1, "Weapon/handgun"
 	}
-	Fader
+	Cast
 	{
-		FadeType = FadeOut
-		Time = 5
+		CastClass = "Thug"
+		CastName = "Thug"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+		AttackSound = "Missile", 2, "Weapon/handgun"
 	}
-	Fader
+	Cast
 	{
-		Background = "ENDCRD03"
-		FadeType = FadeIn
-		Time = 5
+		CastClass = "Hobo"
+		CastName = "Mugger"
+		//AttackSound = "Missile", 1, "Weapon/handgun"
 	}
-	Image
+	Cast
 	{
-		Time = -10
+		CastClass = "BodyGuard"
+		CastName = "Body Guard"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "TwoFaceHenchmen"
+		CastName = "TwoFace Henchman"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "Convict"
+		CastName = "Knife Prisoner"
+		//AttackSound = "Missile", 1, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "Prisoner"
+		CastName = "Pistol Prisoner"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "RiddlerThug"
+		CastName = "Riddler Henchman"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+	}//
+	Cast
+	{
+		CastClass = "Soilder"
+		CastName = "Militia"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "JokerGoon"
+		CastName = "Joker Goon"
+		AttackSound = "Missile", 1, "shotguy/attack"
+	}
+	Cast
+	{
+		CastClass = "HatterGoon"
+		CastName = "Mad Hatter Henchman"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "EvilDoctor"
+		CastName = "Mad Doctor"
+		AttackSound = "Missile", 1, "Weapon/handgun"
+	}
+	Cast
+	{
+		CastClass = "SladeGoon"
+		CastName = "Deathstroke Henchman"
+		AttackSound = "Missile", 1, "Weapon/machinegun"
+	}
+	Cast
+	{
+		CastClass = "Ninja"
+		CastName = "Ninja"
+		//AttackSound = "Missile", 1, "Weapon/machinegun"
+	}*/
+	
+	//Bosses
+
+	Cast
+	{
+		CastClass = "FireFlyAir"
+		CastName = "Fire Fly"
+	}
+	Cast
+	{
+		CastClass = "KillerCrocLand"
+		CastName = "Killer Croc"
+	}
+	Cast
+	{
+		CastClass = "Zsasz"
+		CastName = "Victor Zsasz"
+	}
+	Cast
+	{
+		CastClass = "ProfessorPyg"
+		CastName = "Professor Pyg"
+	}
+	Cast
+	{
+		CastClass = "Deadshot"
+		CastName = "Deadshot"
+	}
+	Cast
+	{
+		CastClass = "Eraser"
+		CastName = "The Eraser"
+	}
+	Cast
+	{
+		CastClass = "KillerMoth"
+		CastName = "Killer Moth"
+	}
+	Cast
+	{
+		CastClass = "CalendarMan"
+		CastName = "Calendar Man"
+	}
+	Cast
+	{
+		CastClass = "Calculator"
+		CastName = "The Calculator"
+	}
+	Cast
+	{
+		CastClass = "SolomonGrundy"
+		CastName = "Solomon Grundy"
+	}
+	Cast
+	{
+		CastClass = "PoisonIvy"
+		CastName = "Poison Ivy"
+	}
+	Cast
+	{
+		CastClass = "MrFreeze"
+		CastName = "Mr Freeze"
+	}
+	
+	Cast
+	{
+		CastClass = "BlackMask"
+		CastName = "Black Mask"
+	}
+	Cast
+	{
+		CastClass = "LockUp"
+		CastName = "Lock Up"
+	}
+	Cast
+	{
+		CastClass = "ClockKing"
+		CastName = "Clock King"
+	}
+	Cast
+	{
+		CastClass = "ElGhoul"
+		CastName = "Ra's Al Ghoul"
+	}
+	Cast
+	{
+		CastClass = "HugoStrange"
+		CastName = "Hugo Strange"
+	}
+	Cast
+	{
+		CastClass = "Bane"
+		CastName = "Bane"
+	}
+	Cast
+	{
+		CastClass = "Scarecrow"
+		CastName = "Scarecrow"
+	}
+	Cast
+	{
+		CastClass = "Penguin"
+		CastName = "The Penguin"
+	}
+	Cast
+	{
+		CastClass = "MadHatter"
+		CastName = "Mad Hatter"
+	}
+	Cast
+	{
+		CastClass = "Clayface"
+		CastName = "Clayface"
+	}
+	Cast
+	{
+		CastClass = "Twoface"
+		CastName = "Two-Face"
+	}
+	Cast
+	{
+		CastClass = "Riddler"
+		CastName = "The Riddler"
+	}
+	Cast
+	{
+		CastClass = "HarleyQuinn"
+		CastName = "Harley Quinn"
+	}
+	Cast
+	{
+		CastClass = "Joker"
+		CastName = "The Joker"
+	}
+	Cast
+	{
+		CastClass = "DeathstrokeSwords"
+		CastName = "Deathstroke"
 	}
 	Fader
 	{

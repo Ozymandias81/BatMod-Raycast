@@ -7,7 +7,6 @@ AddOptionMenu "OptionsMenu"
 OptionMenu "MostWanted"
 {	
 	Title "Gotham's Most Wanted"
-	
 	StaticText ""
 	Submenu "The Joker", "Joker"
 	Submenu "Harley Quinn", "Harley"
@@ -18,6 +17,7 @@ OptionMenu "MostWanted"
 	Submenu "Deathstroke", "Slade"
 	Submenu "Hugo Strange", "Hugo"
 	Submenu "Zsasz", "Zsasz"
+	Submenu "Poison Ivy", "Ivy"
 	Submenu "Killer Croc", "Croc"
 	Submenu "Clayface", "Clayface"
 	Submenu "Mr. Freeze", "Freeze"
@@ -38,7 +38,7 @@ OptionMenu "MostWanted"
 }
 ListMenu "Joker"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "JOKRA0"
 	StaticTextCentered 160, 155, "The Joker"
 	Font "SMALLFONT", White
@@ -46,7 +46,7 @@ ListMenu "Joker"
 }
 ListMenu "Harley"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "HRLYA0"
 	StaticTextCentered 160, 155, "Harley Quinn"
 	Font "SMALLFONT", White
@@ -54,7 +54,7 @@ ListMenu "Harley"
 }
 ListMenu "Bane"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "BANEA0"
 	StaticTextCentered 160, 155, "Bane"
 	Font "SMALLFONT", White
@@ -62,7 +62,7 @@ ListMenu "Bane"
 }
 ListMenu "Twoface"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "TWOFA0"
 	StaticTextCentered 160, 155, "Two-face"
 	Font "SMALLFONT", White
@@ -70,7 +70,7 @@ ListMenu "Twoface"
 }
 ListMenu "Riddler"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "RIDDA0"
 	StaticTextCentered 160, 155, "The Riddler"
 	Font "SMALLFONT", White
@@ -78,7 +78,7 @@ ListMenu "Riddler"
 }
 ListMenu "Penguin"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "PENGA0"
 	StaticTextCentered 160, 155, "The Penguin"
 	Font "SMALLFONT", White
@@ -86,7 +86,7 @@ ListMenu "Penguin"
 }
 ListMenu "Slade"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "DTRKA0"
 	StaticTextCentered 160, 155, "Deathstroke"
 	Font "SMALLFONT", White
@@ -94,7 +94,7 @@ ListMenu "Slade"
 }
 ListMenu "Hugo"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "HUGOA0"
 	StaticTextCentered 160, 155, "Hugo Strange"
 	Font "SMALLFONT", White
@@ -102,15 +102,23 @@ ListMenu "Hugo"
 }
 ListMenu "Zsasz"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "ZsazA0"
 	StaticTextCentered 160, 155, "Zsasz"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Victor Zsasz Priority: High"
 }
+ListMenu "Ivy"
+{
+	Font "BIGFONT", Green
+	StaticPatch 160, 145, "PIVYA0"
+	StaticTextCentered 160, 155, "Poison Ivy"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Pamela Isley Priority: Low"
+}
 ListMenu "Croc"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "CROCA0"
 	StaticTextCentered 160, 155, "Killer Croc"
 	Font "SMALLFONT", White
@@ -118,7 +126,7 @@ ListMenu "Croc"
 }
 ListMenu "Clayface"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "CFACA0"
 	StaticTextCentered 160, 155, "Clayface"
 	Font "SMALLFONT", White
@@ -126,7 +134,7 @@ ListMenu "Clayface"
 }
 ListMenu "Freeze"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "FREZA0"
 	StaticTextCentered 160, 155, "Mr. Freeze"
 	Font "SMALLFONT", White
@@ -134,7 +142,7 @@ ListMenu "Freeze"
 }
 ListMenu "Deadshot"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "DEADA0"
 	StaticTextCentered 160, 155, "Deadshot"
 	Font "SMALLFONT", White
@@ -142,7 +150,7 @@ ListMenu "Deadshot"
 }
 ListMenu "LockUp"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "LOCKR0"
 	StaticTextCentered 160, 155, "Lock Up"
 	Font "SMALLFONT", White
@@ -150,7 +158,7 @@ ListMenu "LockUp"
 }
 ListMenu "MadHatter"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "MHATA0"
 	StaticTextCentered 160, 155, "Mad Hatter"
 	Font "SMALLFONT", White
@@ -158,7 +166,7 @@ ListMenu "MadHatter"
 }
 ListMenu "FireFly"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "FIRFA0"
 	StaticTextCentered 160, 155, "Fire Fly"
 	Font "SMALLFONT", White
@@ -166,7 +174,7 @@ ListMenu "FireFly"
 }
 ListMenu "Scarecrow"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "SCARA0"
 	StaticTextCentered 160, 155, "Scarecrow"
 	Font "SMALLFONT", White
@@ -174,7 +182,7 @@ ListMenu "Scarecrow"
 }
 ListMenu "BlackMask"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "BLAKA0"
 	StaticTextCentered 160, 155, "Black Mask"
 	Font "SMALLFONT", White
@@ -182,7 +190,7 @@ ListMenu "BlackMask"
 }
 ListMenu "PYG"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "PPYGA0"
 	StaticTextCentered 160, 155, "Professor Pyg"
 	Font "SMALLFONT", White
@@ -190,7 +198,7 @@ ListMenu "PYG"
 }
 ListMenu "ClockKing"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "CKNGA0"
 	StaticTextCentered 160, 155, "Clock King"
 	Font "SMALLFONT", White
@@ -198,7 +206,7 @@ ListMenu "ClockKing"
 }
 ListMenu "Ghul"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "GHULA0"
 	StaticTextCentered 160, 155, "Ra's Al Ghoul"
 	Font "SMALLFONT", White
@@ -206,7 +214,7 @@ ListMenu "Ghul"
 }
 ListMenu "Calculator"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "CALCA0"
 	StaticTextCentered 160, 155, "The Calculator"
 	Font "SMALLFONT", White
@@ -214,7 +222,7 @@ ListMenu "Calculator"
 }
 ListMenu "Grundy"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "SMONA0"
 	StaticTextCentered 160, 155, "Solomon Grundy"
 	Font "SMALLFONT", White
@@ -222,7 +230,7 @@ ListMenu "Grundy"
 }
 ListMenu "Eraser"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "ERASA0"
 	StaticTextCentered 160, 155, "The Eraser"
 	Font "SMALLFONT", White
@@ -230,7 +238,7 @@ ListMenu "Eraser"
 }
 ListMenu "Moth"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "MOTHA0"
 	StaticTextCentered 160, 155, "Killer Moth"
 	Font "SMALLFONT", White
@@ -238,7 +246,7 @@ ListMenu "Moth"
 }
 ListMenu "CalendarMan"
 {
-	Font "BIGFONT", Red
+	Font "BIGFONT", Green
 	StaticPatch 160, 145, "CMANA0"
 	StaticTextCentered 160, 155, "Calendar Man"
 	Font "SMALLFONT", White
