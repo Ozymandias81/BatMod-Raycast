@@ -1,9 +1,20 @@
-AddOptionMenu "OptionsMenu"
+LISTMENU "MainMenu"
 {
-	StaticText ""
-	Submenu "Most Wanted", "MostWanted"
-	Submenu "ZMove Options", "ZMoveOptions"
+	IfGame(Doom)
+	{
+		StaticPatch 32, 8, "M_DOOM"
+		Position 38, 90
+		LineSpacing 15
+		PatchItem "M_NEWG", "N", "PlayerclassMenu"
+		PatchItem "M_LOADG", "L", "LoadGameMenu"
+		PatchItem "M_SAVEG", "S", "SaveGameMenu"
+		PatchItem "M_BTCOPT","Z", "ZMoveOptions"
+		PatchItem "M_OPTION","O", "OptionsMenu"
+		PatchItem "M_MOSTWA", "M", "MostWanted"
+		PatchItem "M_QUITG","Q", "QuitMenu"
+    }
 }
+
 OptionMenu "MostWanted"
 {	
 	Title "Gotham's Most Wanted"
