@@ -706,7 +706,7 @@ height 56
 speed 35 
 DeathSound "guard/death"   
 //seesound "guard/sight"    
-activesound "guard/sight"    
+
 painsound "weapons/batswing"
 attacksound "weapons/batswing"  
 +NoBlood
@@ -765,7 +765,7 @@ gibhealth 200
 speed 35
 DeathSound "guard/death"   
 //seesound "guard/sight"    
-activesound "guard/sight"    
+
 painsound "weapons/batswing"
 attacksound "weapons/batswing"   
 +LOOKALLAROUND
@@ -819,7 +819,7 @@ speed 35
 height 56
 DeathSound "guard/death"   
 //seesound "guard/sight"    
-activesound "guard/sight"    
+
 painsound "weapons/batswing"
 attacksound "weapons/batswing" 
 +NoBlood 
@@ -879,7 +879,7 @@ speed 35
 height 56
 DeathSound "guard/death"   
 //seesound "guard/sight"    
-activesound "guard/sight"    
+
 painsound "weapons/batswing"
 attacksound "weapons/batswing"   
 MONSTER    
@@ -933,7 +933,7 @@ height 56
 speed 35
 DeathSound "guard/death"   
 //seesound "guard/sight"    
-activesound "guard/sight"    
+
 painsound "weapons/batswing"
 +NoBlood
 +LOOKALLAROUND
@@ -992,7 +992,7 @@ gibhealth 200
 speed 35
 DeathSound "guard/death"   
 //seesound "guard/sight"    
-activesound "guard/sight"    
+
 painsound "weapons/batswing"
 +LOOKALLAROUND
 attacksound "weapons/batswing"
@@ -1046,7 +1046,7 @@ height 56
 speed 35
 DeathSound "guard/death"   
 //seesound "guard/sight"    
-activesound "guard/sight"    
+
 painsound "weapons/batswing"
 attacksound "weapons/batswing"
 +NoBlood
@@ -1105,7 +1105,7 @@ gibhealth 200
 speed 35
 DeathSound "guard/death"   
 //seesound "guard/sight"    
-activesound "guard/sight"    
+
 painsound "weapons/batswing"
 attacksound "weapons/batswing"
 +LOOKALLAROUND

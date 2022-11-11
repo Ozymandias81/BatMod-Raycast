@@ -616,7 +616,7 @@ ACTOR BatBike : PowerupGiver 10804
 	Inventory.MaxAmount 0
 	+INVENTORY.AUTOACTIVATE
 	//Inventory.PickupSound "Car/Start"
-	Inventory.PickupMessage "You got on the Batbike!"
+	Inventory.PickupMessage "Atomic batteries to power. Turbines to speed."
 	-COUNTITEM
 	States
 	{
@@ -643,7 +643,7 @@ ACTOR RunningCar : CustomInventory 614
 	+NOBLOOD
 	+SOLID
 	+SHOOTABLE
-	Inventory.Pickupmessage "Entered A Car."
+	Inventory.Pickupmessage "Atomic batteries to power. Turbines to speed"
 	Radius 60
 	Height 52
 	Mass 1000

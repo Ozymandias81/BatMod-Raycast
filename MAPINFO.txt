@@ -42,6 +42,7 @@ map TUTORIAL "Tutorial"
 }
 map MAP01 "Shipping Yard"
 {
+	NOINFIGHTING
 	sky1 = "DOCKSCAP"
 	MUSIC = "D_RUNNIN"
 	Next = "MAP02"
@@ -49,6 +50,7 @@ map MAP01 "Shipping Yard"
 }
 map MAP02 "Sewer"
 {
+	NOINFIGHTING
 	sky1 = "DOCKSCAP"
 	MUSIC = "GOTHMGEN"
 	Next = "MAP03"
@@ -56,6 +58,7 @@ map MAP02 "Sewer"
 }
 map MAP03 "Arkham Asylum"
 {
+	NOINFIGHTING
 	sky1 = "DOCKSCAP"
 	MUSIC = "UNDRGNES"
 	Next = "MAP04"
@@ -63,6 +66,7 @@ map MAP03 "Arkham Asylum"
 }
 map MAP04 "Mad Hatter's Lair"
 {
+	NOINFIGHTING
 	sky1 = "CITYSCAP"
 	MUSIC = "LABORNES"
 	Lightning
@@ -72,6 +76,7 @@ map MAP04 "Mad Hatter's Lair"
 }
 map MAP05 "Apprehend the Mad Hatter"
 {
+	NOINFIGHTING
 	DisableShadowmap
 	sky1 = "madsky"
 	MUSIC = "AXISCHEM"//funhou
@@ -81,6 +86,7 @@ map MAP05 "Apprehend the Mad Hatter"
 }
 map CITYMAP "Restore order in West Gotham"
 {
+	NOINFIGHTING
 	sky1 = "CITYSCAP"
 	MUSIC = "B2DANGER"
 	LevelNum = 6
@@ -91,6 +97,7 @@ map CITYMAP "Restore order in West Gotham"
 }
 map MAP06 "Track down The Joker"
 {
+	NOINFIGHTING
 	sky1 = "DOCKSCAP"
 	MUSIC = "ROJ_URGT"
 	LevelNum = 7
@@ -100,6 +107,7 @@ map MAP06 "Track down The Joker"
 }
 map MAP07 "Apprehend the Joker"//will change this map number since it is the last level
 {
+	NOINFIGHTING
 	sky1 = "CITYSCAP"
 	MUSIC = "CATHEDRL"
 	LevelNum = 8
@@ -108,6 +116,7 @@ map MAP07 "Apprehend the Joker"//will change this map number since it is the las
 }
 map MAP08 "Sanctuary"
 {
+	NOINFIGHTING
 	sky1 = "DOCKSCAP"
 	MUSIC = "SKYGOTHM"
 	LevelNum = 9
