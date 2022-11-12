@@ -523,6 +523,46 @@ ACTOR BatSoda : Health replaces healthBonus
     Loop
   }
 }
+ACTOR BatPopcorn : Medikit replaces Medikit
+{
+  Inventory.Amount 25
+  Inventory.PickupMessage "You ate some bat popcorn." // "Picked up a medikit."
+  Health.LowMessage 25, "Waynetech designed Popcorn is able to heal life threatning injuries." // "Picked up a medikit that you REALLY need!"
+  States
+  {
+  Spawn:
+    MEDI A -1
+    Stop
+  }
+}
+ACTOR BatMilk : Stimpack Replaces Stimpack
+{
+  Inventory.Amount 10
+  Inventory.PickupMessage "Even Batman needs his milk." // "Picked up a stimpack."
+  States
+  {
+  Spawn:
+    STIM A -1
+    Stop
+  }
+}
+actor BlueKey : BlueCard Replaces BlueCard
+{
+Inventory.PickupMessage "Picked up a blue key."
+}
+actor RedKey : RedCard Replaces RedCard
+{
+Inventory.PickupMessage "Picked up a red key."
+}
+actor YellowKey : YellowCard Replaces YellowCard
+{
+Inventory.PickupMessage "Picked up a yellow key."
+}
+actor GreenKey : YellowSkull Replaces YellowSkull
+{
+Inventory.PickupMessage "Picked up a green key."
+}
+
 actor SewerColumnMossy replaces BrainStem
 {
 	radius 32

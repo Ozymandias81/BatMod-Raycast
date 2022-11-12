@@ -206,6 +206,7 @@ ACTOR Bola : Weapon
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
+	inventory.pickupmessage "You got some bolas!"
 	Weapon.AmmoUse1 1
 	Weapon.AmmoUse2 1
 	Weapon.AmmoGive 20
@@ -272,7 +273,7 @@ ACTOR bolaProjectile
 actor BaterangAmmo : Ammo
 {
 	inventory.pickupsound "misc/ammo_pickup"
-	inventory.pickupmessage "Picked up some baterangs"
+	inventory.pickupmessage "Picked up some batarangs"
 	inventory.amount 10
 	inventory.maxamount 350
 	ammo.backpackamount 10
@@ -287,7 +288,7 @@ actor BaterangAmmo : Ammo
 actor RECBaterangAmmo : Ammo
 {
 	inventory.pickupsound "misc/ammo_pickup"
-	inventory.pickupmessage "Picked up some REC Baterangs"
+	inventory.pickupmessage "Picked up some REC Batarangs"
 	inventory.amount 1
 	inventory.maxamount 250
 	ammo.backpackamount 5
@@ -309,6 +310,7 @@ ACTOR Baterang : Weapon
 	Weapon.AmmoUse 1
 	DamageType BatPuff
 	Weapon.AmmoGive 20
+	inventory.pickupmessage "You got some batarangs!"
 	AttackSound "*fist"
 	Weapon.AmmoUse2 1
 	Weapon.AmmoType "BaterangAmmo"
@@ -354,6 +356,7 @@ ACTOR RemoteBaterang : Weapon
 	Tag "$TAG_FIST"
 	Weapon.AmmoUse 1
 	AttackSound "*fist"
+	inventory.pickupmessage "You got a remote batarang launcher!"
 	Weapon.AmmoGive 10
 	Weapon.AmmoUse2 1
 	Weapon.AmmoType "RECBaterangAmmo"
@@ -401,6 +404,7 @@ ACTOR TriBaterang : Weapon
 	AttackSound "*fist"
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
+	inventory.pickupmessage "You got some batarangs!"
 	Weapon.AmmoUse2 3
 	Weapon.AmmoType "BaterangAmmo"
 	Weapon.AmmoType2 "BaterangAmmo"
@@ -703,6 +707,7 @@ ACTOR EMPGun : weapon replaces bfg9000
   Weapon.AmmoGive 40
   Weapon.AmmoType2 "Cell"
   AttackSound "*fist"
+  inventory.pickupmessage "You got the EMP rifle! No one will see you for several seconds after a blast."
   Weapon.AmmoUse2 40
   Weapon.AmmoType "Cell"
   +WEAPON.NOAUTOFIRE
@@ -769,7 +774,7 @@ ACTOR EMPBlast
 actor GasGun : Weapon 
 {
 	//inventory.icon "GATLGUN"
-	inventory.pickupmessage "$BAT_GASGUN"
+	inventory.pickupmessage "You got the smoke bomb launcher!"
 	weapon.selectionorder 100
 	weapon.bobrangex 0.7
     weapon.bobrangey 0.7
