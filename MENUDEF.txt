@@ -8,9 +8,9 @@ LISTMENU "MainMenu"
 		PatchItem "M_NEWG", "N", "PlayerclassMenu"
 		PatchItem "M_LOADG", "L", "LoadGameMenu"
 		PatchItem "M_SAVEG", "S", "SaveGameMenu"
-		PatchItem "M_BTCOPT","Z", "ZMoveOptions"
+		PatchItem "M_NEWOPT","Z", "ZMoveOptions"
 		PatchItem "M_OPTION","O", "OptionsMenu"
-		PatchItem "M_MOSTWA", "M", "MostWanted"
+		PatchItem "M_WANTED", "M", "MostWanted"
 		PatchItem "M_QUITG","Q", "QuitMenu"
     }
 }
