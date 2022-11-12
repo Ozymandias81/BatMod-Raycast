@@ -32,7 +32,7 @@ Class Batman : ZMovePlayer
 	Player.WeaponSlot 2, "Bola";
 	Player.WeaponSlot 3, "TriBaterang", "Baterang";
 	Player.WeaponSlot 4, "Tazer";
-	Player.WeaponSlot 5, "GasGun", "GasGunGreen";
+	Player.WeaponSlot 5, "GasGun";
 	Player.WeaponSlot 6, "RemoteBaterang";
 	Player.WeaponSlot 7, "EMPGun";
 	+NOBLOOD

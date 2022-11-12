@@ -67,7 +67,7 @@ Mugshot "WolfIdle"
 {
 	{STT1, STT2} 35;
 }
-
+//hud status bar
 Statusbar Normal //, ForceScaled
 {
 	GameMode deathmatch, teamgame
@@ -104,9 +104,12 @@ Statusbar Normal //, ForceScaled
 	//DrawSwitchableImage YellowKeyLost, "nullimage", "YKEY", 244, 173, center;
 	//DrawSwitchableImage BlueKeyLost, "nullimage", "BKEY", 244, 189, center;
 
-	DrawSwitchableImage BlueSkull, "nullimage", "STKEYS3", 312, 0;
+	//these two are never used
+	DrawSwitchableImage BlueSkull, "nullimage", "nullimage", 6, -173;
+	DrawSwitchableImage RedSkull, "nullimage", "nullimage", 6, -189;
+	
+	
 	DrawSwitchableImage YellowSkull, "nullimage", "KEYPG0", 252, 173, center;
-	DrawSwitchableImage RedSkull, "nullimage", "STKEYS5", 312, 16;
 	DrawSwitchableImage RedCard, "nullimage", "KEYPR0", 252, 189, center;
 
 	UsesAmmo not
@@ -116,41 +119,45 @@ Statusbar Normal //, ForceScaled
 	DrawNumber 3, WOLFNUM, Untranslated, Ammo1, 231, 176;
 	DrawSelectedInventory CONFONT, 5, 127;
 }
-
+//zoomed out status bar
 Statusbar Fullscreen, FullScreenOffsets
 {
 	InInventory Not AtariJaguar
 	{
-		DrawNumber 8, HUDFONT_DOOM, WHITE, GlobalArray 17, -2, -25;
+		//DrawNumber 8, HUDFONT_DOOM, WHITE, GlobalArray 17, -2, -25;
 
-		Gamemode cooperative, singleplayer
+		/*Gamemode cooperative, singleplayer
 		{
-			DrawImage "LIFEA0", 14, -1;
+			
 			DrawNumber 1, HUDFONT_DOOM, WHITE, Life, 35, -10;
 		}
-
+*/
 		GameMode deathmatch, teamgame
 		{
 			DrawImage "FRAG", 14, -1;
 			DrawNumber 3, HUDFONT_DOOM, WHITE, Frags, 35, -10;
 		}
 
-		DrawSwitchableImage YellowCard, "nullimage", "STKEYS1", -8, 0;
-		DrawSwitchableImage BlueCard, "nullimage", "STKEYS4", -8, 14;
+		DrawSwitchableImage YellowCard, "NOKEY", "KEYPY0", -40, -133, center;
+	DrawSwitchableImage BlueCard, "NOKEY", "KEYPB0", -40, -149, center;
 
-		//DrawSwitchableImage YellowKeyLost, "nullimage", "I_YKEY", -8, 0;
-		//DrawSwitchableImage BlueKeyLost, "nullimage", "I_BKEY", -8, 14;
+	//DrawSwitchableImage YellowKeyLost, "nullimage", "YKEY", 244, 173, center;
+	//DrawSwitchableImage BlueKeyLost, "nullimage", "BKEY", 244, 189, center;
+	
+	//these two are never used
+	DrawSwitchableImage BlueSkull, "nullimage", "nullimage", 6, -73;
+	DrawSwitchableImage RedSkull, "nullimage", "nullimage", 6, -89;
+	
+	
+	DrawSwitchableImage YellowSkull, "nullimage", "KEYPG0", -48, -133, center;
+	
+	DrawSwitchableImage RedCard, "nullimage", "KEYPR0", -48, -149, center;
 
-		//DrawSwitchableImage BlueSkull, "nullimage", "STKEYS3", -16, 0;
-		DrawSwitchableImage YellowSkull, "nullimage", "STKEYS2", -16, 10;
-		//DrawSwitchableImage RedSkull, "nullimage", "STKEYS5", -16, 20;
-		DrawSwitchableImage RedCard, "nullimage", "STKEYS3", -16, 30;
+		DrawImage AmmoIcon1, -80, -91, centerbottom;
+		DrawNumber 3, HUDFONT_DOOM, WHITE, Ammo1, alignment(left), -65, -100;
 
-		DrawImage AmmoIcon1, -110, -1, centerbottom;
-		DrawNumber 3, HUDFONT_DOOM, WHITE, Ammo1, alignment(left), -95, -10;
-
-		DrawImage "HLTHE0", -50, -1;
-		DrawNumber 3, HUDFONT_DOOM, WHITE, Health, -2, -10;
+		DrawImage "LIFEA0", -140, -70;
+		DrawNumber 3, HUDFONT_DOOM, WHITE, Health, -56, -45;
 
 		DrawSelectedInventory CONFONT, 5, 175;
 	}
@@ -169,7 +176,9 @@ Statusbar Fullscreen, FullScreenOffsets
 
 		//DrawSwitchableImage YellowKeyLost, "nullimage", "I_YKEY", -8, 0;
 		//DrawSwitchableImage BlueKeyLost, "nullimage", "I_BKEY", -8, 14;
-
+		//these two are never used
+	DrawSwitchableImage BlueSkull, "nullimage", "nullimage", 6, -173;
+	DrawSwitchableImage RedSkull, "nullimage", "nullimage", 6, -189;
 		//DrawSwitchableImage BlueSkull, "nullimage", "STKEYS3", -16, 0;
 		DrawSwitchableImage YellowSkull, "nullimage", "STKEYS2", -16, 10;
 		//DrawSwitchableImage RedSkull, "nullimage", "STKEYS5", -16, 20;

@@ -405,11 +405,6 @@ Fader
 		background = "ENDSCR14"
 		Time = 1
 	}
-	Fader
-	{
-		Background = "ENDSCR14"
-		Time = .5
-	}
 	Image
 	{
 		Time = -10
@@ -451,6 +446,7 @@ Fader
 	}
 	Fader
 	{
+		Music = "BOSSSONG"
 		Background = "ENDCRD04"
 		FadeType = FadeIn
 		Time = 5

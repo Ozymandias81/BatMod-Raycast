@@ -117,6 +117,12 @@ actor Theif
 		THEF L 5
 		THEF M -1
 		stop
+	Crush:
+		THEF J 5
+		THEF K 5 A_ScreamAndUnblock
+		THEF L 5
+		THEF M -1
+		stop
 	Pain.Smoke:
 		THEF N 12 A_Pain
 		THEF O 6
@@ -247,6 +253,12 @@ actor Thug
 	Pain:
 		THUG I 6 A_Pain
 		goto See
+	Crush:
+		THUG J 5
+		THUG K 5 A_ScreamAndUnblock
+		THUG LMN 2
+		THUG O -1
+		stop
 	Death:
 		THUG J 5
 		THUG K 5 A_ScreamAndUnblock
@@ -332,6 +344,12 @@ actor Thug2 : thug
 	Pain:
 		GOON I 6 A_Pain
 		goto See
+	Crush:
+		GOON J 5
+		GOON K 5 A_ScreamAndUnblock
+		GOON LMN 2
+		GOON O -1
+		stop
 	Death:
 		GOON J 5
 		GOON K 5 A_ScreamAndUnblock
@@ -404,10 +422,10 @@ actor RiddlerThug
 		RHEN BBBBBBCCCCCDDDDDDEEEEE 1 A_Chase
 		loop
 	Missile:
-		RHEN FG 4 A_FaceTarget
+		RHEN FG 5 A_FaceTarget
 		RHEN H  0 A_PlaySound("Weapon/handgun")
 		RHEN H  6 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
-		RHEN FG 2 A_FaceTarget
+		RHEN FG 4 A_FaceTarget
 		goto See
 	Pain:
 		RHEN I 6 A_Pain
@@ -489,7 +507,7 @@ actor Prisoner replaces spectre
 		PRIS BBBBBBCCCCCDDDDDDEEEEE 1 A_Chase
 		loop
 	Missile:
-		PRIS FG 4 A_FaceTarget
+		PRIS FG 6 A_FaceTarget
 		PRIS H  0 A_PlaySound("Weapon/handgun")
 		PRIS H 8 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		PRIS FG 4 A_CposRefire
@@ -538,6 +556,9 @@ actor Prisoner replaces spectre
 		BURN RSTU 7 Bright
 		BURN V -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 actor Convict replaces demon
@@ -578,6 +599,9 @@ actor Convict replaces demon
 	Pain:
 		pris N 6 A_Pain
 		goto See
+	Crush:
+		tnt1 a 0
+		goto Death
 	Death:
 		CONV G 5
 		CONV H 5 A_ScreamAndUnblock
@@ -665,6 +689,9 @@ actor Hobo replaces MBFHelperDog
 		HOBO PQ 5
 		HOBO R -1
 		stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	Death:
 		HOBO E 5
 		HOBO F 5 A_ScreamAndUnblock
@@ -746,6 +773,9 @@ actor Ninja 6745
 	Pain:
 		NINJ E 2 A_Pain
 		goto See
+	Crush:
+		tnt1 a 0
+		goto Death
 	Death:
 		NINJ V 5
 		NINJ W 5 A_ScreamAndUnblock
@@ -818,6 +848,9 @@ actor BodyGuard replaces chaingunguy
 	Pain:
 		GARD I 6 A_Pain
 		goto See
+	Crush:
+		tnt1 a 0
+		goto Death
 	Death:
 		GARD J 5
 		GARD K 5 A_ScreamAndUnblock
@@ -900,6 +933,9 @@ actor TwoFaceHenchmen replaces stealthchaingunguy
 	Pain:
 		THEN I 6 A_Pain
 		goto See
+	Crush:
+		tnt1 a 0
+		goto Death
 	Death:
 		THEN J 5
 		THEN K 5 A_ScreamAndUnblock
@@ -978,6 +1014,7 @@ actor Soilder replaces stealthzombieman
 		loop
 	Missile:
 		SLDR FG 4 A_FaceTarget
+		SLDR H 0 A_Jump(32, "See")
 		SLDR H  0 A_PlaySound("Weapon/machinegun")
 		SLDR H  3 bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		SLDR G 1 A_CposRefire
@@ -985,6 +1022,9 @@ actor Soilder replaces stealthzombieman
 	Pain:
 		SLDR I 6 A_Pain
 		goto See
+	Crush:
+		tnt1 a 0
+		goto Death
 	Death:
 		SLDR J 5
 		SLDR K 5 A_ScreamAndUnblock
@@ -1032,13 +1072,15 @@ actor Soilder replaces stealthzombieman
 }
 actor JokerGoonCar 778//replaces wolfensteinss
 {
-	+AvoidMelee
+	//+AvoidMelee
 	health 200
 	Radius 55
+	meleerange 75
 	Height 56
 	Speed 15
 	PainChance 0
 	Monster
+	+INTERPOLATEANGLES
 	+CANTLEAVEFLOORPIC
 	+NoBlood
 	//Scale 1.2
@@ -1061,10 +1103,15 @@ actor JokerGoonCar 778//replaces wolfensteinss
 		loop
 	See:
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
+		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
 		//TNT1 A 0 A_SetScale(-1)
 		//TNT1 A 0 A_SetScale(scalex*(-1),scaley*(-1))
 		PCAR AAA 1 A_Chase
 		loop
+	Melee:
+		PCAR A 1 A_FaceTarget
+		PCAR AA 1 A_SargAttack
+		Goto See
 	Missile:
 		PCAR A 0 A_Jump(128,"PassengarMissile")
 		PCAR BD 3 A_Chase
@@ -1090,6 +1137,9 @@ actor JokerGoonCar 778//replaces wolfensteinss
 	//Pain:
 		//clwn F 6 A_Pain
 		//goto See
+	Crush:
+		tnt1 a 0
+		goto Death
 	Death:
 		TNT1 A 0 A_SpawnItem("VehicleExplosion2")
 		TNT1 A 0 A_PlaySound("weapons/explode")
@@ -1120,6 +1170,8 @@ actor JokerGoonCarAgressive 777//replaces wolfensteinss
 	//+AvoidMelee
 	health 200
 	+CANTLEAVEFLOORPIC
+	+INTERPOLATEANGLES
+	meleerange 75
 	Radius 55
 	Height 56
 	Speed 15
@@ -1146,10 +1198,15 @@ actor JokerGoonCarAgressive 777//replaces wolfensteinss
 		loop
 	See:
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
+		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
 		//TNT1 A 0 A_SetScale(-1)
 		//TNT1 A 0 A_SetScale(scalex*(-1),scaley*(-1))
 		PCAR AAA 1 A_Chase
 		loop
+	Melee:
+		PCAR A 1 A_FaceTarget
+		PCAR AA 1 A_SargAttack
+		Goto See
 	Missile:
 		PCAR A 0 A_Jump(128,"PassengarMissile")
 		PCAR BD 3 A_Chase
@@ -1417,6 +1474,9 @@ actor HatterGoon replaces stealthdoomimp
 		BURN RSTU 7 Bright
 		BURN V -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 actor SladeGoon replaces marineChaingun
@@ -1497,6 +1557,9 @@ actor SladeGoon replaces marineChaingun
 		BURN RSTU 7 Bright
 		BURN V -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 actor EvilDoctor replaces stealthShotgunguy
@@ -1579,6 +1642,9 @@ actor EvilDoctor replaces stealthShotgunguy
 		BURN RSTU 7 Bright
 		BURN V -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 Actor Batmap : CustomInventory Replaces AllMap
@@ -1686,6 +1752,7 @@ Actor hostage : SwitchableDecoration replaces BlurSphere
 	Death:
 		HOST C 0 A_ChangeFlag("USESPECIAL", 0)
 		TNT1 A 0 A_ChangeFlag("CountItem", 0)
+		HOST C 1 A_Scream
 		HOST C 4 A_NoBlocking
 		HOST D -1
 		stop
@@ -2152,6 +2219,7 @@ actor FireFlyLand //replaces StealthArchvile
 	attacksound "wolfss/attack"
 	deathsound "ffly/die"
 	//seesound "frez/see"
+	PainChance "Smoke", 10
 	MONSTER
 	states
 	{
@@ -2619,6 +2687,7 @@ Actor ElGhoul replaces StealthBaron //IDK about this dude, he is pretty lame wit
 	Speed 10
 	//painchance 170
 	Health 900
+	DamageFactor "Ice", 0 
 	+NoBlood
 	//SeeSound "bmak/see"
 	AttackSound "weapon/shotgun"
@@ -2633,6 +2702,7 @@ Actor ElGhoul replaces StealthBaron //IDK about this dude, he is pretty lame wit
 		GHUL AABBCCDD 3 A_Chase
 		Loop
 	Missile:
+		GHUL E 0 A_Jump(128, "Smoke")
 		GHUL E 4 A_FaceTarget
 		GHUL F 4 BRIGHT A_CyberAttack
 		GHUL E 4 A_FaceTarget
@@ -2641,6 +2711,16 @@ Actor ElGhoul replaces StealthBaron //IDK about this dude, he is pretty lame wit
 		GHUL F 4 BRIGHT A_CyberAttack
 		GHUL E 4 A_FaceTarget
 		GHUL F 4 BRIGHT A_CyberAttack
+		GHUL A 0 A_ChangeFlag("STEALTH", false)
+		//GHUL G 1 A_SpawnItemEx("IceCloud",0,0,64)
+		Goto See
+	Smoke:
+		GHUL E 2 A_FaceTarget
+		GHUL G 2 A_SpawnItemEx("IceCloud",0,0,96)
+		GHUL A 2 A_ChangeFlag("STEALTH", true)
+		GHUL A 4 A_FastChase
+		GHUL A 4 A_Recoil(-200)
+		GHUL AAA 4 A_FastChase
 		Goto See
 	Death:
 		GHUL G 8 A_Scream
@@ -2702,6 +2782,7 @@ actor Bane replaces BaronOfHell
 	health 1500
 	BloodColor "Green"//because venom
 	Radius 20
+	Mass 200
 	Height 60
 	Speed 14
 	PainChance 100
@@ -2716,6 +2797,8 @@ actor Bane replaces BaronOfHell
 	 //+AVOIDMELEE
 	//Species "" set this for certain types of henchmen
 	//SeeSound "thug/sight"
+	Damage 15
+MeleeDamage 5
 	Species "BaneGang"
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
@@ -2729,27 +2812,29 @@ actor Bane replaces BaronOfHell
 		BANE A 10 A_Look
 		loop
 	See:
+		BANE A 0 A_UnSetInvulnerable 
 		BANE AAAAABBBBBBCCCCCDDDDDD 1 A_Chase
 		loop
 	Melee:
 		BANE E 4 A_FaceTarget
-		BANE F 2 A_SkelFist
+		BANE F 2 A_CustomMeleeAttack(random(1, 10) * 6, "skeleton/melee" , "skeleton/miss")
 		BANE G 2 A_SkullAttack
-		BANE F 2 A_SkelFist
+		BANE F 2 A_CustomMeleeAttack(random(1, 10) * 6, "skeleton/melee" , "skeleton/miss")
 		goto See
 	Missile:
 		BANE E 3 A_FaceTarget
-		BANE E 3 A_recoil(50)
+		BANE E 3 A_SetInvulnerable 
+		BANE EE 3 A_recoil(25)
 		BANE E 3 A_FaceTarget
-		BANE F 3 A_recoil(-200)
+		BANE FFFF 1 A_SkullAttack(50)
 		goto See
 	Pain:
 		BANE H 6 A_Pain
 		goto See
 	Death:
-		BANE I 5
-		BANE J 5 A_ScreamAndUnblock
-		BANE KLM 2
+		BANE I 7
+		BANE J 7 A_ScreamAndUnblock
+		BANE KLM 5
 		BANE N -1
 		stop
 	}
@@ -2815,6 +2900,7 @@ Actor Penguin replaces MarineBFG
 	painchance 140
 	Health 700
 	+NoBlood
+	//Translation "199:207=250:254"
 	SeeSound "peng/see"
 	AttackSound "weapon/shotgun"
 	DeathSound "peng/die"
@@ -3245,6 +3331,9 @@ Actor Riddler replaces BossBrain
 		RIDD P 8
 		RIDD Q -1
 		Stop
+	Crush:
+		tnt1 a 0
+		goto Death
 	}
 }
 Actor DeathStroke replaces Cyberdemon

@@ -2,15 +2,21 @@ LISTMENU "MainMenu"
 {
 	IfGame(Doom)
 	{
-		StaticPatch 32, 8, "M_DOOM"
-		Position 38, 90
+		StaticPatch 74, 8, "M_DOOM"
+		Position 76, 90
 		LineSpacing 15
 		PatchItem "M_NEWG", "N", "PlayerclassMenu"
 		PatchItem "M_LOADG", "L", "LoadGameMenu"
 		PatchItem "M_SAVEG", "S", "SaveGameMenu"
+//<<<<<<< Updated upstream
 		PatchItem "M_NEWOPT","Z", "ZMoveOptions"
 		PatchItem "M_OPTION","O", "OptionsMenu"
 		PatchItem "M_WANTED", "M", "MostWanted"
+//=======
+		//TextItem "Movement Options","Z", "ZMoveOptions"
+		PatchItem "M_OPTION","O", "OptionsMenu"
+		//TextItem "Most Wanted", "M", "MostWanted"
+//>>>>>>> Stashed changes
 		PatchItem "M_QUITG","Q", "QuitMenu"
     }
 }
