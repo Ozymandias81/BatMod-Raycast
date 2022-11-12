@@ -546,21 +546,66 @@ ACTOR BatMilk : Stimpack Replaces Stimpack
     Stop
   }
 }
-actor BlueKey : BlueCard Replaces BlueCard
+actor BlueKey : CustomInventory Replaces BlueCard
 {
-Inventory.PickupMessage "Picked up a blue key."
+  Inventory.PickupMessage "Picked up a blue key."
+  Inventory.PickupSound "misc/p_pkup"
+  -COUNTITEM
+  states
+  {
+  Spawn:
+    BKEY A -1 BRIGHT
+    stop
+  Pickup:
+    TNT1 A 0 A_GiveInventory ("BlueCard")
+    stop
+  }
 }
-actor RedKey : RedCard Replaces RedCard
+
+actor RedKey : CustomInventory Replaces RedCard
 {
 Inventory.PickupMessage "Picked up a red key."
+  Inventory.PickupSound "misc/p_pkup"
+  -COUNTITEM
+  states
+  {
+  Spawn:
+    RKEY A -1 BRIGHT
+    stop
+  Pickup:
+    TNT1 A 0 A_GiveInventory ("RedCard")
+    stop
+  }
 }
-actor YellowKey : YellowCard Replaces YellowCard
+actor YellowKey : CustomInventory Replaces YellowCard
 {
 Inventory.PickupMessage "Picked up a yellow key."
+  Inventory.PickupSound "misc/p_pkup"
+  -COUNTITEM
+  states
+  {
+  Spawn:
+    YKEY A -1 BRIGHT
+    stop
+  Pickup:
+    TNT1 A 0 A_GiveInventory ("YellowCard")
+    stop
+  }
 }
-actor GreenKey : YellowSkull Replaces YellowSkull
+actor GreenKey : CustomInventory Replaces YellowSkull
 {
 Inventory.PickupMessage "Picked up a green key."
+  Inventory.PickupSound "misc/p_pkup"
+  -COUNTITEM
+  states
+  {
+  Spawn:
+    YSKU A -1 BRIGHT
+    stop
+  Pickup:
+    TNT1 A 0 A_GiveInventory ("YellowSkull")
+    stop
+  }
 }
 
 actor SewerColumnMossy replaces BrainStem

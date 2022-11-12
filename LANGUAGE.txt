@@ -9,6 +9,13 @@ PD_BLUES = "You need the special key to open this door";
 PD_REDS = "You need more clues to open this door";
 PD_YELLOWS = "You need the green key to open this door";
 
+PD_BLUECO = "You need the blue key to open this door";
+PD_REDCO = "You need the red key to open this door";
+PD_YELLOWCO = "You need the yellow key to open this door";
+PD_BLUESO = "You need the special key to open this door";
+PD_REDSO = "You need more clues to open this door";
+PD_YELLOWSO = "You need the green key to open this door";
+
 AM_MONSTERS	= "Convicts:";
 AM_SECRETS = "Riddles:";
 AM_ITEMS = "Hostages:";
