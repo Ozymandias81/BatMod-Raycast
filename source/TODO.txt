@@ -1,0 +1,13 @@
+** Stripping ZMove, required basic defs:
+
+crouch sliding
+grapple hook
+double jump
+dash
+climbing ledges
+wall jump
+my current settings are as follows, movement type: dusk
+strafe jumping type: quake3
+double jump type: unreal tournament
+
+** Setup proper floating values without truncation from the engine

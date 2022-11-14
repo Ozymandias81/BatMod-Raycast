@@ -99,10 +99,6 @@ server	int		zm_speedometer			= 0;
 server 	float	dsk_acceleration		= 1.5;
 
 //===============================================
-//Painkiller
-server 	float	pk_acceleration			= 1.0;
-
-//===============================================
 //Build Engine
 server	float	be_jumpanim				= 6.0;
 

@@ -1,5 +1,4 @@
 Dusk Movement is inspired by the game DUSK, developed by David Szymanski and published by New Blood Interactive.
-Painkiller movement is inspired by the game Painkiller, developed by People Can Fly and published by THQ Nordic.
 UT Movement is inspired by the Unreal Tournament series developed and published by Epic Games.
 Build Engine movement in inspired by the classic Build Trilogy, and Ion Fury developed by Voidpoint and published by 3DRealms.
 Quake movement is inspired by the Quake series developed and published by id Software.

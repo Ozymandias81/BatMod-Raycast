@@ -2,21 +2,15 @@ LISTMENU "MainMenu"
 {
 	IfGame(Doom)
 	{
-		StaticPatch 74, 8, "M_DOOM"
-		Position 76, 90
+		StaticPatch 52, 0, "M_DOOM"
+		Position 110, 90
 		LineSpacing 15
 		PatchItem "M_NEWG", "N", "PlayerclassMenu"
 		PatchItem "M_LOADG", "L", "LoadGameMenu"
 		PatchItem "M_SAVEG", "S", "SaveGameMenu"
-//<<<<<<< Updated upstream
 		PatchItem "M_NEWOPT","Z", "ZMoveOptions"
 		PatchItem "M_OPTION","O", "OptionsMenu"
 		PatchItem "M_WANTED", "M", "MostWanted"
-//=======
-		//TextItem "Movement Options","Z", "ZMoveOptions"
-		PatchItem "M_OPTION","O", "OptionsMenu"
-		//TextItem "Most Wanted", "M", "MostWanted"
-//>>>>>>> Stashed changes
 		PatchItem "M_QUITG","Q", "QuitMenu"
     }
 }
@@ -288,9 +282,6 @@ OptionMenu "ZMoveOptions"
 	StaticText	"Dusk Movement", Orange
 	ZMoveSlider "Strafejumping Acceleration", 			"How fast you gain speed when you strafejump",											"dsk_acceleration",			1.0,	2.5,	0.1
 	StaticText	""
-	StaticText	"Painkiller Movement", Orange
-	ZMoveSlider "BHop Acceleration", 					"How fast you gain speed when bunnyhopping",											"pk_acceleration",			1.0,	2.0,	0.05,	2
-	StaticText	""
 	StaticText	"Quake Movement", Orange
 	ZMoveOption	"Strafe Jumping Type",					"Pick your strafe jumping type",														"q_strafetype",				"StrafeType"
 	ZMoveSlider "Q3 Acceleration", 						"How fast you gain speed when strafejumping Q3 style",									"q_3airaccel",				0.5,	1.0,	0.05,	2
@@ -304,9 +295,6 @@ OptionMenu "ZMoveOptions"
 	StaticText	""
 	StaticText	"Build Engine Movement", Orange
 	ZMoveSlider "Jump Animation ViewHeight", 			"How much your viewpoint lowers when executing a jump",									"be_jumpanim",				4.0,	8.0,	0.5
-	StaticText	""
-	StaticText	"Painkiller Movement", Orange
-	ZMoveSlider "BHop Jump Height", 					"Bunny hop jump height (% of regular jump height)",										"pk_bhopjumpheight",		0.5,	1,		0.1,	2
 	StaticText	""
 	StaticText	"Double Jump", Orange
 	ZMoveOption "Double Jump Type", 					"Enable and choose Double Jumping style",												"zm_doublejump",			"DoubleJump"
@@ -404,7 +392,6 @@ OptionValue "MoveType"
 	0, "Doom"
 	1, "Build Engine"
 	2, "Dusk"
-	3, "Painkiller"
 	4, "Quake"
 	5, "Unreal Tournament"
 }
@@ -435,7 +422,6 @@ OptionValue "BobType"
 	0, "Doom"
 	1, "Build Engine"
 	2, "Dusk"
-	3, "Painkiller"
 	4, "Unreal Tournament"
 }
 

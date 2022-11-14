@@ -1,4 +1,3 @@
-
 //Sergeant Mark IV's bike, will be replaced with BoA tank code - ozy81
 //Special thanks to Doomero.
 //If you want to modify and reuse this on your wad, please ask me first.

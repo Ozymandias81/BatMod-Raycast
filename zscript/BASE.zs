@@ -1,4 +1,4 @@
-Class Batman : ZMovePlayer
+Class Batman : BMovePlayer
 {
 	Default
 	{
@@ -9,6 +9,7 @@ Class Batman : ZMovePlayer
 	Height 50;
 	Mass 100;
 	PainChance 255;
+	+NOBLOOD
 	DeathSound "bat/death";
 	Player.DisplayName "Batman";
 	//Player.CrouchSprite "PLYC";
@@ -35,7 +36,6 @@ Class Batman : ZMovePlayer
 	Player.WeaponSlot 5, "GasGun";
 	Player.WeaponSlot 6, "RemoteBaterang";
 	Player.WeaponSlot 7, "EMPGun";
-	+NOBLOOD
 	DamageFactor "Firey", 0.8;
 	DamageFactor "Smoke", 0.2;
 	PainChance "Smoke", 0;
@@ -43,7 +43,6 @@ Class Batman : ZMovePlayer
 	Player.DamageScreenColor "00 de 00", 0.6, "Poison";
 	Player.DamageScreenColor "Light Blue", 1, "Ice";
 	Player.DamageScreenColor "8c 4f 0d", 1, "Clay";
-
 	Player.ColorRange 112, 127;
 	Player.Colorset 0, "Green",			0x70, 0x7F,  0x72;
 	Player.Colorset 1, "Gray",			0x60, 0x6F,  0x62;
@@ -110,7 +109,7 @@ Class Batman : ZMovePlayer
 	}
 }
 
-Class GreenArrow : ZMovePlayer
+Class GreenArrow : BMovePlayer
 {
 	Default
 	{
@@ -146,7 +145,6 @@ Class GreenArrow : ZMovePlayer
 	Player.DamageScreenColor "00 de 00", 0.8, "Poison";
 	Player.DamageScreenColor "Light Blue", 0.8, "Ice";
 	Player.DamageScreenColor "8c 4f 0d", 1, "Clay";
-
 	Player.ColorRange 112, 127;
 	Player.Colorset 0, "Green",			0x70, 0x7F,  0x72;
 	Player.Colorset 1, "Gray",			0x60, 0x6F,  0x62;
@@ -215,45 +213,48 @@ Class GreenArrow : ZMovePlayer
 
 Class Freedom : Health
 {
-	Default{
-	+COUNTITEM;
-  +NoClip;
-  +INVENTORY.AUTOACTIVATE;
-  +INVENTORY.ALWAYSPICKUP;
-  +INVENTORY.FANCYPICKUPSOUND;
-  Inventory.Amount 0;
-  Inventory.MaxAmount 200;
-  Inventory.PickupMessage "";//so the console dosent display anything
-  //Inventory.PickupSound "misc/p_pkup"
-  +INVENTORY.NOSCREENFLASH;
-  }
-  States
-  {
-  Spawn:
-    TNT1 ABCDCB 6 Bright;
-    Loop;
-  }
+	Default
+	{
+		+COUNTITEM;
+		+NOCLIP;
+		+INVENTORY.AUTOACTIVATE;
+		+INVENTORY.ALWAYSPICKUP;
+		+INVENTORY.FANCYPICKUPSOUND;
+		+INVENTORY.NOSCREENFLASH;
+		Inventory.Amount 0;
+		Inventory.MaxAmount 200;
+		Inventory.PickupMessage "";//so the console dosent display anything
+		//Inventory.PickupSound "misc/p_pkup"
+	}
 	
-    Override void Tick()
-    { //Tick override gets called every tick
-        Super.Tick();
-        GlideToPlayer(); //Call the function
-    }
-    void GlideToPlayer()
-    { //Function definition
-        For(let i = BlockThingsIterator.Create(self,9999); i.Next();)
-        { //Iterate through all actors in a 9999 unit range
-            Actor other = i.thing;
-            If(other==self)
-            {Continue;} //If the actor is the item, skip
-            double distance = Distance3D(other);
-            If(distance>9999)
-            {Continue;} //If it's above the specified distance, skip
-            If(other is "PlayerPawn")
-            { //If it's a player, continue
-                A_Face(other); //Face the player
-                VelFromAngle(10.0); //Move towards the player with a speed of 10 units per tick
-            }
-        }
-    }
+	States
+	{
+	Spawn:
+		TNT1 ABCDCB 6 Bright;
+		Loop;
+	}
+
+	Override void Tick()
+	{ //Tick override gets called every tick
+		Super.Tick();
+		GlideToPlayer(); //Call the function
+	}
+	
+	void GlideToPlayer()
+	{ //Function definition
+		For(let i = BlockThingsIterator.Create(self,9999); i.Next();)
+		{ //Iterate through all actors in a 9999 unit range
+			Actor other = i.thing;
+			If(other==self)
+		{Continue;} //If the actor is the item, skip
+		double distance = Distance3D(other);
+		If(distance>9999)
+		{Continue;} //If it's above the specified distance, skip
+		If(other is "PlayerPawn")
+			{ //If it's a player, continue
+				A_Face(other); //Face the player
+				VelFromAngle(10.0); //Move towards the player with a speed of 10 units per tick
+			}
+		}
+	}
 } 
