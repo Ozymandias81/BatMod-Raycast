@@ -1,3 +1,25 @@
+/*
+ * Copyright (c) 2022 Derrick, Ozymandias81
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+**/
+
 Class Batman : BMovePlayer
 {
 	Default
@@ -28,7 +50,6 @@ Class Batman : BMovePlayer
 	//Player.StartItem "GasGunAmmo" 100;
 	//Player.StartItem "BaterangAmmo", 50;
 	Player.StartItem "BolaAmmo", 25;
-	//Player.StartItem "BikeHUD"; //let's prevent starting randomly in the car - ozy81
 	Player.WeaponSlot 1, "BatFist";
 	Player.WeaponSlot 2, "Bola";
 	Player.WeaponSlot 3, "TriBaterang", "Baterang";
@@ -58,7 +79,7 @@ Class Batman : BMovePlayer
 	States
 	{
 	Spawn:
-		DBFL A 0; //what's this?
+		DBFL A 0; //spaghetti placeholder for batcar frame inheritances
 		PLAY A -1;
 		Loop;
 	See:
@@ -223,8 +244,7 @@ Class Freedom : Health
 		+INVENTORY.NOSCREENFLASH;
 		Inventory.Amount 0;
 		Inventory.MaxAmount 200;
-		Inventory.PickupMessage "";//so the console dosent display anything
-		//Inventory.PickupSound "misc/p_pkup"
+		Inventory.PickupMessage "";
 	}
 	
 	States

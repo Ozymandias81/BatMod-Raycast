@@ -1,3 +1,25 @@
+/*
+ * Copyright (c) 2019-2022 Ivory Duke, Ozymandias81 (code rearrange)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+**/
+
 enum Bobbing
 {
 	Bob_Normal,
@@ -765,7 +787,7 @@ Class BMovePlayer : PlayerPawn
 				
 				if(!(BMPlayer.cheats & CF_PREDICTING) && !JumpSoundCooler)
 				{
-					A_PlaySound("*jump", CHAN_BODY);
+					A_StartSound("*jump", CHAN_BODY);
 					JumpSoundCooler = 4;
 				}
 				
@@ -783,7 +805,7 @@ Class BMovePlayer : PlayerPawn
 				bONMOBJ = false;
 				Jumped = True;
 				
-				if(!(BMPlayer.cheats & CF_PREDICTING)) { A_PlaySound("*jump", CHAN_BODY); }
+				if(!(BMPlayer.cheats & CF_PREDICTING)) { A_StartSound("*jump", CHAN_BODY); }
 				
 				CanDoubleJump = False;
 			}
@@ -865,7 +887,7 @@ Class BMovePlayer : PlayerPawn
 					
 				if(!(BMPlayer.cheats & CF_PREDICTING) && !JumpSoundCooler)
 				{
-					A_PlaySound("*jump", CHAN_BODY);
+					A_StartSound("*jump", CHAN_BODY);
 					JumpSoundCooler = 4;
 				}
 				
@@ -886,7 +908,7 @@ Class BMovePlayer : PlayerPawn
 					bONMOBJ = false;
 					Jumped = True;
 					
-					if(!(BMPlayer.cheats & CF_PREDICTING)) { A_PlaySound("*jump", CHAN_BODY); }
+					if(!(BMPlayer.cheats & CF_PREDICTING)) { A_StartSound("*jump", CHAN_BODY); }
 					
 					CanDoubleJump = False;
 				}
@@ -960,7 +982,7 @@ Class BMovePlayer : PlayerPawn
 				
 				if(!(BMPlayer.cheats & CF_PREDICTING) && !JumpSoundCooler)
 				{
-					A_PlaySound("*jump", CHAN_BODY);
+					A_StartSound("*jump", CHAN_BODY);
 					JumpSoundCooler = 4;
 				}
 				
@@ -978,7 +1000,7 @@ Class BMovePlayer : PlayerPawn
 				bONMOBJ = false;
 				Jumped = True;
 				
-				if(!(BMPlayer.cheats & CF_PREDICTING)) { A_PlaySound("*jump", CHAN_BODY); }
+				if(!(BMPlayer.cheats & CF_PREDICTING)) { A_StartSound("*jump", CHAN_BODY); }
 				
 				CanDoubleJump = False;
 			}
@@ -2186,7 +2208,7 @@ Class BMovePlayer : PlayerPawn
 					if(zm_crouchslide == 1)
 					{
 						CanCSlide = True;
-						A_PlaySound("slide",CHAN_BODY);
+						A_StartSound("slide",CHAN_BODY);
 						Vel.XY = MaximumSlideSpeed * AngleToVector(SlideAngle);
 					}
 					else if(QSlideDuration)
@@ -2248,7 +2270,7 @@ Class BMovePlayer : PlayerPawn
 	{
 		Usercmd cmd = BMPlayer.cmd;
 		
-		A_PlaySound("WallSlide", CHAN_BODY, 0.5, True);
+		A_StartSound("WallSlide", CHAN_BODY, 0.5, True);
 		
 		//====================================
 		//Actual Movement
@@ -2459,7 +2481,7 @@ Class BMovePlayer : PlayerPawn
 		if(JumpFac) { DashVelZ *= JumpFac; }
 		Vel.Z = DashVelZ;
 		
-		if(!(BMPlayer.cheats & CF_PREDICTING)) { A_PlaySound("*jump", CHAN_BODY); }
+		if(!(BMPlayer.cheats & CF_PREDICTING)) { A_StartSound("*jump", CHAN_BODY); }
 		
 		Vel.XY = DashVector;
 		MaxAirSpeed = min(Vel.XY.Length(), zm_maxhopspeed);
@@ -2473,7 +2495,7 @@ Class BMovePlayer : PlayerPawn
 		DashCommon();
 		ADashCooler = 53;
 		
-		if(!(BMPlayer.cheats & CF_PREDICTING) && !JumpSoundCooler) { A_PlaySound("*jump", CHAN_BODY); }
+		if(!(BMPlayer.cheats & CF_PREDICTING) && !JumpSoundCooler) { A_StartSound("*jump", CHAN_BODY); }
 		
 		if(Vel.XY.Length() <= MaxGroundSpeed)
 		{
@@ -2536,7 +2558,7 @@ Class BMovePlayer : PlayerPawn
 		}
 		
 		if(zm_wjdoublejumprenew) { CanDoubleJump = True; }
-		if(!(BMPlayer.cheats & CF_PREDICTING) && !JumpSoundCooler) { A_PlaySound("*jump", CHAN_BODY); }
+		if(!(BMPlayer.cheats & CF_PREDICTING) && !JumpSoundCooler) { A_StartSound("*jump", CHAN_BODY); }
 		
 		Vel.XY = WJumpVector;
 		MaxAirSpeed = min(Vel.XY.Length(), zm_maxhopspeed);
@@ -2646,7 +2668,7 @@ Class BMovePlayer : PlayerPawn
 		
 		Vel.XY = WSlideVelocity;
 		Vel.Z *= zm_wslidevelz;
-		A_PlaySound("WallSlide", CHAN_BODY, 0.3, True);
+		A_StartSound("WallSlide", CHAN_BODY, 0.3, True);
 		
 		//Sprite animation
 		PlayIdle();
@@ -2739,7 +2761,7 @@ Class BMovePlayer : PlayerPawn
 		A_StopSound(CHAN_WEAPON); 	//stop looping weapon sounds
 		StopHook();					//stop hook, not needed but just in case
 		LedgeAngle = Angle;
-		A_PlaySound("Climb", CHAN_BODY);
+		A_StartSound("Climb", CHAN_BODY);
 		LedgeGrabbed = True;
 	}
 	
@@ -2755,7 +2777,7 @@ Class BMovePlayer : PlayerPawn
 			//Only if ledge grab was successful
 			if(LedgeTime >= 35) { return; }
 			Vel = Vel.Length() ? (5.f * AngleToVector(LedgeAngle), -3) : (0, 0, 0); //push player forward and downward
-			A_PlaySound("*land", CHAN_BODY);
+			A_StartSound("*land", CHAN_BODY);
 		}
 		else
 		{
@@ -2804,7 +2826,7 @@ Class BMovePlayer : PlayerPawn
 		
 		//First click, fire hook
 		if(HookFired || Grappled) { return; }
-		A_PlaySound("HookLaunch", 7, 0.8);
+		A_StartSound("HookLaunch", 7, 0.8);
 		//Why actor projectile firing functions do not have a pitch parameter?
 		FLineTraceData CrossHairProjection; LineTrace(Angle, 10000, Pitch, 0, BMPlayer.ViewHeight, data: CrossHairProjection);
 		Float PitchOffset = VectorAngle(CrossHairProjection.Distance, -AttackZOffset);
@@ -3295,11 +3317,11 @@ Class Hook : Actor
 			Let Monster = Actor(Master);
 			BMovePlayer(Target).GrappledMonster = Monster;
 			SetMonsterSpeed(False);
-			A_PlaySound("HookMeat", 7);
+			A_StartSound("HookMeat", 7);
 		}
 		else
 		{
-			A_PlaySound("HookWall", 7);
+			A_StartSound("HookWall", 7);
 		}
 	}
 	
@@ -3425,7 +3447,7 @@ Class Hook : Actor
 			if(HookOwner)
 			{
 				HookOwner.StopHook();
-				HookOwner.A_PlaySound("HookFailed", 7, 0.2);
+				HookOwner.A_StartSound("HookFailed", 7, 0.2);
 			}
 			
 			Let Monster = Actor(Master);

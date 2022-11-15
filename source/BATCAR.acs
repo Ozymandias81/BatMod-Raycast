@@ -1,7 +1,7 @@
 #library "BATCAR"
 #include "zcommon.acs"
 
-int isBiker = 0;
+int isDriver = 0;
 
 //FORWARD
 script 421 ENTER
@@ -89,14 +89,13 @@ script 425 ENTER
 
 	if (buttons & BT_USE)
 	{
-	if (isBiker == 1)//set this number to bike class in keyconf
-	{
-		Spawn("AcsDropBike",GetActorX(0),GetActorY(0),GetActorFloorZ(0) + 64,0,GetActorAngle(0) >> 8);
-		isBiker = 0;
-		SetPlayerProperty(1,0,4);
-		UnMorphActor (0);
-	}
-	
+		if (isDriver == 1)//set this number to bike class in keyconf
+		{
+			Spawn("AcsDropBatCar",GetActorX(0),GetActorY(0),GetActorFloorZ(0) + 64,0,GetActorAngle(0) >> 8);
+			isDriver = 0;
+			SetPlayerProperty(1,0,4);
+			UnMorphActor (0);
+		}
 	}
 
 	delay(1);
@@ -105,8 +104,8 @@ script 425 ENTER
 
 script 426 (void)
 {
-	//print(s:"\cd Hopped On Bike");
-	isBiker = 1;
+	//print(s:"\cd Hopped On Car");
+	isDriver = 1;
 }
 
 script 427 ENTER
@@ -119,7 +118,7 @@ script 427 ENTER
 
 	if (buttons & BT_ATTACK)
 	{
-		if (isBiker == 1)
+		if (isDriver == 1)
 		{
 			GiveInventory("BatShooting", 1);
 			//Spawn("BatMissile",GetActorX(0),GetActorY(0),GetActorFloorZ(0),0,GetActorAngle(0) >> 8);

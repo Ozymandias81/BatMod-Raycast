@@ -1,6 +1,24 @@
-//Sergeant Mark IV's bike, will be replaced with BoA tank code - ozy81
-//Special thanks to Doomero.
-//If you want to modify and reuse this on your wad, please ask me first.
+/*
+ * Copyright (c) 2016-2022 Sergeant Mark IV, Derrick, Ozymandias81
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+**/
 
 Actor Accelerate : Inventory { inventory.maxamount 1 }
 Actor Backpedal : Inventory { inventory.maxamount 1 }
@@ -10,7 +28,7 @@ Actor TurnRight : Inventory { inventory.maxamount 1 }
 Actor MaxLeft : Inventory { inventory.maxamount 1 }
 Actor MaxRight : Inventory { inventory.maxamount 1 }
 
-ACTOR BikeSpeed : Ammo
+ACTOR BatCarSpeed : Ammo
 {
 	Game Doom
 	SpawnID 11
@@ -28,7 +46,7 @@ ACTOR BikeSpeed : Ammo
 	}
 }
 
-ACTOR Biker : PlayerPawn
+ACTOR BatCarPlayer : PlayerPawn
 {
 	Health 500
 	Radius 32
@@ -40,9 +58,8 @@ ACTOR Biker : PlayerPawn
 	Player.DisplayName "Batmobile"
 	Player.CrouchSprite "PLYC"
 	deathsound "bat/death6"
-	//Player.StartItem "BikeHUD"
 	Player.Face "STF"
-	Player.MorphWeapon "BikeHUD"
+	Player.MorphWeapon "BatCarHUD"
 	+NOMENU
 	-PICKUP
 	Player.ColorRange 112, 127
@@ -59,43 +76,43 @@ ACTOR Biker : PlayerPawn
 	States
 	{
 	Pain.Kick:
-	TNT1 A 0
-	TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
-	TNT1 A 0 A_TakeInventory("BikeSpeed", 300)
-	TNT1 A 0 A_TakeInventory("Accelerate", 1)
-	TNT1 A 0 A_PlaySOund("EBIKECLS", 3)
-	TNT1 A 0 HealThing(1)
-	TNT1 A 0 A_Recoil(5)
-	DBFL A 12
-	TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
-	TNT1 A 0 A_TakeInventory("Accelerate", 1)
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 300)
+		TNT1 A 0 A_TakeInventory("Accelerate", 1)
+		TNT1 A 0 A_StartSound("EBIKECLS", 3)
+		TNT1 A 0 HealThing(1)
+		TNT1 A 0 A_Recoil(5)
+		DBFL A 12
+		TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
+		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 	Goto Stay
 	
 	
 	Pain.CrashLeft:
-	TNT1 A 0
-	TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
-	TNT1 A 0 A_TakeInventory("BikeSpeed", 10)
-	TNT1 A 0 A_PlaySOund("BIKECLW", 3)
-	TNT1 A 0 HealThing(1)
-	TNT1 A 0 A_Recoil(-3)
-	DBFL AAA 1 A_SetAngle(-3 + angle)
-	TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 10)
+		TNT1 A 0 A_StartSound("BIKECLW", 3)
+		TNT1 A 0 HealThing(1)
+		TNT1 A 0 A_Recoil(-3)
+		DBFL AAA 1 A_SetAngle(-3 + angle)
+		TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
 	Goto Stay
 	
 	Pain.CrashRight:
-	TNT1 A 0
-	TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
-	TNT1 A 0 A_TakeInventory("BikeSpeed", 10)
-	TNT1 A 0 A_PlaySOund("BIKECLW", 3)
-	TNT1 A 0 HealThing(1)
-	TNT1 A 0 A_Recoil(-3)
-	DBFL AAA 1 A_SetAngle(3 + angle)
-	TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 10)
+		TNT1 A 0 A_StartSound("BIKECLW", 3)
+		TNT1 A 0 HealThing(1)
+		TNT1 A 0 A_Recoil(-3)
+		DBFL AAA 1 A_SetAngle(3 + angle)
+		TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
 	Goto Stay
 	See:
 	Spawn:
-		DBFL A 0 A_GiveInventory("BikeHud")
+		DBFL A 0 A_GiveInventory("BatCarHud")
 		DBFL A 1 SetPlayerProperty(1,1,4)//freeze player normal movement
 		DBFL A 0 Acs_Execute(426)
 	Goto Stay
@@ -115,15 +132,15 @@ ACTOR Biker : PlayerPawn
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
 		TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate")
 		DBFL A 1
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 2)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 140, "Accelerate8")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 120, "Accelerate7")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 100, "Accelerate6")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 80, "Accelerate5")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 60, "Accelerate4")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 40, "Accelerate3")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 20, "Accelerate2")
-		TNT1 A 0 A_PlaySound("BIKE1", 2, 1, 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 2)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 140, "Accelerate8")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 120, "Accelerate7")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 100, "Accelerate6")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 80, "Accelerate5")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 60, "Accelerate4")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 40, "Accelerate3")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 20, "Accelerate2")
+		TNT1 A 0 A_StartSound("BIKE1", 2, 1, 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
 		Loop
@@ -134,10 +151,10 @@ ACTOR Biker : PlayerPawn
 	    DBFL A 1 A_Recoil(2)
 		TNT1 A 0 A_JumpIfInventory("TurnLeft", 1, "TurnLeftBackPedal")
 		TNT1 A 0 A_JumpIfInventory("TurnRight", 1, "TurnRightBackPedal")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, "Brake")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, "Brake")
 		TNT1 A 0 A_TakeInventory("BackPedal", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 35)
-		TNT1 A 0 A_PlaySound("BIKE1", 2, 1, 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 35)
+		TNT1 A 0 A_StartSound("BIKE1", 2, 1, 1)
 		TNT1 A 0 A_JumpIfInventory("TurnLeft", 1, "TurnLeftBackPedal")
 		TNT1 A 0 A_JumpIfInventory("TurnRight", 1, "TurnRightBackPedal")
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "BackPedal")
@@ -146,23 +163,21 @@ ACTOR Biker : PlayerPawn
 	Brake:
 	    DBFL A 2 A_Recoil(1)
 		TNT1 A 0 A_TakeInventory("BackPedal", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 9)
-		TNT1 A 0 A_PlaySound("BIKESK", 2, 1, 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 9)
+		TNT1 A 0 A_StartSound("BIKESK", 2, 1, 1)
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
-		//aTNT1 A 0 A_PlaySound("BIKESK", 3)
 		TNT1 A 0 A_JumpIfInventory("BackPedal", 0, "Stay")
 		DBFL A 2
 		TNT1 A 0 A_TakeInventory("BackPedal", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 9)
-		TNT1 A 0 A_PlaySound("BIKESK", 2, 1, 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 9)
+		TNT1 A 0 A_StartSound("BIKESK", 2, 1, 1)
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
-		//aTNT1 A 0 A_PlaySound("BIKESK", 3)
 		TNT1 A 0 A_JumpIfInventory("BackPedal", 1, "Brake")
 		Goto Stay		
 	
 	NoTurn:
 		TNT1 A 0
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 100)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 100)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "BackPedal")
 		DBFL A 1
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "BackPedal")
@@ -176,11 +191,11 @@ ACTOR Biker : PlayerPawn
 		//TNT1 A 0 A_JumpIf(MomY == 0, "NoTurn")
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 0, "TurnRightNoAcceleration")
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "TurnRightBackPedal")
-		TNT1 A 0 A_jumpIfInventory("BikeSpeed", 62, "TurnRightHighSpeed")
-		TNT1 A 0 A_jumpIfInventory("BikeSpeed", 89, "TurnRightMaxSpeed")
+		TNT1 A 0 A_jumpIfInventory("BatCarSpeed", 62, "TurnRightHighSpeed")
+		TNT1 A 0 A_jumpIfInventory("BatCarSpeed", 89, "TurnRightMaxSpeed")
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, 1)
 		Goto NoTurn
 	    TNT1 AA 0 A_SetAngle(-1 + angle)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -193,18 +208,18 @@ ACTOR Biker : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
 		Goto Stay
 	TurnLeft:
 	    DBFL A 0 
 		//TNT1 A 0 A_JumpIf(MomY == 0, "NoTurn")
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 0, "TurnLeftNoAcceleration")
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "TurnLeftBackPedal")
-		TNT1 A 0 A_jumpIfInventory("BikeSpeed", 62, "TurnLeftHighSpeed")
-		TNT1 A 0 A_jumpIfInventory("BikeSpeed", 89, "TurnLeftMaxSpeed")
+		TNT1 A 0 A_jumpIfInventory("BatCarSpeed", 62, "TurnLeftHighSpeed")
+		TNT1 A 0 A_jumpIfInventory("BatCarSpeed", 89, "TurnLeftMaxSpeed")
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, 1)
 		Goto NoTurn
 	    TNT1 AAA 0 A_SetAngle(1 + angle)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -218,16 +233,16 @@ ACTOR Biker : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
 		Goto Stay	
 		
-TurnRightNoAcceleration:
+	TurnRightNoAcceleration:
 	    DBFL A 0 
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 8)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 8)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "TurnRightBackPedal")
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, 1)
 		Goto NoTurn
 	    TNT1 AA 0 A_SetAngle(-1 + angle)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -240,15 +255,15 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 8)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 8)
 		Goto Stay
 	TurnLeftNoAcceleration:
 	    DBFL A 0 
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 8)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 8)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "TurnLeftBackPedal")
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, 1)
 		Goto NoTurn
 	    TNT1 AAA 0 A_SetAngle(1 + angle)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -262,19 +277,19 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 8)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 8)
 		Goto Stay
 
 		
-  TurnRightHighSpeed:
+	TurnRightHighSpeed:
 	    DBFL A 0 
 		
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, 2)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, 1)
 		Goto NoTurn
-		TNT1 A 0 A_PlaySound("BIKESK2", 3)
+		TNT1 A 0 A_StartSound("BIKESK2", 3)
 	    TNT1 AA 0 A_SetAngle(-2 + angle)
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -288,16 +303,16 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 2)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 2)
 		Goto Stay
 	TurnLeftHighSpeed:
 	    DBFL A 0
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, 2)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, 1)
 		Goto NoTurn
-		TNT1 A 0 A_PlaySound("BIKESK2", 3)
+		TNT1 A 0 A_StartSound("BIKESK2", 3)
 	    TNT1 AA 0 A_SetAngle(2 + angle)
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -311,7 +326,7 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 2)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 2)
 		Goto Stay
 		
 		
@@ -321,9 +336,9 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, 2)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, 1)
 		Goto NoTurn
-		TNT1 A 0 A_PlaySound("BIKESK2", 3)
+		TNT1 A 0 A_StartSound("BIKESK2", 3)
 	    TNT1 A 0 A_SetAngle(-3 + angle)
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -338,16 +353,16 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 2)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 2)
 		Goto Stay
 	TurnLeftMaxSpeed:
 	    DBFL A 0
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, 2)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 1, 1)
 		Goto NoTurn
-		TNT1 A 0 A_PlaySound("BIKESK2", 3)
+		TNT1 A 0 A_StartSound("BIKESK2", 3)
 	    TNT1 A 0 A_SetAngle(3 + angle)
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -362,24 +377,24 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 2)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 2)
 		Goto Stay	
 		
 	Accelerate:
 	    TNT1 A 0
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 140, "Accelerate8")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 120, "Accelerate7")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 100, "Accelerate6")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 80, "Accelerate5")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 60, "Accelerate4")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 40, "Accelerate3")
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 20, "Accelerate2")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 140, "Accelerate8")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 120, "Accelerate7")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 100, "Accelerate6")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 80, "Accelerate5")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 60, "Accelerate4")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 40, "Accelerate3")
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 20, "Accelerate2")
 		TNT1 A 0 A_CustomMissile ("HitLeft", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
 		DBFL A 1 A_Recoil(-3)
 		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_PlaySound("BIKE1A", 2, 1, 1)
-		TNT1 A 0 A_GiveInventory("BikeSpeed", 1)
+		TNT1 A 0 A_StartSound("BIKE1A", 2, 1, 1)
+		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate")
 		Goto Stay	
@@ -389,10 +404,10 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitLeft", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_PlaySound("BIKE1B", 2, 1, 1)
+		TNT1 A 0 A_StartSound("BIKE1B", 2, 1, 1)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 40, "Accelerate3")
-		TNT1 A 0 A_GiveInventory("BikeSpeed", 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 40, "Accelerate3")
+		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate2")
 		Goto Stay	
@@ -401,10 +416,10 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
 	    DBFL A 1 A_Recoil(-3)
 		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_PlaySound("BIKE1C", 2, 1, 1)
+		TNT1 A 0 A_StartSound("BIKE1C", 2, 1, 1)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 60, "Accelerate4")
-		TNT1 A 0 A_GiveInventory("BikeSpeed", 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 60, "Accelerate4")
+		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate3")
 		Goto Stay	
@@ -413,9 +428,9 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
 	    DBFL A 1 A_Recoil(-3)
 		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_PlaySound("BIKE1D", 2, 1, 1)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 80, "Accelerate4")
-		TNT1 A 0 A_GiveInventory("BikeSpeed", 1)
+		TNT1 A 0 A_StartSound("BIKE1D", 2, 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 80, "Accelerate4")
+		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate3")
 		Goto Stay
@@ -424,9 +439,9 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
 	    DBFL A 1 A_Recoil(-4)
 		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_PlaySound("BIKE1E", 2, 1, 1)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 100, "Accelerate6")
-		TNT1 A 0 A_GiveInventory("BikeSpeed", 1)
+		TNT1 A 0 A_StartSound("BIKE1E", 2, 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 100, "Accelerate6")
+		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate5")
 		Goto Stay	
@@ -435,9 +450,9 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
 	    DBFL A 1 A_Recoil(-4)
 		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_PlaySound("BIKE1F", 2, 1, 1)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 120, "Accelerate7")
-		TNT1 A 0 A_GiveInventory("BikeSpeed", 1)
+		TNT1 A 0 A_StartSound("BIKE1F", 2, 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 120, "Accelerate7")
+		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate6")
 		Goto Stay
@@ -446,9 +461,9 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
 	    DBFL A 1 A_Recoil(-5)
 		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_PlaySound("BIKE1G", 2, 1, 1)
-		TNT1 A 0 A_JumpIfInventory("BikeSpeed", 140, "Accelerate8")
-		TNT1 A 0 A_GiveInventory("BikeSpeed", 1)
+		TNT1 A 0 A_StartSound("BIKE1G", 2, 1, 1)
+		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 140, "Accelerate8")
+		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate7")
 		Goto Stay	
@@ -457,8 +472,8 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
 	    DBFL A 1 A_Recoil(-7)
 		TNT1 A 0 A_CustomMissile ("HitFront", 30, 0, 0, 2, 0)
-		TNT1 A 0 A_PlaySound("BIKE1G", 2, 1, 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 1)
+		TNT1 A 0 A_StartSound("BIKE1G", 2, 1, 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate7")
 		Goto Stay	
@@ -475,7 +490,7 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 	    TNT1 AAA 0 A_SetAngle(1 + angle)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
 		Goto Stay
 		
 	TurnLeftBackPedal:
@@ -488,7 +503,7 @@ TurnRightNoAcceleration:
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 	    TNT1 AA 0 A_SetAngle(-1 + angle)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		TNT1 A 0 A_TakeInventory("BikeSpeed", 1)
+		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
 		Goto Stay	
 		
 	Pain:
@@ -511,13 +526,13 @@ TurnRightNoAcceleration:
 	}
 }
 
-ACTOR BikeHUD : DoomWeapon
+ACTOR BatCarHUD : DoomWeapon
 {
 	Game Doom
 	Weapon.SelectionOrder 1900
 	Weapon.AmmoUse 0
 	Weapon.AmmoGive 0
-	Weapon.AmmoType "BikeSpeed"
+	Weapon.AmmoType "BatCarSpeed"
 	Obituary "$OB_MPPISTOL"
 	+WEAPON.WIMPY_WEAPON
 	Inventory.Pickupmessage "$PICKUP_PISTOL_DROPPED"
@@ -596,19 +611,20 @@ ACTOR BikeHUD : DoomWeapon
 		Stop
 	}
 }
-ACTOR ACSDropBike : CustomInventory
+
+ACTOR ACSDropBatCar : CustomInventory
 {
 	Game Doom
 	States
 	{
 	Spawn:
 		TNT1 A 0
-		TNT1 A 0 A_SpawnItemEx("BatBike", 0, 56)
+		TNT1 A 0 A_SpawnItemEx("BatCar", 0, 56)
 		Stop
 	}
 }
 
-ACTOR BatBike : PowerupGiver 10804
+ACTOR BatCar : PowerupGiver 10804
 {
 	Powerup.Type PowerVehicalPlayer 
 	Powerup.Duration -3000
@@ -630,7 +646,7 @@ ACTOR BatBike : PowerupGiver 10804
 
 ACTOR PowerVehicalPlayer : PowerMorph
 {
-	PowerMorph.PlayerClass "Biker"
+	PowerMorph.PlayerClass "BatCar"
 	PowerMorph.MorphFlash "NoFlash"
 	PowerMorph.UnMorphFlash "NoFlash" 
 }
@@ -653,7 +669,7 @@ ACTOR RunningCar : CustomInventory 614
 		Loop
 	Pickup:
 		TNT1 A 0 A_GiveInventory("ExitCar", 1)
-		TNT1 A 0 A_GiveInventory("BatBike", 1)
+		TNT1 A 0 A_GiveInventory("BatCar", 1)
 		Stop
 	Death:
 	XDeath:
@@ -808,11 +824,10 @@ ACTOR HitSides: FastProjectile
 		Stop
 	Death:
 	TNT1 A 1
-	TNT1 A 0 A_SpawnItem("SideBikeHitPuff")
+	TNT1 A 0 A_SpawnItem("SideBatCarHitPuff")
 	Stop
 	}
 }
-
 
 ACTOR HitLeft: HitSides
 {
@@ -825,11 +840,10 @@ ACTOR HitLeft: HitSides
 		Stop
 	Death:
 	TNT1 A 1
-	TNT1 A 0 A_CustomMissile("LeftBikeHitPuff")
+	TNT1 A 0 A_CustomMissile("LeftBatCarHitPuff")
 	Stop
 	}
 }
-
 
 ACTOR HitRight: HitSides
 {
@@ -842,11 +856,10 @@ ACTOR HitRight: HitSides
 		Stop
 	Death:
 	TNT1 A 1
-	TNT1 A 0 A_CustomMissile("RightBikeHitPuff")
+	TNT1 A 0 A_CustomMissile("RightBatCarHitPuff")
 	Stop
 	}
 }
-
 
 ACTOR HitFront: HitSides
 {
@@ -860,7 +873,7 @@ ACTOR HitFront: HitSides
 		Stop
 	Death:
 	TNT1 A 1
-	TNT1 A 0 A_SpawnItem("FrontBikeHitPuff")
+	TNT1 A 0 A_SpawnItem("FrontBatCarHitPuff")
 	TNT1 A 0 A_Explode(2,60,1)
 	TNT1 A 0 A_Explode(55,55,0)
 	TNT1 A 20
@@ -868,107 +881,106 @@ ACTOR HitFront: HitSides
 	}
 }
 
-ACTOR SideBikeHitPuff: BulletPuff
+ACTOR SideBatCarHitPuff: BulletPuff
 {
-  renderstyle Translucent
-scale 0.15
-alpha 0.7
-  +NOBLOCKMAP
-  +NOGRAVITY
-  +NOEXTREMEDEATH
-  +FORCEXYBILLBOARD
-  states
-  {
-Spawn:
-Death:
-XDeath:
-Melee:
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+NOEXTREMEDEATH
+	+FORCEXYBILLBOARD
+	Scale 0.15
+	Alpha 0.7
+	Renderstyle Translucent
+	states
+	{
+	Spawn:
+	Death:
+	XDeath:
+	Melee:
 		TNT1 A 0
-        TNT1 AAAAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
+		TNT1 AAAAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 AA 0 A_CustomMissile ("CrashMetalShards", 2, 0, random (0, 360), 2, random (0, 360))
 		BPUF CD 1 bright
-Stop	
-  }
+		Stop	
+	}
 }
 
-
-ACTOR FrontBikeHitPuff: SideBikeHitPuff
+ACTOR FrontBatCarHitPuff: SideBatCarHitPuff
 {
-  states
-  {
-Spawn:
-Death:
-XDeath:
-Melee:
+	states
+	{
+	Spawn:
+	Death:
+	XDeath:
+	Melee:
 		TNT1 A 0
 		TNT1 A 0 Radius_Quake(6, 12, 0, 4, 0)
 		TNT1 AAAAAAAA 0 A_CustomMissile ("CrashMetalShards", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 A 20
-Stop	
-  }
+		Stop	
+	}
 }
 
-ACTOR LeftBikeHitPuff: SideBikeHitPuff
+ACTOR LeftBatCarHitPuff: SideBatCarHitPuff
 {
-  damagetype CrashLeft
-  states
-  {
-Spawn:
-Death:
-XDeath:
-Melee:
+	damagetype CrashLeft
+	states
+	{
+	Spawn:
+	Death:
+	XDeath:
+	Melee:
 		TNT1 A 0 Radius_Quake(3, 8, 0, 4, 0)
 		TNT1 A 0 A_Explode(2,60,1)
 		TNT1 AA 0 A_CustomMissile ("CrashMetalShards", 2, 0, random (0, 360), 2, random (0, 360))
-        TNT1 AAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
+		TNT1 AAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 A 20
-Stop	
-  }
+		Stop	
+	}
 }
 
-ACTOR RightBikeHitPuff: SideBikeHitPuff
+ACTOR RightBatCarHitPuff: SideBatCarHitPuff
 {
-  damagetype CrashRight
-  states
-  {
-Spawn:
-Death:
-XDeath:
-Melee:
+	damagetype CrashRight
+	states
+	{
+	Spawn:
+	Death:
+	XDeath:
+	Melee:
 		TNT1 A 0 Radius_Quake(3, 8, 0, 4, 0)
 		TNT1 A 0 A_Explode(2,60,1)
 		TNT1 AA 0 A_CustomMissile ("CrashMetalShards", 2, 0, random (0, 360), 2, random (0, 360))
-        TNT1 AAAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
+		TNT1 AAAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 A 20
-Stop	
-  }
+		Stop	
+	}
 }
 
 ACTOR SparkXXXX
 {
- +MISSILE
- speed 10
- Gravity 0.8
- -NOGRAVITY
-  Scale 0.05
-   radius 1
- height 1
- +DOOMBOUNCE
- +GHOST
- BounceFactor 0.5
- Damage 0
-  alpha 1.0
-  renderstyle add
-    States
-    {
-     Spawn:
-       SPKO AAA 1 BRIGHT
-	   SPKO AAAAAAA 1 Bright A_FadeOut(0.20)
-        stop
-     Death:
-	 TNT1 A 0
-       Stop
-    }
+	radius 1
+	height 1
+	speed 10
+	Damage 0
+	Scale 0.05
+	Gravity 0.8
+	alpha 1.0
+	+MISSILE
+	+DOOMBOUNCE
+	+GHOST
+	-NOGRAVITY
+	BounceFactor 0.5
+	renderstyle add
+	States
+	{
+	Spawn:
+		SPKO AAA 1 BRIGHT
+		SPKO AAAAAAA 1 Bright A_FadeOut(0.20)
+		stop
+	Death:
+		TNT1 A 0
+		Stop
+	}
 }
 
 ACTOR TireSmoke
@@ -997,7 +1009,7 @@ ACTOR TireSmoke
 	Death:
 	    PUF2 ABCDEFGHIJKLMNOPQRSTUVWXYZ 3
 		PUF3 ABC 3
-Stop
+	Stop
     }
 }
 

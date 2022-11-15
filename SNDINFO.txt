@@ -146,7 +146,7 @@ weapons/explode3	        dspipex3
 weapons/explode4	        dspipex4
 $random weapons/explode  { weapons/explode1 weapons/explode2 weapons/explode3 weapons/explode4 }
 
-//bike
+//batcar
 BIKE1 BIKE1
 BIKE1A BIKE1A
 BIKE1B BIKE1B
