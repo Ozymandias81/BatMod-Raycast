@@ -20,6 +20,7 @@ MAIN TEAM:
 - Ivory Duke: ZMovement Codes
 - Ijon: Source of inspiration
 - Michaelis and DoomKrakken: programming help & support
+- CaptainJ for Playtesting and Cool Feedbacks
 --------------------------------------------------------------------------------
 
 ### EDITORS USED:

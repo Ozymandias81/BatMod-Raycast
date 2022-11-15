@@ -8,3 +8,4 @@ Credits:
 - Ivory Duke: all coding;
 - Ijon: endless source of inspiration;
 - Michaelis and DoomKrakken: cool dudes, help, support, and answers to my ZScript questions.
+- CaptainJ for Playtesting and Cool Feedbacks
