@@ -16,7 +16,7 @@ LISTMENU "MainMenu"
 }
 
 OptionMenu "MostWanted"
-{	
+{
 	Title "Gotham's Most Wanted"
 	StaticText ""
 	Submenu "The Joker", "Joker"
@@ -266,38 +266,46 @@ ListMenu "CalendarMan"
 OptionMenu "ZMoveOptions"
 {
 	Class "ZMoveMenu"
-	Title "ZMove Options"
+	Title "New Bindings"
+	StaticText	""
+	Control		"Grappling Hook Bind",					"GrapplingHook"
+	Control		"Dash - Wall Jump Bind",				"Dash"
+	Control		"Wall Slide Bind",						"WallSlide"
+	StaticText	""
+	Title "New Options"
 	
 	StaticText	"Speed & Acceleration", 1
-	ZMoveOption	"Movement Type",						"Pick your Movement Type",																"zm_movetype",				"MoveType"
+	//ZMoveOption	"Movement Type",						"Pick your Movement Type",																"zm_movetype",				"MoveType"
 	ZMoveSlider "Ground Friction Strength", 			"Set ground friction strength",															"zm_friction",				0.5,	10.0,	0.1
 	ZMoveSlider	"Maximum Ground Speed",					"Maximum ground speed (u/s)",															"zm_maxgroundspeed",		10,		15,		0.1
 	ZMoveSlider "Maximum Hopping Speed", 				"Maximum hopping speed (u/s)",															"zm_maxhopspeed",			24,		36,		1,		0
 	ZMoveSlider	"Walk Speed",							"How fast you move when walking",														"zm_walkspeed",				0.5,	1.0,	0.1
 	ZMoveSlider	"Crouch Speed",							"How fast you move when crouching",														"zm_crouchspeed",			0.1,	1.0,	0.1
 	ZMoveSlider "StrafeRunning Speed Bonus",			"Ground straferunning speed boost",														"zm_strafemodifier",		1.0,	1.5,	0.05,	2
-	ZMoveOption	"Quake Wall Friction",					"Prevents player from slowing down when touching walls",								"zm_wallfriction",			"OnOff"
-	ZMoveOption	"Drop Prevention",						"Helps not fall off ledges when you are walking",										"zm_dropprevention",		"OnOff"
+	//ZMoveOption	"Quake Wall Friction",					"Prevents player from slowing down when touching walls",								"zm_wallfriction",			"OnOff"
+	//ZMoveOption	"Drop Prevention",						"Helps not fall off ledges when you are walking",										"zm_dropprevention",		"OnOff"
 	StaticText	""
-	StaticText	"Dusk Movement", Orange
-	ZMoveSlider "Strafejumping Acceleration", 			"How fast you gain speed when you strafejump",											"dsk_acceleration",			1.0,	2.5,	0.1
-	StaticText	""
-	StaticText	"Quake Movement", Orange
-	ZMoveOption	"Strafe Jumping Type",					"Pick your strafe jumping type",														"q_strafetype",				"StrafeType"
-	ZMoveSlider "Q3 Acceleration", 						"How fast you gain speed when strafejumping Q3 style",									"q_3airaccel",				0.5,	1.0,	0.05,	2
-	ZMoveSlider "Q1 Acceleration", 						"How fast you gain speed when strafejumping Q1 style",									"q_1airaccel",				1.0,	2.0,	0.05,	2
-	StaticText	""
+	//StaticText	"Dusk Movement", Orange
+	//ZMoveSlider "Strafejumping Acceleration", 			"How fast you gain speed when you strafejump",											"dsk_acceleration",			1.0,	2.5,	0.1
+	//StaticText	""
+	//StaticText	"Quake Movement", Orange
+	//ZMoveOption	"Strafe Jumping Type",					"Pick your strafe jumping type",														"q_strafetype",				"StrafeType"
+	//ZMoveSlider "Q3 Acceleration", 						"How fast you gain speed when strafejumping Q3 style",									"q_3airaccel",				0.5,	1.0,	0.05,	2
+	//ZMoveSlider "Q1 Acceleration", 						"How fast you gain speed when strafejumping Q1 style",									"q_1airaccel",				1.0,	2.0,	0.05,	2
+	//StaticText	""
 	
 	StaticText	"Jumping", 1
+	ZMoveSlider "Strafejumping Acceleration", 			"How fast you gain speed when you strafejump",											"dsk_acceleration",			1.0,	2.5,	0.1
 	ZMoveSlider "Jump Height", 							"Player jump height",																	"zm_jumpheight",			5,		8,		0.5
 	ZMoveSlider "Gravity", 								"Set player gravity",																	"zm_setgravity",			0.1,	1.5,	0.1,	2
 	ZMoveOption "Auto Jump", 							"Enable auto jump",																		"zm_autojump",				"OnOff"
 	StaticText	""
-	StaticText	"Build Engine Movement", Orange
+	//StaticText	"Build Engine Movement", Orange
+	StaticText	"Jumping (Advanced)", Orange
 	ZMoveSlider "Jump Animation ViewHeight", 			"How much your viewpoint lowers when executing a jump",									"be_jumpanim",				4.0,	8.0,	0.5
 	StaticText	""
 	StaticText	"Double Jump", Orange
-	ZMoveOption "Double Jump Type", 					"Enable and choose Double Jumping style",												"zm_doublejump",			"DoubleJump"
+	//ZMoveOption "Double Jump Type", 					"Enable and choose Double Jumping style",												"zm_doublejump",			"DoubleJump"
 	ZMoveSlider "Double Jump Height", 					"Double jump height (% of regular jump height)",										"zm_doublejumpheight",		0.5,	1.5,	0.1
 	ZMoveOption "Wall Jump Renewal", 					"Grants double jump everytime you execute a consecutive wall jump",						"zm_wjdoublejumprenew",		"OnOff"
 	StaticText	""
@@ -316,7 +324,6 @@ OptionMenu "ZMoveOptions"
 	StaticText	""
 	
 	StaticText	"Dashing", 1
-	Control		"Dash - Wall Jump Bind",				"Dash"
 	ZMoveOption	"Dash Enabled",							"Enable dashing",																		"zm_dash",					"OnOff"
 	ZMoveOption	"Double Tap Dash",						"Enable dashing double tapping trigger",												"zm_doubletap",				"OnOff"
 	ZMoveSlider "Max Double Tap Time", 					"Maximum double tapping time",															"zm_maxtaptime",			2,		20,		1,		0
@@ -336,38 +343,36 @@ OptionMenu "ZMoveOptions"
 	StaticText	""
 	
 	StaticText	"Wall Sliding", 1
-	Control		"Wall Slide Bind",						"WallSlide"
 	ZMoveOption	"Wall Slide Enabled",					"Enable wall sliding",																	"zm_wslide",				"OnOff"
 	ZMoveSlider "Wall Sliding Gravity", 				"How strong gravity is when wall sliding",												"zm_wslidevelz",			0.5,	1.0,	0.05,	2
 	StaticText	""
 	
 	StaticText	"CrouchSlide", 1
-	ZMoveOption "Crouch Slide", 						"Choose crouchslide type",																"zm_crouchslide",			"SlideType"
-	StaticText	""
-	StaticText	"Regular Crouch Slide", Orange
+	//ZMoveOption "Crouch Slide", 						"Choose crouchslide type",																"zm_crouchslide",			"SlideType"
+	//StaticText	""
+	//StaticText	"Regular Crouch Slide", Orange
 	ZMoveSlider "Slide Speed Boost", 					"Set the initial crouch slide speed boost",												"zm_cslidestrength",		1.5,	2.5,	0.05,	2
 	ZMoveSlider "Slide duration", 						"Maximum slide duration in tics",														"zm_cslideduration",		10,		15,		1,		0
-	StaticText	""
-	StaticText	"Quake Crouch Slide", Orange
+	//StaticText	""
+	//StaticText	"Quake Crouch Slide", Orange
 	ZMoveSlider "Slide Acceleration", 					"How strong the crouch slide acceleration is",											"zm_qslideaccel",			5.0,	7.0,	0.05,	2
 	ZMoveSlider "Slide duration", 						"Multiplier of the crouch slide duration",												"zm_qslideduration",		6,		10,		1,		0
 	StaticText	""
 	
-	StaticText	"Ledge Grabbing", 1
-	ZMoveOption "Ledge Grabbing Enabled", 				"Turn on and off ledge grabbing",														"zm_ledgegrab",				"OnOff"
-	StaticText	""
+	//StaticText	"Ledge Grabbing", 1
+	//ZMoveOption "Ledge Grabbing Enabled", 			"Turn on and off ledge grabbing",														"zm_ledgegrab",				"OnOff"
+	//StaticText	""
 	
-	StaticText	"Grappling Hook", 1
-	Control		"Grappling Hook Bind",					"GrapplingHook"
-	ZMoveOption "Grappling Hook Enabled", 				"Enable and choose grappling hook style",												"zm_hook",					"GHook"
-	ZMoveSlider "Hook speed boost", 					"Intensity of the hook's speed boost",													"zm_hookboost",				1.0,	2.0,	0.1
-	StaticText	""
+	//StaticText	"Grappling Hook", 1
+	//ZMoveOption "Grappling Hook Enabled", 			"Enable and choose grappling hook style",												"zm_hook",					"GHook"
+	//ZMoveSlider "Hook speed boost", 					"Intensity of the hook's speed boost",													"zm_hookboost",				1.0,	2.0,	0.1
+	//StaticText	""
 	
 	StaticText	"Bobbing", 1
 	ZMoveSlider	"Walk/Run View Bobbing",				"Adjust view bobbing's intensity when moving",											"movebob",					0.0,	1.0,	0.1
 	ZMoveSlider	"Still View Bobbing",					"Adjust view bobbing's intensity when not moving",										"stillbob",					0.0,	1.0,	0.1
 	ZMoveSlider	"Walk/Run Weapon Bobbing",				"Adjust weapon bobbing's intensity when moving",										"wbobspeed",				0.0,	2.0,	0.1
-	ZMoveOption	"Still Weapon Bobbing",					"Turn on/off the weapon bobbing when standing still",									"zm_stillbob",				"OnOff"
+	//ZMoveOption	"Still Weapon Bobbing",					"Turn on/off the weapon bobbing when standing still",									"zm_stillbob",				"OnOff" //not implemented - ozy81
 	StaticText 	""
 	StaticText	"Weapon Sway", Orange
 	ZMoveOption "Yaw Weapon Sway", 						"Allow weapons to sway according to your mouse yaw",									"zm_sway",					"OnOff"
@@ -383,53 +388,8 @@ OptionMenu "ZMoveOptions"
 	StaticText 	""
 	
 	StaticText	"Others", 1
-	ZMoveOption "Speedometer", 							"Enable speedOMeter",																	"zm_speedometer",			"Speedometer"
+	//ZMoveOption "Speedometer", 							"Enable speedOMeter",																	"zm_speedometer",			"Speedometer"
 	Control		"Reset to default values",				"zmove_reset"
-}
-
-OptionValue "MoveType"
-{
-	0, "Doom"
-	1, "Build Engine"
-	2, "Dusk"
-	4, "Quake"
-	5, "Unreal Tournament"
-}
-
-OptionValue "StrafeType"
-{
-	0, "Quake 3"
-	1, "Quake 1"
-	2, "CPMA"
-}
-
-OptionValue "DoubleJump"
-{
-	0, "Off"
-	1, "Unreal Tournament"
-	2, "Doom 4"
-}
-
-OptionValue "SlideType"
-{
-	0, "Off"
-	1, "Regular"
-	2, "Quake"
-}
-
-OptionValue "BobType"
-{
-	0, "Doom"
-	1, "Build Engine"
-	2, "Dusk"
-	4, "Unreal Tournament"
-}
-
-OptionValue "GHook"
-{
-	0, "Off"
-	1, "Pull Only"
-	2, "Pull & Pendulum"
 }
 
 OptionValue "SwayDirection"
@@ -442,11 +402,4 @@ OptionValue "OffsetDirection"
 {
 	0, "Opposite Direction"
 	1, "Same Direction"
-}
-
-OptionValue "Speedometer"
-{
-	0, "Off"
-	1, "Doom Units"
-	2, "Quake Units"
 }
