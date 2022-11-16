@@ -381,6 +381,18 @@ actor SkullTorch replaces YellowParticleFountain
 			loop
 	}
 }
+actor JokerTorch replaces PurpleParticleFountain
+{
+	radius 16
+	+SOLID
+	
+	states
+	{
+		Spawn:
+			jlit abcd 3 BRIGHT
+			loop
+	}
+}
 actor OneDirectionSign replaces GibbedMarineExtra
 {
 	radius 32
