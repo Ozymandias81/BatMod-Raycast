@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81 (some snippets)
+ * Copyright (c) 2022 Derrick, Ozymandias81
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -511,8 +511,6 @@ actor McRegister replaces HangTSkull
 			Loop
 	}
 }
-
-
 
 actor ShoppingCart replaces ColonGibs
 {

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81 (some snippets)
+ * Copyright (c) 2022 Derrick, Ozymandias81
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,53 +20,57 @@
  * SOFTWARE.
 **/
 
-Actor RainSpawner 15555
+Class RainSpawner : Actor
 {
-	Radius 1
-	Height 1
-	+NOCLIP
-	+CLIENTSIDEONLY
-	+SPAWNCEILING
-	+NOGRAVITY
+	Default
+	{
+		Radius 1;
+		Height 1;
+		+NOCLIP
+		+CLIENTSIDEONLY
+		+SPAWNCEILING
+		+NOGRAVITY
+	}
+	
 	States
 	{
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_JumpIf(Args[2] > 0, "NoSound")
-		TNT1 A 0 A_JumpIf(Args[3] > 0, "Circle")
-		TNT1 A 0 A_StartSound("Ambient/Rain", CHAN_7, CHANF_DEFAULT, 0.1)
-		TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), Random(-Args[0], Args[0]), -2, 0, 0, 0, 0, 128, Args[1])
-		Loop
+		TNT1 A 0;
+		TNT1 A 0 A_JumpIf(Args[2] > 0, "NoSound");
+		TNT1 A 0 A_JumpIf(Args[3] > 0, "Circle");
+		TNT1 A 0 A_StartSound("Ambient/Rain", CHAN_7, CHANF_DEFAULT, 0.1);
+		TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), Random(-Args[0], Args[0]), -2, 0, 0, 0, 0, 128, Args[1]);
+		Loop;
 	Circle:
-		TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), 0, -2, 0, 0, 0, Random(0, 360), 128, Args[1])
+		TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), 0, -2, 0, 0, 0, Random(0, 360), 128, Args[1]);
 	NoSound:
-		TNT1 A 0 A_Jumpif(Args[3] > 0, "NoSoundCircle")
-		TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), Random(-Args[0], Args[0]), -2, 0, 0, 0, 0, 128, Args[1])
-		Loop
+		TNT1 A 0 A_Jumpif(Args[3] > 0, "NoSoundCircle");
+		TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), Random(-Args[0], Args[0]), -2, 0, 0, 0, 0, 128, Args[1]);
+		Loop;
 	NoSoundCircle:
-		TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), 0, -2, 0, 0, 0, Random(0, 360), 128, Args[1])
-		Loop
+		TNT1 A 2 A_SpawnItemEx("RainDrop", Random(-Args[0], Args[0]), 0, -2, 0, 0, 0, Random(0, 360), 128, Args[1]);
+		Loop;
 	}
 }
 
-Actor RainDrop
+Class RainDrop : Actor
 {
+	Default
+	{
+		Height 2;
+		Radius 2;
+		+MISSILE
+		+NOBLOCKMAP
+		-NOGRAVITY
+	}
 	
-	Height 2
-	Radius 2
-	+MISSILE
-	+NOBLOCKMAP
-	-NOGRAVITY
-	//Renderstyle Translucent
-	//Alpha 0.6
-	//Scale 0.2
 	States
 	{
 	Spawn:
-		RNDR A 1 A_JumpIf(WaterLevel > 0, "Death")
-		Loop
+		RNDR A 1 A_JumpIf(WaterLevel > 0, "Death");
+		Loop;
 	Death:
-		RNDR BCDEFGH 3 A_FadeOut(0.15)
-		Stop
+		RNDR BCDEFGH 3 A_FadeOut(0.15);
+		Stop;
 	}
 }

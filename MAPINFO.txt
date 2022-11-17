@@ -729,3 +729,8 @@ Fader
 	}
 	GotoTitle {}
 }
+
+DoomEdNums
+{
+	15555 = "RainSpawner"
+}
