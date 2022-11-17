@@ -1,18 +1,20 @@
+clearEpisodes
+
 gameinfo
 {
 	AddEventHandlers = "DashHandler", "GrapplingHookHandler", "SpeedoMeterHandler", "WallSlideHandler"
-	//NormForwardMove = 0x32, 0x32	//Walk speed is modulated through
-	//NormSideMove = 0x32, 0x32		//CVar in the menu options
-	PlayerClasses = "Batman" 		//, "BatCarPlayer", "GreenArrow"
+	
+	PlayerClasses = "Batman"
+	
 	NoRandomPlayerClass = true
+	
+	QuitMessages = "$BATMSG1", "$BATMSG2", "$BATMSG3", "$BATMSG4", "$BATMSG5", "$BATMSG6", "$BATMSG7", "$BATMSG8", "$BATMSG9", "$BATMSG10", "$BATMSG11", "$BATMSG12", "$BATMSG13", "$BATMSG14"
 }
 
 defaultmap
 {
 	sky1 = "CITYSCAP"
 }
-
-clearEpisodes
 
 episode map01
 {
@@ -747,6 +749,8 @@ Fader
 
 DoomEdNums
 {
+	500 = "HarleyQuinn"
+	501 = "PoisonIvy"
 	614 = "RunningCar"
 	777 = "JokerGoonCarAgressive"
 	778 = "JokerGoonCar"
