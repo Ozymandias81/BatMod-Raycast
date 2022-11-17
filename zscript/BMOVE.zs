@@ -2270,7 +2270,7 @@ Class BMovePlayer : PlayerPawn
 	{
 		Usercmd cmd = BMPlayer.cmd;
 		
-		A_StartSound("WallSlide", CHAN_BODY, 0.5, True);
+		A_StartSound("WallSlide", CHAN_BODY, CHANF_LOOP, 0.5);
 		
 		//====================================
 		//Actual Movement
@@ -2668,7 +2668,7 @@ Class BMovePlayer : PlayerPawn
 		
 		Vel.XY = WSlideVelocity;
 		Vel.Z *= zm_wslidevelz;
-		A_StartSound("WallSlide", CHAN_BODY, 0.3, True);
+		A_StartSound("WallSlide", CHAN_BODY, CHANF_LOOP, 0.3);
 		
 		//Sprite animation
 		PlayIdle();
@@ -2826,7 +2826,7 @@ Class BMovePlayer : PlayerPawn
 		
 		//First click, fire hook
 		if(HookFired || Grappled) { return; }
-		A_StartSound("HookLaunch", 7, 0.8);
+		A_StartSound("HookLaunch", CHAN_7, CHANF_DEFAULT, 0.8);
 		//Why actor projectile firing functions do not have a pitch parameter?
 		FLineTraceData CrossHairProjection; LineTrace(Angle, 10000, Pitch, 0, BMPlayer.ViewHeight, data: CrossHairProjection);
 		Float PitchOffset = VectorAngle(CrossHairProjection.Distance, -AttackZOffset);
@@ -3447,7 +3447,7 @@ Class Hook : Actor
 			if(HookOwner)
 			{
 				HookOwner.StopHook();
-				HookOwner.A_StartSound("HookFailed", 7, 0.2);
+				HookOwner.A_StartSound("HookFailed", CHAN_7, CHANF_DEFAULT, 0.2);
 			}
 			
 			Let Monster = Actor(Master);

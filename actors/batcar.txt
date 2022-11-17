@@ -28,11 +28,10 @@ Actor TurnRight : Inventory { inventory.maxamount 1 }
 Actor MaxLeft : Inventory { inventory.maxamount 1 }
 Actor MaxRight : Inventory { inventory.maxamount 1 }
 
-ACTOR BatCarSpeed : Ammo
+Actor BatCarSpeed : Ammo
 {
 	Game Doom
-	SpawnID 11
-	Inventory.PickupMessage "$GOTCLIP"
+	Inventory.PickupMessage "$GOTCLIP" //to be replaced? - ozy81
 	Inventory.Amount 0
 	Inventory.MaxAmount 999
 	Ammo.BackpackAmount 0
@@ -46,7 +45,7 @@ ACTOR BatCarSpeed : Ammo
 	}
 }
 
-ACTOR BatCarPlayer : PlayerPawn
+Actor BatCarPlayer : PlayerPawn
 {
 	Health 500
 	Radius 32
@@ -72,7 +71,6 @@ ACTOR BatCarPlayer : PlayerPawn
 	Player.ColorSet 5, "Light Brown",   0x38, 0x47,  0x3A
 	Player.ColorSet 6, "Light Red",     0xB0, 0xBF,  0xB2
 	Player.ColorSet 7, "Light Blue",    0xC0, 0xCF,  0xC2
-
 	States
 	{
 	Pain.Kick:
@@ -81,49 +79,44 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 300)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		TNT1 A 0 A_StartSound("EBIKECLS", 3)
-		TNT1 A 0 HealThing(1)
+		TNT1 A 0 Healthing(1)
 		TNT1 A 0 A_Recoil(5)
 		DBFL A 12
 		TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
-	Goto Stay
-	
-	
+		Goto Stay
 	Pain.CrashLeft:
 		TNT1 A 0
 		TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 10)
 		TNT1 A 0 A_StartSound("BIKECLW", 3)
-		TNT1 A 0 HealThing(1)
+		TNT1 A 0 Healthing(1)
 		TNT1 A 0 A_Recoil(-3)
 		DBFL AAA 1 A_SetAngle(-3 + angle)
 		TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
-	Goto Stay
-	
+		Goto Stay
 	Pain.CrashRight:
 		TNT1 A 0
 		TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 10)
 		TNT1 A 0 A_StartSound("BIKECLW", 3)
-		TNT1 A 0 HealThing(1)
+		TNT1 A 0 Healthing(1)
 		TNT1 A 0 A_Recoil(-3)
 		DBFL AAA 1 A_SetAngle(3 + angle)
 		TNT1 A 0 A_ChangeFlag("NOPAIN", 0)
-	Goto Stay
+		Goto Stay
 	See:
 	Spawn:
 		DBFL A 0 A_GiveInventory("BatCarHud")
 		DBFL A 1 SetPlayerProperty(1,1,4)//freeze player normal movement
 		DBFL A 0 Acs_Execute(426)
-	Goto Stay
+		Goto Stay
 	Stay:
 	    TNT1 A 0
-		
 		TNT1 A 0 A_JumpIfInventory("TurnLeft", 1, "TurnLeft")
 		TNT1 A 0 A_JumpIfInventory("TurnRight", 1, "TurnRight")
 		TNT1 A 0 A_JumpIfInventory("BackPedal", 1, "BackPedal")
 		TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate")
-		
 		DBFL A 1
 		TNT1 A 0 A_JumpIfInventory("TurnLeft", 1, "TurnLeft")
 		TNT1 A 0 A_JumpIfInventory("TurnRight", 1, "TurnRight")
@@ -158,8 +151,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_JumpIfInventory("TurnLeft", 1, "TurnLeftBackPedal")
 		TNT1 A 0 A_JumpIfInventory("TurnRight", 1, "TurnRightBackPedal")
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "BackPedal")
-		Goto Stay	
-		
+		Goto Stay
 	Brake:
 	    DBFL A 2 A_Recoil(1)
 		TNT1 A 0 A_TakeInventory("BackPedal", 1)
@@ -173,8 +165,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_StartSound("BIKESK", 2, 1, 1)
 		TNT1 A 0 A_CustomMissile ("TireSmoke", 1, 0, random (0, 360), 2, random (30, 170))
 		TNT1 A 0 A_JumpIfInventory("BackPedal", 1, "Brake")
-		Goto Stay		
-	
+		Goto Stay
 	NoTurn:
 		TNT1 A 0
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 100)
@@ -184,10 +175,8 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		Goto Stay
-		
-		
 	TurnRight:
-	    DBFL A 0 
+	    DBFL A 0
 		//TNT1 A 0 A_JumpIf(MomY == 0, "NoTurn")
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 0, "TurnRightNoAcceleration")
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "TurnRightBackPedal")
@@ -201,8 +190,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 	    TNT1 AA 0 A_SetAngle(-1 + angle)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -211,7 +199,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
 		Goto Stay
 	TurnLeft:
-	    DBFL A 0 
+	    DBFL A 0
 		//TNT1 A 0 A_JumpIf(MomY == 0, "NoTurn")
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 0, "TurnLeftNoAcceleration")
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "TurnLeftBackPedal")
@@ -225,8 +213,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
 	    TNT1 AAA 0 A_SetAngle(1 + angle)
@@ -234,10 +221,9 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
-		Goto Stay	
-		
+		Goto Stay
 	TurnRightNoAcceleration:
-	    DBFL A 0 
+	    DBFL A 0
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 8)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "TurnRightBackPedal")
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
@@ -248,8 +234,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 	    TNT1 AA 0 A_SetAngle(-1 + angle)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
@@ -258,7 +243,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 8)
 		Goto Stay
 	TurnLeftNoAcceleration:
-	    DBFL A 0 
+	    DBFL A 0
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 8)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, "TurnLeftBackPedal")
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
@@ -269,8 +254,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
 	    TNT1 AAA 0 A_SetAngle(1 + angle)
@@ -279,11 +263,8 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 8)
 		Goto Stay
-
-		
 	TurnRightHighSpeed:
-	    DBFL A 0 
-		
+	    DBFL A 0
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, 2)
@@ -295,8 +276,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
 	    TNT1 AA 0 A_SetAngle(-2 + angle)
@@ -318,8 +298,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
 	    TNT1 AA 0 A_SetAngle(2 + angle)
@@ -328,11 +307,8 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 2)
 		Goto Stay
-		
-		
 	TurnRightMaxSpeed:
-	    DBFL A 0 
-		
+	    DBFL A 0
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
 		TNT1 A 0 A_JumpIfInventory("Backpedal", 1, 2)
@@ -344,8 +320,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
 	    TNT1 A 0 A_SetAngle(-3 + angle)
@@ -368,8 +343,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
 	    TNT1 A 0 A_SetAngle(3 + angle)
@@ -378,8 +352,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_CustomMissile ("HitSides", 30, 0, -20, 2, 0)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 2)
-		Goto Stay	
-		
+		Goto Stay
 	Accelerate:
 	    TNT1 A 0
 		TNT1 A 0 A_JumpIfInventory("BatCarSpeed", 140, "Accelerate8")
@@ -397,8 +370,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate")
-		Goto Stay	
-		
+		Goto Stay
 	Accelerate2:
 	    DBFL A 1 A_Recoil(-3)
 		TNT1 A 0 A_CustomMissile ("HitLeft", 30, 0, 20, 2, 0)
@@ -410,7 +382,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate2")
-		Goto Stay	
+		Goto Stay
 	Accelerate3:
 	    TNT1 A 0 A_CustomMissile ("HitLeft", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
@@ -422,7 +394,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate3")
-		Goto Stay	
+		Goto Stay
 	Accelerate4:
 	    TNT1 A 0 A_CustomMissile ("HitLeft", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
@@ -444,7 +416,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate5")
-		Goto Stay	
+		Goto Stay
 	Accelerate6:
 	    TNT1 A 0 A_CustomMissile ("HitLeft", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
@@ -466,7 +438,7 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_GiveInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		//TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate7")
-		Goto Stay	
+		Goto Stay
 	Accelerate8:
 	    TNT1 A 0 A_CustomMissile ("HitLeft", 30, 0, 20, 2, 0)
 		TNT1 A 0 A_CustomMissile ("HitRight", 30, 0, -20, 2, 0)
@@ -476,36 +448,29 @@ ACTOR BatCarPlayer : PlayerPawn
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
 		TNT1 A 0 A_TakeInventory("Accelerate", 1)
 		TNT1 A 0 A_JumpIfInventory("Accelerate", 1, "Accelerate7")
-		Goto Stay	
-		
-	
-	
+		Goto Stay
 	TurnRightBackPedal:
-	    DBFL A 0 
+	    DBFL A 0
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 	    TNT1 AA 0 A_SetAngle(1 + angle)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 	    TNT1 AAA 0 A_SetAngle(1 + angle)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
 		Goto Stay
-		
 	TurnLeftBackPedal:
-	    DBFL A 0 
+	    DBFL A 0
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 	    TNT1 AA 0 A_SetAngle(-1 + angle)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
-		
-		DBFL A 1 
+		DBFL A 1
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 	    TNT1 AA 0 A_SetAngle(-1 + angle)
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("BatCarSpeed", 1)
-		Goto Stay	
-		
+		Goto Stay
 	Pain:
 		PLAY G 0
 		PLAY G 1 A_Pain
@@ -526,17 +491,17 @@ ACTOR BatCarPlayer : PlayerPawn
 	}
 }
 
-ACTOR BatCarHUD : DoomWeapon
+Actor BatCarHUD : DoomWeapon
 {
 	Game Doom
 	Weapon.SelectionOrder 1900
 	Weapon.AmmoUse 0
 	Weapon.AmmoGive 0
 	Weapon.AmmoType "BatCarSpeed"
-	Obituary "$OB_MPPISTOL"
+	Obituary "$OB_MPPISTOL" //to be replaced? - ozy81
 	+WEAPON.WIMPY_WEAPON
-	Inventory.Pickupmessage "$PICKUP_PISTOL_DROPPED"
-	Tag "$TAG_PISTOL"
+	Inventory.Pickupmessage "$PICKUP_PISTOL_DROPPED" //to be replaced? - ozy81
+	Tag "$TAG_PISTOL" //to be replaced? - ozy81
 	States
 	{
 	Ready:
@@ -552,36 +517,30 @@ ACTOR BatCarHUD : DoomWeapon
 		BKHL AB 1
 		TNT1 A 0 A_GiveInventory("MaxLeft", 1)
 		Goto MaxLeft
-	
 	MaxLeft:
 	    TNT1 A 0
 		//TNT1 A 0 A_TakeInventory("MaxRight", 1)
 		//TNT1 A 0 A_JumpIfInventory("TurnLeft", 0, "StopTurningLeft")
 		BKHL C 1
-		Goto Ready	
-		
+		Goto Ready
 	StopTurningLeft:
 		BKHL BA 1
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
-		Goto Ready	
-	
+		Goto Ready
 	TurnRight:
 		BKHR AB 1
 		TNT1 A 0 A_GiveInventory("MaxRight", 1)
 		Goto MaxRight
-	
 	MaxRight:
 	    TNT1 A 0
 		//TNT1 A 0 A_TakeInventory("MaxLeft", 1)
 		//TNT1 A 0 A_JumpIfInventory("TurnRight", 0, "StopTurningRight")
 		BKHR C 1
 		Goto Ready
-		
 	StopTurningRight:
 		BKHR BA 1
 		TNT1 A 0 A_TakeInventory("MaxRight", 1)
-		Goto Ready		
-		
+		Goto Ready
 	StopTurning:
 		TNT1 A 0
 		TNT1 A 0 A_TakeInventory("MaxLeft", 1)
@@ -589,7 +548,6 @@ ACTOR BatCarHUD : DoomWeapon
 		TNT1 A 0 A_TakeInventory("TurnLeft", 1)
 		TNT1 A 0 A_TakeInventory("TurnRight", 1)
 		Goto Ready
-		
 	Deselect:
 		TNT1 A 0 SetPlayerProperty(1,0,4)
 		BKHU A 1 A_Lower
@@ -612,7 +570,7 @@ ACTOR BatCarHUD : DoomWeapon
 	}
 }
 
-ACTOR ACSDropBatCar : CustomInventory
+Actor ACSDropBatCar : CustomInventory
 {
 	Game Doom
 	States
@@ -624,14 +582,14 @@ ACTOR ACSDropBatCar : CustomInventory
 	}
 }
 
-ACTOR BatCar : PowerupGiver 10804
+Actor BatCar : PowerupGiver
 {
-	Powerup.Type PowerVehicalPlayer 
+	Powerup.Type PowerVehicalPlayer
 	Powerup.Duration -3000
 	Inventory.MaxAmount 0
 	+INVENTORY.AUTOACTIVATE
 	//Inventory.PickupSound "Car/Start"
-	Inventory.PickupMessage "Atomic batteries to power. Turbines to speed."
+	Inventory.PickupMessage "$PK_BATPOW"
 	-COUNTITEM
 	States
 	{
@@ -644,26 +602,26 @@ ACTOR BatCar : PowerupGiver 10804
 	}
 }
 
-ACTOR PowerVehicalPlayer : PowerMorph
+Actor PowerVehicalPlayer : PowerMorph
 {
 	PowerMorph.PlayerClass "BatCar"
 	PowerMorph.MorphFlash "NoFlash"
-	PowerMorph.UnMorphFlash "NoFlash" 
+	PowerMorph.UnMorphFlash "NoFlash"
 }
 
-ACTOR RunningCar : CustomInventory 614
+Actor RunningCar : CustomInventory
 {
+	Radius 60
+	Height 52
+	Mass 1000
 	Health 2500
 	-COUNTITEM
 	+NOBLOOD
 	+SOLID
 	+SHOOTABLE
-	Inventory.Pickupmessage "Atomic batteries to power. Turbines to speed"
-	Radius 60
-	Height 52
-	Mass 1000
+	Inventory.Pickupmessage "$PK_BATPOW"
 	States
-	{	
+	{
 	Spawn:
 		DBFL A -1
 		Loop
@@ -678,7 +636,7 @@ ACTOR RunningCar : CustomInventory 614
 	}
 }
 
-ACTOR ExitCar : CustomInventory
+Actor ExitCar : CustomInventory
 {
 	+INVENTORY.INVBAR
 	Inventory.Amount 1
@@ -698,7 +656,7 @@ ACTOR ExitCar : CustomInventory
 	}
 }
 
-ACTOR NoFlash
+Actor NoFlash
 {
 	SeeSound "CARENTR"
 	RenderStyle None
@@ -708,16 +666,16 @@ ACTOR NoFlash
 		TNT1 A 1
 		Stop
 	}
-} 
+}
 
-ACTOR VehicleExplosion
+Actor VehicleExplosion
 {
 	Radius 8
 	Height 8
 	Speed 5
 	Mass 6
 	Scale 1.5
-	BounceFactor 0
+	BounceFActor 0
 	+DOOMBOUNCE
 	+NOBLOCKMAP
 	+MISSILE
@@ -734,49 +692,33 @@ ACTOR VehicleExplosion
 		EXPL A 0 Radius_Quake (4, 8, 0, 20, 0)
 		TNT1 AA 0 A_CustomMissile("VehicleSmoke", 15, 0, random(0, 360), 2, random(0, 360))
 		ELEC A 0 //A_Explode(100, 150)
-		BEXP DEFG 3 BRIGHT
+		BEXP DEFG 3 Bright
 		TNT1 AA 0 A_CustomMissile("VehicleSmoke", 30, 0, random(0, 360), 2, random(70, 130))
-		BEXP HIJKLM 3 BRIGHT
+		BEXP HIJKLM 3 Bright
 		TNT1 A 0 A_CustomMissile("VehicleSmoke", 40, 0, random(0, 360), 2, random(70, 130))
-		BEXP NOPQ 3 BRIGHT
+		BEXP NOPQ 3 Bright
 		TNT1 A 0 A_CustomMissile("VehicleSmoke", 40, 0, random(0, 360), 2, random(70, 130))
 		TNT1 A 0
 		Stop
 	}
 }
 
-ACTOR VehicleExplosion2: VehicleExplosion
+Actor VehicleExplosion2 : VehicleExplosion
 {
-	Radius 8
-	Height 8
-	Speed 5
-	Mass 6
-	Scale 1.5
-	BounceFactor 0
-	+DOOMBOUNCE
-	+NOBLOCKMAP
-	+MISSILE
-	+NOTELEPORT
-	+DONTSPLASH
-	+MOVEWITHSECTOR
-	+CLIENTSIDEONLY
-	+FORCEXYBILLBOARD
-	+NOGRAVITY
-	Renderstyle Add
 	States
 	{
 	Spawn:
 		EXPL A 0 Radius_Quake (4, 8, 0, 20, 0)
 		TNT1 AA 0 A_CustomMissile("VehicleSmoke", 15, 0, random(0, 360), 2, random(0, 360))
 		ELEC A 0 //A_Explode(100, 150)
-		BFE1 ABCDEFG 3 BRIGHT
+		BFE1 ABCDEFG 3 Bright
 		TNT1 AA 0 A_CustomMissile("VehicleSmoke", 30, 0, random(0, 360), 2, random(70, 130))
-		BFE1 HIJKL 3 BRIGHT
+		BFE1 HIJKL 3 Bright
 		Stop
 	}
 }
 
-ACTOR VehicleSmoke
+Actor VehicleSmoke
 {
 	Radius 1
 	Height 1
@@ -802,7 +744,7 @@ ACTOR VehicleSmoke
 	}
 }
 
-ACTOR HitSides: FastProjectile
+Actor HitSides : FastProjectile
 {
 	Radius 6
 	Height 4
@@ -820,48 +762,48 @@ ACTOR HitSides: FastProjectile
 	States
 	{
 	Spawn:
-		TNT1 A 1 BRIGHT
+		TNT1 A 1 Bright
 		Stop
 	Death:
-	TNT1 A 1
-	TNT1 A 0 A_SpawnItem("SideBatCarHitPuff")
-	Stop
+		TNT1 A 1
+		TNT1 A 0 A_SpawnItem("SideBatCarHitPuff")
+		Stop
 	}
 }
 
-ACTOR HitLeft: HitSides
+Actor HitLeft : HitSides
 {
 	DamageType Kick
 	Speed 70
 	States
 	{
 	Spawn:
-		TNT1 A 1 BRIGHT
+		TNT1 A 1 Bright
 		Stop
 	Death:
-	TNT1 A 1
-	TNT1 A 0 A_CustomMissile("LeftBatCarHitPuff")
-	Stop
+		TNT1 A 1
+		TNT1 A 0 A_CustomMissile("LeftBatCarHitPuff")
+		Stop
 	}
 }
 
-ACTOR HitRight: HitSides
+Actor HitRight : HitSides
 {
 	DamageType Kick
 	Speed 70
 	States
 	{
 	Spawn:
-		TNT1 A 1 BRIGHT
+		TNT1 A 1 Bright
 		Stop
 	Death:
-	TNT1 A 1
-	TNT1 A 0 A_CustomMissile("RightBatCarHitPuff")
-	Stop
+		TNT1 A 1
+		TNT1 A 0 A_CustomMissile("RightBatCarHitPuff")
+		Stop
 	}
 }
 
-ACTOR HitFront: HitSides
+Actor HitFront : HitSides
 {
 	DamageType Kick
 	Radius 2
@@ -869,19 +811,19 @@ ACTOR HitFront: HitSides
 	States
 	{
 	Spawn:
-		TNT1 A 1 BRIGHT
+		TNT1 A 1 Bright
 		Stop
 	Death:
-	TNT1 A 1
-	TNT1 A 0 A_SpawnItem("FrontBatCarHitPuff")
-	TNT1 A 0 A_Explode(2,60,1)
-	TNT1 A 0 A_Explode(55,55,0)
-	TNT1 A 20
-	Stop
+		TNT1 A 1
+		TNT1 A 0 A_SpawnItem("FrontBatCarHitPuff")
+		TNT1 A 0 A_Explode(2,60,1)
+		TNT1 A 0 A_Explode(55,55,0)
+		TNT1 A 20
+		Stop
 	}
 }
 
-ACTOR SideBatCarHitPuff: BulletPuff
+Actor SideBatCarHitPuff : BulletPuff
 {
 	+NOBLOCKMAP
 	+NOGRAVITY
@@ -890,7 +832,7 @@ ACTOR SideBatCarHitPuff: BulletPuff
 	Scale 0.15
 	Alpha 0.7
 	Renderstyle Translucent
-	states
+	States
 	{
 	Spawn:
 	Death:
@@ -899,14 +841,14 @@ ACTOR SideBatCarHitPuff: BulletPuff
 		TNT1 A 0
 		TNT1 AAAAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 AA 0 A_CustomMissile ("CrashMetalShards", 2, 0, random (0, 360), 2, random (0, 360))
-		BPUF CD 1 bright
-		Stop	
+		BPUF CD 1 Bright
+		Stop
 	}
 }
 
-ACTOR FrontBatCarHitPuff: SideBatCarHitPuff
+Actor FrontBatCarHitPuff : SideBatCarHitPuff
 {
-	states
+	States
 	{
 	Spawn:
 	Death:
@@ -916,14 +858,14 @@ ACTOR FrontBatCarHitPuff: SideBatCarHitPuff
 		TNT1 A 0 Radius_Quake(6, 12, 0, 4, 0)
 		TNT1 AAAAAAAA 0 A_CustomMissile ("CrashMetalShards", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 A 20
-		Stop	
+		Stop
 	}
 }
 
-ACTOR LeftBatCarHitPuff: SideBatCarHitPuff
+Actor LeftBatCarHitPuff : SideBatCarHitPuff
 {
-	damagetype CrashLeft
-	states
+	DamageType CrashLeft
+	States
 	{
 	Spawn:
 	Death:
@@ -934,14 +876,14 @@ ACTOR LeftBatCarHitPuff: SideBatCarHitPuff
 		TNT1 AA 0 A_CustomMissile ("CrashMetalShards", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 AAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 A 20
-		Stop	
+		Stop
 	}
 }
 
-ACTOR RightBatCarHitPuff: SideBatCarHitPuff
+Actor RightBatCarHitPuff : SideBatCarHitPuff
 {
-	damagetype CrashRight
-	states
+	DamageType CrashRight
+	States
 	{
 	Spawn:
 	Death:
@@ -952,15 +894,15 @@ ACTOR RightBatCarHitPuff: SideBatCarHitPuff
 		TNT1 AA 0 A_CustomMissile ("CrashMetalShards", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 AAAAA 0 A_CustomMissile ("SparkXXXX", 2, 0, random (0, 360), 2, random (0, 360))
 		TNT1 A 20
-		Stop	
+		Stop
 	}
 }
 
-ACTOR SparkXXXX
+Actor SparkXXXX
 {
-	radius 1
-	height 1
-	speed 10
+	Radius 1
+	Height 1
+	Speed 10
 	Damage 0
 	Scale 0.05
 	Gravity 0.8
@@ -969,21 +911,21 @@ ACTOR SparkXXXX
 	+DOOMBOUNCE
 	+GHOST
 	-NOGRAVITY
-	BounceFactor 0.5
+	BounceFActor 0.5
 	renderstyle add
 	States
 	{
 	Spawn:
-		SPKO AAA 1 BRIGHT
+		SPKO AAA 1 Bright
 		SPKO AAAAAAA 1 Bright A_FadeOut(0.20)
-		stop
+		Stop
 	Death:
 		TNT1 A 0
 		Stop
 	}
 }
 
-ACTOR TireSmoke
+Actor TireSmoke
 {
     Radius 0
     Height 0
@@ -991,16 +933,16 @@ ACTOR TireSmoke
 	RenderStyle Add
 	Speed 1
 	Scale 2.0
+	Damage 0
     +NOBLOCKMAP
     +NOTELEPORT
+    +NOINTERACTION
     +DONTSPLASH
 	+MISSILE
 	+FORCEXYBILLBOARD
     +CLIENTSIDEONLY
 	+THRUGHOST
 	+THRUACTORS
-	Damage 0
-    +NOINTERACTION
     States
     {
     Spawn:
@@ -1009,11 +951,11 @@ ACTOR TireSmoke
 	Death:
 	    PUF2 ABCDEFGHIJKLMNOPQRSTUVWXYZ 3
 		PUF3 ABC 3
-	Stop
+		Stop
     }
 }
 
-ACTOR CrashMetalShards
+Actor CrashMetalShards
 {
     Radius 8
     Height 8
@@ -1021,7 +963,7 @@ ACTOR CrashMetalShards
 	Speed 16
 	Mass 1
     gravity 0.5
-	BounceFactor 0.6
+	BounceFActor 0.6
 	+DOOMBOUNCE
 	+MISSILE
     +MOVEWITHSECTOR

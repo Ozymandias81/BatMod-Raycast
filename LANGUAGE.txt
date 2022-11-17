@@ -23,6 +23,29 @@ KILLTOTAL = "Convicts";
 SECRETTOTAL = "Riddles";
 TREASURETOTAL = "Hostages";
 
+//Pickups
+PK_BATPOW = "Atomic batteries to power. Turbines to speed.";
+PK_RIDDLE = "Riddle Doll!!!";
+
+//Obituaries
+OB_2FACT = "%o was killed by a Two-Face Thug.";
+OB_BGUAR = "%o was killed by a Bodyguard.";
+OB_DETHE = "%o was killed by a Deathstroke Henchmen.";
+OB_EVDOC = "%o was killed by an Evil Doctor.";
+OB_FFLY = "%o was burned to death by FireFly.";
+OB_HATTG = "%o was killed by a Mad Hatter Henchmen.";
+OB_HOBO = "%o was killed by a Hobo.";
+OB_JOKEH = "%o was killed by a Joker Henchmen.";
+OB_KROC = "%o was food for Killer Croc.";
+OB_NINJA = "%o was sliced by a Ninja.";
+OB_PRISO = "%o was killed by a Prisoner.";
+OB_PRPYG = "%o became one of Professor Pyg's dollatrons.";
+OB_SOILD = "%o was killed by a hired Soilder.";
+OB_THEIF = "%o was killed by a Theif.";
+OB_THUG = "%o was killed by a Thug.";
+OB_THUG2 = "%o was killed by a Riddler Thug.";
+OB_ZSASZ = "%o was another tally on Zsasz's body.";
+
 // Quit Doom 1 messages
 QUITMSG1 = "What's the matter Batman? Scared?";
 QUITMSG2 = "Where are you Batman? Afraid to show your face?";
@@ -128,6 +151,8 @@ C6TEXT =
 	"CONGRATULATIONS, YOU'VE FOUND THE\n"
 	"SUPER SECRET LEVEL!  YOU'D BETTER\n"
 	"BLAZE THROUGH THIS ONE!\n";
+
+//NOAH
 NOAH_CORRECT = "Correct!";
 NOAH_INCORRECT = "Incorrect!";
 

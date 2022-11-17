@@ -20,7 +20,7 @@
  * SOFTWARE.
 **/
 
-actor 60sCarRed 10600
+Actor 60sCarRed 10600
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "60's car - Red"
@@ -41,7 +41,7 @@ actor 60sCarRed 10600
 	}
 }
 
-actor 60sCarBlue : 60sCarRed 10601
+Actor 60sCarBlue : 60sCarRed 10601
 {
 	//$Title "60's car - Blue"
 	
@@ -53,7 +53,7 @@ actor 60sCarBlue : 60sCarRed 10601
 	}
 }
 
-actor 60sCarGreen : 60sCarRed 10602
+Actor 60sCarGreen : 60sCarRed 10602
 {
 	//$Title "60's car - Green"
 
@@ -65,7 +65,7 @@ actor 60sCarGreen : 60sCarRed 10602
 	}
 }
 
-actor 60sCarOrange : 60sCarRed 10603
+Actor 60sCarOrange : 60sCarRed 10603
 {
 	//$Title "60's car - Two-Face"
 
@@ -77,7 +77,7 @@ actor 60sCarOrange : 60sCarRed 10603
 	}
 }
 
-actor 60sCarWhite : 60sCarRed 10604
+Actor 60sCarWhite : 60sCarRed 10604
 {
 	//$Title "60's car - White"
 
@@ -89,7 +89,7 @@ actor 60sCarWhite : 60sCarRed 10604
 	}
 }
 
-actor 60sCarPink : 60sCarRed 10605
+Actor 60sCarPink : 60sCarRed 10605
 {
 	//$Title "60's car - Pink"
 
@@ -101,7 +101,7 @@ actor 60sCarPink : 60sCarRed 10605
 	}
 }
 
-actor 60sCarBrown : 60sCarRed 10606
+Actor 60sCarBrown : 60sCarRed 10606
 {
 	//$Title "60's car - Brown"
  
@@ -113,7 +113,7 @@ actor 60sCarBrown : 60sCarRed 10606
 	}
 }
 
-actor ChopperRed 10607
+Actor ChopperRed 10607
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Chopper bike - Red"
@@ -133,7 +133,7 @@ actor ChopperRed 10607
 	}
 }
 
-actor ChopperBlue : ChopperRed 10608
+Actor ChopperBlue : ChopperRed 10608
 {
 	//$Title "Chopper bike - Blue"
 
@@ -145,7 +145,7 @@ actor ChopperBlue : ChopperRed 10608
 	}
 }
 
-actor ChopperGreen : ChopperRed 10609
+Actor ChopperGreen : ChopperRed 10609
 {
 	//$Title "Chopper bike - Green"
 
@@ -157,7 +157,7 @@ actor ChopperGreen : ChopperRed 10609
 	}
 }
 
-actor ChopperOrange : ChopperRed 10610
+Actor ChopperOrange : ChopperRed 10610
 {
 	//$Title "Chopper bike - Orange"
 
@@ -169,7 +169,7 @@ actor ChopperOrange : ChopperRed 10610
 	}
 }
 
-actor ChopperWhite : ChopperRed 10611
+Actor ChopperWhite : ChopperRed 10611
 {
 	//$Title "Chopper bike - White"
 
@@ -181,7 +181,7 @@ actor ChopperWhite : ChopperRed 10611
 	}
 }
 
-actor ChopperDarkRed : ChopperRed 10612
+Actor ChopperDarkRed : ChopperRed 10612
 {
 	//$Title "Chopper bike - Dark red"
 
@@ -193,7 +193,7 @@ actor ChopperDarkRed : ChopperRed 10612
 	}
 }
 
-actor 80sTaxi : 60sCarRed 10613
+Actor 80sTaxi : 60sCarRed 10613
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "80's taxi"
@@ -206,7 +206,7 @@ actor 80sTaxi : 60sCarRed 10613
 	}
 }
 
-actor 80sCopOff : 60sCarRed 10614
+Actor 80sCopOff : 60sCarRed 10614
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "80's cop - Off"
@@ -219,7 +219,7 @@ actor 80sCopOff : 60sCarRed 10614
 	}
 }
 
-actor 80sCopOn : 60sCarRed 10615
+Actor 80sCopOn : 60sCarRed 10615
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "80's cop - On"
@@ -235,7 +235,7 @@ actor 80sCopOn : 60sCarRed 10615
 	}
 }
 
-actor ModernCarRed 10616
+Actor ModernCarRed 10616
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Modern car - Red"
@@ -256,7 +256,7 @@ actor ModernCarRed 10616
 	}
 }
 
-actor ModernCarDarkRed : ModernCarRed 10617
+Actor ModernCarDarkRed : ModernCarRed 10617
 {
 	//$Title "Modern car - Dark red"
 
@@ -268,7 +268,7 @@ actor ModernCarDarkRed : ModernCarRed 10617
 	}
 }
 
-actor ModernCarBlue : ModernCarRed 10618
+Actor ModernCarBlue : ModernCarRed 10618
 {
 	//$Title "Modern car - Blue"
 
@@ -280,7 +280,7 @@ actor ModernCarBlue : ModernCarRed 10618
 	}
 }
 
-actor ModernCarDarkBlue : ModernCarRed 10619
+Actor ModernCarDarkBlue : ModernCarRed 10619
 {
 	//$Title "Modern car - Dark blue"
 
@@ -292,7 +292,7 @@ actor ModernCarDarkBlue : ModernCarRed 10619
 	}
 }
 
-actor ModernCarGreen : ModernCarRed 10620
+Actor ModernCarGreen : ModernCarRed 10620
 {
 	//$Title "Modern car - Green"
 
@@ -304,7 +304,7 @@ actor ModernCarGreen : ModernCarRed 10620
 	}
 }
 
-actor ModernCarDirtyGreen : ModernCarRed 10621
+Actor ModernCarDirtyGreen : ModernCarRed 10621
 {
 	//$Title "Modern car - Dirty green"
 
@@ -316,7 +316,7 @@ actor ModernCarDirtyGreen : ModernCarRed 10621
 	}
 }
 
-actor ModernCarOrange : ModernCarRed 10622
+Actor ModernCarOrange : ModernCarRed 10622
 {
 	//$Title "Modern car - Orange"
 
@@ -328,7 +328,7 @@ actor ModernCarOrange : ModernCarRed 10622
 	}
 }
 
-actor ModernCarPink : ModernCarRed 10623
+Actor ModernCarPink : ModernCarRed 10623
 {
 	//$Title "Modern car - Pink"
 
@@ -340,7 +340,7 @@ actor ModernCarPink : ModernCarRed 10623
 	}
 }
 
-actor ModernCarBrown : ModernCarRed 10624
+Actor ModernCarBrown : ModernCarRed 10624
 {
 	//$Title "Modern car - Brown"
 
@@ -352,7 +352,7 @@ actor ModernCarBrown : ModernCarRed 10624
 	}
 }
 
-actor 60sCarDarkRed : 60sCarRed 10625
+Actor 60sCarDarkRed : 60sCarRed 10625
 {
 	//$Title "60's car - Dark red"
 
@@ -363,7 +363,7 @@ actor 60sCarDarkRed : 60sCarRed 10625
 		Stop
 	}
 }
-actor 60sCarDarkBlue : 60sCarRed 10626
+Actor 60sCarDarkBlue : 60sCarRed 10626
 {
 	//$Title "60's car - Dark blue"
 
@@ -375,7 +375,7 @@ actor 60sCarDarkBlue : 60sCarRed 10626
 	}
 }
 
-actor 60sCarDirtyGreen : 60sCarRed 10627
+Actor 60sCarDirtyGreen : 60sCarRed 10627
 {
 	//$Title "60's car - Dirty green"
 
@@ -387,7 +387,7 @@ actor 60sCarDirtyGreen : 60sCarRed 10627
 	}
 }
 
-actor ModernTaxi : ModernCarRed 10628
+Actor ModernTaxi : ModernCarRed 10628
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Modern taxi"
@@ -400,7 +400,7 @@ actor ModernTaxi : ModernCarRed 10628
 	}
 }
 
-actor ModernCopOff : ModernCarRed 10629
+Actor ModernCopOff : ModernCarRed 10629
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Modern cop - Off"
@@ -413,7 +413,7 @@ actor ModernCopOff : ModernCarRed 10629
 	}
 }
 
-actor ModernCopOn : ModernCarRed 10630
+Actor ModernCopOn : ModernCarRed 10630
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Modern cop - On"
@@ -426,7 +426,7 @@ actor ModernCopOn : ModernCarRed 10630
 	}
 }
 
-actor 60sWagonRed : 60sCarRed 10631
+Actor 60sWagonRed : 60sCarRed 10631
 {
 	//$Title "60's wagon - Red"
 
@@ -438,7 +438,7 @@ actor 60sWagonRed : 60sCarRed 10631
 	}
 }
 
-actor 60sWagonDarkRed : 60sCarRed 10632
+Actor 60sWagonDarkRed : 60sCarRed 10632
 {
 	//$Title "60's wagon - Dark red"
 
@@ -450,7 +450,7 @@ actor 60sWagonDarkRed : 60sCarRed 10632
 	}
 }
 
-actor 60sWagonBlue : 60sCarRed 10633
+Actor 60sWagonBlue : 60sCarRed 10633
 {
 	//$Title "60's wagon - Blue"
 
@@ -462,7 +462,7 @@ actor 60sWagonBlue : 60sCarRed 10633
 	}
 }
 
-actor 60sWagonDarkBlue : 60sCarRed 10634
+Actor 60sWagonDarkBlue : 60sCarRed 10634
 {
 	//$Title "60's wagon - Dark blue"
 
@@ -474,7 +474,7 @@ actor 60sWagonDarkBlue : 60sCarRed 10634
 	}
 }
 
-actor 60sWagonGreen : 60sCarRed 10635
+Actor 60sWagonGreen : 60sCarRed 10635
 {
 	//$Title "60's wagon - Green"
 
@@ -486,7 +486,7 @@ actor 60sWagonGreen : 60sCarRed 10635
 	}
 }
 
-actor 60sWagonDirtyGreen : 60sCarRed 10636
+Actor 60sWagonDirtyGreen : 60sCarRed 10636
 {
 	//$Title "60's wagon - Dirty green"
 
@@ -498,7 +498,7 @@ actor 60sWagonDirtyGreen : 60sCarRed 10636
 	}
 }
 
-actor 60sWagonOrange : 60sCarRed 10637
+Actor 60sWagonOrange : 60sCarRed 10637
 {
 	//$Title "60's wagon - Orange"
 
@@ -510,7 +510,7 @@ actor 60sWagonOrange : 60sCarRed 10637
 	}
 }
 
-actor 60sWagonWhite : 60sCarRed 10638
+Actor 60sWagonWhite : 60sCarRed 10638
 {
 	//$Title "60's wagon - White"
 
@@ -522,7 +522,7 @@ actor 60sWagonWhite : 60sCarRed 10638
 	}
 }
 
-actor 60sWagonPink : 60sCarRed 10639
+Actor 60sWagonPink : 60sCarRed 10639
 {
 	//$Title "60's wagon - Pink"
 
@@ -534,7 +534,7 @@ actor 60sWagonPink : 60sCarRed 10639
 	}
 }
 
-actor 60sWagonBrown : 60sCarRed 10640
+Actor 60sWagonBrown : 60sCarRed 10640
 {
 	//$Title "60's wagon - Brown"
 
@@ -546,7 +546,7 @@ actor 60sWagonBrown : 60sCarRed 10640
 	}
 }
 
-actor HatchBackRed 10641
+Actor HatchBackRed 10641
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Hatchback - Red"
@@ -567,7 +567,7 @@ actor HatchBackRed 10641
 	}
 }
 
-actor HatchBackDarkRed : HatchBackRed 10642
+Actor HatchBackDarkRed : HatchBackRed 10642
 {
 	//$Title "Hatchback - Dark red"
 
@@ -579,7 +579,7 @@ actor HatchBackDarkRed : HatchBackRed 10642
 	}
 }
 
-actor HatchBackBlue : HatchBackRed 10643
+Actor HatchBackBlue : HatchBackRed 10643
 {
 	//$Title "Hatchback - Blue"
 
@@ -591,7 +591,7 @@ actor HatchBackBlue : HatchBackRed 10643
 	}
 }
 
-actor HatchBackDarkBlue : HatchBackRed 10644
+Actor HatchBackDarkBlue : HatchBackRed 10644
 {
 	//$Title "Hatchback - Dark blue"
 
@@ -603,7 +603,7 @@ actor HatchBackDarkBlue : HatchBackRed 10644
 	}
 }
 
-actor HatchBackGreen: HatchBackRed 10645
+Actor HatchBackGreen: HatchBackRed 10645
 {
 	//$Title "Hatchback - Green"
 
@@ -615,7 +615,7 @@ actor HatchBackGreen: HatchBackRed 10645
 	}
 }
 
-actor HatchBackDirtyGreen : HatchBackRed 10646
+Actor HatchBackDirtyGreen : HatchBackRed 10646
 {
 	//$Title "Hatchback - Dirty green"
 
@@ -627,7 +627,7 @@ actor HatchBackDirtyGreen : HatchBackRed 10646
 	}
 }
 
-actor HatchBackOrange : HatchBackRed 10647
+Actor HatchBackOrange : HatchBackRed 10647
 {
 	//$Title "Hatchback - Orange"
 
@@ -639,7 +639,7 @@ actor HatchBackOrange : HatchBackRed 10647
 	}
 }
 
-actor HatchBackPink : HatchBackRed 10648
+Actor HatchBackPink : HatchBackRed 10648
 {
 	//$Title "Hatchback - Pink"
 
@@ -651,7 +651,7 @@ actor HatchBackPink : HatchBackRed 10648
 	}
 }
 
-actor HatchBackBrown : HatchBackRed 10649
+Actor HatchBackBrown : HatchBackRed 10649
 {
 	//$Title "Hatchback - Brown"
 
@@ -663,7 +663,7 @@ actor HatchBackBrown : HatchBackRed 10649
 	}
 }
 
-actor VanRed 10650
+Actor VanRed 10650
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Van - Red"
@@ -684,7 +684,7 @@ actor VanRed 10650
 	}
 }
 
-actor VanDarkRed : VanRed 10651
+Actor VanDarkRed : VanRed 10651
 {
 	//$Title "Van - Dark red"
 
@@ -696,7 +696,7 @@ actor VanDarkRed : VanRed 10651
 	}
 }
 
-actor VanBlue : VanRed 10652
+Actor VanBlue : VanRed 10652
 {
 	//$Title "Van - Blue"
 
@@ -708,7 +708,7 @@ actor VanBlue : VanRed 10652
 	}
 }
 
-actor VanDarkBlue : VanRed 10653
+Actor VanDarkBlue : VanRed 10653
 {
 	//$Title "Van - Dark blue"
 
@@ -720,7 +720,7 @@ actor VanDarkBlue : VanRed 10653
 	}
 }
 
-actor VanGreen : VanRed 10654
+Actor VanGreen : VanRed 10654
 {
 	//$Title "Van - Green"
 
@@ -732,7 +732,7 @@ actor VanGreen : VanRed 10654
 	}
 }
 
-actor VanDirtyGreen : VanRed 10655
+Actor VanDirtyGreen : VanRed 10655
 {
 	//$Title "Van - Dirty green"
 
@@ -744,7 +744,7 @@ actor VanDirtyGreen : VanRed 10655
 	}
 }
 
-actor VanOrange : VanRed 10656
+Actor VanOrange : VanRed 10656
 {
 	//$Title "Van - Two-Face"
 
@@ -756,7 +756,7 @@ actor VanOrange : VanRed 10656
 	}
 }
 
-actor VanWhite : VanRed 10657
+Actor VanWhite : VanRed 10657
 {
 	//$Title "Van - White"
 
@@ -768,7 +768,7 @@ actor VanWhite : VanRed 10657
 	}
 }
 
-actor VanPink : VanRed 10658
+Actor VanPink : VanRed 10658
 {
 	//$Title "Van - Pink"
 
@@ -780,7 +780,7 @@ actor VanPink : VanRed 10658
 	}
 }
 
-actor VanBrown : VanRed 10659
+Actor VanBrown : VanRed 10659
 {
 	//$Title "Van - Brown"
 
@@ -792,7 +792,7 @@ actor VanBrown : VanRed 10659
 	}
 }
 
-actor VanUAC : VanRed 10660
+Actor VanUAC : VanRed 10660
 {
 	//$Title "Van - UAC"
 
@@ -804,7 +804,7 @@ actor VanUAC : VanRed 10660
 	}
 }
 
-actor PickupRed 10661
+Actor PickupRed 10661
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Pickup - Red"
@@ -825,7 +825,7 @@ actor PickupRed 10661
 	}
 }
 
-actor PickupDarkRed : PickupRed 10662
+Actor PickupDarkRed : PickupRed 10662
 {
 	//$Title "Pickup - Dark red"
 
@@ -837,7 +837,7 @@ actor PickupDarkRed : PickupRed 10662
 	}
 }
 
-actor PickupBlue : PickupRed 10663
+Actor PickupBlue : PickupRed 10663
 {
 	//$Title "Pickup - Blue"
 
@@ -849,7 +849,7 @@ actor PickupBlue : PickupRed 10663
 	}
 }
 
-actor PickupDarkBlue : PickupRed 10664
+Actor PickupDarkBlue : PickupRed 10664
 {
 	//$Title "Pickup - Dark blue"
 
@@ -861,7 +861,7 @@ actor PickupDarkBlue : PickupRed 10664
 	}
 }
 
-actor PickupGreen : PickupRed 10665
+Actor PickupGreen : PickupRed 10665
 {
 	//$Title "Pickup - Green"
 
@@ -873,7 +873,7 @@ actor PickupGreen : PickupRed 10665
 	}
 }
 
-actor PickupDirtyGreen : PickupRed 10666
+Actor PickupDirtyGreen : PickupRed 10666
 {
 	//$Title "Pickup - Dirty green"
 
@@ -885,7 +885,7 @@ actor PickupDirtyGreen : PickupRed 10666
 	}
 }
 
-actor PickupOrange : PickupRed 10667
+Actor PickupOrange : PickupRed 10667
 {
 	//$Title "Pickup - Orange"
 
@@ -897,7 +897,7 @@ actor PickupOrange : PickupRed 10667
 	}
 }
 
-actor PickupWhite : PickupRed 10668
+Actor PickupWhite : PickupRed 10668
 {
 	//$Title "Pickup - White"
 
@@ -909,7 +909,7 @@ actor PickupWhite : PickupRed 10668
 	}
 }
 
-actor PickupPink : PickupRed 10669
+Actor PickupPink : PickupRed 10669
 {
 	//$Title "Pickup - Pink"
 
@@ -921,7 +921,7 @@ actor PickupPink : PickupRed 10669
 	}
 }
 
-actor PickupBrown : PickupRed 10670
+Actor PickupBrown : PickupRed 10670
 {
 	//$Title "Pickup - Brown"
 
@@ -933,7 +933,7 @@ actor PickupBrown : PickupRed 10670
 	}
 }
 
-actor PlaneRed 10671
+Actor PlaneRed 10671
 {
 	//$Category Voxel Vehicles Pack - Aircraft
 	//$Title "Plane - Red"
@@ -954,7 +954,7 @@ actor PlaneRed 10671
 	}
 }
 
-actor PlaneDarkRed : PlaneRed 10672
+Actor PlaneDarkRed : PlaneRed 10672
 {
 	//$Title "Plane - Dark red"
 
@@ -966,7 +966,7 @@ actor PlaneDarkRed : PlaneRed 10672
 	}
 }
 
-actor PlaneBlue : PlaneRed 10673
+Actor PlaneBlue : PlaneRed 10673
 {
 	//$Title "Plane - Blue"
 
@@ -978,7 +978,7 @@ actor PlaneBlue : PlaneRed 10673
 	}
 }
 
-actor PlaneDarkBlue : PlaneRed 10674
+Actor PlaneDarkBlue : PlaneRed 10674
 {
 	//$Title "Plane - Dark blue"
 
@@ -990,7 +990,7 @@ actor PlaneDarkBlue : PlaneRed 10674
 	}
 }
 
-actor PlaneGreen : PlaneRed 10675
+Actor PlaneGreen : PlaneRed 10675
 {
 	//$Title "Plane - Green"
 
@@ -1002,7 +1002,7 @@ actor PlaneGreen : PlaneRed 10675
 	}
 }
 
-actor PlaneDarkGreen : PlaneRed 10676
+Actor PlaneDarkGreen : PlaneRed 10676
 {
 	//$Title "Plane - Dark green"
 
@@ -1014,7 +1014,7 @@ actor PlaneDarkGreen : PlaneRed 10676
 	}
 }
 
-actor PlaneOrange : PlaneRed 10677
+Actor PlaneOrange : PlaneRed 10677
 {
 	//$Title "Plane - Orange"
 
@@ -1026,7 +1026,7 @@ actor PlaneOrange : PlaneRed 10677
 	}
 }
 
-actor PlaneGreen&Gold : PlaneRed 10678
+Actor PlaneGreen&Gold : PlaneRed 10678
 {
 	//$Title "Plane - Green & gold"
 
@@ -1038,7 +1038,7 @@ actor PlaneGreen&Gold : PlaneRed 10678
 	}
 }
 
-actor HelicopterRed 10679
+Actor HelicopterRed 10679
 {
 	//$Category Voxel Vehicles Pack - Aircraft
 	//$Title "Helicopter - Red"
@@ -1059,7 +1059,7 @@ actor HelicopterRed 10679
 	}
 }
 
-actor HelicopterDarkRed : HelicopterRed 10680
+Actor HelicopterDarkRed : HelicopterRed 10680
 {
 	//$Title "Helicopter - Dark red"
 
@@ -1071,7 +1071,7 @@ actor HelicopterDarkRed : HelicopterRed 10680
 	}
 }
 
-actor HelicopterBlue : HelicopterRed 10681
+Actor HelicopterBlue : HelicopterRed 10681
 {
 	//$Title "Helicopter - Blue"
 
@@ -1083,7 +1083,7 @@ actor HelicopterBlue : HelicopterRed 10681
 	}
 }
 
-actor HelicopterDarkBlue : HelicopterRed 10682
+Actor HelicopterDarkBlue : HelicopterRed 10682
 {
 	//$Title "Helicopter - Dark blue"
 
@@ -1095,7 +1095,7 @@ actor HelicopterDarkBlue : HelicopterRed 10682
 	}
 }
 
-actor HelicopterGreen : HelicopterRed 10683
+Actor HelicopterGreen : HelicopterRed 10683
 {
 	//$Title "Helicopter - Green"
 
@@ -1107,7 +1107,7 @@ actor HelicopterGreen : HelicopterRed 10683
 	}
 }
 
-actor HelicopterDarkGreen : HelicopterRed 10684
+Actor HelicopterDarkGreen : HelicopterRed 10684
 {
 	//$Title "Helicopter - Dark green"
 
@@ -1119,7 +1119,7 @@ actor HelicopterDarkGreen : HelicopterRed 10684
 	}
 }
 
-actor HelicopterOrange : HelicopterRed 10685
+Actor HelicopterOrange : HelicopterRed 10685
 {
 	//$Title "Helicopter - Orange"
 
@@ -1131,7 +1131,7 @@ actor HelicopterOrange : HelicopterRed 10685
 	}
 }
 
-actor HelicopterUAC : HelicopterRed 10686
+Actor HelicopterUAC : HelicopterRed 10686
 {
 	//$Title "Helicopter - UAC"
 
@@ -1143,7 +1143,7 @@ actor HelicopterUAC : HelicopterRed 10686
 	}
 }
 
-actor ArmoredUACtruckGreen 10687
+Actor ArmoredUACtruckGreen 10687
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Armored UAC truck - Green"
@@ -1164,7 +1164,7 @@ actor ArmoredUACtruckGreen 10687
 	}
 }
 
-actor ArmoredUACtruckBrown : ArmoredUACtruckGreen  10688
+Actor ArmoredUACtruckBrown : ArmoredUACtruckGreen  10688
 {
 	//$Title "Armored UAC truck - Brown"
 
@@ -1176,7 +1176,7 @@ actor ArmoredUACtruckBrown : ArmoredUACtruckGreen  10688
 	}
 }
 
-actor VTOLgreen 10689
+Actor VTOLgreen 10689
 {
 	//$Category Voxel Vehicles Pack - Aircraft
 	//$Title "VTOL - Green"
@@ -1197,7 +1197,7 @@ actor VTOLgreen 10689
 	}
 }
 
-actor VTOLbrown : VTOLgreen 10690
+Actor VTOLbrown : VTOLgreen 10690
 {
 	//$Title "VTOL - Brown"
 
@@ -1209,7 +1209,7 @@ actor VTOLbrown : VTOLgreen 10690
 	}
 }
 
-actor TankGreen 10691
+Actor TankGreen 10691
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Tank - Green"
@@ -1230,7 +1230,7 @@ actor TankGreen 10691
 	}
 }
 
-actor TankSand : TankGreen 10692
+Actor TankSand : TankGreen 10692
 {
 	//$Title "Tank - Sand camo"
 
@@ -1242,7 +1242,7 @@ actor TankSand : TankGreen 10692
 	}
 }
 
-actor TankCamo : TankGreen 10693
+Actor TankCamo : TankGreen 10693
 {
 	//$Title "Tank - Forest camo"
 
@@ -1254,7 +1254,7 @@ actor TankCamo : TankGreen 10693
 	}
 }
 
-actor ForkliftOrange 10694
+Actor ForkliftOrange 10694
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Forklift - Orange"
@@ -1275,7 +1275,7 @@ actor ForkliftOrange 10694
 	}
 }
 
-actor BulldozerOrange 10695
+Actor BulldozerOrange 10695
 {
 	//$Category Voxel Vehicles Pack - Heavy equipment
 	//$Title "Bulldozer - Orange"
@@ -1296,7 +1296,7 @@ actor BulldozerOrange 10695
 	}
 }
 
-actor ForkliftYellow : ForkliftOrange 10696
+Actor ForkliftYellow : ForkliftOrange 10696
 {
 	//$Title "Forklift - Yellow"
 
@@ -1308,7 +1308,7 @@ actor ForkliftYellow : ForkliftOrange 10696
 	}
 }
 
-actor ForkliftBlue : ForkliftOrange 10697
+Actor ForkliftBlue : ForkliftOrange 10697
 {
 	//$Title "Forklift - Blue"
 
@@ -1320,7 +1320,7 @@ actor ForkliftBlue : ForkliftOrange 10697
 	}
 }
 
-actor ForkliftRed : ForkliftOrange 10698
+Actor ForkliftRed : ForkliftOrange 10698
 {
 	//$Title "Forklift - Red"
 
@@ -1332,7 +1332,7 @@ actor ForkliftRed : ForkliftOrange 10698
 	}
 }
 
-actor ForkliftDarkGreen : ForkliftOrange 10699
+Actor ForkliftDarkGreen : ForkliftOrange 10699
 {
 	//$Title "Forklift - Dark green"
 
@@ -1344,7 +1344,7 @@ actor ForkliftDarkGreen : ForkliftOrange 10699
 	}
 }
 
-actor ForkliftBrown : ForkliftOrange 10700
+Actor ForkliftBrown : ForkliftOrange 10700
 {
 	//$Title "Forklift - Brown"
 
@@ -1356,7 +1356,7 @@ actor ForkliftBrown : ForkliftOrange 10700
 	}
 }
 
-actor ForkliftGreen : ForkliftOrange 10701
+Actor ForkliftGreen : ForkliftOrange 10701
 {
 	//$Title "Forklift - Green"
 
@@ -1368,7 +1368,7 @@ actor ForkliftGreen : ForkliftOrange 10701
 	}
 }
 
-actor ForkliftWhite : ForkliftOrange 10702
+Actor ForkliftWhite : ForkliftOrange 10702
 {
 	//$Title "Forklift - White"
 
@@ -1380,7 +1380,7 @@ actor ForkliftWhite : ForkliftOrange 10702
 	}
 }
 
-actor BulldozerRed : BulldozerOrange 10703
+Actor BulldozerRed : BulldozerOrange 10703
 {
 	//$Title "Bulldozer - Red"
 
@@ -1392,7 +1392,7 @@ actor BulldozerRed : BulldozerOrange 10703
 	}
 }
 
-actor BulldozerDarkRed : BulldozerOrange 10704
+Actor BulldozerDarkRed : BulldozerOrange 10704
 {
 	//$Title "Bulldozer - Dark red"
 
@@ -1404,7 +1404,7 @@ actor BulldozerDarkRed : BulldozerOrange 10704
 	}
 }
 
-actor BulldozerGreen : BulldozerOrange 10705
+Actor BulldozerGreen : BulldozerOrange 10705
 {
 	//$Title "Bulldozer - Green"
 
@@ -1416,7 +1416,7 @@ actor BulldozerGreen : BulldozerOrange 10705
 	}
 }
 
-actor BulldozerDarkGreen : BulldozerOrange 10706
+Actor BulldozerDarkGreen : BulldozerOrange 10706
 {
 	//$Title "Bulldozer - Dark green"
 
@@ -1428,7 +1428,7 @@ actor BulldozerDarkGreen : BulldozerOrange 10706
 	}
 }
 
-actor BulldozerBrown : BulldozerOrange 10707
+Actor BulldozerBrown : BulldozerOrange 10707
 {
 	//$Title "Bulldozer - Brown"
 
@@ -1440,7 +1440,7 @@ actor BulldozerBrown : BulldozerOrange 10707
 	}
 }
 
-actor ExcavatorOrange 10708
+Actor ExcavatorOrange 10708
 {
 	//$Category Voxel Vehicles Pack - Heavy equipment
 	//$Title "Excavator - Orange"
@@ -1461,7 +1461,7 @@ actor ExcavatorOrange 10708
 	}
 }
 
-actor ExcavatorRed : ExcavatorOrange 10709
+Actor ExcavatorRed : ExcavatorOrange 10709
 {
 	//$Title "Excavator - Red"
 
@@ -1473,7 +1473,7 @@ actor ExcavatorRed : ExcavatorOrange 10709
 	}
 }
 
-actor ExcavatorDarkRed : ExcavatorOrange 10710
+Actor ExcavatorDarkRed : ExcavatorOrange 10710
 {
 	//$Title "Excavator - Dark red"
 
@@ -1485,7 +1485,7 @@ actor ExcavatorDarkRed : ExcavatorOrange 10710
 	}
 }
 
-actor ExcavatorBlue : ExcavatorOrange 10711
+Actor ExcavatorBlue : ExcavatorOrange 10711
 {
 	//$Title "Excavator - Blue"
 
@@ -1497,7 +1497,7 @@ actor ExcavatorBlue : ExcavatorOrange 10711
 	}
 }
 
-actor ExcavatorDarkBlue : ExcavatorOrange 10712
+Actor ExcavatorDarkBlue : ExcavatorOrange 10712
 {
 	//$Title "Excavator - Dark blue"
 
@@ -1509,7 +1509,7 @@ actor ExcavatorDarkBlue : ExcavatorOrange 10712
 	}
 }
 
-actor ExcavatorGreen : ExcavatorOrange 10713
+Actor ExcavatorGreen : ExcavatorOrange 10713
 {
 	//$Title "Excavator - Green"
 
@@ -1521,7 +1521,7 @@ actor ExcavatorGreen : ExcavatorOrange 10713
 	}
 }
 
-actor ExcavatorDarkGreen : ExcavatorOrange 10714
+Actor ExcavatorDarkGreen : ExcavatorOrange 10714
 {
 	//$Title "Excavator - Dark green"
 
@@ -1533,7 +1533,7 @@ actor ExcavatorDarkGreen : ExcavatorOrange 10714
 	}
 }
 
-actor ExcavatorBrown : ExcavatorOrange 10715
+Actor ExcavatorBrown : ExcavatorOrange 10715
 {
 	//$Title "Excavator - Brown"
 
@@ -1545,10 +1545,10 @@ actor ExcavatorBrown : ExcavatorOrange 10715
 	}
 }
 
-actor TractorRed 10716
+Actor TractorRed 10716
 {
 	//$Category Voxel Vehicles Pack - Heavy equipment
-	//$Title "Tractor - Red"
+	//$Title "TrActor - Red"
 	DistanceCheck "bat_lod"
 
 	Radius 32
@@ -1566,9 +1566,9 @@ actor TractorRed 10716
 	}
 }
 
-actor TractorDarkRed1 : TractorRed 10717
+Actor TractorDarkRed1 : TractorRed 10717
 {
-	//$Title "Tractor - Dark red 1"
+	//$Title "TrActor - Dark red 1"
 
 	States
 	{
@@ -1578,9 +1578,9 @@ actor TractorDarkRed1 : TractorRed 10717
 	}
 }
 
-actor TractorDarkRed2 : TractorRed 10718
+Actor TractorDarkRed2 : TractorRed 10718
 {
-	//$Title "Tractor - Dark red 2"
+	//$Title "TrActor - Dark red 2"
 
 	States
 	{
@@ -1590,9 +1590,9 @@ actor TractorDarkRed2 : TractorRed 10718
 	}
 }
 
-actor TractorBlue : TractorRed 10719
+Actor TractorBlue : TractorRed 10719
 {
-	//$Title "Tractor - Blue"
+	//$Title "TrActor - Blue"
 
 	States
 	{
@@ -1602,9 +1602,9 @@ actor TractorBlue : TractorRed 10719
 	}
 }
 
-actor TractorDarkBlue : TractorRed 10720
+Actor TractorDarkBlue : TractorRed 10720
 {
-	//$Title "Tractor - Dark blue"
+	//$Title "TrActor - Dark blue"
 
 	States
 	{
@@ -1614,9 +1614,9 @@ actor TractorDarkBlue : TractorRed 10720
 	}
 }
 
-actor TractorGreen : TractorRed 10721
+Actor TractorGreen : TractorRed 10721
 {
-	//$Title "Tractor - Green"
+	//$Title "TrActor - Green"
 
 	States
 	{
@@ -1626,9 +1626,9 @@ actor TractorGreen : TractorRed 10721
 	}
 }
 
-actor TractorDarkGreen : TractorRed 10722
+Actor TractorDarkGreen : TractorRed 10722
 {
-	//$Title "Tractor - Dark green"
+	//$Title "TrActor - Dark green"
 
 	States
 	{
@@ -1638,9 +1638,9 @@ actor TractorDarkGreen : TractorRed 10722
 	}
 }
 
-actor TractorOrange : TractorRed 10723
+Actor TractorOrange : TractorRed 10723
 {
-	//$Title "Tractor - Orange"
+	//$Title "TrActor - Orange"
 
 	States
 	{
@@ -1650,9 +1650,9 @@ actor TractorOrange : TractorRed 10723
 	}
 }
 
-actor TractorBrown1 : TractorRed 10724
+Actor TractorBrown1 : TractorRed 10724
 {
-	//$Title "Tractor - Brown 1"
+	//$Title "TrActor - Brown 1"
 
 	States
 	{
@@ -1662,9 +1662,9 @@ actor TractorBrown1 : TractorRed 10724
 	}
 }
 
-actor TractorBrown2 : TractorRed 10725
+Actor TractorBrown2 : TractorRed 10725
 {
-	//$Title "Tractor - Brown 2"
+	//$Title "TrActor - Brown 2"
 
 	States
 	{
@@ -1674,7 +1674,7 @@ actor TractorBrown2 : TractorRed 10725
 	}
 }
 
-actor VTOLgreenLogo : VTOLgreen 10726
+Actor VTOLgreenLogo : VTOLgreen 10726
 {
 	//$Title "VTOL - Green & logo"
 
@@ -1686,7 +1686,7 @@ actor VTOLgreenLogo : VTOLgreen 10726
 	}
 }
 
-actor VTOLbrownLogo : VTOLgreen 10727
+Actor VTOLbrownLogo : VTOLgreen 10727
 {
 	//$Title "VTOL - Brown & logo"
 
@@ -1698,7 +1698,7 @@ actor VTOLbrownLogo : VTOLgreen 10727
 	}
 }
 
-actor AmbulanceOff 10728
+Actor AmbulanceOff 10728
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Ambulance - Off"
@@ -1719,7 +1719,7 @@ actor AmbulanceOff 10728
 	}
 }
 
-actor AmbulanceOn : AmbulanceOff 10729
+Actor AmbulanceOn : AmbulanceOff 10729
 {
 	//$Title "Ambulance - On"
 
@@ -1734,7 +1734,7 @@ actor AmbulanceOn : AmbulanceOff 10729
 	}
 }
 
-actor SemiRed 10730
+Actor SemiRed 10730
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Semi truck - Red"
@@ -1755,7 +1755,7 @@ actor SemiRed 10730
 	}
 }
 
-actor SemiDarkRed : SemiRed 10731
+Actor SemiDarkRed : SemiRed 10731
 {
 	//$Title "Semi truck - Dark red"
 
@@ -1767,7 +1767,7 @@ actor SemiDarkRed : SemiRed 10731
 	}
 }
 
-actor SemiBlue : SemiRed 10732
+Actor SemiBlue : SemiRed 10732
 {
 	//$Title "Semi truck - Blue"
 
@@ -1779,7 +1779,7 @@ actor SemiBlue : SemiRed 10732
 	}
 }
 
-actor SemiDarkBlue : SemiRed 10733
+Actor SemiDarkBlue : SemiRed 10733
 {
 	//$Title "Semi truck - Dark blue"
 
@@ -1791,7 +1791,7 @@ actor SemiDarkBlue : SemiRed 10733
 	}
 }
 
-actor SemiGreen : SemiRed 10734
+Actor SemiGreen : SemiRed 10734
 {
 	//$Title "Semi truck - Green"
 
@@ -1803,7 +1803,7 @@ actor SemiGreen : SemiRed 10734
 	}
 }
 
-actor SemiDirtyGreen : SemiRed 10735
+Actor SemiDirtyGreen : SemiRed 10735
 {
 	//$Title "Semi truck - Dirty green"
 
@@ -1815,7 +1815,7 @@ actor SemiDirtyGreen : SemiRed 10735
 	}
 }
 
-actor SemiOrange : SemiRed 10736
+Actor SemiOrange : SemiRed 10736
 {
 	//$Title "Semi truck - Orange"
 
@@ -1827,7 +1827,7 @@ actor SemiOrange : SemiRed 10736
 	}
 }
 
-actor SemiBrown1 : SemiRed 10737
+Actor SemiBrown1 : SemiRed 10737
 {
 	//$Title "Semi truck - Brown 1"
 
@@ -1839,7 +1839,7 @@ actor SemiBrown1 : SemiRed 10737
 	}
 }
 
-actor SemiBrown2 : SemiRed 10738
+Actor SemiBrown2 : SemiRed 10738
 {
 	//$Title "Semi truck - Brown 2"
 
@@ -1851,7 +1851,7 @@ actor SemiBrown2 : SemiRed 10738
 	}
 }
 
-actor SportsCarRed 10739
+Actor SportsCarRed 10739
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "Sports car - Red"
@@ -1872,7 +1872,7 @@ actor SportsCarRed 10739
 	}
 }
 
-actor SportsCarDarkRed : SportsCarRed 10740
+Actor SportsCarDarkRed : SportsCarRed 10740
 {
 	//$Title "Sports car - Dark red"
 
@@ -1884,7 +1884,7 @@ actor SportsCarDarkRed : SportsCarRed 10740
 	}
 }
 
-actor SportsCarBlue : SportsCarRed 10741
+Actor SportsCarBlue : SportsCarRed 10741
 {
 	//$Title "Sports car - Blue"
 
@@ -1896,7 +1896,7 @@ actor SportsCarBlue : SportsCarRed 10741
 	}
 }
 
-actor SportsCarDarkBlue : SportsCarRed 10742
+Actor SportsCarDarkBlue : SportsCarRed 10742
 {
 	//$Title "Sports car - Dark blue"
 
@@ -1908,7 +1908,7 @@ actor SportsCarDarkBlue : SportsCarRed 10742
 	}
 }
 
-actor SportsCarGreen : SportsCarRed 10743
+Actor SportsCarGreen : SportsCarRed 10743
 {
 	//$Title "Sports car - Green"
 
@@ -1920,7 +1920,7 @@ actor SportsCarGreen : SportsCarRed 10743
 	}
 }
 
-actor SportsCarDirtyGreen : SportsCarRed 10744
+Actor SportsCarDirtyGreen : SportsCarRed 10744
 {
 	//$Title "Sports car - Dirty green"
 
@@ -1932,7 +1932,7 @@ actor SportsCarDirtyGreen : SportsCarRed 10744
 	}
 }
 
-actor SportsCarOrange : SportsCarRed 10745
+Actor SportsCarOrange : SportsCarRed 10745
 {
 	//$Title "Sports car - Orange"
 
@@ -1944,7 +1944,7 @@ actor SportsCarOrange : SportsCarRed 10745
 	}
 }
 
-actor SportsCarWhite : SportsCarRed 10746
+Actor SportsCarWhite : SportsCarRed 10746
 {
 	//$Title "Sports car - White"
 
@@ -1956,7 +1956,7 @@ actor SportsCarWhite : SportsCarRed 10746
 	}
 }
 
-actor SportsCarPink : SportsCarRed 10747
+Actor SportsCarPink : SportsCarRed 10747
 {
 	//$Title "Sports car - Pink"
 
@@ -1968,7 +1968,7 @@ actor SportsCarPink : SportsCarRed 10747
 	}
 }
 
-actor SportsCarBrown : SportsCarRed 10748
+Actor SportsCarBrown : SportsCarRed 10748
 {
 	//$Title "Sports car - Brown"
 
@@ -1980,7 +1980,7 @@ actor SportsCarBrown : SportsCarRed 10748
 	}
 }
 
-actor LimousineDarkBlue 10749
+Actor LimousineDarkBlue 10749
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Limousine - Dark blue"
@@ -2001,7 +2001,7 @@ actor LimousineDarkBlue 10749
 	}
 }
 
-actor LimousineDarkRed : LimousineDarkBlue 10750
+Actor LimousineDarkRed : LimousineDarkBlue 10750
 {
 	//$Title "Limousine - Dark red"
 
@@ -2013,7 +2013,7 @@ actor LimousineDarkRed : LimousineDarkBlue 10750
 	}
 }
 
-actor LimousineWhite : LimousineDarkBlue 10751
+Actor LimousineWhite : LimousineDarkBlue 10751
 {
 	//$Title "Limousine - White"
 
@@ -2025,7 +2025,7 @@ actor LimousineWhite : LimousineDarkBlue 10751
 	}
 }
 
-actor LimousinePink : LimousineDarkBlue 10752
+Actor LimousinePink : LimousineDarkBlue 10752
 {
 	//$Title "Limousine - Pink"
 
@@ -2037,7 +2037,7 @@ actor LimousinePink : LimousineDarkBlue 10752
 	}
 }
 
-actor SuvRed 10753
+Actor SuvRed 10753
 {
 	//$Category Voxel Vehicles Pack - Cars
 	//$Title "SUV - Red"
@@ -2058,7 +2058,7 @@ actor SuvRed 10753
 	}
 }
 
-actor SuvDarkRed : SuvRed 10754
+Actor SuvDarkRed : SuvRed 10754
 {
 	//$Title "SUV - Dark red"
 
@@ -2070,7 +2070,7 @@ actor SuvDarkRed : SuvRed 10754
 	}
 }
 
-actor SuvBlue : SuvRed 10755
+Actor SuvBlue : SuvRed 10755
 {
 	//$Title "SUV - Blue"
 
@@ -2082,7 +2082,7 @@ actor SuvBlue : SuvRed 10755
 	}
 }
 
-actor SuvDarkBlue : SuvRed 10756
+Actor SuvDarkBlue : SuvRed 10756
 {
 	//$Title "SUV - Dark blue"
 
@@ -2094,7 +2094,7 @@ actor SuvDarkBlue : SuvRed 10756
 	}
 }
 
-actor SuvGreen : SuvRed 10757
+Actor SuvGreen : SuvRed 10757
 {
 	//$Title "SUV - Green"
 
@@ -2106,7 +2106,7 @@ actor SuvGreen : SuvRed 10757
 	}
 }
 
-actor SuvDirtyGreen : SuvRed 10758
+Actor SuvDirtyGreen : SuvRed 10758
 {
 	//$Title "SUV - Dirty green"
 
@@ -2118,7 +2118,7 @@ actor SuvDirtyGreen : SuvRed 10758
 	}
 }
 
-actor SuvOrange : SuvRed 10759
+Actor SuvOrange : SuvRed 10759
 {
 	//$Title "SUV - Orange"
 
@@ -2130,7 +2130,7 @@ actor SuvOrange : SuvRed 10759
 	}
 }
 
-actor SuvPink : SuvRed 10760
+Actor SuvPink : SuvRed 10760
 {
 	//$Title "SUV - Pink"
 
@@ -2142,7 +2142,7 @@ actor SuvPink : SuvRed 10760
 	}
 }
 
-actor SuvBrown : SuvRed 10761
+Actor SuvBrown : SuvRed 10761
 {
 	//$Title "SUV - Brown"
 
@@ -2154,7 +2154,7 @@ actor SuvBrown : SuvRed 10761
 	}
 }
 
-actor SnowmobileRed 10762
+Actor SnowmobileRed 10762
 {
 	//$Category Voxel Vehicles Pack - Snow
 	//$Title "Snowmobile - Red"
@@ -2175,7 +2175,7 @@ actor SnowmobileRed 10762
 	}
 }
 
-actor SnowmobileDarkRed : SnowmobileRed 10763
+Actor SnowmobileDarkRed : SnowmobileRed 10763
 {
 	//$Title "Snowmobile - Dark red"
 
@@ -2187,7 +2187,7 @@ actor SnowmobileDarkRed : SnowmobileRed 10763
 	}
 }
 
-actor SnowmobileBlue : SnowmobileRed 10764
+Actor SnowmobileBlue : SnowmobileRed 10764
 {
 	//$Title "Snowmobile - Blue"
 
@@ -2199,7 +2199,7 @@ actor SnowmobileBlue : SnowmobileRed 10764
 	}
 }
 
-actor SnowmobileDarkBlue : SnowmobileRed 10765
+Actor SnowmobileDarkBlue : SnowmobileRed 10765
 {
 	//$Title "Snowmobile - Dark blue"
 
@@ -2211,7 +2211,7 @@ actor SnowmobileDarkBlue : SnowmobileRed 10765
 	}
 }
 
-actor SnowmobileGreen : SnowmobileRed 10766
+Actor SnowmobileGreen : SnowmobileRed 10766
 {
 	//$Title "Snowmobile - Green"
 
@@ -2223,7 +2223,7 @@ actor SnowmobileGreen : SnowmobileRed 10766
 	}
 }
 
-actor SnowmobileDirtyGreen : SnowmobileRed 10767
+Actor SnowmobileDirtyGreen : SnowmobileRed 10767
 {
 	//$Title "Snowmobile - Dirty green"
 
@@ -2235,7 +2235,7 @@ actor SnowmobileDirtyGreen : SnowmobileRed 10767
 	}
 }
 
-actor SnowmobileOrange : SnowmobileRed 10768
+Actor SnowmobileOrange : SnowmobileRed 10768
 {
 	//$Title "Snowmobile - Orange"
 
@@ -2247,7 +2247,7 @@ actor SnowmobileOrange : SnowmobileRed 10768
 	}
 }
 
-actor SnowmobileWhite : SnowmobileRed 10769
+Actor SnowmobileWhite : SnowmobileRed 10769
 {
 	//$Title "Snowmobile - White"
 
@@ -2259,7 +2259,7 @@ actor SnowmobileWhite : SnowmobileRed 10769
 	}
 }
 
-actor SnowmobileBrown : SnowmobileRed 10770
+Actor SnowmobileBrown : SnowmobileRed 10770
 {
 	//$Title "Snowmobile - Brown"
 
@@ -2271,7 +2271,7 @@ actor SnowmobileBrown : SnowmobileRed 10770
 	}
 }
 
-actor SnowcatRed 10771
+Actor SnowcatRed 10771
 {
 	//$Category Voxel Vehicles Pack - Snow
 	//$Title "Snowcat - Red"
@@ -2292,7 +2292,7 @@ actor SnowcatRed 10771
 	}
 }
 
-actor SnowcatBlue : SnowcatRed 10772
+Actor SnowcatBlue : SnowcatRed 10772
 {
 	//$Title "Snowcat - Blue"
 
@@ -2304,7 +2304,7 @@ actor SnowcatBlue : SnowcatRed 10772
 	}
 }
 
-actor SnowcatOrange : SnowcatRed 10773
+Actor SnowcatOrange : SnowcatRed 10773
 {
 	//$Title "Snowcat - Orange"
 
@@ -2316,7 +2316,7 @@ actor SnowcatOrange : SnowcatRed 10773
 	}
 }
 
-actor SnowcatGreen : SnowcatRed 10774
+Actor SnowcatGreen : SnowcatRed 10774
 {
 	//$Title "Snowcat - Green"
 
@@ -2328,7 +2328,7 @@ actor SnowcatGreen : SnowcatRed 10774
 	}
 }
 
-actor SnowcoachRed : SnowcatRed 10775
+Actor SnowcoachRed : SnowcatRed 10775
 {
 	//$Title "Snowcoach - Red"
 
@@ -2340,7 +2340,7 @@ actor SnowcoachRed : SnowcatRed 10775
 	}
 }
 
-actor SnowcoachBlue : SnowcatRed 10776
+Actor SnowcoachBlue : SnowcatRed 10776
 {
 	//$Title "Snowcoach - Blue"
 
@@ -2352,7 +2352,7 @@ actor SnowcoachBlue : SnowcatRed 10776
 	}
 }
 
-actor SnowcoachOrange : SnowcatRed 10777
+Actor SnowcoachOrange : SnowcatRed 10777
 {
 	//$Title "Snowcoach - Orange"
 
@@ -2364,7 +2364,7 @@ actor SnowcoachOrange : SnowcatRed 10777
 	}
 }
 
-actor SnowcoachGreen : SnowcatRed 10778
+Actor SnowcoachGreen : SnowcatRed 10778
 {
 	//$Title "Snowcoach - Green"
 
@@ -2376,7 +2376,7 @@ actor SnowcoachGreen : SnowcatRed 10778
 	}
 }
 
-actor SnowcoachUAC : SnowcatRed 10779
+Actor SnowcoachUAC : SnowcatRed 10779
 {
 	//$Title "Snowcoach - UAC"
 
@@ -2388,7 +2388,7 @@ actor SnowcoachUAC : SnowcatRed 10779
 	}
 }
 
-actor HovercraftRed 10780
+Actor HovercraftRed 10780
 {
 	//$Category Voxel Vehicles Pack - Watercraft
 	//$Title "Hovercraft - Red"
@@ -2409,7 +2409,7 @@ actor HovercraftRed 10780
 	}
 }
 
-actor HovercraftBlue : HovercraftRed 10781
+Actor HovercraftBlue : HovercraftRed 10781
 {
 	//$Title "Hovercraft - Blue"
 
@@ -2421,7 +2421,7 @@ actor HovercraftBlue : HovercraftRed 10781
 	}
 }
 
-actor HovercraftGreen : HovercraftRed 10782
+Actor HovercraftGreen : HovercraftRed 10782
 {
 	//$Title "Hovercraft - Green"
 
@@ -2433,7 +2433,7 @@ actor HovercraftGreen : HovercraftRed 10782
 	}
 }
 
-actor HovercraftOrange : HovercraftRed 10783
+Actor HovercraftOrange : HovercraftRed 10783
 {
 	//$Title "Hovercraft - Orange"
 
@@ -2445,7 +2445,7 @@ actor HovercraftOrange : HovercraftRed 10783
 	}
 }
 
-actor HovercraftBrown : HovercraftRed 10784
+Actor HovercraftBrown : HovercraftRed 10784
 {
 	//$Title "Hovercraft - Brown"
 
@@ -2457,7 +2457,7 @@ actor HovercraftBrown : HovercraftRed 10784
 	}
 }
 
-actor MotorBoatRed 10785
+Actor MotorBoatRed 10785
 {
 	//$Category Voxel Vehicles Pack - Watercraft
 	//$Title "Motor boat - Red"
@@ -2478,7 +2478,7 @@ actor MotorBoatRed 10785
 	}
 }
 
-actor MotorBoatBlue : MotorBoatRed 10786
+Actor MotorBoatBlue : MotorBoatRed 10786
 {
 	//$Title "Motor boat - Blue"
 
@@ -2490,7 +2490,7 @@ actor MotorBoatBlue : MotorBoatRed 10786
 	}
 }
 
-actor MotorBoatGreen : MotorBoatRed 10787
+Actor MotorBoatGreen : MotorBoatRed 10787
 {
 	//$Title "Motor boat - Green"
 
@@ -2502,7 +2502,7 @@ actor MotorBoatGreen : MotorBoatRed 10787
 	}
 }
 
-actor MotorBoatDirtyGreen : MotorBoatRed 10788
+Actor MotorBoatDirtyGreen : MotorBoatRed 10788
 {
 	//$Title "Motor boat - Dirty green"
 
@@ -2514,7 +2514,7 @@ actor MotorBoatDirtyGreen : MotorBoatRed 10788
 	}
 }
 
-actor MotorBoatOrange : MotorBoatRed 10789
+Actor MotorBoatOrange : MotorBoatRed 10789
 {
 	//$Title "Motor boat - Orange"
 
@@ -2526,7 +2526,7 @@ actor MotorBoatOrange : MotorBoatRed 10789
 	}
 }
 
-actor MotorBoatYellow : MotorBoatRed 10790
+Actor MotorBoatYellow : MotorBoatRed 10790
 {
 	//$Title "Motor boat - Yellow"
 
@@ -2538,7 +2538,7 @@ actor MotorBoatYellow : MotorBoatRed 10790
 	}
 }
 
-actor FireTruckOff 10791
+Actor FireTruckOff 10791
 {
 	//$Category Voxel Vehicles Pack - Special cars
 	//$Title "Fire truck - Off"
@@ -2559,7 +2559,7 @@ actor FireTruckOff 10791
 	}
 }
 
-actor FireTruckOn : FireTruckOff 10792
+Actor FireTruckOn : FireTruckOff 10792
 {
 	//$Title "Fire truck - On"
 
@@ -2574,7 +2574,7 @@ actor FireTruckOn : FireTruckOff 10792
 	}
 }
 
-actor FlyingCarRed 10793
+Actor FlyingCarRed 10793
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Flying car - Red"
@@ -2596,7 +2596,7 @@ actor FlyingCarRed 10793
 	}
 }
 
-actor FlyingCarDarkRed : FlyingCarRed 10794
+Actor FlyingCarDarkRed : FlyingCarRed 10794
 {
 	//$Title "Flying car - Dark red"
 
@@ -2608,7 +2608,7 @@ actor FlyingCarDarkRed : FlyingCarRed 10794
 	}
 }
 
-actor FlyingCarBlue : FlyingCarRed 10795
+Actor FlyingCarBlue : FlyingCarRed 10795
 {
 	//$Title "Flying car - Blue"
 
@@ -2620,7 +2620,7 @@ actor FlyingCarBlue : FlyingCarRed 10795
 	}
 }
 
-actor FlyingCarGreen : FlyingCarRed 10797
+Actor FlyingCarGreen : FlyingCarRed 10797
 {
 	//$Title "Flying car - Green"
 
@@ -2632,7 +2632,7 @@ actor FlyingCarGreen : FlyingCarRed 10797
 	}
 }
 
-actor FlyingCarDirtyGreen : FlyingCarRed 10798
+Actor FlyingCarDirtyGreen : FlyingCarRed 10798
 {
 	//$Title "Flying car - Dirty green"
 
@@ -2644,7 +2644,7 @@ actor FlyingCarDirtyGreen : FlyingCarRed 10798
 	}
 }
 
-actor FlyingCarOrange : FlyingCarRed 10799
+Actor FlyingCarOrange : FlyingCarRed 10799
 {
 	//$Title "Flying car - Orange"
 
@@ -2656,7 +2656,7 @@ actor FlyingCarOrange : FlyingCarRed 10799
 	}
 }
 
-actor FlyingCarPink : FlyingCarRed 10800
+Actor FlyingCarPink : FlyingCarRed 10800
 {
 	//$Title "Flying car - Pink"
 
@@ -2668,7 +2668,7 @@ actor FlyingCarPink : FlyingCarRed 10800
 	}
 }
 
-actor FlyingCarBrown : FlyingCarRed 10801
+Actor FlyingCarBrown : FlyingCarRed 10801
 {
 	//$Title "Flying car - Brown"
 
@@ -2680,7 +2680,7 @@ actor FlyingCarBrown : FlyingCarRed 10801
 	}
 }
 
-actor FlyingCopOff 10802
+Actor FlyingCopOff 10802
 {
 	//$Category Voxel Vehicles Pack - Misc.
 	//$Title "Flying cop - Off"
@@ -2702,7 +2702,7 @@ actor FlyingCopOff 10802
 	}
 }
 
-actor FlyingCopOn : FlyingCopOff 10803
+Actor FlyingCopOn : FlyingCopOff 10803
 {
 	//$Title "Flying cop - On"
 
@@ -2714,7 +2714,7 @@ actor FlyingCopOn : FlyingCopOff 10803
 	}
 }
 
-actor FlyingBatmobile : FlyingCarRed 10796
+Actor FlyingBatmobile : FlyingCarRed 10796
 {
 	//$Category BatMod/Vehicles
 	//$Title "Flying Batmobile"
@@ -2727,7 +2727,7 @@ actor FlyingBatmobile : FlyingCarRed 10796
 	}
 }
 
-/*actor BatmobileBack : 60sCarRed 10804
+/*Actor BatmobileBack : 60sCarRed 10804
 {
 	
 	//$Title "Batmobile Back"
@@ -2738,7 +2738,7 @@ actor FlyingBatmobile : FlyingCarRed 10796
 		Stop
 	}
 }
-actor BatmobileFront : 60sCarRed 10805
+Actor BatmobileFront : 60sCarRed 10805
 {
 	
 	//$Title "Batmobile Front"
