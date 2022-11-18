@@ -1,38 +1,40 @@
+clearEpisodes
+
 gameinfo
 {
 	AddEventHandlers = "DashHandler", "GrapplingHookHandler", "SpeedoMeterHandler", "WallSlideHandler"
-	//NormForwardMove = 0x32, 0x32	//Walk speed is modulated through
-	//NormSideMove = 0x32, 0x32		//CVar in the menu options
-	PlayerClasses = "Batman" 		//, "BatCarPlayer", "GreenArrow"
+	
+	PlayerClasses = "Batman"
+	
 	NoRandomPlayerClass = true
+	
+	QuitMessages = "$BATMSG1", "$BATMSG2", "$BATMSG3", "$BATMSG4", "$BATMSG5", "$BATMSG6", "$BATMSG7", "$BATMSG8", "$BATMSG9", "$BATMSG10", "$BATMSG11", "$BATMSG12", "$BATMSG13", "$BATMSG14"
 }
+
 defaultmap
 {
 	sky1 = "CITYSCAP"
 }
-clearEpisodes
+
 episode map01
 {
    name = "Rogue City"
    key = "R"
 }
+
 episode tutorial
 {
    name = "Tutorial"
    key = "T"
 }
+
 map C1M1 "Level1"
 {
 	sky1 = "DOCKSCAP"
 	MUSIC = "D_RUNNIN"
 	cluster = 5
 }
-/*map MAP01 "Gotham City"
-{
-	sky1 = "CITYSCAP"
-	MUSIC = "D_RUNNIN"
-}
-*/
+
 map TUTORIAL "Tutorial"
 {
 	sky1 = "DOCKSCAP"
@@ -40,6 +42,7 @@ map TUTORIAL "Tutorial"
 	Next = "MAP01"
 	cluster = 5
 }
+
 map MAP01 "Shipping Yard"
 {
 	NOINFIGHTING
@@ -48,6 +51,7 @@ map MAP01 "Shipping Yard"
 	Next = "MAP02"
 	cluster = 5
 }
+
 map MAP02 "Sewer"
 {
 	NOINFIGHTING
@@ -56,6 +60,7 @@ map MAP02 "Sewer"
 	Next = "MAP03"
 	cluster = 6
 }
+
 map MAP03 "Arkham Asylum"
 {
 	NOINFIGHTING
@@ -64,6 +69,7 @@ map MAP03 "Arkham Asylum"
 	Next = "MAP04"
 	cluster = 6
 }
+
 map MAP04 "Mad Hatter's Lair"
 {
 	NOINFIGHTING
@@ -74,6 +80,7 @@ map MAP04 "Mad Hatter's Lair"
 	cluster = 7
 	//SpecialAction = "MyMonster", "Exit_Normal"
 }
+
 map MAP05 "Apprehend the Mad Hatter"
 {
 	NOINFIGHTING
@@ -84,6 +91,7 @@ map MAP05 "Apprehend the Mad Hatter"
 	Next = "CITYMAP"
 	cluster = 8
 }
+
 map CITYMAP "Restore order in West Gotham"
 {
 	NOINFIGHTING
@@ -95,6 +103,7 @@ map CITYMAP "Restore order in West Gotham"
 	SecretNext = "MAP08"
 	cluster = 9
 }
+
 map MAP06 "Track down The Joker"
 {
 	NOINFIGHTING
@@ -105,6 +114,7 @@ map MAP06 "Track down The Joker"
 	Lightning
 	cluster = 9
 }
+
 map MAP07 "Apprehend the Joker"//will change this map number since it is the last level
 {
 	NOINFIGHTING
@@ -114,6 +124,7 @@ map MAP07 "Apprehend the Joker"//will change this map number since it is the las
 	Lightning
 	cluster = 9
 }
+
 map MAP08 "Sanctuary"
 {
 	NOINFIGHTING
@@ -123,13 +134,13 @@ map MAP08 "Sanctuary"
 	Next = "MAP06"
 	cluster = 9
 }
-//CATHEDRL.ogg
-//UNDRGNES.ogg
+
 map MAP10 "Joker's Funhouse"
 {
 	sky1 = "CITYSCAP"
 	MUSIC = "FUNHOU"
 }
+
 map MAP11 "Tower"
 {
 	sky1 = "CITYSCAP"
@@ -139,6 +150,8 @@ map MAP11 "Tower"
 	SecretNext = "MAP08"
 	cluster = 9
 }
+
+//SKILLS
 skill baby
 {
 	AutoUseHealth
@@ -183,13 +196,15 @@ skill nightmare
 	FastMonsters
 	DisableCheats
 	Aggressiveness = 0.5
-	//RespawnTime = 12
+	//ReSpawnTime = 12
 	SpawnFilter = Nightmare
 	Name = "Knightfall"
 	Key = "k"
 	MustConfirm
 	Key = "n"
 }
+
+//INTERMISSIONS
 Intermission Inter_Cast
 {
 	Image
@@ -199,6 +214,7 @@ Intermission Inter_Cast
 	}
 	Link = BatmanEndSequence
 }
+
 Intermission Inter_VillainRoll
 {
 	Image
@@ -295,6 +311,7 @@ Intermission Doom2Cast
 	}
 	GotoTitle {}
 }
+
 intermission BatmanEndSequence //End Sequence
 {
 Fader
@@ -728,4 +745,23 @@ Fader
 		Time = 5
 	}
 	GotoTitle {}
+}
+
+DoomEdNums
+{
+	500 = "HarleyQuinn"
+	501 = "PoisonIvy"
+	614 = "RunningCar"
+	777 = "JokerGoonCarAgressive"
+	778 = "JokerGoonCar"
+	6745 = "Ninja"
+	10492 = "RiddleDoll"
+	10493 = "RiddleHint"
+	10804 = "BatCar"
+	15555 = "RainSpawner"
+}
+
+SpawnNums
+{
+	11 = "BatCarSpeed"
 }

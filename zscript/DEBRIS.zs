@@ -20,45 +20,52 @@
  * SOFTWARE.
 **/
 
-ACTOR Debris_Base
+Class Debris_Base : Actor
 {
-	Radius 1
-	Height 1
-	Mass 1
-	Scale 0.65
-	Projectile
-	-ACTIVATEIMPACT
-	-ACTIVATEPCROSS
-	-NOGRAVITY
-	+FORCEXYBILLBOARD
-	+RANDOMIZE
-	+ROLLCENTER
-	+ROLLSPRITE
-	BounceCount 3
-	BounceFactor 0.7
-	BounceType "Doom"
-	WallBounceFactor 0.7
-	Gravity 0.3
+	Default
+	{
+		Radius 1;
+		Height 1;
+		Mass 1;
+		Scale 0.65;
+		Projectile;
+		-ACTIVATEIMPACT
+		-ACTIVATEPCROSS
+		-NOGRAVITY
+		+FORCEXYBILLBOARD
+		+RANDOMIZE
+		+ROLLCENTER
+		+ROLLSPRITE
+		BounceCount 3;
+		BounceFactor 0.7;
+		BounceType "Doom";
+		WallBounceFactor 0.7;
+		Gravity 0.3;
+	}
 }
 
-ACTOR Trashcan_Lid : Debris_Base
+Class Trashcan_Lid : Debris_Base
 {
+	Default
+	{
 	-FLATSPRITE
-	BounceCount 2
-	BounceFactor 0.8
-	WallBounceFactor 0.8
-	Gravity 0.5
-	BounceSound "METLDBRS"
+	BounceCount 2;
+	BounceFactor 0.8;
+	WallBounceFactor 0.8;
+	Gravity 0.5;
+	BounceSound "METLDBRS";
+	}
+	
 	States
 	{
 	Spawn:
-		TBIN H 1 A_SetRoll(roll+random(15,30), SPF_INTERPOLATE)
-		Loop
+		TBIN H 1 A_SetRoll(roll+random(15,30), SPF_INTERPOLATE);
+		Loop;
 	Death:
 		TBIN H 0 {A_SetRoll(0); bRollCenter = FALSE; bRollSprite = FALSE; bBounceOnActors = FALSE; bFlatSprite = TRUE;}
-		"####" H 1 A_SetTics(35*5)
+		"####" H 1 A_SetTics(35*5);
 	DeathWait:
-		"####" "#" 1 A_FadeOut(0.1)
-		Wait
+		"####" "#" 1 A_FadeOut(0.1);
+		Wait;
 	}
 }

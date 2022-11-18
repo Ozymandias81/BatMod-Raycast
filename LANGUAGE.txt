@@ -23,23 +23,67 @@ KILLTOTAL = "Convicts";
 SECRETTOTAL = "Riddles";
 TREASURETOTAL = "Hostages";
 
-// Quit Doom 1 messages
-QUITMSG1 = "What's the matter Batman? Scared?";
-QUITMSG2 = "Where are you Batman? Afraid to show your face?";
-QUITMSG3 = "Come out you coward!";
-QUITMSG4 = "Thomas and Martha Wayne would be dissapointed in you.";
-QUITMSG5 = "Batman, don't leave those civilians to die!";
-QUITMSG6 = "Run, hide, I'll find you, and beat the living crap outta ya.";
-QUITMSG7 = "It's ok to give up. I'm sure the hostages won't mind";
+//Pickups
+PK_BATPOW = "Atomic batteries to power. Turbines to speed.";
+PK_RIDDLE = "Riddle Doll!!!";
 
-// Quit Doom II messages
-QUITMSG8 = "So you admit that I, the Riddler, am better than you?";
-QUITMSG9 = "Chicken man, or Batman!";
-QUITMSG10 = "Don't go all this way to give up now master bruce.";
-QUITMSG11 = "I'll be waiting here for you bats!";
-QUITMSG12 = "You know, I thought you'd last longer.";
-QUITMSG13 = "Who's going to take care of the city now? Robin?";
-QUITMSG14 = "As the symbol of hope fades, so too will law and order.";
+//Obituaries
+OB_2FACE = "%o was on the wrong side of fate.";
+OB_2FACT = "%o was killed by a Two-Face Thug.";
+OB_BANE = "%o was broken by Bane.";
+OB_BGUAR = "%o was killed by a Bodyguard.";
+OB_BMASK = "%o was blown up by Black Mask.";
+OB_CALCU = "%o death was the answer to the Calculator's equation.";
+OB_CALEN = "It was a good day for Calendar Man.";
+OB_CLAYF = "%o was remodeled by ClayFace.";
+OB_CLAYM = "%o was killed by a Clay monstrosity.";
+OB_CLOKI = "%o dodged at the wrong time.";
+OB_DEADS = "%o was another clean kill for Deadshot.";
+OB_DETHE = "%o was killed by a Deathstroke Henchmen.";
+OB_ERASE = "%o was erased.";
+OB_EVDOC = "%o was killed by an Evil Doctor.";
+OB_FFLY = "%o was burned to death by FireFly.";
+OB_FREZE = "%o was frozen by Mr. Freeze.";
+OB_GRUND = "%o was zombiefied by Solomon Grundy.";
+OB_HATTG = "%o was killed by a Mad Hatter Henchmen.";
+OB_HOBO = "%o was killed by a Hobo.";
+OB_HUGOS = "%o was replaced by Hugo Strange.";
+OB_JOKEH = "%o was killed by a Joker Henchmen.";
+OB_JOKER = "The Joker got the last laugh.";
+OB_KMOTH = "%o was defeated by Killer Moth.";
+OB_KROC = "%o was food for Killer Croc.";
+OB_LOKUP = "%o was bested in battle by Lock Up.";
+OB_MADH = "%o was mentally broken by the Mad Hatter.";
+OB_NINJA = "%o was sliced by a Ninja.";
+OB_PENGN = "%o was fowled by the Penguin.";
+OB_PIVY = "%o was poisoned by Poison Ivy.";
+OB_PRISO = "%o was killed by a Prisoner.";
+OB_PRPYG = "%o became one of Professor Pyg's dollatrons.";
+OB_QUINN = "%o was somehow killed by Harley Quinn.";
+OB_RAHG = "%o was defeated by the great Ra's Al Ghoul.";
+OB_SCARE = "%o was scared to death by the Scarecrow!";
+OB_SLADE = "%o was assasinated by Slade.";
+OB_SOILD = "%o was killed by a hired Soilder.";
+OB_THEIF = "%o was killed by a Theif.";
+OB_THUG = "%o was killed by a Thug.";
+OB_THUG2 = "%o was killed by a Riddler Thug.";
+OB_ZSASZ = "%o was another tally on Zsasz's body.";
+
+// Quit Doom 1 messages
+BATMSG1 = "What's the matter Batman? Scared?";
+BATMSG2 = "Where are you Batman? Afraid to show your face?";
+BATMSG3 = "Come out you coward!";
+BATMSG4 = "Thomas and Martha Wayne would be dissapointed in you.";
+BATMSG5 = "Batman, don't leave those civilians to die!";
+BATMSG6 = "Run, hide, I'll find you, and beat the living crap outta ya.";
+BATMSG7 = "It's ok to give up. I'm sure the hostages won't mind";
+BATMSG8 = "So you admit that I, the Riddler, am better than you?";
+BATMSG9 = "Chicken man, or Batman!";
+BATMSG10 = "Don't go all this way to give up now master bruce.";
+BATMSG11 = "I'll be waiting here for you bats!";
+BATMSG12 = "You know, I thought you'd last longer.";
+BATMSG13 = "Who's going to take care of the city now? Robin?";
+BATMSG14 = "As the symbol of hope fades, so too will law and order.";
 
 C1TEXT =
 	"Bane and many of his men managed \n"
@@ -128,6 +172,8 @@ C6TEXT =
 	"CONGRATULATIONS, YOU'VE FOUND THE\n"
 	"SUPER SECRET LEVEL!  YOU'D BETTER\n"
 	"BLAZE THROUGH THIS ONE!\n";
+
+//NOAH
 NOAH_CORRECT = "Correct!";
 NOAH_INCORRECT = "Incorrect!";
 
