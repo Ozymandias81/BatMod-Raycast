@@ -3560,6 +3560,7 @@ Actor PoisonIvy 501
 	Height 56
 	Monster
 	Mass 100
+	scale 1.2
 	Speed 8
 	painchance 120
 	Health 1

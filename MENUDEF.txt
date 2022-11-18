@@ -54,6 +54,9 @@ ListMenu "Joker"
 	StaticTextCentered 160, 155, "The Joker"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Unknown Priority: Highest"
+	StaticPatch 286, 145, "CLWNa8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Harley"
 {
@@ -70,6 +73,9 @@ ListMenu "Bane"
 	StaticTextCentered 160, 155, "Bane"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Unknown Priority: Highest"
+	StaticPatch 286, 145, "sldra8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Twoface"
 {
@@ -78,6 +84,9 @@ ListMenu "Twoface"
 	StaticTextCentered 160, 155, "Two-face"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Harvey Dent Priority: High"
+	StaticPatch 286, 145, "thena8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Riddler"
 {
@@ -86,6 +95,9 @@ ListMenu "Riddler"
 	StaticTextCentered 160, 155, "The Riddler"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Edward Nigma Priority: High"
+	StaticPatch 286, 145, "rhena8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Penguin"
 {
@@ -94,6 +106,9 @@ ListMenu "Penguin"
 	StaticTextCentered 160, 155, "The Penguin"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Oswald Cobblepot Priority: High"
+	StaticPatch 286, 145, "garda8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Slade"
 {
@@ -102,6 +117,9 @@ ListMenu "Slade"
 	StaticTextCentered 160, 155, "Deathstroke"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Slade Wilson Priority: Highest"
+	StaticPatch 286, 145, "assaa8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Hugo"
 {
@@ -110,6 +128,9 @@ ListMenu "Hugo"
 	StaticTextCentered 160, 155, "Hugo Strange"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Doctor Strange Priority: High"
+	StaticPatch 286, 145, "docta8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Zsasz"
 {
@@ -142,6 +163,9 @@ ListMenu "Clayface"
 	StaticTextCentered 160, 155, "Clayface"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Basil Karlo Priority: High"
+	StaticPatch 286, 145, "cmona0"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Freeze"
 {
@@ -174,6 +198,9 @@ ListMenu "MadHatter"
 	StaticTextCentered 160, 155, "Mad Hatter"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Jervis Tetch Priority: Highest"
+	StaticPatch 286, 145, "madra8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "FireFly"
 {
@@ -190,6 +217,9 @@ ListMenu "Scarecrow"
 	StaticTextCentered 160, 155, "Scarecrow"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Jonathan Crane Priority: High"
+	StaticPatch 286, 145, "garda8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "BlackMask"
 {
@@ -198,6 +228,9 @@ ListMenu "BlackMask"
 	StaticTextCentered 160, 155, "Black Mask"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Roman Sionis Priority: Medium"
+	StaticPatch 286, 145, "garda8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "PYG"
 {
@@ -206,6 +239,9 @@ ListMenu "PYG"
 	StaticTextCentered 160, 155, "Professor Pyg"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Lazlo Valentin Priority: High"
+	StaticPatch 286, 145, "hoboa8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "ClockKing"
 {
@@ -214,6 +250,9 @@ ListMenu "ClockKing"
 	StaticTextCentered 160, 155, "Clock King"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Temple Fugate Priority: Low"
+	StaticPatch 286, 145, "thefa8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Ghul"
 {
@@ -222,6 +261,9 @@ ListMenu "Ghul"
 	StaticTextCentered 160, 155, "Ra's Al Ghoul"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Demon's Head Priority: High"
+	StaticPatch 286, 145, "ninja8"
+	Font "SMALLFONT", Red
+	StaticTextCentered 286, 150, "Henchmen"
 }
 ListMenu "Calculator"
 {

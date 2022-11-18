@@ -266,7 +266,7 @@ actor McDesk replaces LiveStick
 }
 
 
-actor DrinkCooler replaces NonSolidMeat2
+actor McTable replaces NonSolidMeat2
 {
 	radius 32
 	+SOLID
@@ -435,12 +435,17 @@ actor SewerLight replaces HeadOnAStick
 actor GrassTall replaces HeadsOnAStick
 {
 	radius 32
-	
+	speed 0
 	states
 	{
 		Spawn:
-			GRAB A -1
-			stop
+			GRAB ABABABCA 14 a_look
+			loop
+		See:
+			GRAB ABABABCA 14 
+			loop
+
+		
 	}
 }
 
