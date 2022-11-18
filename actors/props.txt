@@ -265,8 +265,7 @@ Actor McDesk replaces LiveStick
 	}
 }
 
-
-Actor DrinkCooler replaces NonSolidMeat2
+Actor McTable replaces NonSolidMeat2
 {
 	Radius 32
 	+SOLID
@@ -435,6 +434,7 @@ Actor SewerLight replaces HeadOnAStick
 Actor GrassTall replaces HeadsOnAStick
 {
 	Radius 32
+	Speed 0
 	
 	States
 	{
