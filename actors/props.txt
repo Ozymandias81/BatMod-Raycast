@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81
+ * Copyright (c) 2022 Derrick, Ozymandias81 (some snippets)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 **/
 
 //Decorations here
-Actor DangerousBarrel replaces ExplosiveBarrel
+ACTOR DangerousBarrel replaces ExplosiveBarrel
 {
 	Health 20
 	Radius 20
@@ -50,7 +50,7 @@ Actor DangerousBarrel replaces ExplosiveBarrel
 	}
 }
 
-Actor TrashCan replaces HangNoGuts
+ACTOR TrashCan replaces HangNoGuts
 {
 	//$Category BatMod/Props
 	//$Title Trashcan (destroyable)
@@ -88,14 +88,14 @@ Actor TrashCan replaces HangNoGuts
 	}
 }
 
-Actor Alarm  replaces HeartColumn
+actor Alarm  replaces HeartColumn
 {
-	//Radius 32
+	//radius 32
 	//+SOLID
-	States
+	states
 	{
 		Spawn:
-			ALRM A 5 NoDelay A_StartSound("alrmjail", CHAN_AUTO, CHANF_LOOP, 0.6, ATTN_STATIC)
+			ALRM A 5 NoDelay A_StartSound("alrmjail",0, 0.6, true, ATTN_STATIC)
 			Goto Siren
 		Siren:
 			ALRM AB 5
@@ -103,408 +103,414 @@ Actor Alarm  replaces HeartColumn
 	}
 }
 
-Actor Fountain replaces TechPillar
+actor Fountain replaces TechPillar
 {
-	Radius 32
+	radius 32
 	+SOLID
-	States
+	states
 	{
 		Spawn:
 			FNTN AB 7
-			Loop
+			loop
 	}
 }
-Actor PhoneBooth replaces TallRedColumn
+actor PhoneBooth replaces TallRedColumn
 {
-	Radius 32
+	radius 32
 	+SOLID
-	Height 64
-	States
+	height 64
+	states
 	{
 		Spawn:
 			CALA A -1
-			Stop
+			stop
 	}
 }
 
 
-Actor PhoneBoothBroken replaces TallGreenColumn
+actor PhoneBoothBroken replaces TallGreenColumn
 {
-	Radius 32
+	radius 32
 	+SOLID
-	Height 64
-	States
+	height 64
+	states
 	{
 		Spawn:
 			CALB A -1
-			Stop
+			stop
 	}
 }
 
 
-Actor Camera replaces Stalagtite
+actor Camera replaces Stalagtite
 {
-	Radius 32
+	radius 32
 	
-	States
+	states
 	{
 		Spawn:
 			CAM1 A -1
-			Stop
+			stop
 	}
 }
 
 
-Actor ToySoilder replaces stalagmite
+actor ToySoilder replaces stalagmite
 {
-	Radius 8
+	radius 8
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			OLOV B -1
-			Stop
+			stop
 	}
 }
 
-Actor SubwayColumn replaces ShortGreenColumn
+actor SubwayColumn replaces ShortGreenColumn
 {
-	Radius 16
+	radius 16
 	+SOLID
-	Height 64
-	States
+	height 64
+	states
 	{
 		Spawn:
 			COL1 A -1
-			Stop
+			stop
 	}
 }
 
 
-Actor ComputerDesk replaces SmallBloodPool
+actor ComputerDesk replaces SmallBloodPool
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			COMP A -1
-			Stop
+			stop
 	}
 }
 
 
-Actor StreetLightOn replaces Meat2
+actor StreetLightOn replaces Meat2
 {
-	Radius 32
+	radius 32
 	+SOLID
-	Scale 1.1
-	States
+	scale 1.1
+	states
 	{
 		Spawn:
 			FONA A -1
-			Stop
+			stop
 	}
 }
 
 
-Actor CaveColumn replaces NonSolidTwitch
+actor CaveColumn replaces NonSolidTwitch
 {
-	Radius 32
+	radius 32
 	+SOLID
-	//+SpawnCEILING
-	States
+	//+SPAWNCEILING
+	states
 	{
 		Spawn:
 			STLC a -1
-			Stop
+			stop
 	}
 }
 
 
-Actor WheelChair replaces Meat4
+actor WheelChair replaces Meat4
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			MADC A -1
-			Stop
+			stop
 	}
 }
 
 
-Actor DeadEndSign replaces Meat5
+actor DeadEndSign replaces Meat5
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			DEND A -1
-			Stop
+			stop
 	}
 }
 
 
-Actor McDesk replaces LiveStick
+actor McDesk replaces LiveStick
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			DESK A -1
-			Stop
+			stop
 	}
 }
 
-Actor McTable replaces NonSolidMeat2
+
+actor McTable replaces NonSolidMeat2
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			DRNK A -1
-			Stop
+			stop
 	}
 }
 
-Actor StreetLightFallen replaces NonSolidMeat3
+actor StreetLightFallen replaces NonSolidMeat3
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			FONB A -1
-			Stop
+			stop
 	}
 }
 
-Actor StreetLightBroken replaces NonSolidMeat4
+actor StreetLightBroken replaces NonSolidMeat4
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			FOND A -1
-			Stop
+			stop
 	}
 }
 
-Actor StreetLightTotalLoss replaces NonSolidMeat5
+actor StreetLightTotalLoss replaces NonSolidMeat5
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			FONG A -1
-			Stop
+			stop
 	}
 }
 
-Actor StreetLight 
+actor StreetLight 
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			FONR A -1
-			Stop
+			stop
 	}
 }
 
-Actor TrafficLight replaces FloatingSkull
+actor TrafficLight replaces FloatingSkull
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
-			TRAF ABC 35
-			Stop
+			TRAF BA 35
+			TRAF C  16 //yellow light
+			loop
 	}
 }
 
-Actor GreenTreeFallen replaces GibbedMarine
+actor GreenTreeFallen replaces GibbedMarine
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			FTRE A -1
-			Stop
+			stop
 	}
 }
-Actor BatKnight replaces WhiteParticleFountain
+actor BatKnight replaces WhiteParticleFountain
 {
-	Radius 16
+	radius 16
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			NEEE A -1
-			Stop
+			stop
 	}
 }
 
-Actor SkullTorch replaces YellowParticleFountain
+actor SkullTorch replaces YellowParticleFountain
 {
-	Radius 16
+	radius 16
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
-			skut abcd 3 Bright
-			Loop
+			skut abcd 3 BRIGHT
+			loop
 	}
 }
-Actor JokerTorch replaces PurpleParticleFountain
+actor JokerTorch replaces PurpleParticleFountain
 {
-	Radius 16
+	radius 16
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
-			jlit abcd 3 Bright
-			Loop
+			jlit abcd 3 BRIGHT
+			loop
 	}
 }
-Actor OneDirectionSign replaces GibbedMarineExtra
+actor OneDirectionSign replaces GibbedMarineExtra
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			FWRD A -1
-			Stop
+			stop
 	}
 }
 
-Actor GreenTrashBin replaces Gibs
+actor GreenTrashBin replaces Gibs
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			GBIN A -1
-			Stop
+			stop
 	}
 }
 
-Actor SewerLight replaces HeadOnAStick
+actor SewerLight replaces HeadOnAStick
 {
-	Radius 32
+	radius 32
 	//+SOLID
 	
-	States
+	states
 	{
 		Spawn:
-			SBUL A -1 Bright 
-			Stop
+			SBUL A -1 bright 
+			stop
 	}
 }
 
-Actor GrassTall replaces HeadsOnAStick
+actor GrassTall replaces HeadsOnAStick
 {
-	Radius 32
-	Speed 0
-	
-	States
+	radius 32
+	speed 0
+	states
 	{
 		Spawn:
-			GRAB A -1
-			Stop
+			GRAB ABABABCA 14 a_look
+			loop
+		See:
+			GRAB ABABABCA 14 
+			loop
+
+		
 	}
 }
 
-Actor GreenTube replaces HangBNoBrain
+actor GreenTube replaces HangBNoBrain
 {
-	Radius 8
+	radius 8
 	+SOLID
 	
-	Height 64
-	States
+	HEIGHT 64
+	states
 	{
 		Spawn:
-			tube ABC 6 Bright
-			Loop
+			tube ABC 6 bright
+			loop
 	}
 }
 
-Actor HydrantBroken replaces HangTLookingDown
+actor HydrantBroken replaces HangTLookingDown
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			HYDB A -1
-			Stop
+			stop
 	}
 }
 
-Actor Hydrant replaces HangTLookingUp
+actor Hydrant replaces HangTLookingUp
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			HYDR A -1
-			Stop
+			stop
 	}
 }
 
-Actor Manequinn replaces HangTNoBrain
+actor Manequinn replaces HangTNoBrain
 {
-	Radius 32
+	radius 32
 	
-	States
+	states
 	{
 		Spawn:
 			MANQ A -1
-			Stop
+			stop
 	}
 }
 
-Actor McRegister replaces HangTSkull
+actor McRegister replaces HangTSkull
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
-			MACD A 5 NoDelay A_StartSound("alrmstor", CHAN_AUTO, CHANF_LOOP, 0.6, ATTN_STATIC)
+			MACD A 5 NoDelay A_StartSound("alrmstor",0, 0.6, true, ATTN_STATIC)
 			Goto Siren
 		Siren:
 			MACD A 5
@@ -512,7 +518,9 @@ Actor McRegister replaces HangTSkull
 	}
 }
 
-Actor ShoppingCart replaces ColonGibs
+
+
+actor ShoppingCart replaces ColonGibs
 {
 	Health 10
 	Radius 20
@@ -524,7 +532,7 @@ Actor ShoppingCart replaces ColonGibs
 	+PUSHABLE
 	+SHOOTABLE
 	+SOLID
-	DropItem "Healthbonus"
+	DropItem "healthbonus"
 	DeathSound "trashbreak"	
 	States
 	{
@@ -541,13 +549,13 @@ Actor ShoppingCart replaces ColonGibs
 		Stop
 	}
 }
-Actor BatSoda : Health replaces HealthBonus
+ACTOR BatSoda : Health replaces healthBonus
 {
   +COUNTITEM
   +INVENTORY.ALWAYSPICKUP
   Inventory.Amount 3
   Inventory.MaxAmount 250
-  Inventory.PickupMessage "Drank a bat soda" // "Picked up a Health bonus."
+  Inventory.PickupMessage "Drank a bat soda" // "Picked up a health bonus."
   States
   {
   Spawn:
@@ -555,7 +563,7 @@ Actor BatSoda : Health replaces HealthBonus
     Loop
   }
 }
-Actor BatPopcorn : Medikit replaces Medikit
+ACTOR BatPopcorn : Medikit replaces Medikit
 {
   Inventory.Amount 25
   Inventory.PickupMessage "You ate some bat popcorn." // "Picked up a medikit."
@@ -567,7 +575,7 @@ Actor BatPopcorn : Medikit replaces Medikit
     Stop
   }
 }
-Actor BatMilk : Stimpack Replaces Stimpack
+ACTOR BatMilk : Stimpack Replaces Stimpack
 {
   Inventory.Amount 10
   Inventory.PickupMessage "Even Batman needs his milk." // "Picked up a stimpack."
@@ -578,662 +586,662 @@ Actor BatMilk : Stimpack Replaces Stimpack
     Stop
   }
 }
-Actor BlueKey : CustomInventory Replaces BlueCard
+actor BlueKey : CustomInventory Replaces BlueCard
 {
   Inventory.PickupMessage "Picked up a blue key."
   Inventory.PickupSound "misc/p_pkup"
   -COUNTITEM
-  States
+  states
   {
   Spawn:
-    BKEY A -1 Bright
-    Stop
+    BKEY A -1 BRIGHT
+    stop
   Pickup:
     TNT1 A 0 A_GiveInventory ("BlueCard")
-    Stop
+    stop
   }
 }
 
-Actor RedKey : CustomInventory Replaces RedCard
+actor RedKey : CustomInventory Replaces RedCard
 {
 Inventory.PickupMessage "Picked up a red key."
   Inventory.PickupSound "misc/p_pkup"
   -COUNTITEM
-  States
+  states
   {
   Spawn:
-    RKEY A -1 Bright
-    Stop
+    RKEY A -1 BRIGHT
+    stop
   Pickup:
     TNT1 A 0 A_GiveInventory ("RedCard")
-    Stop
+    stop
   }
 }
-Actor YellowKey : CustomInventory Replaces YellowCard
+actor YellowKey : CustomInventory Replaces YellowCard
 {
 Inventory.PickupMessage "Picked up a yellow key."
   Inventory.PickupSound "misc/p_pkup"
   -COUNTITEM
-  States
+  states
   {
   Spawn:
-    YKEY A -1 Bright
-    Stop
+    YKEY A -1 BRIGHT
+    stop
   Pickup:
     TNT1 A 0 A_GiveInventory ("YellowCard")
-    Stop
+    stop
   }
 }
-Actor GreenKey : CustomInventory Replaces YellowSkull
+actor GreenKey : CustomInventory Replaces YellowSkull
 {
 Inventory.PickupMessage "Picked up a green key."
   Inventory.PickupSound "misc/p_pkup"
   -COUNTITEM
-  States
+  states
   {
   Spawn:
-    YSKU A -1 Bright
-    Stop
+    YSKU A -1 BRIGHT
+    stop
   Pickup:
     TNT1 A 0 A_GiveInventory ("YellowSkull")
-    Stop
+    stop
   }
 }
 
-Actor SewerColumnMossy replaces BrainStem
+actor SewerColumnMossy replaces BrainStem
 {
-	Radius 32
+	radius 32
 	+SOLID
-	Height 64
-	States
+	height 64
+	states
 	{
 		Spawn:
 			MCOL A -1
-			Stop
+			stop
 	}
 }
 
-Actor CrossingSign replaces BloodyTwitch
+actor CrossingSign replaces BloodyTwitch
 {
-	Radius 32
+	radius 32
 	
-	States
+	states
 	{
 		Spawn:
 			CROS A -1
-			Stop
+			stop
 	}
 }
 
-Actor SurgeryTable replaces DeadStick
+actor SurgeryTable replaces DeadStick
 {
-	Radius 32
+	radius 32
 	
-	States
+	states
 	{
 		Spawn:
 			SURG A -1
-			Stop
+			stop
 	}
 }
 
-Actor GreenLamp replaces DeadZombieman
+actor GreenLamp replaces DeadZombieman
 {
-	Radius 32
+	radius 32
 	-solid
-	States
+	states
 	{
 		Spawn:
 			LAMG A -1
-			Stop
+			stop
 	}
 }
 
-Actor SonderLampOn replaces DeadShotgunguy
+actor SonderLampOn replaces DeadShotgunguy
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SLIT A -1
-			Stop
+			stop
 	}
 }
 
-Actor OilBarrel replaces DeadMarine
+actor OilBarrel replaces DeadMarine
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			OILB A -1
-			Stop
+			stop
 	}
 }
 
-Actor Oven replaces DeadLostsoul
+actor Oven replaces DeadLostsoul
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			OVEN A -1
-			Stop
+			stop
 	}
 }
 
-Actor Pebble1 replaces DeadDoomImp
+actor Pebble1 replaces DeadDoomImp
 {
-	Radius 32
+	radius 32
 	//+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			PEB2 A -1
-			Stop
+			stop
 	}
 }
 
-Actor BigBomb replaces DeadDemon
+actor BigBomb replaces DeadDemon
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			BOMB A -1
-			Stop
+			stop
 	}
 }
 
-Actor ToiletDirty replaces DeadCacodemon
+actor ToiletDirty replaces DeadCacodemon
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			PISS A -1
-			Stop
+			stop
 	}
 }
 
-Actor Money replaces EvilEye
+actor Money replaces EvilEye
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			PLNT A -1
-			Stop
+			stop
 	}
 }
 
-Actor PoolTable replaces RedTorch
+actor PoolTable replaces RedTorch
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			POOL A -1
-			Stop
+			stop
 	}
 }
 
-Actor PotTall replaces GreenTorch
+actor PotTall replaces GreenTorch
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			POT1 A -1
-			Stop
+			stop
 	}
 }
 
-Actor PotGrey replaces BlueTorch
+actor PotGrey replaces BlueTorch
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			POT2 A -1
-			Stop
+			stop
 	}
 }
 
-Actor PotDry replaces ShortRedTorch
+actor PotDry replaces ShortRedTorch
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			POT3 A -1
-			Stop
+			stop
 	}
 }
 
-Actor CorpseSkel replaces ShortGreenTorch
+actor CorpseSkel replaces ShortGreenTorch
 {
-	Radius 32
+	radius 32
 	//+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			POT4 A -1
-			Stop
+			stop
 	}
 }
 
-Actor McTrays replaces ShortBlueTorch
+actor McTrays replaces ShortBlueTorch
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			PUSH A -1
-			Stop
+			stop
 	}
 }
 
-Actor DeadCop replaces MegaSphere
+actor DeadCop replaces MegaSphere
 {
 	
-	Radius 32
-	States
+	radius 32
+	states
 	{
 		Spawn:
 			COPP D -1
-			Stop
+			stop
 	}
 }
 
-Actor FireBigDroppedPermanent replaces ShortRedColumn
+actor FireBigDroppedPermanent replaces ShortRedColumn
 {
-Radius 32
-Damage 0
+radius 32
+damage 0
 Height 8
-Projectile
--NOGRAVITY
-Speed 8
+projectile
+-nogravity
+speed 8
 //
-	States
+	states
 	{
 		Spawn:
 			FFLK ABC 1
-			Loop
+			loop
 		Death:
-			FIRB A 7 Bright A_StartSound("fire/flameLoop")
-			FIRB BCABCABCABCABCABCABCABCABC 7 Bright A_Explode(2,32,0,0,0,0,0,"BulletPuff","FireDamage") //requires fitting new puff
-			FIRB A 1 Bright A_SpawnItem("FireSmallDropped",0,3)
-			Loop
+			FIRB A 7 BRIGHT A_StartSound("fire/flameloop")
+			FIRB BCABCABCABCABCABCABCABCABC 7 BRIGHT A_Explode(2,32,0,0,0,0,0,"BulletPuff","FireDamage") //requires fitting new puff
+			FIRB A 1 BRIGHT A_SpawnItem("FireSmallDropped",0,3)
+			loop
 	}
 }
 
-Actor StreetLightTallOff replaces HangingCorpse
+actor StreetLightTallOff replaces HangingCorpse
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			RLIT A -1
-			Stop
+			stop
 	}
 }
 
-Actor SmallBin 
+actor SmallBin 
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SBIN A -1
-			Stop
+			stop
 	}
 }
 
-Actor SewerColumn
+actor SewerColumn
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SCOL A -1
-			Stop
+			stop
 	}
 }
 
-Actor Scrap
+actor Scrap
 {
-	Radius 32
+	radius 32
 	
-	States
+	states
 	{
 		Spawn:
 			SCRP A -1
-			Stop
+			stop
 	}
 }
 
-Actor WoodenCloset replaces candleStick
+actor WoodenCloset replaces candleStick
 {
-	Radius 32
+	radius 32
 	+SOLID
-	Height 64
-	States
+	height 64
+	states
 	{
 		Spawn:
 			SHKF A -1
-			Stop
+			stop
 	}
 }
 
-Actor Shelves replaces SkullColumn
+actor Shelves replaces SkullColumn
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SHLV A -1
-			Stop
+			stop
 	}
 }
 //BlackParticleFountain
-Actor SubwayTicket replaces BlackParticleFountain
+actor SubwayTicket replaces BlackParticleFountain
 {
-	Radius 8
+	radius 8
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			STKT A -1
-			Stop
+			stop
 	}
 }
 
-Actor SinkNew replaces column
+actor SinkNew replaces column
 {
-	Radius 8
+	radius 8
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SINK A -1
-			Stop
+			stop
 	}
 }
 
-Actor ChairOffice replaces techLamp
+actor ChairOffice replaces techLamp
 {
-	Radius 8
+	radius 8
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SITT A -1
-			Stop
+			stop
 	}
 }
 
-Actor SnookerTable
+actor SnookerTable
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SNOO A -1
-			Stop
+			stop
 	}
 }
 
-Actor Sofa replaces techLamp2
+actor Sofa replaces techLamp2
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SOFA A -1
-			Stop
+			stop
 	}
 }
 
-Actor SewerCeilingPipe
+actor SewerCeilingPipe
 {
-	Radius 32
+	radius 32
 	
-	States
+	states
 	{
 		Spawn:
 			SPIP A -1
-			Stop
+			stop
 	}
 }
 
-Actor BatSuit
+actor BatSuit
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SUIT A -1
-			Stop
+			stop
 	}
 }
 
-Actor Table replaces torchTree
+actor Table replaces torchTree
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			TABL A -1
-			Stop
+			stop
 	}
 }
 
-Actor TeaTable replaces bigTree
+actor TeaTable replaces bigTree
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			TEAT A -1
-			Stop
+			stop
 	}
 }
 
-Actor TinBarrel
+actor TinBarrel
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			TINB A -1
-			Stop
+			stop
 	}
 }
 
-Actor Register2 replaces HeadCandles
+actor Register2 replaces HeadCandles
 {
-	Radius 32
+	radius 32
 	+SOLID
-	Height 32
-	States
+	height 32
+	states
 	{
 		Spawn:
 			MACD B -1
-			Stop
+			stop
 	}
 }
 
-Actor TVset replaces Candelabra
+actor TVset replaces Candelabra
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			TVBX A -1
-			Stop
+			stop
 	}
 }
 
-Actor WashingMachine replaces burningBarrel
+actor WashingMachine replaces burningBarrel
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			WASH A -1
-			Stop
+			stop
 	}
 }
-Actor Tree1 replaces MarineFist
+actor Tree1 replaces MarineFist
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			TREE A -1
-			Stop
+			stop
 	}
 }
-Actor Tree2 replaces MarineBerserk
+actor Tree2 replaces MarineBerserk
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			TREE B -1
-			Stop
+			stop
 	}
 }
-Actor Scarface replaces MarineChainsaw
+actor Scarface replaces MarineChainsaw
 {
-	Radius 32
+	radius 32
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			SFAC A -1
-			Stop
+			stop
 	}
 }
 
-Actor Nora replaces MarineShotgun
+actor Nora replaces MarineShotgun
 {
-	Radius 32
+	radius 32
 	+SOLID
-	Height 32
-	States
+	height 32
+	states
 	{
 		Spawn:
 			NORA A -1
-			Stop
+			stop
 	}
 }
 
-Actor Chamber replaces MarineSSG
+actor Chamber replaces MarineSSG
 {
-	Radius 32
+	radius 32
 	+SOLID
-	Height 32
-	States
+	height 32
+	states
 	{
 		Spawn:
 			CHAM A -1
-			Stop
+			stop
 	}
 }
-Actor BenchSpawner : RandomSpawner replaces MarinePistol
+actor BenchSpawner : RandomSpawner replaces MarinePistol
 {
 	DropItem "Bench"
 	DropItem "HoboBench"
-	States
+	states
 	{
 		Spawn:
 			HOBB A 0
-			Stop
+			stop
 	}
 }
-Actor Bench 
+actor Bench 
 {
-	Radius 32
-	Height 8
+	radius 32
+	height 8
 	+SOLID
 	
-	States
+	states
 	{
 		Spawn:
 			BNCH A -1
-			Stop
+			stop
 	}
 }
-Actor HoboBench 
+actor HoboBench 
 {
-	Radius 32
-	Height 8
+	radius 32
+	height 8
 	+SOLID
 	+Ambush
 	
-	States
+	states
 	{
 		Spawn:
 			HOBB A 3 A_Look
-			Loop
+			loop
 		See:
 			HOBB BC 15
 			HOBB D 1 A_CustomMissile("Hobo")
