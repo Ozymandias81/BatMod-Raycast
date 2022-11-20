@@ -338,11 +338,11 @@ Actor TrafficLight replaces FloatingSkull
 	States
 	{
 		Spawn:
-			TRAF B 200 A_AttachLight("stop","DynamicLight.PulseLight","red",64,32,0)//red 
+			TRAF B 200 A_AttachLight("stop","DynamicLight.PulseLight","red",32,16,0)//red 
 			TRAF B 1 A_RemoveLight("stop")//red 
-			TRAF A 140 A_AttachLight("go","DynamicLight.PulseLight","green",64,32,0)
+			TRAF A 140 A_AttachLight("go","DynamicLight.PulseLight","green",32,16,0)
 			TRAF A 1 A_RemoveLight("go") 
-			TRAF C 70 A_AttachLight("yield","DynamicLight.PulseLight","yellow",64,32,0)
+			TRAF C 70 A_AttachLight("yield","DynamicLight.PulseLight","yellow",32,16,0)
 			TRAF C 1 A_RemoveLight("yield") 
 			loop
 	}
