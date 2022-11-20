@@ -236,6 +236,7 @@ Actor Bola : Weapon
 	Weapon.AmmoType2 "BolaAmmo"
 	AttackSound "*fist"
 	//Scale 3
+	+NoAlert
 	+WEAPON.MELEEWEAPON
 	+WEAPON.NOAUTOAIM
 	States
@@ -254,13 +255,13 @@ Actor Bola : Weapon
 		BOLA A 1 A_Raise
 		Loop
 	Fire:
-		BOLA B 3 
+		BOLA B 3 A_AlertMonsters
 		BOLA C 3 A_FireCustomMissile ("bolaProjectile",0,1)
 		BOLA DEF 2 
 		BOLA A 2 A_ReFire
 		Goto Ready
 	AltFire:
-		BKIK A 3 
+		BKIK A 3
 		BKIK B 3
 		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
@@ -431,6 +432,7 @@ Actor TriBaterang : Weapon
 	Weapon.AmmoType "BaterangAmmo"
 	Weapon.AmmoType2 "BaterangAmmo"
 	//Scale 3
+	+NoAlert
 	+WEAPON.MELEEWEAPON
 	+WEAPON.NOAUTOAIM
 	//+WEAPON.NOAUTOSWITCH
@@ -667,6 +669,7 @@ Actor Tazer : Weapon Replaces PlasmaRifle
 	Weapon.AmmoType2 "Cell"
 	Weapon.AmmoUse2 1
 	+WEAPON.NOAUTOAIM
+	+NoAlert
 	Inventory.PickupMessage "You Got the tazer!"
 	//Tag "$TAG_PLASMARIFLE"
 	States
@@ -685,6 +688,7 @@ Actor Tazer : Weapon Replaces PlasmaRifle
 		TAZE A 1 A_Raise
 		Loop
 	Fire:
+		TAZE B 0 A_AlertMonsters
 		TAZE BC 4 A_FireCustomMissile("TazerPlasma")
 		//TAZE A 5
 		Goto Ready
@@ -810,6 +814,7 @@ Actor GasGun : Weapon
 	Weapon.ammouse2 1
 	Weapon.ammogive1 5
 	//+WEAPON.NOGRIN
+	+NoAlert
 	+WEAPON.NOAUTOFIRE
 	+WEAPON.NOAUTOAIM
 	 AttackSound "*fist"
@@ -830,7 +835,7 @@ Actor GasGun : Weapon
 			GASG A 1 A_WeaponReady
 			Loop
 		Fire:
-			GASG B 3 Bright
+			GASG B 3 Bright A_AlertMonsters
 			GASG C 3 A_FireCustomMissile("GasProj",0,1)
 			GASG D 5 
 			GASG E 5
