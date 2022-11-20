@@ -582,7 +582,7 @@ Actor ACSDropBatCar : CustomInventory
 	}
 }
 
-Actor BatCarPickup : PowerupGiver
+Actor BatCar : PowerupGiver
 {
 	Powerup.Type PowerVehicalPlayer
 	Powerup.Duration -3000
