@@ -1105,9 +1105,9 @@ Actor TinBarrel
 
 Actor Register2 replaces HeadCandles
 {
-	Radius 32
+	Radius 26
 	+SOLID
-	Height 32
+	Height 26
 	States
 	{
 		Spawn:
