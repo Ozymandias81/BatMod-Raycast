@@ -775,13 +775,21 @@ Actor ToiletDirty replaces DeadCacodemon
 Actor Money replaces EvilEye
 {
 	Radius 32
+	height 20
+	health 10
+	painchance 255
 	+SOLID
-	
+	+shootable
+	+NoBlood
+	+Buddha
 	States
 	{
 		Spawn:
-			PLNT A -1
-			Stop
+			PLNT A 1
+			loop
+		Pain.Firey:
+			PLNT BCBCBCBCBCBCBC 7 BRIGHT
+			goto Spawn
 	}
 }
 
