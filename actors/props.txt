@@ -463,15 +463,15 @@ Actor GreenTube replaces HangBNoBrain
 	}
 }
 
-Actor HydrantBroken replaces HangTLookingDown
+Actor litter replaces HangTLookingDown
 {
 	Radius 32
-	+SOLID
+	//+SOLID
 	
 	States
 	{
 		Spawn:
-			HYDB A -1
+			drug A -1
 			Stop
 	}
 }
