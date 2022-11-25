@@ -410,7 +410,7 @@ Actor OneDirectionSign replaces GibbedMarineExtra
 	}
 }
 
-Actor GreenTrashBin replaces Gibs
+/*Actor GreenTrashBin replaces Gibs
 {
 	Radius 32
 	+SOLID
@@ -419,6 +419,50 @@ Actor GreenTrashBin replaces Gibs
 	{
 		Spawn:
 			GBIN A -1
+			Stop
+	}
+}*/
+Actor TrashBinSpawner : RandomSpawner replaces Gibs
+{
+	DropItem "TrashBin"
+	DropItem "HoboTrashBin"
+	States
+	{
+		Spawn:
+			BINH B 0
+			Stop
+	}
+}
+Actor TrashBin
+{
+	Radius 32
+	Height 8
+	+SOLID
+	
+	States
+	{
+		Spawn:
+			BINH G -1
+			Stop
+	}
+}
+Actor HoboTrashBin
+{
+	Radius 32
+	Height 8
+	+SOLID
+	+Ambush
+	+LookAllAround
+	States
+	{
+		Spawn:
+			BINH A 20
+			BINH B 20 A_Look
+			Loop
+		See:
+			BINH BCDEF 8
+			BINH F 1 A_CustomMissile("Hobo")
+			BINH A -1
 			Stop
 	}
 }

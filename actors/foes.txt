@@ -559,7 +559,7 @@ Actor Prisoner replaces spectre
 
 Actor Convict replaces demon
 {
-	Health 5
+	Health 45
 	Radius 20
 	Height 56
 	Speed 10
@@ -589,7 +589,7 @@ Actor Convict replaces demon
 		CONV F 8 A_SargAttack
 		Goto See
 	Pain:
-		PRIS N 6 A_Pain
+		CONV G 6 A_Pain
 		Goto See
 	Pain.Electricity:
 		PRIS QRQRQRQRQR 3 Bright A_StartSound("Weapon/tazer")
