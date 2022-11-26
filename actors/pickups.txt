@@ -55,6 +55,46 @@ Actor DoomScanner : PowerupGiver
 
 Actor Batsphere : SoulSphere Replaces SoulSphere { -COUNTITEM }
 
+Actor BatSoda : Health replaces HealthBonus
+{
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.Amount 3
+	Inventory.MaxAmount 250
+	Inventory.PickupMessage "$PK_SODA"
+	States
+	{
+	Spawn:
+		BON1 ABCDCB 6
+		Loop
+	}
+}
+
+Actor BatPopcorn : Medikit replaces Medikit
+{
+	Inventory.Amount 25
+	Inventory.PickupMessage "$PK_CORN"
+	Health.LowMessage 25, "$PK_CORN2"
+	States
+	{
+	Spawn:
+		MEDI A -1
+		Stop
+	}
+}
+
+Actor BatMilk : Stimpack Replaces Stimpack
+{
+	Inventory.Amount 10
+	Inventory.PickupMessage "$PK_MILK"
+	States
+	{
+	Spawn:
+		STIM A -1
+		Stop
+	}
+}
+
 Actor Hostage : SwitchableDecoration replaces BlurSphere
 {
 	Radius 16//makes it only killable by explosions and specific types of Damage
@@ -306,6 +346,71 @@ Actor CopNoHat : SwitchableDecoration //replaces infrared
 		COPP CCCCCCCCCC 0 A_GiveToTarget("ArmorBonus", 1)//done this way because armor bonus are special
 		COPP C 1 A_GiveToTarget("Health", 10)
 		COPP C -1
+		Stop
+	}
+}
+
+//KEYS//
+Actor BlueKey : CustomInventory Replaces BlueCard
+{
+	Inventory.PickupMessage "$PK_BKEY"
+	Inventory.PickupSound "misc/p_pkup"
+	-COUNTITEM
+	States
+	{
+	Spawn:
+		BKEY A -1 Bright
+		Stop
+	Pickup:
+		TNT1 A 0 A_GiveInventory ("BlueCard")
+		Stop
+	}
+}
+
+Actor RedKey : CustomInventory Replaces RedCard
+{
+	Inventory.PickupMessage "$PK_RKEY"
+	Inventory.PickupSound "misc/p_pkup"
+	-COUNTITEM
+	States
+	{
+	Spawn:
+		RKEY A -1 Bright
+		Stop
+	Pickup:
+		TNT1 A 0 A_GiveInventory ("RedCard")
+		Stop
+	}
+}
+
+Actor YellowKey : CustomInventory Replaces YellowCard
+{
+	Inventory.PickupMessage "$PK_YKEY"
+	Inventory.PickupSound "misc/p_pkup"
+	-COUNTITEM
+	States
+	{
+	Spawn:
+		YKEY A -1 Bright
+		Stop
+	Pickup:
+		TNT1 A 0 A_GiveInventory ("YellowCard")
+		Stop
+	}
+}
+
+Actor GreenKey : CustomInventory Replaces YellowSkull
+{
+	Inventory.PickupMessage "$PK_GKEY"
+	Inventory.PickupSound "misc/p_pkup"
+	-COUNTITEM
+	States
+	{
+	Spawn:
+		YSKU A -1 Bright
+		Stop
+	Pickup:
+		TNT1 A 0 A_GiveInventory ("YellowSkull")
 		Stop
 	}
 }

@@ -385,6 +385,7 @@ Actor SkullTorch replaces YellowParticleFountain
 			Loop
 	}
 }
+
 Actor JokerTorch replaces PurpleParticleFountain
 {
 	Radius 16
@@ -397,6 +398,7 @@ Actor JokerTorch replaces PurpleParticleFountain
 			Loop
 	}
 }
+
 Actor OneDirectionSign replaces GibbedMarineExtra
 {
 	Radius 32
@@ -410,7 +412,8 @@ Actor OneDirectionSign replaces GibbedMarineExtra
 	}
 }
 
-/*Actor GreenTrashBin replaces Gibs
+/*
+Actor GreenTrashBin replaces Gibs
 {
 	Radius 32
 	+SOLID
@@ -421,7 +424,9 @@ Actor OneDirectionSign replaces GibbedMarineExtra
 			GBIN A -1
 			Stop
 	}
-}*/
+}
+*/
+
 Actor TrashBinSpawner : RandomSpawner replaces Gibs
 {
 	Radius 20
@@ -435,6 +440,7 @@ Actor TrashBinSpawner : RandomSpawner replaces Gibs
 			Stop
 	}
 }
+
 Actor TrashBin
 {
 	Radius 20
@@ -449,13 +455,14 @@ Actor TrashBin
 			Stop
 	}
 }
+
 Actor HoboTrashBin
 {
 	Radius 20
 	Height 42
 	Mass 100
 	+SOLID
-	+Ambush
+	+AMBUSH
 	//+LookAllAround
 	States
 	{
@@ -478,7 +485,6 @@ Actor HoboTrashBin
 Actor SewerLight replaces HeadOnAStick
 {
 	Radius 32
-	//+SOLID
 	
 	States
 	{
@@ -518,10 +524,9 @@ Actor GreenTube replaces HangBNoBrain
 	}
 }
 
-Actor litter replaces HangTLookingDown
+Actor Litter replaces HangTLookingDown
 {
 	Radius 32
-	//+SOLID
 	
 	States
 	{
@@ -600,104 +605,6 @@ Actor ShoppingCart replaces ColonGibs
 		GROC E -1 
 		Stop
 	}
-}
-Actor BatSoda : Health replaces HealthBonus
-{
-  +COUNTITEM
-  +INVENTORY.ALWAYSPICKUP
-  Inventory.Amount 3
-  Inventory.MaxAmount 250
-  Inventory.PickupMessage "Drank a bat soda" // "Picked up a Health bonus."
-  States
-  {
-  Spawn:
-    BON1 ABCDCB 6
-    Loop
-  }
-}
-Actor BatPopcorn : Medikit replaces Medikit
-{
-  Inventory.Amount 25
-  Inventory.PickupMessage "You ate some bat popcorn." // "Picked up a medikit."
-  Health.LowMessage 25, "Waynetech designed Popcorn is able to heal life threatning injuries." // "Picked up a medikit that you REALLY need!"
-  States
-  {
-  Spawn:
-    MEDI A -1
-    Stop
-  }
-}
-Actor BatMilk : Stimpack Replaces Stimpack
-{
-  Inventory.Amount 10
-  Inventory.PickupMessage "Even Batman needs his milk." // "Picked up a stimpack."
-  States
-  {
-  Spawn:
-    STIM A -1
-    Stop
-  }
-}
-Actor BlueKey : CustomInventory Replaces BlueCard
-{
-  Inventory.PickupMessage "Picked up a blue key."
-  Inventory.PickupSound "misc/p_pkup"
-  -COUNTITEM
-  States
-  {
-  Spawn:
-    BKEY A -1 Bright
-    Stop
-  Pickup:
-    TNT1 A 0 A_GiveInventory ("BlueCard")
-    Stop
-  }
-}
-
-Actor RedKey : CustomInventory Replaces RedCard
-{
-Inventory.PickupMessage "Picked up a red key."
-  Inventory.PickupSound "misc/p_pkup"
-  -COUNTITEM
-  States
-  {
-  Spawn:
-    RKEY A -1 Bright
-    Stop
-  Pickup:
-    TNT1 A 0 A_GiveInventory ("RedCard")
-    Stop
-  }
-}
-Actor YellowKey : CustomInventory Replaces YellowCard
-{
-Inventory.PickupMessage "Picked up a yellow key."
-  Inventory.PickupSound "misc/p_pkup"
-  -COUNTITEM
-  States
-  {
-  Spawn:
-    YKEY A -1 Bright
-    Stop
-  Pickup:
-    TNT1 A 0 A_GiveInventory ("YellowCard")
-    Stop
-  }
-}
-Actor GreenKey : CustomInventory Replaces YellowSkull
-{
-Inventory.PickupMessage "Picked up a green key."
-  Inventory.PickupSound "misc/p_pkup"
-  -COUNTITEM
-  States
-  {
-  Spawn:
-    YSKU A -1 Bright
-    Stop
-  Pickup:
-    TNT1 A 0 A_GiveInventory ("YellowSkull")
-    Stop
-  }
 }
 
 Actor SewerColumnMossy replaces BrainStem

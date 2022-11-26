@@ -25,7 +25,15 @@ TREASURETOTAL = "Hostages";
 
 //Pickups
 PK_BATPOW = "Atomic batteries to power. Turbines to speed.";
+PK_BKEY = "Picked up a Blue key.";
+PK_CORN = "You ate some bat popcorn.";
+PK_CORN2 = "WayneTech designed Popcorn is able to heal life threatning injuries.";
+PK_GKEY = "Picked up a Green key.";
+PK_MILK = "Even Batman needs his milk.";
 PK_RIDDLE = "Riddle Doll!!!";
+PK_RKEY = "Picked up a Red key.";
+PK_SODA = "Drank a bat soda.";
+PK_YKEY = "Picked up a Yellow key.";
 
 //Obituaries
 OB_2FACE = "%o was on the wrong side of fate.";
