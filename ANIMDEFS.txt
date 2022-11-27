@@ -35,6 +35,14 @@ switch IMAG_12
    off
    pic IMAG_12 tics 0
 
+switch FURN_30
+   on //sound glass/break
+   pic FURN_28 tics 0
+   //pic OVERLA13 tics 0
+   
+   off
+   pic FURN_30 tics 0
+
 texture mh0
     allowdecals
 	//RANDOM

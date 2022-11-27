@@ -269,7 +269,7 @@ Actor McTable replaces NonSolidMeat2
 {
 	Radius 32
 	+SOLID
-	
+	height 32
 	States
 	{
 		Spawn:
@@ -878,6 +878,19 @@ Actor StreetLightTallOff 51
 	{
 		Spawn:
 			RLIT A -1
+			Stop
+	}
+}
+Actor tallLight Replaces GreenParticleFountain
+{
+	Radius 12
+	height 130
+	+SOLID
+	
+	States
+	{
+		Spawn:
+			SLIT B -1 Bright
 			Stop
 	}
 }
