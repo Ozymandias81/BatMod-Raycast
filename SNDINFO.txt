@@ -168,6 +168,18 @@ MTDBRS4 MTDBRS4
 $random METLDBRS	{ MTDBRS1 MTDBRS2 MTDBRS3 MTDBRS4 }
 $limit	METLDBRS 1
 
+//Casino chips
+$random casino/chips { CHIP1 CHIP2 CHIP3 CHIP4 CHIP5 }
+CHIP1 CHIP1
+CHIP2 CHIP2
+CHIP3 CHIP3
+CHIP4 CHIP4
+CHIP5 CHIP5
+$limit	casino/chips 1
+
+CHIP6 CHIP6
+
+//gordon character
 gordon/Save			gorwarn
 $random bat/death		{ bat/death1  bat/death2  bat/death3  bat/death4  bat/death5}
 bat/death1			bded1
