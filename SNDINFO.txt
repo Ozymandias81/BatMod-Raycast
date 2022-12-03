@@ -111,6 +111,8 @@ mhat/see			mhatsee
 mhat/die			mhatdie
 pivy/see			pivysee
 pivy/die			pivydie
+moth/die			mothdie
+mbat/die			mbatdie
 frcf/de				frcfde
 frcf/ac				frcfac
 rico1				RICOCHE1	

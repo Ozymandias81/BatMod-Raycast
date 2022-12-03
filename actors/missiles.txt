@@ -403,8 +403,8 @@ Actor ScareRocket
 	States
 	{
 	Spawn:
+		FEAR A 1 Bright A_Tracer
 		FEAR A 1 Bright A_SpawnItemEx("WolfRocketSmoke", 0, 0, -40)
-		FEAR A 1 A_Tracer
 		Loop
 	Death:
 		FEAR BCD 4 A_Explode(16, 32, 1)

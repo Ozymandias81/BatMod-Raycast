@@ -2036,12 +2036,14 @@ Actor KillerMoth replaces BetaSkull
 	Monster
 	Mass 100
 	Speed 10
+	Tag "Killer Moth"
 	PainChance 170
 	Health 300
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
 	+NORADIUSDMG
+	DeathSound "moth/die"
 	AttackSound "weapon/shotgun"
 	Obituary "$OB_KMOTH"
 	States
@@ -2053,11 +2055,20 @@ Actor KillerMoth replaces BetaSkull
 		MOTH AABBCCDD 3 A_Chase
 		Loop
 	Missile:
+		MOTH E 0 A_jump(128, "BugSpray")
 		MOTH E 25 A_FaceTarget
 		MOTH F  0 A_StartSound("Weapon/chaingun")
 		MOTH FG  2 Bright A_CustomMissile("MonsterTracer", 32, 0, random(-2, 2), 1, random(-2, 2))//A_CPosAttack
 		MOTH F 1 A_CposRefire
-		Goto Missile+1
+		Goto Missile+2
+	BugSpray:
+		MOTH E 15 A_FaceTarget
+		MOTH L 5 Bright A_CustomMissile("GasProjAltFire",0,TRUE)
+		MOTH E 10 A_FaceTarget
+		MOTH L 5 Bright A_CustomMissile("GasProjAltFire",0,TRUE)
+		MOTH E 1 A_FaceTarget
+		MOTH L 5 Bright A_CustomMissile("GasProjAltFire",0,TRUE)
+		Goto See
 	Pain:
 		MOTH E 2
 		MOTH H 2 A_Pain
