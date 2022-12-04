@@ -1026,14 +1026,19 @@ Actor GasProjAltFire
   -BOUNCEONACTORS
   +EXPLODEONWATER
   +NOEXTREMEDEATH
-  -NOGRAVITY
-  BounceFActor 0.65
-  WallBounceFActor 0.7
-  //Bouncetype Hexen
-  BounceCount 8
+-NOGRAVITY
+  +RANDOMIZE
+  +DEHEXPLOSION
+  +GRENADETRAIL
+  BounceType "Doom"
+  Gravity 1.5
+  BounceCount 3
+  SeeSound "weapons/grenlf"
+  DeathSound "weapons/grenlx"
+  BounceSound "weapons/grbnce"
 	// Scale 2.0
-	SeeSound "missile/fire"
-	deathsound "weapons/gasbreak"
+	//SeeSound "missile/fire"
+	//deathsound "weapons/gasbreak"
 	Projectile
 	DamageType "Smoke"
 	States
