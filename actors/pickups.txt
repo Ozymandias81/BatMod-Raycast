@@ -57,7 +57,8 @@ Actor Batsphere : SoulSphere Replaces SoulSphere { -COUNTITEM }
 
 Actor BatSoda : Health replaces HealthBonus
 {
-	+COUNTITEM
+	//hostages are items don't count this 
+	-COUNTITEM
 	+INVENTORY.ALWAYSPICKUP
 	Inventory.Amount 3
 	Inventory.MaxAmount 250

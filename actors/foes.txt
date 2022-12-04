@@ -1988,7 +1988,59 @@ Actor DeadShot replaces stealthrevenant
 		Stop
 	}
 }
-
+Actor ManBat 503
+{
+	Health 700
+	Height 56
+	radius 32
+	Speed 30
+	MeleeRange 40
+	PainChance 50
+	Mass 50
+	scale 1.2
+	Monster
+	+NOBLOOD
+	+BOSS
+	+LOOKALLAROUND
+	+FLOAT
+	+NOGRAVITY
+	Obituary "Was Ripped apart by ManBat!"
+	//AttackSound "wolfss/attack"
+	deathsound "mbat/die"
+	SeeSound "mbat/see"
+	States
+	{
+	Spawn:
+		MBAT ABCD 10 A_Look
+		Loop
+	See:
+		MBAT AABBCCDD 3 A_FastChase
+		Loop
+	Melee:
+		MBAT FGH 1 A_FaceTarget
+		MBAT IJ 3 A_CustomMeleeAttack(random(1, 10) * 6, "imp/melee") // Does not make any sound when missing
+		MBAT K 3 
+		Goto See
+	Missile:
+		MBAT E 1 A_FaceTarget
+		MBAT EEE 15 A_SkullAttack
+		MBAT FGH 1 A_FaceTarget
+		MBAT IJ 3 A_CustomMeleeAttack(random(1, 10) * 6, "imp/melee") // Does not make any sound when missing
+		MBAT K 3 
+		MBAT ABCD 10 A_recoil(20)
+		Goto See
+	Pain:
+		MBAT a 2
+		MBAT L 2 A_Pain
+		Goto See
+	Death:
+		MBAT L 10 A_Fall
+		MBAT M 8 A_Scream
+		MBAT NO 6
+		MBAT P -1
+		Stop
+	}
+}
 Actor Eraser replaces LostSoul
 {
 	Radius 20

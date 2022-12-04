@@ -28,19 +28,30 @@ str BossHealth[11] =
 	"HEALTH60","HEALTH70","HEALTH80","HEALTH90","HEALTHMX"
 };
 
-script "MiniBossHealth" ENTER
+script "CameraRocket" (void)
+{
+     int MissileID = UniqueTID(); // Get a random TID, it is sure that it will not use an already used one.
+     Thing_ChangeTID(0, MissileID); // Set that TID to the fired missile
+     SetActivatorToTarget(MissileID); // Use the target to select the player who fired this missile
+     ChangeCamera(MissileID, 0, 0); // Set the camera for the player
+     SetPlayerProperty(0, ON, PROP_Frozen); // Don't let the player move
+     Thing_ChangeTID(MissileID, 0); // Remove the TID from the missile, as it is no longer needed.
+}
+
+script "MiniBossHealth" ENTER  //player is tid 0
 {
 	SetHudSize(640,400,1);
-	while(GetActorProperty(0,APROP_Health)<=0)
+	while(GetActorProperty(0,APROP_Health)<=0) // if player dead don't run
 		delay(1);
-	int tid = UniqueTID();
+	int Utid = UniqueTID(); // generates new tid
+	int tid = PickActor(0,GetActorAngle(0),GetActorPitch(0),2000.0,Utid,MF_SHOOTABLE,ML_BLOCKEVERYTHING | ML_BLOCKHITSCAN, PICKAF_RETURNTID);
 	if(PickActor(0,GetActorAngle(0),GetActorPitch(0),2000.0,tid)&&CheckFlag(tid,"BOSS"))
 	{
 		SetFont("SMALLFONT");
 		HudMessage(s:GetActorProperty(tid,APROP_NameTag); HUDMSG_PLAIN,21,CR_GRAY,320.0,30.0,0.03);//formerly 41.0 instead of 33
 		SetFont(BossHealth[FixedDiv(GetActorProperty(tid,APROP_Health),GetActorProperty(tid,APROP_SpawnHealth))*10/65536]);
-		HudMessage(s:"A"; HUDMSG_PLAIN,22,CR_GRAY,320.0,40.0,0.03);
-		Thing_ChangeTID(tid,0);
+		HudMessage(s:"A"; HUDMSG_PLAIN,22,CR_GRAY,320.0,40.0,0.03);//makes lifebar
+		//Thing_ChangeTID(tid,0);
 	}
 	delay(1);
 	restart;
