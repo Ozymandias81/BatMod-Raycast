@@ -42,6 +42,7 @@ OptionMenu "MostWanted"
 	Submenu "Clock King", "ClockKing"
 	Submenu "Ra's Al Ghul", "Ghul"
 	Submenu "The Calculator", "Calculator"
+	Submenu "Man-Bat", "Manbat"
 	Submenu "Solomon Grundy", "Grundy"
 	Submenu "Eraser", "Eraser"
 	Submenu "Killer Moth", "Moth"
@@ -272,6 +273,14 @@ ListMenu "Calculator"
 	StaticTextCentered 160, 155, "The Calculator"
 	Font "SMALLFONT", White
 	StaticTextCentered 160, 170, "AKA: Noah Kuttler Priority: Low"
+}
+ListMenu "Manbat"
+{
+	Font "BIGFONT", Green
+	StaticPatch 160, 145, "MBATA0"
+	StaticTextCentered 160, 155, "Man-Bat"
+	Font "SMALLFONT", White
+	StaticTextCentered 160, 170, "AKA: Kirk Langstrom Priority: Medium"
 }
 ListMenu "Grundy"
 {

@@ -12,13 +12,13 @@ script "Maplaunch" ENTER
 
 Script 34 (void) //replace it with a namedscript for a better style - ozy81
 {
-	SetPlayerProperty(0,1,7);
-	SetPlayerProperty(0,1,1);
-	SetPlayerProperty(0,1,10);
-	SetActorProperty (0, APROP_RenderStyle, 1);
-	delay(35*10);
-	SetPlayerProperty(0,0,7);
-	SetPlayerProperty(0,0,1);
+	GiveInventory("darkness", 1);
+	SetPlayerProperty(0,1,1);//notarget
+	delay(35*2);
+	SetPlayerProperty(0,1,10);//infrared
+	delay(35*8);
+	TakeInventory("darkness", 1);
+	SetPlayerProperty(0,0,1);//notarget
 	SetPlayerProperty(0,0,10);
 }
 
@@ -28,13 +28,14 @@ str BossHealth[11] =
 	"HEALTH60","HEALTH70","HEALTH80","HEALTH90","HEALTHMX"
 };
 
-script "CameraRocket" (void)
+script 35 (void)//baterang remote control script
 {
+	
      int MissileID = UniqueTID(); // Get a random TID, it is sure that it will not use an already used one.
      Thing_ChangeTID(0, MissileID); // Set that TID to the fired missile
      SetActivatorToTarget(MissileID); // Use the target to select the player who fired this missile
      ChangeCamera(MissileID, 0, 0); // Set the camera for the player
-     SetPlayerProperty(0, ON, PROP_Frozen); // Don't let the player move
+     //SetPlayerProperty(0, ON, PROP_Frozen); // Don't let the player move
      Thing_ChangeTID(MissileID, 0); // Remove the TID from the missile, as it is no longer needed.
 }
 

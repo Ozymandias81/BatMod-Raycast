@@ -1643,6 +1643,7 @@ Actor Zsasz replaces stealthdemon
 	PainChance 200
 	Monster
 	MeleeThreshold 120
+	Tag "Victor Zsasz"
 	+NOBLOOD
 	+FLOORCLIP
 	+NOTARGET
@@ -1686,6 +1687,7 @@ Actor ProfessorPyg replaces revenant
 	Speed 6
 	PainChance 200
 	Monster
+	Tag "Professor Pyg"
 	+NOBLOOD
 	+FLOORCLIP
 	+NOTARGET
@@ -1743,6 +1745,7 @@ Actor KillerCrocLand replaces cacodemon
 	Mass 400
 	Scale 1.2
 	Monster
+	Tag "Killer Croc"
 	+BOSS
 	+LOOKALLAROUND
 	+FLOORCLIP
@@ -1791,6 +1794,7 @@ Actor KillerCrocWater replaces stealthcacodemon
 	PainChance 150
 	Scale 1.2
 	Monster
+	Tag "Killer Croc"
 	+NOBLOOD
 	+CANTLEAVEFLOORPIC
 	+BOSS
@@ -1865,6 +1869,7 @@ Actor FireFlyLand //replaces StealthArchvile
 	Height 56
 	Speed 14
 	Mass 1000
+	Tag "Firefly"
 	PainChance 50
 	PainChance "Smoke", 10
 	Monster
@@ -1908,6 +1913,7 @@ Actor FireFlyAir replaces Archvile
 	PainChance 50
 	Mass 1000
 	Monster
+	Tag "Firefly"
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
@@ -1999,6 +2005,7 @@ Actor ManBat 503
 	radius 32
 	Speed 30
 	MeleeRange 40
+	Tag "Man-Bat"
 	PainChance 50
 	Mass 50
 	scale 1.2
@@ -2053,6 +2060,7 @@ Actor Eraser replaces LostSoul
 	Mass 100
 	Speed 10
 	PainChance 170
+	Tag "The Eraser"
 	Health 300
 	+NOBLOOD
 	+BOSS
@@ -2145,6 +2153,7 @@ Actor CalendarMan replaces MarinePlasma
 	Mass 100
 	Speed 13
 	PainChance 120
+	Tag "Calendar Man"
 	Health 350
 	Monster
 	+BOSS
@@ -2187,6 +2196,7 @@ Actor SolomonGrundy replaces MarineRocket
 	PainChance 150
 	Scale 1.2
 	Monster
+	Tag "Solomon Grundy"
 	+BOSS
 	+LOOKALLAROUND
 	+FLOORCLIP
@@ -2237,6 +2247,7 @@ Actor Calculator replaces MarineRailgun
 	Speed 6
 	PainChance 140
 	Health 365
+	Tag "The Calculator"
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
@@ -2279,6 +2290,7 @@ Actor BlackMask replaces StealthHellKnight
 	Speed 8
 	PainChance 170
 	Monster
+	Tag "Black Mask"
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
@@ -2319,6 +2331,7 @@ Actor LockUp replaces CommanderKeen
 	Height 60
 	Speed 7
 	Monster
+	Tag "Lock Up"
 	+BOSS
 	+FLOORCLIP
 	+NOBLOOD
@@ -2379,6 +2392,7 @@ Actor ElGhoul replaces StealthBaron //IDK about this dude, he is pretty lame wit
 	Radius 20
 	Height 56
 	Monster
+	Tag "Ra's Al Ghoul"
 	Mass 100
 	Speed 10
 	+NOBLOOD
@@ -2433,9 +2447,10 @@ Actor HugoStrange replaces stealthfatso
 	Radius 26
 	Speed 4
 	Mass 1000
-	DeathHeight 0
+	//DeathHeight 0
 	PainChance 0
 	Monster
+	Tag "Hugo Strange"
 	+NOBLOOD
 	+FLOORCLIP
 	+NORADIUSDMG
@@ -2465,7 +2480,7 @@ Actor HugoStrange replaces stealthfatso
 		Goto See
 	Death:
 		//HUGO A 60
-		HUGO G 5 A_Scream
+		HUGO G 5 A_ScreamAndUnblock
 		HUGO H 5 //A_GiveToTarget("Points", 5000)
 		HUGO IJ 5
 		HUGO J -1 A_BossDeath
@@ -2539,6 +2554,7 @@ Actor MrFreeze replaces fatso
 	Speed 14
 	Mass 1000
 	Monster
+	Tag "Mr. Freeze"
 	+BOSS
 	+LOOKALLAROUND
 	+MISSILEMORE
@@ -2585,6 +2601,7 @@ Actor Penguin replaces MarineBFG
 	Speed 6
 	PainChance 140
 	Monster
+	Tag "The Penguin"
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
@@ -2672,6 +2689,7 @@ Actor MadHatter Replaces PainElemental
 	Radius 20
 	Height 56
 	Monster
+	Tag "Mad Hatter"
 	Mass 300
 	Speed 10
 	PainChance 170
@@ -2857,6 +2875,7 @@ Actor ClockKing replaces Arachnotron
 	Speed 8
 	PainChance 120
 	Monster
+	Tag "Clock King"
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
@@ -2900,6 +2919,7 @@ Actor TwoFace replaces HellKnight
 	Mass 100
 	Speed 8
 	Monster
+	Tag "Two-Face"
 	PainChance 170
 	+NOBLOOD
 	+BOSS
@@ -2958,6 +2978,7 @@ Actor Riddler replaces BossBrain
 	Mass 100
 	Speed 8
 	PainChance 120
+	Tag "The Riddler"
 	Health 800
 	Monster
 	+NOBLOOD
@@ -3068,6 +3089,7 @@ Actor DeathStrokeSwords
 	Height 56
 	Mass 400
 	Speed 18
+	Tag "Deathstroke"
 	PainChance 70
 	Monster
 	+NOBLOOD
@@ -3120,6 +3142,7 @@ Actor Joker replaces SpiderMastermind
 	Height 56
 	Monster
 	Mass 100
+	Tag "The Joker"
 	Speed 13
 	PainChance 120
 	WoundHealth 600

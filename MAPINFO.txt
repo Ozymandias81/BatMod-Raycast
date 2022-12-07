@@ -636,6 +636,11 @@ Fader
 	}
 	Cast
 	{
+		CastClass = "ManBat"
+		CastName = "Man-Bat"
+	}
+	Cast
+	{
 		CastClass = "ElGhoul"
 		CastName = "Ra's Al Ghoul"
 	}

@@ -610,6 +610,7 @@ Actor recbaterangProjectile : MageStaffFX2
 	{
 	Spawn:
 		NULL A 0 Bright A_SeekerMissile(80,90)
+		//NULL A 0 Acs_ExecuteAlways(35) //makes camera follow
 		QROK A 0 Bright A_LookEx(2,0,12,0,360,"See")
 		RECB A 4 A_MStaffTrack
 		NULL A 0 Bright A_SeekerMissile(80,90)
@@ -657,6 +658,29 @@ Actor shockBaterangProjectile
 		ZAPY AB 1 Bright
 		Stop
 	}
+}
+Actor darkness : PowerupGiver
+{
+  +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.AUTOACTIVATE
+  Powerup.Type "Shadow"
+  //Powerup.Type Frightener
+  +INVENTORY.NOSCREENBLINK
+  Powerup.Color Black 0.8
+  Powerup.Duration -10
+  Inventory.PickupMessage "Mask of Terror"
+  //Inventory.Icon "MTRRA0"
+  -CountItem
+  //RenderStyle Stencil
+  //+Inventory.InvBar
+  //+FloatBob
+  //+Inventory.PickupFlash
+  States
+  {
+  Spawn:
+    MTRR BBBBBBBBBCDC 3 Bright
+    Loop
+  }
 }
 Actor Tazer : Weapon Replaces PlasmaRifle
 {
