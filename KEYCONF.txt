@@ -3,8 +3,3 @@ alias zmove_reset "zm_wallfriction 0; zm_movetype 0; zm_walkspeed 0.7; zm_crouch
 alias Dash "NetEvent Dash"
 alias WallSlide "NetEvent WallSlide"
 alias GrapplingHook "NetEvent GrapplingHook"
-
-addkeysection "ZMove Bind" "ZMoveBind"
-addmenukey "Dash" 									"Dash"
-addmenukey "WallSlide" 								"WallSlide"
-addmenukey "Grappling Hook" 						"GrapplingHook"
