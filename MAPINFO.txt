@@ -135,6 +135,56 @@ map MAP08 "Sanctuary"
 	cluster = 9
 }
 
+// 1-2
+
+cluster 5
+{
+	flat = "PFUB1"
+	exittext = lookup, "C1TEXT"
+
+}
+
+// 3-4
+
+cluster 6
+{
+	flat = "PFUB1"
+	exittext = lookup, "C2TEXT"
+
+}
+
+// 4-5
+
+cluster 7
+{
+	flat = "PFUB1"
+	exittext = lookup, "C3TEXT"
+}
+
+// 5-6
+
+cluster 8
+{
+	flat = "PFUB1"
+	exittext = lookup, "C4TEXT"
+}
+
+// 6 onward
+
+cluster 9
+{
+	flat = "PFUB1"
+	entertext = lookup, "C5TEXT"
+}
+
+// Unused
+
+cluster 10
+{
+	flat = "PFUB1"
+	entertext = lookup, "C6TEXT"
+}
+
 map MAP10 "Joker's Funhouse"
 {
 	sky1 = "CITYSCAP"
