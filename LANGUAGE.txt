@@ -93,7 +93,7 @@ BATMSG12 = "You know, I thought you'd last longer.";
 BATMSG13 = "Who's going to take care of the city now? Robin?";
 BATMSG14 = "As the symbol of hope fades, so too will law and order.";
 
-C1TEXT =
+B1TEXT =
 	"Bane and many of his men managed \n"
 	"to escape before you were able to arrive.\n"
 	"Firefly's traps was good, but not good enough. \n"
@@ -112,7 +112,7 @@ C1TEXT =
 	"Croc's lair is the quickest way to Arkham. Croc\n"
 	"may not be one of your smartest foes, but he is\n"
 	"is fast and deadly. Tread with caution.";
-C2TEXT =
+B2TEXT =
 	"You have managed to control the riot\n"
 	"at the asylum. Running through the cell\n"
 	"block reveals that the other convicts have\n"
@@ -137,7 +137,7 @@ C2TEXT =
 	"Jervis manage to gain so much control in the criminal\n"
 	"underworld? You'll have to dwell on the mystery later. \n"
 	"Hatter must be stopped regardless.";
-C3TEXT =
+B3TEXT =
 	"So that's how Hatter got all his supplies.\n"
 	"He was being supported by Ra's Al Ghoul!\n"
 	"Suddenly Ra's Al Ghoul rises to his feet.\n"
@@ -151,7 +151,7 @@ C3TEXT =
 	"deathtrap for you. However, you're not going\n"
 	"to let that stop you in delivering justice\n"
 	"to the crazed madman.";
-C5TEXT =
+B5TEXT =
 	"Jervis's twisted illusions are some\n"
 	"of the worst you've gone through.\n"
 	"His partnering with Scarecrow had\n"
@@ -170,13 +170,13 @@ C5TEXT =
 	"city, protect the innocent, and deliver\n"
 	"justice to the unruly criminals that\n"
 	"threaten your city once more.\n";
-C4TEXT =
+B4TEXT =
 	"CONGRATULATIONS, YOU'VE FOUND THE SECRET\n"
 	"LEVEL! LOOKS LIKE IT'S BEEN BUILT BY\n"
 	"HUMANS, RATHER THAN DEMONS. YOU WONDER\n"
 	"WHO THE INMATES OF THIS CORNER OF HELL\n"
 	"WILL BE.";
-C6TEXT =
+B6TEXT =
 	"CONGRATULATIONS, YOU'VE FOUND THE\n"
 	"SUPER SECRET LEVEL!  YOU'D BETTER\n"
 	"BLAZE THROUGH THIS ONE!\n";
