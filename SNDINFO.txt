@@ -53,6 +53,7 @@ fire/flameloop              FLAMLOOP
 fire/flameexplosion         FLAMEXP
 fire/shootflame             FIRESHOT
 jokerbox					JOKEBOX
+jokerboj					JOKEBOJ
 world/thunder		THNDR1
 doors/dr1_open		WOODOPEN
 doors/dr1_clos		WOODCLOS
@@ -116,6 +117,7 @@ mbat/see			mbatsee
 mbat/die			mbatdie
 frcf/de				frcfde
 frcf/ac				frcfac
+MADHOU				MADHOU
 rico1				RICOCHE1	
 rico3				RICOCHE3	
 rico4				RICOCHE4			

@@ -1171,6 +1171,7 @@ Actor FlyingHat
 	Radius 11
 	Speed 20
 	-NOGRAVITY
+	+THRUACTORS
 	Damage 0 // random(0, 31) + 30
 	//SeeSound "missile/fire"
 	//deathsound "missile/hit"

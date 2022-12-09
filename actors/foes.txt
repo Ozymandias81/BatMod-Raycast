@@ -64,6 +64,7 @@ Actor JokerBox replaces UnholyBible
 	+DONTGIB
 	+NOICEDEATH
 	+OLDRADIUSDMG
+	ActiveSound "jokerboj"
 	AttackSound "jokerbox"
 	DeathSound "world/barrelx"
 	Obituary "$OB_BARREL" //needs proper entry - oz81
@@ -73,7 +74,7 @@ Actor JokerBox replaces UnholyBible
 		JBOX A 6 A_Look
 		Loop
 	See:
-		JBOX A 6 A_Chase
+		JBOX AFAAAAFAAAAAAAAAA 6 A_Chase
 		Loop
 	Melee:
 		JBOX B 2

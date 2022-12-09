@@ -394,7 +394,10 @@ Actor JokerTorch replaces PurpleParticleFountain
 	States
 	{
 		Spawn:
-			jlit abcd 3 Bright
+			JLIT A 3 NoDelay A_StartSound("MADHOU", CHAN_AUTO, CHANF_LOOP, 0.8, ATTN_STATIC)//MADHOU
+			Goto Siren
+		Siren:
+			JLIT ABCD 3 Bright
 			Loop
 	}
 }
@@ -569,7 +572,7 @@ Actor McRegister replaces HangTSkull
 	States
 	{
 		Spawn:
-			MACD A 5 NoDelay A_StartSound("alrmstor", CHAN_AUTO, CHANF_LOOP, 0.6, ATTN_STATIC)
+			MACD A 5 NoDelay A_StartSound("alrmstor", CHAN_AUTO, CHANF_LOOP, 0.8, ATTN_STATIC)
 			Goto Siren
 		Siren:
 			MACD A 5
