@@ -5,6 +5,8 @@ LISTMENU "MainMenu"
 		StaticPatch 52, 0, "M_DOOM"
 		Position 110, 90
 		LineSpacing 15
+		Font "BIGFONT"
+		*/
 		PatchItem "M_NEWG", "N", "PlayerclassMenu"
 		PatchItem "M_LOADG", "L", "LoadGameMenu"
 		PatchItem "M_SAVEG", "S", "SaveGameMenu"
@@ -12,6 +14,14 @@ LISTMENU "MainMenu"
 		PatchItem "M_OPTION","O", "OptionsMenu"
 		PatchItem "M_WANTED", "M", "MostWanted"
 		PatchItem "M_QUITG","Q", "QuitMenu"
+		/*
+		TextItem "New Game", "N", "PlayerclassMenu"
+		TextItem "Load Game", "L", "LoadGameMenu"
+		TextItem "Save Game", "S", "SaveGameMenu"
+		TextItem "Batman Options","Z", "ZMoveOptions"
+		TextItem "Other Options","O", "OptionsMenu"
+		TextItem "Most Wanted", "M", "MostWanted"
+		TextItem "Quit Game","Q", "QuitMenu"
     }
 }
 
