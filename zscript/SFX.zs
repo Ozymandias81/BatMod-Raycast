@@ -20,6 +20,8 @@
  * SOFTWARE.
 **/
 
+
+//Weather Related
 Class RainSpawner : Actor
 {
 	Default
@@ -71,6 +73,55 @@ Class RainDrop : Actor
 		Loop;
 	Death:
 		RNDR BCDEFGH 3 A_FadeOut(0.15);
+		Stop;
+	}
+}
+
+//Nature Related
+Class UnderwaterPlant1 : Actor
+{
+	Default
+	{
+		//$Category New Props
+		//$Title Underwater Seaweed (long)
+		//$Color 3
+		Radius 8;
+		Height 96;
+	}
+	
+	States
+	{
+	Spawn:
+		UWPL A -1;
+		Stop;
+	}
+}
+
+Class UnderwaterPlant2 : UnderwaterPlant1
+{
+	Default
+	{
+	//$Title Underwater Seaweed (small)
+	Height 32;
+	}
+	States
+	{
+	Spawn:
+		UWPL B -1;
+		Stop;
+	}
+}
+
+Class UnderwaterPlant3 : UnderwaterPlant2
+{
+	Default
+	{
+	//$Title Underwater Seaweed (thin)
+	}
+	States
+	{
+	Spawn:
+		UWPL C -1;
 		Stop;
 	}
 }

@@ -1,0 +1,147 @@
+////////////////////////////////////////
+// Splashes & Terrain Definitions //////
+////////////////////////////////////////
+
+splash Bat_Water
+{
+	smallclass		Bat_WaterSplash
+	smallclip		0
+	smallsound		world/drip
+	baseclass		Bat_WaterSplash
+	chunkclass		Bat_WaterSplash_Chunk
+	chunkxvelshift	9
+	chunkyvelshift	9
+	chunkzvelshift	7
+	chunkbasezvel	2
+	sound			world/watersplash
+	noalert
+}
+
+terrain Bat_Water
+{
+	splash	Bat_Water
+	liquid
+	footclip 4
+}
+
+splash Bat_Blood
+{
+	smallclass		Bat_BloodSplash
+	smallclip		8
+	smallsound		world/sludgegloopsmall
+	baseclass		Bat_BloodSplash
+	chunkclass		Bat_BloodSplash_Chunk
+	chunkxvelshift	9
+	chunkyvelshift	9
+	chunkzvelshift	7
+	chunkbasezvel	2
+	sound			world/sludgegloop
+	noalert
+}
+
+terrain Bat_Blood
+{
+	splash	Bat_Blood
+	liquid
+	footclip 4
+}
+
+splash Bat_Lava
+{
+	smallclass		Bat_LavaSplash
+	smallclip		0
+	smallsound		world/lavasizzle
+	baseclass		Bat_LavaSplash
+	chunkclass		Bat_LavaSplash_Chunk
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lavasizzle
+	noalert
+}
+
+terrain Bat_Lava
+{
+	splash	Bat_Lava
+	liquid
+	footclip 4
+	friction 0.8
+}
+
+splash Bat_Slime
+{
+	smallclass		Bat_SlimeSplash
+	smallclip		0
+	smallsound		world/sludgegloop
+	baseclass		Bat_SlimeSplash
+	chunkclass		Bat_SlimeSplash_Chunk
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	1
+	sound			world/sludgegloop
+	noalert
+}
+
+terrain Bat_Slime
+{
+	splash	Bat_Slime
+	liquid
+	footclip 4
+	friction 0.9
+}
+
+splash Bat_Nukage
+{
+	smallclass		Bat_NukageSplash
+	smallclip		0
+	smallsound		world/lavasizzle
+	baseclass		Bat_NukageSplash
+	chunkclass		Bat_NukageSplash_Chunk
+	chunkxvelshift	9
+	chunkyvelshift	9
+	chunkzvelshift	7
+	chunkbasezvel	2
+	sound			world/lavasizzle
+	noalert
+}
+
+terrain Bat_Nukage
+{
+	splash	Bat_Nukage
+	liquid
+	footclip 4
+	friction 0.8
+}
+
+//Defs - longnamed tx not included!
+//Doom related
+floor BLOOD1 	Bat_Blood
+floor BLOOD2 	Bat_Blood
+floor BLOOD3 	Bat_Blood
+floor DBRAIN1 	Bat_Lava
+floor DBRAIN2 	Bat_Lava
+floor DBRAIN3 	Bat_Lava
+floor DBRAIN4 	Bat_Lava
+floor FWATER1 	Bat_Water
+floor FWATER2 	Bat_Water
+floor FWATER3 	Bat_Water
+floor FWATER4 	Bat_Water
+floor LAVA1 	Bat_Lava
+floor LAVA2 	Bat_Lava
+floor LAVA3 	Bat_Lava
+floor LAVA4 	Bat_Lava
+floor NUKAGE1 	Bat_Water
+floor NUKAGE2 	Bat_Water
+floor NUKAGE3 	Bat_Water
+floor SLIME01 	Bat_Slime
+floor SLIME02 	Bat_Slime
+floor SLIME03 	Bat_Slime
+floor SLIME04 	Bat_Slime
+floor SLIME05 	Bat_Slime
+floor SLIME06 	Bat_Slime
+floor SLIME07 	Bat_Slime
+floor SLIME08 	Bat_Slime
+
+//new ones here

@@ -2,12 +2,9 @@ clearEpisodes
 
 gameinfo
 {
-	AddEventHandlers = "DashHandler", "GrapplingHookHandler", "SpeedoMeterHandler", "WallSlideHandler"
-	
 	PlayerClasses = "Batman"
-	
 	NoRandomPlayerClass = true
-	
+	AddEventHandlers = "EnhWaterHandler", "CustomShaderHandler", "DashHandler", "GrapplingHookHandler", "SpeedoMeterHandler", "WallSlideHandler"
 	QuitMessages = "$BATMSG1", "$BATMSG2", "$BATMSG3", "$BATMSG4", "$BATMSG5", "$BATMSG6", "$BATMSG7", "$BATMSG8", "$BATMSG9", "$BATMSG10", "$BATMSG11", "$BATMSG12", "$BATMSG13", "$BATMSG14"
 }
 
@@ -814,6 +811,10 @@ DoomEdNums
 	10493 = "RiddleHint"
 	10804 = "BatCar"
 	15555 = "RainSpawner"
+	15556 = "UnderwaterPlant1"
+	15557 = "UnderwaterPlant2"
+	15558 = "UnderwaterPlant3"
+	15559 = "HeatEffectGiver"
 }
 
 SpawnNums

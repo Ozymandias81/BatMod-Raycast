@@ -1,0 +1,55 @@
+//HeatEffect shader
+HardwareShader PostProcess scene {
+	Name "heatshader"
+	Shader "shaders/heat.fp" 330
+	Uniform float amount
+	Uniform float timer
+}
+
+//Underwater shader
+HardwareShader PostProcess scene
+{
+	Name "watershader"
+	Shader "shaders/Water.frag" 330
+	Uniform float waterFactor
+	Uniform float timer // placeholder?
+}
+
+HardwareShader PostProcess scene
+{
+	Name "waterzoomshader"
+	Shader "shaders/WaterZoom.frag" 330
+	Uniform float zoomFactor
+}
+
+//Underwater plants
+HardwareShader Sprite UWPLA0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.06
+}
+
+HardwareShader Sprite UWPLB0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.04
+}
+
+HardwareShader Sprite UWPLC0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.03
+}
+
+//Nature
+HardwareShader Sprite TREEA0
+{
+	Shader "shaders/tree_sway.fp"
+	Speed 2.25
+}
+
+HardwareShader Sprite TREEB0
+{
+	Shader "shaders/tree_sway.fp"
+	Speed -2.25
+}
