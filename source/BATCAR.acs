@@ -91,10 +91,12 @@ script 425 ENTER
 	{
 		if (isDriver == 1)//set this number to bike class in keyconf
 		{
-			Spawn("AcsDropBatCar",GetActorX(0),GetActorY(0),GetActorFloorZ(0) + 64,0,GetActorAngle(0) >> 8);
+			Spawn("AcsDropBatCar",GetActorX(0),GetActorY(0),GetActorFloorZ(0) + 64,233,GetActorAngle(0) >> 8);
 			isDriver = 0;
 			SetPlayerProperty(1,0,4);
+			ThrustThing(0,60,30,233);//thrust batmobile away 
 			UnMorphActor (0);
+
 		}
 	}
 
