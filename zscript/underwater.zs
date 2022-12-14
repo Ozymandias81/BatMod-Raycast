@@ -20,6 +20,7 @@
  * SOFTWARE.
 **/
 
+//Shaders related
 class EnhWaterHandler : StaticEventHandler {
 	override void RenderOverlay(RenderEvent e) {
 		// set the player's timer up correctly (more-than-1-tick precision)
@@ -37,5 +38,54 @@ class EnhWaterHandler : StaticEventHandler {
 			Shader.SetEnabled(p, "watershader", false);
 			Shader.SetEnabled(p, "waterzoomshader", false);
 		}
+	}
+}
+
+//Props related
+Class UnderwaterPlant1 : Actor
+{
+	Default
+	{
+		//$Category New Props
+		//$Title Underwater Seaweed (long)
+		//$Color 3
+		Radius 8;
+		Height 96;
+	}
+	
+	States
+	{
+	Spawn:
+		UWPL A -1;
+		Stop;
+	}
+}
+
+Class UnderwaterPlant2 : UnderwaterPlant1
+{
+	Default
+	{
+		//$Title Underwater Seaweed (small)
+		Height 32;
+	}
+	States
+	{
+	Spawn:
+		UWPL B -1;
+		Stop;
+	}
+}
+
+Class UnderwaterPlant3 : UnderwaterPlant2
+{
+	Default
+	{
+		//$Title Underwater Seaweed (thin)
+	}
+	States
+	{
+	Spawn:
+		UWPL C -1;
+		Stop;
 	}
 }

@@ -1,5 +1,6 @@
 //HeatEffect shader
-HardwareShader PostProcess scene {
+HardwareShader PostProcess scene
+{
 	Name "heatshader"
 	Shader "shaders/heat.fp" 330
 	Uniform float amount
@@ -12,7 +13,7 @@ HardwareShader PostProcess scene
 	Name "watershader"
 	Shader "shaders/Water.frag" 330
 	Uniform float waterFactor
-	Uniform float timer // placeholder?
+	Uniform float timer
 }
 
 HardwareShader PostProcess scene
@@ -41,7 +42,7 @@ HardwareShader Sprite UWPLC0
 	Speed 1.03
 }
 
-//Nature
+//Foliage
 HardwareShader Sprite TREEA0
 {
 	Shader "shaders/tree_sway.fp"
