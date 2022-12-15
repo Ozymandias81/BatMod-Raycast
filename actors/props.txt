@@ -20,9 +20,12 @@
  * SOFTWARE.
 **/
 
-//Decorations here
+//Destroyables here//
 Actor DangerousBarrel replaces ExplosiveBarrel
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Dangerous Barrel (destroyable)
+	//$Color 5
 	Health 20
 	Radius 20
 	Height 42
@@ -34,7 +37,7 @@ Actor DangerousBarrel replaces ExplosiveBarrel
 	+NOICEDEATH
 	+OLDRADIUSDMG
 	DeathSound "world/barrelx"
-	Obituary "$OB_BARREL" // "%o went boom."
+	Obituary "$OB_BTBAR"
 	States
 	{
 	Spawn:
@@ -52,9 +55,9 @@ Actor DangerousBarrel replaces ExplosiveBarrel
 
 Actor TrashCan replaces HangNoGuts
 {
-	//$Category BatMod/Props
+	//$Category New Props (BatMod)
 	//$Title Trashcan (destroyable)
-	//$Color 3
+	//$Color 5
 	Scale 0.85
 	Health 10
 	Radius 20
@@ -88,78 +91,13 @@ Actor TrashCan replaces HangNoGuts
 	}
 }
 
-Actor Alarm  replaces HeartColumn
+Actor ToySoilder replaces Stalagmite
 {
-	//Radius 32
-	//+SOLID
-	States
-	{
-		Spawn:
-			ALRM A 5 NoDelay A_StartSound("alrmjail", CHAN_AUTO, CHANF_LOOP, 0.6, ATTN_STATIC)
-			Goto Siren
-		Siren:
-			ALRM AB 5
-			Loop
-	}
-}
-
-Actor Fountain replaces TechPillar
-{
-	Radius 32
-	+SOLID
-	States
-	{
-		Spawn:
-			FNTN AB 7
-			Loop
-	}
-}
-Actor PhoneBooth replaces TallRedColumn
-{
-	Radius 32
-	+SOLID
-	Height 64
-	States
-	{
-		Spawn:
-			CALA A -1
-			Stop
-	}
-}
-
-
-Actor PhoneBoothBroken replaces TallGreenColumn
-{
-	Radius 32
-	+SOLID
-	Height 64
-	States
-	{
-		Spawn:
-			CALB A -1
-			Stop
-	}
-}
-
-
-Actor Camera replaces Stalagtite
-{
-	Radius 32
-	
-	States
-	{
-		Spawn:
-			CAM1 A -1
-			Stop
-	}
-}
-
-
-Actor ToySoilder replaces stalagmite
-{
+	//$Category New Props (BatMod)
+	//$Title Toy Soilder (destroyable)
+	//$Color 5
 	Radius 8
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -168,420 +106,11 @@ Actor ToySoilder replaces stalagmite
 	}
 }
 
-Actor SubwayColumn replaces ShortGreenColumn
-{
-	Radius 16
-	+SOLID
-	Height 64
-	States
-	{
-		Spawn:
-			COL1 A -1
-			Stop
-	}
-}
-
-
-Actor ComputerDesk replaces SmallBloodPool
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			COMP A -1
-			Stop
-	}
-}
-
-
-Actor StreetLightOn replaces Meat2
-{
-	Radius 32
-	+SOLID
-	Scale 1.1
-	States
-	{
-		Spawn:
-			FONA A -1
-			Stop
-	}
-}
-
-
-Actor CaveColumn replaces NonSolidTwitch
-{
-	Radius 32
-	+SOLID
-	//+SpawnCEILING
-	States
-	{
-		Spawn:
-			STLC a -1
-			Stop
-	}
-}
-
-
-Actor WheelChair replaces Meat4
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			MADC A -1
-			Stop
-	}
-}
-
-
-Actor DeadEndSign replaces Meat5
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			DEND A -1
-			Stop
-	}
-}
-
-
-Actor McDesk replaces LiveStick
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			DESK A -1
-			Stop
-	}
-}
-
-Actor McTable replaces NonSolidMeat2
-{
-	Radius 32
-	+SOLID
-	height 32
-	States
-	{
-		Spawn:
-			DRNK A -1
-			Stop
-	}
-}
-
-Actor StreetLightFallen replaces NonSolidMeat3
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			FONB A -1
-			Stop
-	}
-}
-
-Actor StreetLightBroken replaces NonSolidMeat4
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			FOND A -1
-			Stop
-	}
-}
-
-Actor StreetLightTotalLoss replaces NonSolidMeat5
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			FONG A -1
-			Stop
-	}
-}
-
-Actor StreetLight 
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			FONR A -1
-			Stop
-	}
-}
-
-Actor TrafficLight replaces FloatingSkull
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			TRAF B 200 A_AttachLight("stop",2,"ff3a3a",8,64,0)//red 
-			TRAF B 1 A_RemoveLight("stop")//red 
-			TRAF A 140 A_AttachLight("go",2,"4CFC54",8,64,0)
-			TRAF A 1 A_RemoveLight("go") 
-			TRAF C 70 A_AttachLight("yield",2,"yellow",8,64,0)
-			TRAF C 1 A_RemoveLight("yield") 
-			loop
-	}
-}
-
-Actor GreenTreeFallen replaces GibbedMarine
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			FTRE A -1
-			Stop
-	}
-}
-Actor BatKnight replaces WhiteParticleFountain
-{
-	Radius 16
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			NEEE A -1
-			Stop
-	}
-}
-
-Actor SkullTorch replaces YellowParticleFountain
-{
-	Radius 16
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			skut abcd 3 Bright
-			Loop
-	}
-}
-
-Actor JokerTorch replaces PurpleParticleFountain
-{
-	Radius 16
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			JLIT A 3 NoDelay A_StartSound("MADHOU", CHAN_AUTO, CHANF_LOOP, 0.8, ATTN_STATIC)//MADHOU
-			Goto Siren
-		Siren:
-			JLIT ABCD 3 Bright
-			Loop
-	}
-}
-
-Actor OneDirectionSign replaces GibbedMarineExtra
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			FWRD A -1
-			Stop
-	}
-}
-
-/*
-Actor GreenTrashBin replaces Gibs
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			GBIN A -1
-			Stop
-	}
-}
-*/
-
-Actor TrashBinSpawner : RandomSpawner replaces Gibs
-{
-	Radius 20
-	Height 42
-	DropItem "TrashBin"
-	DropItem "HoboTrashBin"
-	States
-	{
-		Spawn:
-			BINH B 0
-			Stop
-	}
-}
-
-Actor TrashBin
-{
-	Radius 20
-	Height 42
-	Mass 100
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			BINH G -1
-			Stop
-	}
-}
-
-Actor HoboTrashBin
-{
-	Radius 20
-	Height 42
-	Mass 100
-	+SOLID
-	+AMBUSH
-	//+LookAllAround
-	States
-	{
-		Spawn:
-			BINH A 20
-			BINH B 20 A_Look
-			Loop
-		See:
-			BINH B 10
-			BINH BCDEF 12 
-			BINH F 0 A_ChangeFlag("SOLID",false)
-			BINH F 1 A_CustomMissile("Hobo")
-			BINH A 12
-			BINH A 0 A_ChangeFlag("SOLID",true)
-			BINH A -1
-			Stop
-	}
-}
-
-Actor SewerLight replaces HeadOnAStick
-{
-	Radius 32
-	
-	States
-	{
-		Spawn:
-			SBUL A 27 Bright 
-			SBUL BAB 3 
-			SBUL A 56 Bright 
-			SBUL BABBAB 3 
-			Loop
-	}
-}
-
-Actor GrassTall replaces HeadsOnAStick
-{
-	Radius 32
-	Speed 0
-	
-	States
-	{
-		Spawn:
-			GRAB A -1
-			Stop
-	}
-}
-
-Actor GreenTube replaces HangBNoBrain
-{
-	Radius 8
-	+SOLID
-	
-	Height 64
-	States
-	{
-		Spawn:
-			tube ABC 6 Bright
-			Loop
-	}
-}
-
-Actor Litter replaces HangTLookingDown
-{
-	Radius 32
-	
-	States
-	{
-		Spawn:
-			drug A -1
-			Stop
-	}
-}
-
-Actor Hydrant replaces HangTLookingUp
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			HYDR A -1
-			Stop
-	}
-}
-
-Actor Manequinn replaces HangTNoBrain
-{
-	Radius 32
-	
-	States
-	{
-		Spawn:
-			MANQ A -1
-			Stop
-	}
-}
-
-Actor McRegister replaces HangTSkull
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			MACD A 5 NoDelay A_StartSound("alrmstor", CHAN_AUTO, CHANF_LOOP, 0.8, ATTN_STATIC)
-			Goto Siren
-		Siren:
-			MACD A 5
-			Loop
-	}
-}
-
 Actor ShoppingCart replaces ColonGibs
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Shopping Cart (destroyable)
+	//$Color 9
 	Health 10
 	Radius 20
 	Height 42
@@ -609,174 +138,13 @@ Actor ShoppingCart replaces ColonGibs
 		Stop
 	}
 }
-
-Actor SewerColumnMossy replaces BrainStem
-{
-	Radius 32
-	+SOLID
-	Height 64
-	States
-	{
-		Spawn:
-			MCOL A -1
-			Stop
-	}
-}
-
-Actor CrossingSign replaces BloodyTwitch
-{
-	Radius 32
-	
-	States
-	{
-		Spawn:
-			CROS A -1
-			Stop
-	}
-}
-
-Actor SurgeryTable replaces DeadStick
-{
-	Radius 32
-	
-	States
-	{
-		Spawn:
-			SURG A -1
-			Stop
-	}
-}
-
-Actor GreenLamp replaces DeadZombieman
-{
-	Radius 32
-	-solid
-	States
-	{
-		Spawn:
-			LAMG A -1
-			Stop
-	}
-}
-
-Actor SonderLampOn replaces DeadShotgunguy
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			SLIT A -1
-			Stop
-	}
-}
-
-Actor OilBarrel replaces DeadMarine
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			OILB A -1
-			Stop
-	}
-}
-
-Actor Oven replaces DeadLostsoul
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			OVEN A -1
-			Stop
-	}
-}
-
-Actor Pebble1 replaces DeadDoomImp
-{
-	Radius 32
-	//+SOLID
-	
-	States
-	{
-		Spawn:
-			PEB2 A -1
-			Stop
-	}
-}
-
-Actor BigBomb replaces DeadDemon
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			BOMB A -1
-			Stop
-	}
-}
-
-Actor ToiletDirty replaces DeadCacodemon
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			PISS A -1
-			Stop
-	}
-}
-
-Actor Money replaces EvilEye
-{
-	Radius 32
-	height 20
-	health 10
-	Mass 700
-	painchance 255
-	+SOLID
-	+shootable
-	+NoBlood
-	+Buddha
-	States
-	{
-		Spawn:
-			PLNT A 1
-			loop
-		Pain.Firey:
-			PLNT BCBCBCBCBCBCBC 7 BRIGHT
-			goto Spawn
-	}
-}
-
-Actor PoolTable replaces RedTorch
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			POOL A -1
-			Stop
-	}
-}
-
 Actor PotTall replaces GreenTorch
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Pot, Tall (destroyable)
+	//$Color 9
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -787,9 +155,11 @@ Actor PotTall replaces GreenTorch
 
 Actor PotGrey replaces BlueTorch
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Pot, Grey (destroyable)
+	//$Color 9
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -800,9 +170,11 @@ Actor PotGrey replaces BlueTorch
 
 Actor PotDry replaces ShortRedTorch
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Pot, Dry (destroyable)
+	//$Color 9
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -811,11 +183,772 @@ Actor PotDry replaces ShortRedTorch
 	}
 }
 
+Actor WoodenCloset replaces CandleStick
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Wooden Closet (destroyable)
+	//$Color 9
+	Radius 32
+	Height 64
+	+SOLID
+	States
+	{
+		Spawn:
+			SHKF A -1
+			Stop
+	}
+}
+
+Actor SinkNew replaces column
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Clean Sink (destroyable)
+	//$Color 9
+	Radius 8
+	+SOLID
+	States
+	{
+		Spawn:
+			SINK A -1
+			Stop
+	}
+}
+
+Actor ChairOffice replaces TechLamp
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Office Chair (destroyable)
+	//$Color 9
+	Radius 8
+	+SOLID
+	States
+	{
+		Spawn:
+			SITT A -1
+			Stop
+	}
+}
+
+Actor Chamber replaces MarineSSG
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Lab Chamber (destroyable)
+	//$Color 9
+	Radius 32
+	Height 32
+	+SOLID
+	States
+	{
+		Spawn:
+			CHAM A -1
+			Stop
+	}
+}
+//End Of Destroyables//
+
+Actor Alarm replaces HeartColumn
+{
+	//$Category New Props (BatMod)
+	//$Title Alarm
+	//$Color 5
+	States
+	{
+		Spawn:
+			ALRM A 5 NoDelay A_StartSound("alrmjail", CHAN_AUTO, CHANF_LOOP, 0.6, ATTN_STATIC)
+			Goto Siren
+		Siren:
+			ALRM AB 5
+			Loop
+	}
+}
+
+Actor Fountain replaces TechPillar
+{
+	//$Category New Props (BatMod)
+	//$Title Fountain
+	//$Color 5
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			FNTN AB 7
+			Loop
+	}
+}
+
+Actor PhoneBooth replaces TallRedColumn
+{
+	//$Category New Props (BatMod)
+	//$Title Phone Booth
+	//$Color 5
+	Radius 32
+	Height 64
+	+SOLID
+	States
+	{
+		Spawn:
+			CALA A -1
+			Stop
+	}
+}
+
+Actor PhoneBoothBroken replaces TallGreenColumn
+{
+	//$Category New Props (BatMod)
+	//$Title Phone Booth (broken)
+	//$Color 5
+	Radius 32
+	Height 64
+	+SOLID
+	States
+	{
+		Spawn:
+			CALB A -1
+			Stop
+	}
+}
+
+Actor Camera replaces Stalagtite
+{
+	//$Category New Props (BatMod)
+	//$Title Camera
+	//$Color 5
+	Radius 32
+	States
+	{
+		Spawn:
+			CAM1 A -1
+			Stop
+	}
+}
+
+Actor ComputerDesk replaces SmallBloodPool
+{
+	//$Category New Props (BatMod)
+	//$Title Computer Desk
+	//$Color 5
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			COMP A -1
+			Stop
+	}
+}
+
+Actor SubwayColumn replaces ShortGreenColumn
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Subway Column
+	//$Color 5
+	Radius 16
+	Height 64
+	+SOLID
+	States
+	{
+		Spawn:
+			COL1 A -1
+			Stop
+	}
+}
+
+Actor StreetLightOn replaces Meat2
+{
+	//$Category New Lights (BatMod)
+	//$Title StreetLight (ON)
+	//$Color 14
+	Radius 32
+	Scale 1.1
+	+SOLID
+	States
+	{
+		Spawn:
+			FONA A -1
+			Stop
+	}
+}
+
+Actor CaveColumn replaces NonSolidTwitch
+{
+	//$Category New Props (BatMod)
+	//$Title Cave Column
+	//$Color 5
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			STLC A -1
+			Stop
+	}
+}
+
+Actor WheelChair replaces Meat4
+{
+	//$Category New Props (BatMod)
+	//$Title Wheelchair
+	//$Color 5
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			MADC A -1
+			Stop
+	}
+}
+
+Actor DeadEndSign replaces Meat5
+{
+	//$Category New Props (BatMod)
+	//$Title Dead End Sign
+	//$Color 5
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			DEND A -1
+			Stop
+	}
+}
+
+Actor McDesk replaces LiveStick
+{
+	//$Category New Props (BatMod)
+	//$Title McDonald Desk
+	//$Color 5
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			DESK A -1
+			Stop
+	}
+}
+
+Actor McTable replaces NonSolidMeat2
+{
+	//$Category New Props (BatMod)
+	//$Title McDonald Table
+	//$Color 5
+	Radius 32
+	Height 32
+	+SOLID
+	States
+	{
+		Spawn:
+			DRNK A -1
+			Stop
+	}
+}
+
+Actor StreetLightFallen replaces NonSolidMeat3
+{
+	//$Category New Lights (BatMod)
+	//$Title StreetLight (Fallen)
+	//$Color 14
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			FONB A -1
+			Stop
+	}
+}
+
+Actor StreetLightBroken replaces NonSolidMeat4
+{
+	//$Category New Lights (BatMod)
+	//$Title StreetLight (broken)
+	//$Color 14
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			FOND A -1
+			Stop
+	}
+}
+
+Actor StreetLightTotalLoss replaces NonSolidMeat5
+{
+	//$Category New Lights (BatMod)
+	//$Title StreetLight (lossless)
+	//$Color 14
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			FONG A -1
+			Stop
+	}
+}
+
+Actor TrafficLight replaces FloatingSkull
+{
+	//$Category New Lights (BatMod)
+	//$Title Traffic Light
+	//$Color 14
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			TRAF B 200 A_AttachLight("stop",2,"ff3a3a",8,64,0)//red 
+			TRAF B 1 A_RemoveLight("stop")//red 
+			TRAF A 140 A_AttachLight("go",2,"4CFC54",8,64,0)
+			TRAF A 1 A_RemoveLight("go") 
+			TRAF C 70 A_AttachLight("yield",2,"yellow",8,64,0)
+			TRAF C 1 A_RemoveLight("yield") 
+			loop
+	}
+}
+
+Actor GreenTreeFallen replaces GibbedMarine
+{
+	//$Category New Flora (BatMod)
+	//$Title Tree (fallen)
+	//$Color 10
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			FTRE A -1
+			Stop
+	}
+}
+
+Actor BatKnight replaces WhiteParticleFountain
+{
+	//$Category New Props (BatMod)
+	//$Title Bat Knight
+	//$Color 5
+	Radius 16
+	+SOLID
+	States
+	{
+		Spawn:
+			NEEE A -1
+			Stop
+	}
+}
+
+Actor SkullTorch replaces YellowParticleFountain
+{
+	//$Category New Lights (BatMod)
+	//$Title Skull Torch
+	//$Color 14
+	Radius 16
+	+SOLID
+	States
+	{
+		Spawn:
+			SKUT ABCD 3 Bright
+			Loop
+	}
+}
+
+Actor JokerTorch replaces PurpleParticleFountain
+{
+	//$Category New Lights (BatMod)
+	//$Title Joker Torch
+	//$Color 14
+	Radius 16
+	+SOLID
+	States
+	{
+		Spawn:
+			JLIT A 3 NoDelay A_StartSound("MADHOU", CHAN_AUTO, CHANF_LOOP, 0.8, ATTN_STATIC)
+			Goto Siren
+		Siren:
+			JLIT ABCD 3 Bright
+			Loop
+	}
+}
+
+Actor OneWaySign replaces GibbedMarineExtra
+{
+	//$Category New Props (BatMod)
+	//$Title One Way Sign
+	//$Color 5
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			FWRD A -1
+			Stop
+	}
+}
+
+Actor TrashBinSpawner : RandomSpawner replaces Gibs
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Trashbin Spawner
+	//$Color 9
+	Radius 20
+	Height 42
+	DropItem "TrashBin"
+	DropItem "HoboTrashBin"
+	States
+	{
+		Spawn:
+			BINH B 0
+			Stop
+	}
+}
+
+Actor TrashBin //TrashBinSpawner related
+{
+	Radius 20
+	Height 42
+	Mass 100
+	+SOLID
+	States
+	{
+		Spawn:
+			BINH G -1
+			Stop
+	}
+}
+
+Actor HoboTrashBin //TrashBinSpawner related
+{
+	Radius 20
+	Height 42
+	Mass 100
+	+SOLID
+	+AMBUSH
+	States
+	{
+		Spawn:
+			BINH A 20
+			BINH B 20 A_Look
+			Loop
+		See:
+			BINH B 10
+			BINH BCDEF 12 
+			BINH F 0 A_ChangeFlag("SOLID",false)
+			BINH F 1 A_CustomMissile("Hobo")
+			BINH A 12
+			BINH A 0 A_ChangeFlag("SOLID",true)
+			BINH A -1
+			Stop
+	}
+}
+
+Actor SewerLight replaces HeadOnAStick
+{
+	//$Category New Lights (BatMod)
+	//$Title Sewer Light
+	//$Color 14
+	Radius 32
+	States
+	{
+		Spawn:
+			SBUL A 27 Bright 
+			SBUL BAB 3 
+			SBUL A 56 Bright 
+			SBUL BABBAB 3 
+			Loop
+	}
+}
+
+Actor GrassTall replaces HeadsOnAStick
+{
+	//$Category New Flora (BatMod)
+	//$Title Grass (tall)
+	//$Color 10
+	Radius 32
+	States
+	{
+		Spawn:
+			GRAB A -1
+			Stop
+	}
+}
+
+Actor GreenTube replaces HangBNoBrain
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Green Tube
+	//$Color 9
+	Radius 8
+	Height 64
+	+SOLID
+	States
+	{
+		Spawn:
+			TUBE ABC 6 Bright
+			Loop
+	}
+}
+
+Actor Litter replaces HangTLookingDown
+{
+	//$Category New Props (BatMod)
+	//$Title Litter
+	//$Color 5
+	Radius 32
+	States
+	{
+		Spawn:
+			DRUG A -1
+			Stop
+	}
+}
+
+Actor Hydrant replaces HangTLookingUp
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Hydrant
+	//$Color 9
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			HYDR A -1
+			Stop
+	}
+}
+
+Actor Manequinn replaces HangTNoBrain
+{
+	//$Category New Props (BatMod)
+	//$Title Manequinn
+	//$Color 5
+	Radius 32
+	States
+	{
+		Spawn:
+			MANQ A -1
+			Stop
+	}
+}
+
+Actor McRegister replaces HangTSkull
+{
+	//$Category New Props (BatMod)
+	//$Title McDonald Register
+	//$Color 5
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			MACD A 5 NoDelay A_StartSound("alrmstor", CHAN_AUTO, CHANF_LOOP, 0.8, ATTN_STATIC)
+			Goto Siren
+		Siren:
+			MACD A 5
+			Loop
+	}
+}
+
+Actor SewerColumnMossy replaces BrainStem
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Sewer Column (mossy)
+	//$Color 9
+	Radius 32
+	Height 64
+	+SOLID
+	States
+	{
+		Spawn:
+			MCOL A -1
+			Stop
+	}
+}
+
+Actor CrossingSign replaces BloodyTwitch
+{
+	//$Category New Props (BatMod)
+	//$Title Crossing Sign
+	//$Color 5
+	Radius 32
+	States
+	{
+		Spawn:
+			CROS A -1
+			Stop
+	}
+}
+
+Actor SurgeryTable replaces DeadStick
+{
+	//$Category New Props (BatMod)
+	//$Title Surgery Table
+	//$Color 5
+	Radius 32
+	States
+	{
+		Spawn:
+			SURG A -1
+			Stop
+	}
+}
+
+Actor GreenLamp replaces DeadZombieman
+{
+	//$Category New Lights (BatMod)
+	//$Title Green Lamp
+	//$Color 14
+	Radius 32
+	-SOLID
+	States
+	{
+		Spawn:
+			LAMG A -1
+			Stop
+	}
+}
+
+Actor SonderLampOn replaces DeadShotgunguy
+{
+	//$Category New Lights (BatMod)
+	//$Title Sonder Lamp (ON)
+	//$Color 14
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			SLIT A -1
+			Stop
+	}
+}
+
+Actor OilBarrel replaces DeadMarine
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Oil Barrel
+	//$Color 9
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			OILB A -1
+			Stop
+	}
+}
+
+Actor Oven replaces DeadLostsoul
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Oven
+	//$Color 9
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			OVEN A -1
+			Stop
+	}
+}
+
+Actor Pebbles replaces DeadDoomImp
+{
+	//$Category New Props (BatMod)
+	//$Title Pebbles (random)
+	//$Color 5
+	Radius 32
+	States
+	{
+		Spawn:
+			PEBB A 0 NoDelay A_Jump(256,1,2)
+			PEBB A -1
+			PEBB B -1
+			Stop
+	}
+}
+
+Actor BigBomb replaces DeadDemon
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Big Bomb
+	//$Color 9
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			BOMB A -1
+			Stop
+	}
+}
+
+Actor ToiletDirty replaces DeadCacodemon
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Dirty Toilet
+	//$Color 9
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			PISS A -1
+			Stop
+	}
+}
+
+Actor Money replaces EvilEye
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Pile of Money (burnable)
+	//$Color 9
+	Radius 32
+	Height 20
+	Health 10
+	Mass 700
+	Painchance 255
+	+SOLID
+	+SHOOTABLE
+	+NOBLOOD
+	+BUDDHA
+	States
+	{
+		Spawn:
+			MONY A 1
+			Loop
+		Pain.Firey:
+			MONY BCBCBCBCBCBCBC 7 BRIGHT
+			Goto Spawn
+	}
+}
+
+Actor PoolTable replaces RedTorch
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Pool Table
+	//$Color 9
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			POOL A -1
+			Stop
+	}
+}
+
 Actor CorpseSkel replaces ShortGreenTorch
 {
+	//$Category New Props (BatMod)
+	//$Title Skeleton Corpse
+	//$Color 5
 	Radius 32
-	//+SOLID
-	
 	States
 	{
 		Spawn:
@@ -826,9 +959,11 @@ Actor CorpseSkel replaces ShortGreenTorch
 
 Actor McTrays replaces ShortBlueTorch
 {
+	//$Category New Obstacles (BatMod)
+	//$Title McDonald Trays
+	//$Color 9
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -839,7 +974,9 @@ Actor McTrays replaces ShortBlueTorch
 
 Actor DeadCop replaces MegaSphere
 {
-	
+	//$Category New Props (BatMod)
+	//$Title Dead Cop
+	//$Color 5
 	Radius 32
 	States
 	{
@@ -851,13 +988,15 @@ Actor DeadCop replaces MegaSphere
 
 Actor FireBigDroppedPermanent replaces ShortRedColumn
 {
-Radius 32
-Damage 0
-Height 8
-Projectile
--NOGRAVITY
-Speed 8
-//
+	//$Category New Lights (BatMod)
+	//$Title Big Fire (permanent)
+	//$Color 14
+	Radius 32
+	Height 8
+	Speed 8
+	Damage 0
+	Projectile
+	-NOGRAVITY
 	States
 	{
 		Spawn:
@@ -871,25 +1010,14 @@ Speed 8
 	}
 }
 
-Actor StreetLightTallOff 51
+Actor TallLight Replaces GreenParticleFountain
 {
+	//$Category New Lights (BatMod)
+	//$Title Tall Light
+	//$Color 14
 	Radius 12
-	height 130
+	Height 130
 	+SOLID
-	
-	States
-	{
-		Spawn:
-			RLIT A -1
-			Stop
-	}
-}
-Actor tallLight Replaces GreenParticleFountain
-{
-	Radius 12
-	height 130
-	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -898,62 +1026,13 @@ Actor tallLight Replaces GreenParticleFountain
 	}
 }
 
-Actor SmallBin 
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			SBIN A -1
-			Stop
-	}
-}
-
-Actor SewerColumn
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			SCOL A -1
-			Stop
-	}
-}
-
-Actor Scrap
-{
-	Radius 32
-	
-	States
-	{
-		Spawn:
-			SCRP A -1
-			Stop
-	}
-}
-
-Actor WoodenCloset replaces candleStick
-{
-	Radius 32
-	+SOLID
-	Height 64
-	States
-	{
-		Spawn:
-			SHKF A -1
-			Stop
-	}
-}
-
 Actor Shelves replaces SkullColumn
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Shelves
+	//$Color 9
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -961,12 +1040,14 @@ Actor Shelves replaces SkullColumn
 			Stop
 	}
 }
-//BlackParticleFountain
+
 Actor SubwayTicket replaces BlackParticleFountain
 {
+	//$Category New Props (BatMod)
+	//$Title Subway Ticket
+	//$Color 5
 	Radius 8
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -975,50 +1056,13 @@ Actor SubwayTicket replaces BlackParticleFountain
 	}
 }
 
-Actor SinkNew replaces column
+Actor Sofa replaces TechLamp2
 {
-	Radius 8
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			SINK A -1
-			Stop
-	}
-}
-
-Actor ChairOffice replaces techLamp
-{
-	Radius 8
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			SITT A -1
-			Stop
-	}
-}
-
-Actor SnookerTable
-{
+	//$Category New Obstacles (BatMod)
+	//$Title Sofa
+	//$Color 9
 	Radius 32
 	+SOLID
-	
-	States
-	{
-		Spawn:
-			SNOO A -1
-			Stop
-	}
-}
-
-Actor Sofa replaces techLamp2
-{
-	Radius 32
-	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1027,36 +1071,13 @@ Actor Sofa replaces techLamp2
 	}
 }
 
-Actor SewerCeilingPipe
+Actor Table replaces TorchTree
 {
-	Radius 32
-	
-	States
-	{
-		Spawn:
-			SPIP A -1
-			Stop
-	}
-}
-
-Actor BatSuit
-{
+	//$Category New Obstacles (BatMod)
+	//$Title Table
+	//$Color 9
 	Radius 32
 	+SOLID
-	
-	States
-	{
-		Spawn:
-			SUIT A -1
-			Stop
-	}
-}
-
-Actor Table replaces torchTree
-{
-	Radius 32
-	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1065,11 +1086,13 @@ Actor Table replaces torchTree
 	}
 }
 
-Actor TeaTable replaces bigTree
+Actor TeaTable replaces BigTree
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Tea Table
+	//$Color 9
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1078,24 +1101,14 @@ Actor TeaTable replaces bigTree
 	}
 }
 
-Actor TinBarrel
-{
-	Radius 32
-	+SOLID
-	
-	States
-	{
-		Spawn:
-			TINB A -1
-			Stop
-	}
-}
-
 Actor Register2 replaces HeadCandles
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Cash Register
+	//$Color 9
 	Radius 26
-	+SOLID
 	Height 26
+	+SOLID
 	States
 	{
 		Spawn:
@@ -1106,9 +1119,11 @@ Actor Register2 replaces HeadCandles
 
 Actor TVset replaces Candelabra
 {
+	//$Category New Obstacles (BatMod)
+	//$Title TV Set
+	//$Color 9
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1117,11 +1132,13 @@ Actor TVset replaces Candelabra
 	}
 }
 
-Actor WashingMachine replaces burningBarrel
+Actor WashingMachine replaces BurningBarrel
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Washing Machine
+	//$Color 9
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1129,11 +1146,14 @@ Actor WashingMachine replaces burningBarrel
 			Stop
 	}
 }
+
 Actor Tree1 replaces MarineFist
 {
+	//$Category New Flora (BatMod)
+	//$Title Tree 1
+	//$Color 10
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1141,11 +1161,14 @@ Actor Tree1 replaces MarineFist
 			Stop
 	}
 }
+
 Actor Tree2 replaces MarineBerserk
 {
+	//$Category New Flora (BatMod)
+	//$Title Tree 2
+	//$Color 10
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1153,11 +1176,14 @@ Actor Tree2 replaces MarineBerserk
 			Stop
 	}
 }
+
 Actor Scarface replaces MarineChainsaw
 {
+	//$Category New NPCs (BatMod)
+	//$Title Scarface
+	//$Color 11
 	Radius 32
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1168,9 +1194,12 @@ Actor Scarface replaces MarineChainsaw
 
 Actor Nora replaces MarineShotgun
 {
+	//$Category New NPCs (BatMod)
+	//$Title Nora
+	//$Color 11
 	Radius 32
-	+SOLID
 	Height 32
+	+SOLID
 	States
 	{
 		Spawn:
@@ -1179,20 +1208,11 @@ Actor Nora replaces MarineShotgun
 	}
 }
 
-Actor Chamber replaces MarineSSG
-{
-	Radius 32
-	+SOLID
-	Height 32
-	States
-	{
-		Spawn:
-			CHAM A -1
-			Stop
-	}
-}
 Actor BenchSpawner : RandomSpawner replaces MarinePistol
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Bench Spawner
+	//$Color 9
 	DropItem "Bench"
 	DropItem "HoboBench"
 	States
@@ -1202,12 +1222,12 @@ Actor BenchSpawner : RandomSpawner replaces MarinePistol
 			Stop
 	}
 }
+
 Actor Bench 
 {
 	Radius 32
 	Height 8
 	+SOLID
-	
 	States
 	{
 		Spawn:
@@ -1215,13 +1235,13 @@ Actor Bench
 			Stop
 	}
 }
+
 Actor HoboBench 
 {
 	Radius 32
 	Height 8
 	+SOLID
-	+Ambush
-	
+	+AMBUSH
 	States
 	{
 		Spawn:
@@ -1235,6 +1255,117 @@ Actor HoboBench
 			HOBB D 12 
 			HOBB D 0 A_ChangeFlag("SOLID", true)
 			HOBB D -1
+			Stop
+	}
+}
+
+Actor StreetLightTallOff //uses same DeNum of Meat3
+{
+	//$Category New Lights (BatMod)
+	//$Title StreetLight Tall (OFF)
+	//$Color 14
+	Radius 12
+	Height 130
+	+SOLID
+	States
+	{
+		Spawn:
+			RLIT A -1
+			Stop
+	}
+}
+
+//UNUSED ACTORS, SINCE THEY DONT HAVE ANY DENUM DEFINED//
+Actor StreetLight //unused
+{
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			FONR A -1
+			Stop
+	}
+}
+
+Actor SmallBin //unused
+{
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			SBIN A -1
+			Stop
+	}
+}
+
+Actor SewerColumn //unused
+{
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			SCOL A -1
+			Stop
+	}
+}
+
+Actor Scrap //unused
+{
+	Radius 32
+	States
+	{
+		Spawn:
+			SCRP A -1
+			Stop
+	}
+}
+
+Actor SnookerTable //unused
+{
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			SNOO A -1
+			Stop
+	}
+}
+
+Actor SewerCeilingPipe //unused
+{
+	Radius 32
+	States
+	{
+		Spawn:
+			SPIP A -1
+			Stop
+	}
+}
+
+Actor BatSuit //unused
+{
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			SUIT A -1
+			Stop
+	}
+}
+
+Actor TinBarrel //unused
+{
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			TINB A -1
 			Stop
 	}
 }

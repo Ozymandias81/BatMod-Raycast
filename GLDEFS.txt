@@ -43,6 +43,12 @@ HardwareShader Sprite UWPLC0
 }
 
 //Foliage
+HardwareShader Sprite GRABA0
+{
+	Shader "shaders/grass_sway.fp"
+	Speed 2.25
+}
+
 HardwareShader Sprite TREEA0
 {
 	Shader "shaders/tree_sway.fp"

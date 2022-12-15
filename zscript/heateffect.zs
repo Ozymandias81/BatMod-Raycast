@@ -155,7 +155,7 @@ class EffectGiver : EffectSpawner
 
 	Default
 	{
-		//$Category New Special Effects
+		//$Category New SFX (BatMod)
 		//$Color 12
 		Radius 128;
 		Alpha 0.5;

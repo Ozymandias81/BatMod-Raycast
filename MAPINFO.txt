@@ -801,6 +801,7 @@ Fader
 
 DoomEdNums
 {
+	51 = "StreetLightTallOff"
 	500 = "HarleyQuinn"
 	501 = "PoisonIvy"
 	614 = "RunningCar"

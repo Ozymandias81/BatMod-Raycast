@@ -39,6 +39,7 @@ PK_YKEY = "Picked up a Yellow key.";
 OB_2FACE = "%o was on the wrong side of fate.";
 OB_2FACT = "%o was killed by a Two-Face Thug.";
 OB_BANE = "%o was broken by Bane.";
+OB_BTBAR = "%o didn't made it and went boom'd.";
 OB_BGUAR = "%o was killed by a Bodyguard.";
 OB_BMASK = "%o was blown up by Black Mask.";
 OB_CALCU = "%o death was the answer to the Calculator's equation.";

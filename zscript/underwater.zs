@@ -46,9 +46,9 @@ Class UnderwaterPlant1 : Actor
 {
 	Default
 	{
-		//$Category New Props
+		//$Category New Flora (BatMod)
 		//$Title Underwater Seaweed (long)
-		//$Color 3
+		//$Color 10
 		Radius 8;
 		Height 96;
 	}
