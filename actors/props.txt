@@ -1152,6 +1152,8 @@ Actor Tree1 replaces MarineFist
 	//$Category New Flora (BatMod)
 	//$Title Tree 1
 	//$Color 10
+	xscale 0.5
+	yscale 0.35
 	Radius 32
 	+SOLID
 	States
@@ -1167,6 +1169,8 @@ Actor Tree2 replaces MarineBerserk
 	//$Category New Flora (BatMod)
 	//$Title Tree 2
 	//$Color 10
+	xscale 0.5
+	yscale 0.35
 	Radius 32
 	+SOLID
 	States
