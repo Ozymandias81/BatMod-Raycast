@@ -667,7 +667,7 @@ Actor darkness : PowerupGiver
   //Powerup.Type Frightener
   +INVENTORY.NOSCREENBLINK
   Powerup.Color Black 0.8
-  Powerup.Duration -10
+  Powerup.Duration -2
   Inventory.PickupMessage "Mask of Terror"
   //Inventory.Icon "MTRRA0"
   -CountItem

@@ -14,9 +14,9 @@ Script 34 (void) //replace it with a namedscript for a better style - ozy81
 {
 	GiveInventory("darkness", 1);
 	SetPlayerProperty(0,1,1);//notarget
-	delay(35*2);
+	delay(35*1);
 	SetPlayerProperty(0,1,10);//infrared
-	delay(35*8);
+	delay(35*9);
 	TakeInventory("darkness", 1);
 	SetPlayerProperty(0,0,1);//notarget
 	SetPlayerProperty(0,0,10);
