@@ -1252,8 +1252,8 @@ Actor HoboBench
 			HOBB A 3 A_Look
 			Loop
 		See:
-			HOBB A 32
-			HOBB BC 16
+			HOBB AA 32
+			HOBB BBCC 16
 			HOBB D 0 A_ChangeFlag("SOLID", false)
 			HOBB D 1 A_CustomMissile("Hobo")
 			HOBB D 12 
