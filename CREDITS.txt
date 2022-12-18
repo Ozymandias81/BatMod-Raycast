@@ -42,6 +42,7 @@ WSJ
 r&r (Batman sprites) 
 MaxED (debris system)
 Custom BIGFONT by AFADoomer, Talon1024 and DoomJedi
+Custom TEEVEE Gold font by Jimmy
 
 Playtesters:
 ================
