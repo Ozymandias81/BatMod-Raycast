@@ -372,6 +372,7 @@ Actor JokeBomb
 {
 	Projectile
 	Radius 4
+	height 4
 	Speed 14
 	Damage 10
 	SeeSound "missile/fire"
@@ -393,6 +394,7 @@ Actor ScareRocket
 	Projectile
 	Radius 4
 	Speed 14
+	height 4
 	+SEEKERMISSILE 
 	SeeSound "scare/fire"
 	DeathSound "missile/hit"
@@ -416,6 +418,7 @@ Actor ClayBall
 {
 	Projectile
 	Radius 4
+	height 4
 	Speed 17
 	//Damage 8
 	//+SEEKERMISSILE 
@@ -441,6 +444,7 @@ Actor FreezeRocket
 {
 	Projectile
 	Radius 4
+	height 4
 	Speed 25
 	+SEEKERMISSILE 
 	SeeSound "scare/fire"

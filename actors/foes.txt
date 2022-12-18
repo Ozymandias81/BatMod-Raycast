@@ -2000,7 +2000,7 @@ Actor ManBat 503
 	Height 56
 	radius 32
 	Speed 30
-	MeleeRange 40
+	MeleeRange 60
 	Tag "Man-Bat"
 	PainChance 50
 	Mass 50
@@ -2021,7 +2021,7 @@ Actor ManBat 503
 		MBAT ABCD 10 A_Look
 		Loop
 	See:
-		MBAT AABBCCDD 3 A_FastChase
+		MBAT AABBCCDD 3 A_Chase
 		Loop
 	Melee:
 		MBAT FGH 1 A_FaceTarget
@@ -2030,7 +2030,7 @@ Actor ManBat 503
 		Goto See
 	Missile:
 		MBAT E 1 A_FaceTarget
-		MBAT EEE 15 A_SkullAttack
+		MBAT EEE 4 A_SkullAttack
 		MBAT FGH 1 A_FaceTarget
 		MBAT IJ 3 A_CustomMeleeAttack(random(1, 10) * 6, "imp/melee") // Does not make any sound when missing
 		MBAT K 3 
@@ -2491,8 +2491,8 @@ Actor Bane replaces BaronOfHell
 	Mass 200
 	Height 60
 	Speed 14
-	Damage 15
-	MeleeDamage 5
+	Damage 10
+	MeleeDamage 3
 	PainChance 100
 	Scale 1.2
 	Monster
@@ -2500,7 +2500,7 @@ Actor Bane replaces BaronOfHell
 	+LOOKALLAROUND
 	+FLOORCLIP
 	+NOTARGET
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	ActiveSound "wolfguard/active"
 	PainSound "wolfguard/pain"
 	SeeSound "bane/see"

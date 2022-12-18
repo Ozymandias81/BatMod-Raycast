@@ -990,8 +990,8 @@ Actor IceCloud //: PoisonCloud
 }
 Actor GasProj
 {
-	Radius 11
-	Height 8
+	Radius 8
+	Height 6
 	Speed 20
 	Projectile
 	//+RANDOMIZE
