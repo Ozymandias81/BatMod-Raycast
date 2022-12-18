@@ -1112,8 +1112,11 @@ Actor Register2 replaces HeadCandles
 	States
 	{
 		Spawn:
-			MACD B -1
-			Stop
+			MACD B 5 NoDelay A_StartSound("alrmstor", CHAN_AUTO, CHANF_LOOP, 0.6, ATTN_STATIC)
+			Goto Siren
+		Siren:
+			MACD B 5
+			Loop
 	}
 }
 

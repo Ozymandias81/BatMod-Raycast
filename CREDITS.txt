@@ -1,3 +1,56 @@
+This mod is a free fan mod and has nothing to do with DC Comics but is based on characters of DC Comics
+
+Main Moders:
+Ddadd - Mapping, Coding, Sound Effects
+DoomJedi - Art, Design
+Ozymandias81 - Bug Fixes, Particle Effects, General Polishments
+
+Other Help:
+Ronwolf - Batman sounds
+MrWolf (enemy bases)
+Aurora (some scenery, textures)
+DoomJuan (textures, some mapping, etc)
+Ozymandias81 (coding, resource organazing)
+AstroCreep - Music
+ACE Team
+WSJ
+r&r (Batman sprites) 
+MaxED (debris system)
+
+Testing credits:
+CaptainJ (main tester)
+Casualfan 
+staredcraft
+
+Commercial Games:
+================
+Batman Returns (SNES)
+Batman (Megadrive)
+Adventures of Batman and Robin (SNES)
+Adventures of Batman and Robin (Megadrive)
+Batman Returns (Megadrive) - Gotham sky
+Blake Stone (Bosses, enemies)
+Hexen (pig head)
+Wolfenstein 3D
+Blood
+Doom II
+Operation BodyCount (scenery)
+Hocus Pocus (mushroom sky)
+Batman (Arcade) Atari 
+Batman (Arcade) Raw Thrills 
+Batman Arkham Aslyum (Dialog) 
+Batman Arkham Knight (Dialog) 
+Batman Return of the Joker - Music
+Batman (NES) - Music
+Batman (SEGA) - Music
+Lego Batman 1 and 2
+
+Other Mods Used: 
+Seargent Mark IV's Bike and Tracer code
+Batman Doom
+Voxel vehicle pack
+
+Zmovement:
 Dusk Movement is inspired by the game DUSK, developed by David Szymanski and published by New Blood Interactive.
 UT Movement is inspired by the Unreal Tournament series developed and published by Epic Games.
 Build Engine movement in inspired by the classic Build Trilogy, and Ion Fury developed by Voidpoint and published by 3DRealms.
