@@ -1,28 +1,55 @@
-This mod is a free fan mod and has nothing to do with DC Comics but is based on characters of DC Comics
+/*
+ * All books, titles, characters, character names, slogans, logos, and related 
+ * indicia are trademarks of and copyright DC Comics and/or WildStorm Productions
+ * an imprint of DC Comics. The DC logo is a trademark of DC Comics.
+ *
+ * THIS IS A FAN-BASE MOD BASED OVER DC COMICS WITHOUT LUCRATIVE SCOPE, THIS MOD
+ * OR GAME IS MEANT TO BE DISTRIBUTED FREE AND NOTHING ELSE.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+**/
 
-Main Moders:
-Ddadd - Mapping, Coding, Sound Effects
+Main Team:
+================
+Ddadd - Mapping, Coding, Sound Effects, Resources
 DoomJedi - Art, Design
-Ozymandias81 - Bug Fixes, Particle Effects, General Polishments
+Ozymandias81 - Bug Fixes, Particle Effects, Enhancements, Quality Control
 
-Other Help:
+Supporters:
+================
 Ronwolf - Batman sounds
 MrWolf (enemy bases)
 Aurora (some scenery, textures)
 DoomJuan (textures, some mapping, etc)
-Ozymandias81 (coding, resource organazing)
 AstroCreep - Music
-ACE Team
 WSJ
 r&r (Batman sprites) 
 MaxED (debris system)
+Custom BIGFONT by AFADoomer, Talon1024 and DoomJedi
 
-Testing credits:
+Playtesters:
+================
 CaptainJ (main tester)
 Casualfan 
 staredcraft
 
-Commercial Games:
+Games Involved:
 ================
 Batman Returns (SNES)
 Batman (Megadrive)
@@ -45,21 +72,23 @@ Batman (NES) - Music
 Batman (SEGA) - Music
 Lego Batman 1 and 2
 
-Other Mods Used: 
-Seargent Mark IV's Bike and Tracer code
-Batman Doom
-Voxel vehicle pack
+Mods Involved:
+================
+ACE Team for Batman Doom stuff
+Sergeant Mark IV's Bike and Tracer code
+Voxel Vehicle Pack by NerdKoopa
 
-Zmovement:
-Dusk Movement is inspired by the game DUSK, developed by David Szymanski and published by New Blood Interactive.
-UT Movement is inspired by the Unreal Tournament series developed and published by Epic Games.
-Build Engine movement in inspired by the classic Build Trilogy, and Ion Fury developed by Voidpoint and published by 3DRealms.
-Quake movement is inspired by the Quake series developed and published by id Software.
-Sounds included in this mod come from the aforementioned games except the wallslide and climbing sounds which come from QC:DE: Kane's crouch slide (QC's Slash crouchslide) and Major's climbing.
+ZMovement Crew:
+================
+Ivory Duke - all coding
+Ijon - endless source of inspiration
+Michaelis and DoomKrakken - cool dudes, help, support, and answers to my ZScript questions
+The original mod has been slightly tweaked and simplified by Ozymandias81 solely for this mod, since some features are not used here
 
-Credits:
-- Ivory Duke: all coding;
-- Ijon: endless source of inspiration;
-- Michaelis and DoomKrakken: cool dudes, help, support, and answers to my ZScript questions.
-- CaptainJ for Playtesting and Cool Feedbacks
-- Custom fonts by AFADoomer, Talon1024 and DoomJedi
+About ZMovement
+================
+Dusk Movement is inspired by the game DUSK, developed by David Szymanski and published by New Blood Interactive
+UT Movement is inspired by the Unreal Tournament series developed and published by Epic Games
+Build Engine movement in inspired by the classic Build Trilogy, and Ion Fury developed by Voidpoint and published by 3DRealms
+Quake movement is inspired by the Quake series developed and published by id Software
+Sounds included for ZMovement come from the aforementioned games except the wallslide and climbing sounds, which come from QC:DE: Kane's crouch slide (QC's Slash crouchslide) and Major's climbing
