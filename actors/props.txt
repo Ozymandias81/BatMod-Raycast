@@ -105,7 +105,20 @@ Actor ToySoilder replaces Stalagmite
 			Stop
 	}
 }
-
+Actor TeddyBear replaces RedParticleFountain
+{
+	//$Category New Props (BatMod)
+	//$Title Teddy Bear
+	//$Color 5
+	Radius 8
+	+SOLID
+	States
+	{
+		Spawn:
+			BEAR A -1
+			Stop
+	}
+}
 Actor ShoppingCart replaces ColonGibs
 {
 	//$Category New Obstacles (BatMod)
