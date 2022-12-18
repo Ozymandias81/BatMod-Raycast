@@ -1839,6 +1839,7 @@ Actor FireFlyBurnDoorIntroLand replaces StealthArchvile
 	PainChance 150
 	MeleeRange 26
 	+LOOKALLAROUND
+	+WallSprite
 	+SOLID
 	DamageType "Firey"
 	States
@@ -1847,11 +1848,11 @@ Actor FireFlyBurnDoorIntroLand replaces StealthArchvile
 		FSP1 A 10 A_Look
 		Loop
 	See:
-		FSP1 A 5 A_Chase
+		FSP1 A 5 A_JumpIfCloser(64, "Melee")
 		Loop
 	Melee:
-		FSP1 B 5 A_StartSound("ffly/see2")
-		FSP1 CDEF 5 A_SargAttack
+		FSP1 B 5 Bright A_StartSound("ffly/see2")
+		FSP1 CDEF 5 BRIGHT A_SargAttack
 		FSP1 G 5 A_NoBlocking
 		FSP1 H 5 A_SpawnItem("FireFlyLand")
 		FSP1 I -1
