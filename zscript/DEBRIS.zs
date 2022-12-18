@@ -194,3 +194,40 @@ class Debris_GoonCar : Actor
 		Stop;
 	}
 }
+
+class Debris_Toys : Debris_Base
+{
+	Default
+	{
+		Gravity 0.325;
+	}
+	
+	States
+	{
+	Spawn:
+		OLOV C 0 NODELAY A_Jump(256,"Set1","Set2","Set3");
+		OLOV C 0 A_Jump(256,"Set1");
+		Set1:
+		"####" C 1 {A_SetRoll(roll + 25, SPF_INTERPOLATE); A_SetAngle(angle + random(-15, 15)); A_SetPitch(pitch + frandom(-0.25, 0.25)); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set2:
+		"####" D 1 {A_SetRoll(roll - 25, SPF_INTERPOLATE); A_SetAngle(angle + random(-15, 15)); A_SetPitch(pitch + frandom(-0.25, 0.25)); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set3:
+		"####" E 1 {A_SetRoll(roll + 25, SPF_INTERPOLATE); A_SetAngle(angle + random(-15, 15)); A_SetPitch(pitch + frandom(-0.25, 0.25)); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+	AdjustMass:
+		OLOV "#" 0 A_SetMass(750);
+		OLOV "#" 0 A_Jump(256,"Swim");
+	Swim:
+		OLOV "#" 2 A_ScaleVelocity(0.7);
+		Loop;
+	Death:
+		OLOV "#" 0 {A_SetRoll(0); A_SetAngle(0); A_SetPitch(0); bRollCenter = FALSE; bRollSprite = FALSE; bBounceOnActors = FALSE;}
+		OLOV "#" 1 A_SetTics(35*5);
+		OLOV "#" 0 A_Jump(256,"DeathWait");
+	DeathWait:
+		"####" "#" 1 A_FadeOut(0.09);
+		Wait;
+	}
+}
