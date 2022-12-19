@@ -37,6 +37,7 @@ Class Batman : BMovePlayer
 	//Player.CrouchSprite "PLYC";
 	Player.StartItem "Bola", 15;
 	Player.StartItem "BatFist";
+	Player.StartItem "BatUnderwater";
 	//Player.StartItem "LedgeGrabWeapon";
 	//This other stuff should be commented out later
 	Player.StartItem "TriBaterang"; //enabled so when player picks up three baterangs

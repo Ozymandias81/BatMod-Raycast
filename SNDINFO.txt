@@ -27,6 +27,15 @@ $limit world/sludgegloop 4
 $limit world/sludgegloopsmall 4
 $limit world/watersplash 4
 
+//Underwater
+water/exit	splash2
+underwt1	underwt1
+underwt2	underwt2
+underwt3	underwt3
+underwt4	underwt4
+$random underwtr { underwt1 underwt2 underwt3 underwt4 }
+$rolloff underwtr log 8 16
+
 //FOES//
 $random thug/death		{ thug/death1  thug/death2  thug/death3  thug/death4  thug/death5  thug/death6}
 thug/death1			DEATHSC1

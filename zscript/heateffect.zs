@@ -142,6 +142,11 @@ class EffectSpawner : SwitchableDecoration //following code has been adapted by 
 		bDormant = true;
 		SetStateLabel("Inactive");
 	}
+
+	virtual void SpawnEffect()
+	{
+		if (!bAllowTickDelay) { return; }
+	}
 }
 
 // Shader effect givers

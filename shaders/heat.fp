@@ -1,7 +1,7 @@
 // Modified by AFADoomer from http://www.blog.nathanhaze.com/glsl-desert-mirageheat-wave-effect/
 // and https://github.com/mattdesl/lwjgl-basics/wiki/ShaderLesson5
 
-const float stepsize = 0.000015; // The amplitude of the distortion waves
+const float stepsize = 0.000045; // The amplitude of the distortion waves
 const float stepscale = 2.5; // The scale of the effect (this controls the number of repetitions of the pattern that are crammed into screen space, so higher numbers means more repetitions, so smaller effect scale)
 const float timescale = 0.15; // The speed of the effect (modifies timer, so 0.5 means every two timer ticks, 2.0 means every half timer tick, etc.)
 const float bluramt = 25; // The max amount of blur to give the scene

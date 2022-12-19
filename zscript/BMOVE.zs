@@ -3225,12 +3225,12 @@ Class Hook : Actor
 		+FORCEXYBILLBOARD;
 		+HITMASTER;
 		+MISSILE;
-		//+NOALERT;
 		+NOGRAVITY;
 		+NOTELEPORT;
 		+NOTONAUTOMAP;
 		+THRUSPECIES;
-		Damage 6;
+		+NODAMAGE
+		Damage 0;
 		Height 4;
 		Radius 2;
 		Speed 80;

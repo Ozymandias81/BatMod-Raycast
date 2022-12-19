@@ -42,6 +42,78 @@ HardwareShader Sprite UWPLC0
 	Speed 1.03
 }
 
+HardwareShader Sprite DWPLA0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.06
+}
+
+HardwareShader Sprite DWPLB0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.05
+}
+
+HardwareShader Sprite DWPLC0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.04
+}
+
+HardwareShader Sprite DWPLD0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.03
+}
+
+HardwareShader Sprite DWPLE0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.04
+}
+
+HardwareShader Sprite DWPLF0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.05
+}
+
+HardwareShader Sprite DWPLG0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.06
+}
+
+HardwareShader Sprite DWPLH0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.05
+}
+
+HardwareShader Sprite DWPLI0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.04
+}
+
+HardwareShader Sprite DWPLJ0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.03
+}
+
+HardwareShader Sprite DWPLK0
+{
+	Shader "shaders/underwater_sway.fp"
+	Speed 1.04
+}
+
+HardwareShader Sprite KPLAA0 //uses grass since it should swirl only on top
+{
+	Shader "shaders/grass_sway.fp"
+	Speed 1.25
+}
+
 //Foliage
 HardwareShader Sprite GRABA0
 {

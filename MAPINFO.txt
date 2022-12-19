@@ -801,7 +801,7 @@ Fader
 
 DoomEdNums
 {
-	51 = "StreetLightTallOff"
+	51 = "StreetLightTallOff" //to be replaced with non-doom denum
 	500 = "HarleyQuinn"
 	501 = "PoisonIvy"
 	614 = "RunningCar"
@@ -811,11 +811,15 @@ DoomEdNums
 	10492 = "RiddleDoll"
 	10493 = "RiddleHint"
 	10804 = "BatCar"
+	15554 = "BubbleSpawner"
 	15555 = "RainSpawner"
 	15556 = "UnderwaterPlant1"
 	15557 = "UnderwaterPlant2"
 	15558 = "UnderwaterPlant3"
 	15559 = "HeatEffectGiver"
+	15560 = "UnderwaterPlant4"
+	15561 = "UnderwaterPlant5"
+	15562 = "UnderwaterPlant6"
 }
 
 SpawnNums
