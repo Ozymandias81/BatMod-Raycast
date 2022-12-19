@@ -54,6 +54,7 @@ Actor DoomScanner : PowerupGiver
 }
 
 Actor Batsphere : SoulSphere Replaces SoulSphere { -COUNTITEM }
+Actor Batbelt : Backpack Replaces Backpack { -COUNTITEM Inventory.PickupMessage "Got the batbelt" }
 
 Actor BatSoda : Health replaces HealthBonus
 {
