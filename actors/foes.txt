@@ -2544,7 +2544,7 @@ Actor Bane replaces BaronOfHell
 	}
 }
 
-Actor MrFreeze replaces fatso
+Actor MrFreeze replaces Fatso
 {
 	Health 1200
 	Height 56
@@ -2558,6 +2558,7 @@ Actor MrFreeze replaces fatso
 	AttackSound "wolfss/attack"
 	deathsound "frez/die"
 	SeeSound "frez/see"
+	DamageFactor "Ice", 0.0 //immune for obvious reasons
 	DamageFactor "Electricty", 0.6
 	DamageFactor "Smoke", 1.2
 	BloodColor "LightBlue" //because coolant
@@ -2573,11 +2574,11 @@ Actor MrFreeze replaces fatso
 	Missile:
 		FREZ E 10 A_FaceTarget
 		FREZ F 5 Bright A_CustomMissile("FreezeRocket")
-		FREZ G 5 Bright A_CustomMissile("FreezeRocket")
+		FREZ G 5 Bright A_CustomMissile("FreezeDart")
 		FREZ F 5 Bright A_CustomMissile("FreezeRocket")
-		FREZ G 5 Bright A_CustomMissile("FreezeRocket")
+		FREZ G 5 Bright A_CustomMissile("FreezeDart")
 		FREZ F 5 Bright A_CustomMissile("FreezeRocket")
-		FREZ G 5 Bright A_CustomMissile("FreezeRocket")
+		FREZ G 5 Bright A_CustomMissile("FreezeDart")
 		FREZ E 5 A_CposRefire
 		Goto See
 	Death:

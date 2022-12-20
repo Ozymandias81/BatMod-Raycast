@@ -132,3 +132,11 @@ HardwareShader Sprite TREEB0
 	Shader "shaders/tree_sway.fp"
 	Speed -2.25
 }
+
+//New Lights
+PointLight ICEBALL
+{
+	Color 0.6 0.8 0.8
+	Size 44
+	Offset 0 32 0
+}

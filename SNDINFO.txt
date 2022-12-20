@@ -156,6 +156,11 @@ rico3				RICOCHE3
 rico4				RICOCHE4			
 $random rico				{ rico1  rico3  rico4}	
 
+//Mr Freeze new dart
+IceFlight		ICEDLOOP
+IceHit			ICEDHIT
+IceFire			ICEDFIR
+
 //OTHERS//
 Slide		"SLIDE.ogg"
 WallSlide	"WALLSLID.ogg"

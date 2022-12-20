@@ -251,6 +251,12 @@ skill nightmare
 	Key = "n"
 }
 
+DamageType IceWater
+{
+	NoArmor
+	ReplaceFactor
+}
+
 //INTERMISSIONS
 Intermission Inter_Cast
 {
