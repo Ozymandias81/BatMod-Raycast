@@ -2834,7 +2834,7 @@ Class BMovePlayer : PlayerPawn
 		HookFired = SpawnPlayerMissile("Hook", Angle, 0, 0, -AttackZOffset); //SpawnPlayerMissile fires a projectile at 8/14 of Player Height, I need it to be fired at half
 		Pitch -= PitchOffset;
 		//Set hook to move faster the faster player is moving
-		HookFired.Vel += Vel;
+		HookFired.Vel += Vel; //address zero issue might happen here - ozy81
 	}
 	
 	bool HookLOS()
@@ -3204,7 +3204,7 @@ Class GrapplingHookHandler : EventHandler
             if(e.Name == "GrapplingHook")
             {
                 Let GrapplingPlayer = BMovePlayer(Players[e.Player].Mo);
-                if(GrapplingPlayer) { GrapplingPlayer.FireHook(); }
+                if(GrapplingPlayer) { GrapplingPlayer.FireHook(); } //address zero issue might happen here - ozy81
             }
         }
     }

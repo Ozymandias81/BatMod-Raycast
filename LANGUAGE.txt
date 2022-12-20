@@ -24,6 +24,7 @@ SECRETTOTAL = "Riddles";
 TREASURETOTAL = "Hostages";
 
 //Pickups
+PK_BATBEL = "Got the Bat-Belt.";
 PK_BATPOW = "Atomic batteries to power. Turbines to speed.";
 PK_BKEY = "Picked up a Blue key.";
 PK_CORN = "You ate some bat popcorn.";
