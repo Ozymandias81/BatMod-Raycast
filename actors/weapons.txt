@@ -931,6 +931,8 @@ Actor GasCloud //: PoisonCloud
 	Speed 0.1
 	// Damage 0
 	Scale 2
+	renderstyle translucent
+	Alpha 0.8
 	// SeeSound "missile/fire"
 	// deathsound "missile/hit"
 	//Projectile
@@ -963,6 +965,8 @@ Actor IceCloud //: PoisonCloud
 {
 	Scale 2
 	Radius 20
+	renderstyle translucent
+	Alpha 0.8
 	Speed 0.1
 	// Damage 0
 	//Scale 2.0
@@ -1093,6 +1097,9 @@ Actor GasCloudSmall : PoisonCloud
 {
 	Scale 0.5
 	Radius 8
+	renderstyle translucent
+	Alpha 0.8
+	Alpha 0.8
 	Speed 0.1
 	// Damage 0
 	// Scale 2.0
@@ -1114,7 +1121,7 @@ Actor GasCloudSmall : PoisonCloud
 			
         Death:
 			SMOK F 7 A_Fall
-			SMOK GHI 7
+			SMOK GHI 7 A_FadeOut( 0.15 )
 			Stop
 	}
 }

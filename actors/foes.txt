@@ -2422,7 +2422,7 @@ Actor ElGhoul replaces StealthBaron //IDK about this dude, he is pretty lame wit
 		Goto See
 	Smoke:
 		GHUL E 2 A_FaceTarget
-		GHUL G 2 A_SpawnItemEx("IceCloud",0,0,96)
+		GHUL G 2 A_SpawnItemEx("icecloud",0,0,96)//("smoke3a",0,0,0)
 		GHUL A 2 A_ChangeFlag("STEALTH", true)
 		GHUL A 4 A_FastChase
 		GHUL A 4 A_Recoil(-200)
@@ -2582,7 +2582,7 @@ Actor MrFreeze replaces Fatso
 		FREZ E 5 A_CposRefire
 		Goto See
 	Death:
-		FREZ H 10 A_Fall
+		FREZ H 8 A_Fall
 		FREZ I 8 A_Scream
 		FREZ J 8
 		FREZ K -1
