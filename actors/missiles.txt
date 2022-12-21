@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81 (some snippets)
+ * Copyright (c) 2022 Ddadd, Ozymandias81 (some snippets)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 **/
 
 //Projectiles here
-Actor Tracer: FastProjectile
+Actor Tracer : FastProjectile
 {
 	Radius 2
 	Height 2
@@ -72,9 +72,9 @@ Actor BatPuff replaces BulletPuff // replaced for more satisfying melee
 	}
 }
 
-Actor MonsterTracer: Tracer
+Actor MonsterTracer : Tracer
 {
-	+BLOODSPLATTER 
+	+BLOODSPLATTER
 	+THRUGHOST
 	-DONTSPLASH
 	+MISSILE
@@ -90,9 +90,9 @@ Actor MonsterTracer: Tracer
 		Goto Spawn2
 	Spawn2:
 		TRAC A 1 Bright
-		Loop	
+		Loop
 	Death:
-		TNT1 A 0 A_StartSound("rico") 
+		TNT1 A 0 A_StartSound("rico")
 		TNT1 A 1 A_SpawnItem("BulletPuff")//may switch this out later
 		//TNT1 A 0 A_SpawnItemEx ("MonsterPenetrator",cos(-pitch)*25,0,0+(sin(pitch)*25),cos(-pitch)*100,0,sin(pitch)*100,0,SXF_TRANSFERPITCH)
 		TNT1 A 0
@@ -101,17 +101,17 @@ Actor MonsterTracer: Tracer
 	XDeath:
 		TNT1 A 0
 		TNT1 A 0 //A_StartSound("bulletwhistle")
-		Stop	
+		Stop
 	Crash:
 		TNT1 A 0
 		TNT1 A 0 //A_StartSound("bulletwhistle")
-		Stop	
+		Stop
 	}
 }
 
-Actor ShotgunguyTracer: Tracer
+Actor ShotgunguyTracer : Tracer
 {
-	+BLOODSPLATTER 
+	+BLOODSPLATTER
 	+THRUGHOST
 	-DONTSPLASH
 	+MISSILE
@@ -127,9 +127,9 @@ Actor ShotgunguyTracer: Tracer
 		Goto Spawn2
 	Spawn2:
 		TRAC A 1 Bright
-		Loop	
+		Loop
 	Death:
-		TNT1 A 1 A_StartSound("rico") 
+		TNT1 A 1 A_StartSound("rico")
 		TNT1 A 1 A_SpawnItem("BulletPuff")//may switch this out later
 		//TNT1 A 0 A_SpawnItemEx ("MonsterPenetrator",cos(-pitch)*25,0,0+(sin(pitch)*25),cos(-pitch)*100,0,sin(pitch)*100,0,SXF_TRANSFERPITCH)
 		TNT1 A 0
@@ -138,11 +138,11 @@ Actor ShotgunguyTracer: Tracer
 	XDeath:
 		TNT1 A 0
 		TNT1 A 0 //A_StartSound("bulletwhistle")
-		Stop	
+		Stop
 	Crash:
 		TNT1 A 0
 		TNT1 A 0 //A_StartSound("bulletwhistle")
-		Stop	
+		Stop
 	}
 }
 
@@ -159,7 +159,7 @@ Actor ShotgunParticles
 	+CLIENTSIDEONLY
 	+NOTELEPORT
 	+NOBLOCKMAP
-	+BLOODLESSIMPACT 
+	+BLOODLESSIMPACT
 	+FORCEXYBILLBOARD
 	+FORCEXYBILLBOARD
 	+CLIENTSIDEONLY
@@ -272,12 +272,13 @@ Actor FireDrop
 		FFLK G 5 Bright //A_SpawnItem("FireSmallDropped")
 		FFLK H 5
 		Stop
-	Death: 
+	Death:
 		FFLK H 0 Bright A_SpawnItem("FireSmallDropped",0,3)
 		Stop
 	}
 }
-Actor WolfRocket replaces rocket
+
+Actor WolfRocket replaces Rocket
 {
 	Projectile
 	Radius 6
@@ -299,6 +300,7 @@ Actor WolfRocket replaces rocket
 		Stop
 	}
 }
+
 Actor BatMissile : CustomInventory
 {
    Game Doom
@@ -310,22 +312,25 @@ Actor BatMissile : CustomInventory
       Stop
    }
 }
-Actor BatTargetingSystem {
-+Friendly
-States
+
+Actor BatTargetingSystem
+{
+	+FRIENDLY
+	States
    {
 	Spawn:
 		TNT1 A 1 NoDelay A_StartSound("Weapon/chaingun")
 		TNT1 A 0 A_CustomBulletAttack(22, 0, 4, random(1,4)*3, "BulletPuff", 0, CBAF_AIMFACING)//A_Look
 		Stop
 /*	See:
-   Missile:
+	Missile:
       TNT1 A 1 A_FaceTarget
       TNT1 A 1 A_CustomMissile("BatRocket")
       Stop
 */
    }
 }
+
 Actor BatRocket
 {
 	Projectile
@@ -368,7 +373,8 @@ Actor WolfRocketSmoke
 		Stop
 	}
 }
-Actor JokeBomb 
+
+Actor JokeBomb
 {
 	Projectile
 	Radius 4
@@ -389,13 +395,14 @@ Actor JokeBomb
 		Stop
 	}
 }
-Actor ScareRocket 
+
+Actor ScareRocket
 {
 	Projectile
 	Radius 4
 	Speed 14
 	height 4
-	+SEEKERMISSILE 
+	+SEEKERMISSILE
 	SeeSound "scare/fire"
 	DeathSound "missile/hit"
 	PoisonDamage 1,5
@@ -414,6 +421,7 @@ Actor ScareRocket
 		Stop
 	}
 }
+
 Actor ClayBall
 {
 	Projectile
@@ -421,7 +429,7 @@ Actor ClayBall
 	height 4
 	Speed 17
 	//Damage 8
-	//+SEEKERMISSILE 
+	//+SEEKERMISSILE
 	SeeSound "scare/fire"
 	DeathSound "missile/hit"
 	//PoisonDamage 1,5
@@ -444,14 +452,14 @@ Actor ClayBall
 ///////////////////
 //Mr Freeze START//
 ///////////////////
-Actor FreezeRocket 
+Actor FreezeRocket
 {
 	Projectile
 	Radius 4
 	height 4
 	Speed 25
 	+BRIGHT
-	+SEEKERMISSILE 
+	+SEEKERMISSILE
 	SeeSound "scare/fire"
 	DeathSound "missile/hit"
 	DamageType "Ice"
@@ -503,7 +511,7 @@ ACTOR Smoke2A : Smoke1A
 		"####" A 0 ThrustThing(random(0,255),random(0,1),0,0)
 		"####" A 3 A_FadeOut(.05)
 		Goto Spawn+3
-	}	
+	}
 }
 
 ACTOR Smoke3A : Smoke1A
@@ -576,7 +584,7 @@ ACTOR IceTrail
 //Mr Freeze END//
 /////////////////
 
-Actor ClockRocket 
+Actor ClockRocket
 {
 	Projectile
 	Radius 4
@@ -597,6 +605,7 @@ Actor ClockRocket
 		Stop
 	}
 }
+
 Actor Syringe
 {
 	Projectile
@@ -617,6 +626,7 @@ Actor Syringe
 		Stop
 	}
 }
+
 Actor Cleaver
 {
 	// Note: Wolfenstein 3D defines the Projectile size twice.
@@ -632,13 +642,14 @@ Actor Cleaver
 	States
 	{
 		Spawn:
-			BUTC ABCDEF 1 //Bright 
-            Loop		
+			BUTC ABCDEF 1 //Bright
+            Loop
 		Death:
 			BUTC A 0
 			Stop
 	}
 }
+
 Actor Calendar
 {
 	// Note: Wolfenstein 3D defines the Projectile size twice.
@@ -655,51 +666,17 @@ Actor Calendar
 	States
 	{
 		Spawn:
-			CLND ABC 5 //Bright 
-            Loop		
+			CLND ABC 5 //Bright
+            Loop
 		Death:
 			CLND EFGHI 5
 			Stop
 	}
 }
-/*Actor chain1 : LoreShot replaces LoreShot
-{
-  Speed 20
-  Height 14
-  Radius 10
-  Projectile
-  +STRIFEDAMAGE
-  Damage 2
-  MaxStepHeight 4
-  SeeSound "loremaster/chain"
-  ActiveSound "loremaster/swish"
 
-  //action native A_LoremasterChain();
-
-  States
-  {
-  Spawn:
-    chan A 2 A_LoremasterChain
-    Loop
-  Death:
-    chan A 6
-    Stop
-  }
-}
-Actor Chain2 replaces LoreShot2
-{
-  +NOBLOCKMAP
-  +NOGRAVITY
-  States
-  {
-  Spawn:
-    CHAN A 20
-    Stop
-  }
-}
-*/
-///////Mad hatter Projectile crap/////////////
-
+//////////////////////////////
+//MAD HATTER PROJECTILE CRAP//
+//////////////////////////////
 Actor CardDeck
 {
 	// Note: Wolfenstein 3D defines the Projectile size twice.
@@ -723,567 +700,16 @@ Actor CardDeck
 			DEXP B 3 Bright A_CustomMissile("SparkSpades", 0, 0, 85, 0)
 			DEXP C 3 Bright A_CustomMissile("SparkDiamonds", 0, 0, -85, 0)
 			DEXP D 1 Bright A_CustomMissile("SparkClubs", 0, 0, 50, 0)
-			DEXP D 1 Bright 
-			Stop			
+			DEXP D 1 Bright
+			Stop
 		Death:
 			TNT1 A 0
 			Stop
 	}
 }
 
-Actor DeckTrail
-{
-Radius 8
-	States
-	{
-		Spawn:
-			CRDT ABCDEF 0
-			Stop
-	}
-}
-
-Actor SparkSpades
-{
-Projectile
-Damage 0
-Speed 5
-Radius 8
-	States
-	{
-		Spawn:
-			CSPK ABCDEFG 5  
-			CDRP ABC 5 
-			Goto Death
-			
-		Death: 
-		    CSPK G 0 A_SpawnItemEx("CardSpades2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
-			Stop
-	}
-}
-
-Actor SparkDiamonds
-{
-Projectile
-Damage 0
-Speed 5
-Radius 8
-	States
-	{
-		Spawn:
-			CSPK ABCDEFG 5
-			CDRP ABC 5 
-			Goto Death
-			
-		Death: 
-		    CSPK G 0 A_SpawnItemEx("CardDiamonds2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)//A_SpawnItemEx("CardSpades2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS
-			Stop
-	}
-}
-
-Actor SparkClubs
-{
-Projectile
-Damage 0
-Speed 5
-Radius 8
-	States
-	{
-		Spawn:
-			CSPK ABCDEFG 5 
-			CDRP ABC 5 
-			Goto Death
-			
-		Death: 
-		    CSPK G 0 A_SpawnItemEx("CardClubs2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
-			Stop
-	}
-}
-
-Actor SparkHearts
-{
-Projectile
-Damage 0
-Speed 5
-Radius 8
-	States
-	{
-		Spawn:
-			CSPK ABCDEFG 5  
-			CDRP ABC 5 
-			Goto Death
-			
-		Death: 
-		    CSPK G 0 A_SpawnItemEx("CardHearts2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
-			Stop
-	}
-}
-
-Actor CardSpawner : RandomSpawner 123
-{
-dropitem "CardClubs"
-dropitem "CardDiamonds"
-dropitem "CardHearts"
-dropitem "CardSpades"
-}
-Actor CardClubs 
-{ // Replaces the dead guard at the start of E1L1      
-Health 100    
-PainChance 127 // Go to the pain state on about half of the hits   
-GibHealth 200
-Height 56
-// Damageresistance "GasDamage", 10
-Speed 35 
-DeathSound "guard/death"   
-//SeeSound "guard/sight"    
-
-PainSound "weapons/batswing"
-AttackSound "weapons/batswing"  
-+NOBLOOD
-+LOOKALLAROUND 
-MONSTER    
-  States 
-  {        
-  Spawn:            
-    CLUB A 1 A_Look  
-    Loop 
-	
-  See: 
-    CLUB B 5 A_Chase
-	CLUB B 1
-	CLUB C 4 A_Chase
-	CLUB D 5 A_Chase
-	CLUB D 1
-	CLUB E 4 A_Chase
-	Loop  
-	
-  Melee:
-	CLUB F 5 A_FaceTarget
-	CLUB G 5
-	CLUB H 5 A_SargAttack
-	CLUB G 5
-	CLUB H 5 A_SargAttack
-	CLUB G 5
-	CLUB F 5
-	Goto See
-     
-  Pain:            
-    CLUB I 5 // A_Pain 
-	CLUB J 5 // A_Pain 
-	CLUB K 5 // A_Pain 
-	CLUB L 5 // A_Pain 
-	CLUB M 5 // A_Pain 
-	CLUB A 5 // A_Pain 
-    Goto See
-	
-  Death:            
-    CLUB N 9 A_Fall            
-    CLUB O 7 A_Scream            
-    CLUB P 5 
-	CLUB Q 5// A_DropItem("Clip", 256, 25)         
-    CLUB R -1            
-    Stop   
-  }
- }
- 
- Actor CardClubs2 : CardClubs
-{ // Replaces the dead guard at the start of E1L1       
-Health 100    
-PainChance 127 // Go to the pain state on about half of the hits   
-GibHealth 200
-// Damageresistance "GasDamage", 10
-Speed 35
-DeathSound "guard/death"   
-//SeeSound "guard/sight"    
-
-PainSound "weapons/batswing"
-AttackSound "weapons/batswing"   
-+LOOKALLAROUND
-MONSTER    
-  States 
-  {                   
-  See: 
-    CLUB B 5 A_Chase
-	CLUB B 1
-	CLUB C 4 A_Chase
-	CLUB D 5 A_Chase
-	CLUB D 1
-	CLUB E 4 A_Chase
-	Loop  
-	
-  Melee:
-	CLUB F 5 A_FaceTarget
-	CLUB G 5
-	CLUB H 5 A_SargAttack
-	CLUB G 5
-	CLUB H 5 A_SargAttack
-	CLUB G 5
-	CLUB F 5
-	Goto See
-     
-  Pain:            
-    CLUB I 5 // A_Pain 
-	CLUB J 5 // A_Pain 
-	CLUB K 5 // A_Pain 
-	CLUB L 5 // A_Pain 
-	CLUB M 5 // A_Pain 
-	CLUB A 5 // A_Pain 
-    Goto See
-	
-  Death:            
-    CLUB N 9 A_Fall            
-    CLUB O 7 A_Scream            
-    CLUB P 5 
-	CLUB Q 5// A_DropItem("Clip", 256, 25)         
-    CLUB R -1            
-    Stop   
-  }
- }
-Actor CardDiamonds 
-{ // Replaces the dead guard at the start of E1L1     
-Health 100    
-PainChance 127 // Go to the pain state on about half of the hits   
-GibHealth 200
-// Damageresistance "GasDamage", 10
-Speed 35
-Height 56
-DeathSound "guard/death"   
-//SeeSound "guard/sight"    
-
-PainSound "weapons/batswing"
-AttackSound "weapons/batswing" 
-+NOBLOOD 
-+LOOKALLAROUND 
-MONSTER    
-  States 
-  {        
-  Spawn:            
-    DIAM A 1 A_Look  
-    Loop  
-	
-  See: 
-    DIAM B 5 A_Chase
-	DIAM B 1
-	DIAM C 4 A_Chase
-	DIAM D 5 A_Chase
-	DIAM D 1
-	DIAM E 4 A_Chase
-	Loop  
-	
-  Melee:
-	DIAM F 5 A_FaceTarget
-	DIAM G 5
-	DIAM H 5 A_SargAttack
-	DIAM G 5
-	DIAM H 5 A_SargAttack
-	DIAM G 5
-	DIAM F 5
-	Goto See
-     
-  Pain:            
-    DIAM I 5 // A_Pain 
-	DIAM J 5 // A_Pain 
-	DIAM K 5 // A_Pain 
-	DIAM L 5 // A_Pain 
-	DIAM M 5 // A_Pain 
-	DIAM A 5 // A_Pain 
-    Goto See
-	
-  Death:            
-    DIAM N 9 A_Fall            
-    DIAM O 7 A_Scream            
-    DIAM P 5 
-	DIAM Q 5// A_DropItem("Clip", 256, 25)         
-    DIAM R -1            
-    Stop   
-  }
- }
- 
- Actor CardDiamonds2 : CardDiamonds
-{ // Replaces the dead guard at the start of E1L1     
-Health 100    
-PainChance 127 // Go to the pain state on about half of the hits   
-GibHealth 200
-// Damageresistance "GasDamage", 10
-Speed 35
-Height 56
-DeathSound "guard/death"   
-//SeeSound "guard/sight"    
-
-PainSound "weapons/batswing"
-AttackSound "weapons/batswing"   
-MONSTER    
-+LOOKALLAROUND
-  States 
-  {                 
-  See: 
-    DIAM B 5 A_Chase
-	DIAM B 1
-	DIAM C 4 A_Chase
-	DIAM D 5 A_Chase
-	DIAM D 1
-	DIAM E 4 A_Chase
-	Loop  
-	
-  Melee:
-	DIAM F 5 A_FaceTarget
-	DIAM G 5
-	DIAM H 5 A_SargAttack
-	DIAM G 5
-	DIAM H 5 A_SargAttack
-	DIAM G 5
-	DIAM F 5
-	Goto See
-     
-  Pain:            
-    DIAM I 5 // A_Pain 
-	DIAM J 5 // A_Pain 
-	DIAM K 5 // A_Pain 
-	DIAM L 5 // A_Pain 
-	DIAM M 5 // A_Pain 
-	DIAM A 5 // A_Pain 
-    Goto See
-	
-  Death:            
-    DIAM N 9 A_Fall            
-    DIAM O 7 A_Scream            
-    DIAM P 5 
-	DIAM Q 5// A_DropItem("Clip", 256, 25)         
-    DIAM R -1            
-    Stop   
-  }
- }
-Actor CardHearts 
-{ // Replaces the dead guard at the start of E1L1      
-Health 100    
-PainChance 127 // Go to the pain state on about half of the hits   
-GibHealth 200
-// Damageresistance "GasDamage", 10
-Height 56
-Speed 35
-DeathSound "guard/death"   
-//SeeSound "guard/sight"    
-
-PainSound "weapons/batswing"
-+NOBLOOD
-+LOOKALLAROUND
-AttackSound "weapons/batswing"
-MONSTER    
-  States 
-  {        
-  Spawn:            
-    HART A 1 A_Look  
-    Loop  
-	
-  See: 
-    HART B 5 A_Chase
-	HART B 1
-	HART C 4 A_Chase
-	HART D 5 A_Chase
-	HART D 1
-	HART E 4 A_Chase
-	Loop  
-	
-  Melee:
-	HART F 5 A_FaceTarget
-	HART G 5
-	HART H 5 A_SargAttack
-	HART G 5
-	HART H 5 A_SargAttack
-	HART G 5
-	HART F 5
-	Goto See
-     
-  Pain:            
-    HART I 5 // A_Pain 
-	HART J 5 // A_Pain 
-	HART K 5 // A_Pain 
-	HART L 5 // A_Pain 
-	HART M 5 // A_Pain 
-	HART A 5 // A_Pain 
-    Goto See
-	
-  Death:            
-    HART N 9 A_Fall            
-    HART O 7 A_Scream            
-    HART P 5 
-	HART Q 5// A_DropItem("Clip", 256, 25)         
-    HART R -1            
-    Stop   
-  }
- }
- 
- Actor CardHearts2 : CardHearts
-{ // Replaces the dead guard at the start of E1L1       
-Health 100    
-PainChance 127 // Go to the pain state on about half of the hits   
-GibHealth 200
-// Damageresistance "GasDamage", 10
-Speed 35
-DeathSound "guard/death"   
-//SeeSound "guard/sight"    
-
-PainSound "weapons/batswing"
-+LOOKALLAROUND
-AttackSound "weapons/batswing"
-MONSTER    
-  States 
-  {                 
-  See: 
-    HART B 5 A_Chase
-	HART B 1
-	HART C 4 A_Chase
-	HART D 5 A_Chase
-	HART D 1
-	HART E 4 A_Chase
-	Loop  
-	
-  Melee:
-	HART F 5 A_FaceTarget
-	HART G 5
-	HART H 5 A_SargAttack
-	HART G 5
-	HART H 5 A_SargAttack
-	HART G 5
-	HART F 5
-	Goto See
-     
-  Pain:            
-    HART I 5 // A_Pain 
-	HART J 5 // A_Pain 
-	HART K 5 // A_Pain 
-	HART L 5 // A_Pain 
-	HART M 5 // A_Pain 
-	HART A 5 // A_Pain 
-    Goto See
-	
-  Death:            
-    HART N 9 A_Fall            
-    HART O 7 A_Scream            
-    HART P 5 
-	HART Q 5// A_DropItem("Clip", 256, 25)         
-    HART R -1            
-    Stop   
-  }
- }
-Actor CardSpades 
-{ // Replaces the dead guard at the start of E1L1      
-Health 100    
-PainChance 127 // Go to the pain state on about half of the hits   
-GibHealth 200
-// Damageresistance "GasDamage", 10
-Height 56
-Speed 35
-DeathSound "guard/death"   
-//SeeSound "guard/sight"    
-
-PainSound "weapons/batswing"
-AttackSound "weapons/batswing"
-+NOBLOOD
-+LOOKALLAROUND
-MONSTER    
-  States 
-  {        
-  Spawn:            
-    SPAD A 1 A_Look  
-    Loop  
-	
-  See: 
-    SPAD B 5 A_Chase
-	SPAD B 1
-	SPAD C 4 A_Chase
-	SPAD D 5 A_Chase
-	SPAD D 1
-	SPAD E 4 A_Chase
-	Loop  
-	
-  Melee:
-	SPAD F 5 A_FaceTarget
-	SPAD G 5
-	SPAD H 5 A_SargAttack
-	SPAD G 5
-	SPAD H 5 A_SargAttack
-	SPAD G 5
-	SPAD F 5
-	Goto See
-     
-  Pain:            
-    SPAD I 5 // A_Pain 
-	SPAD J 5 // A_Pain 
-	SPAD K 5 // A_Pain 
-	SPAD L 5 // A_Pain 
-	SPAD M 5 // A_Pain 
-	SPAD A 5 // A_Pain 
-    Goto See
-	
-  Death:            
-    SPAD N 9 A_Fall            
-    SPAD O 7 A_Scream            
-    SPAD P 5 
-	SPAD Q 5// A_DropItem("Clip", 256, 25)         
-    SPAD R -1            
-    Stop   
-  }
- }
- 
- Actor CardSpades2 : CardSpades
-{ // Replaces the dead guard at the start of E1L1      
-Health 100    
-PainChance 127 // Go to the pain state on about half of the hits   
-GibHealth 200
-// Damageresistance "GasDamage", 10
-Speed 35
-DeathSound "guard/death"   
-//SeeSound "guard/sight"    
-
-PainSound "weapons/batswing"
-AttackSound "weapons/batswing"
-+LOOKALLAROUND
-MONSTER    
-  States 
-  {                    
-  See: 
-    SPAD B 5 A_Chase
-	SPAD B 1
-	SPAD C 4 A_Chase
-	SPAD D 5 A_Chase
-	SPAD D 1
-	SPAD E 4 A_Chase
-	Loop  
-	
-  Melee:
-	SPAD F 5 A_FaceTarget
-	SPAD G 5
-	SPAD H 5 A_SargAttack
-	SPAD G 5
-	SPAD H 5 A_SargAttack
-	SPAD G 5
-	SPAD F 5
-	Goto See
-     
-  Pain:            
-    SPAD I 5 // A_Pain 
-	SPAD J 5 // A_Pain 
-	SPAD K 5 // A_Pain 
-	SPAD L 5 // A_Pain 
-	SPAD M 5 // A_Pain 
-	SPAD A 5 // A_Pain 
-    Goto See
-	
-  Death:            
-    SPAD N 9 A_Fall            
-    SPAD O 7 A_Scream            
-    SPAD P 5 
-	SPAD Q 5// A_DropItem("Clip", 256, 25)         
-    SPAD R -1            
-    Stop   
-  }
- }
 Actor FlyingHat
 {
-	// Note: Wolfenstein 3D defines the Projectile size twice.
-	// When doing collisions against walls it uses a Radius of 8
-	// When doing collisions against the player the delta needs to be within 48
-	// So what to do?  I say we just copy Doom's Radius for now.
 	Radius 11
 	Speed 20
 	-NOGRAVITY
@@ -1294,50 +720,474 @@ Actor FlyingHat
 	Projectile
 	States
 	{
-		Spawn:
-			HATP ABCDEFGH 1 Bright A_SpawnItem("DeckTrail")
-			HATP H 0 A_Stop
-			Goto SpawnDeath
-		SpawnDeath:
-			HATP I 2   //A_StartSound("fire/flameexplosion")
-			HATP J 2  
-			HATP K 2  
-			HATP L 2 A_SpawnItemEx("Rabbit", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
-		    HATP I 2   //A_StartSound("fire/flameexplosion")
-			HATP J 2  
-			HATP K 2  
-			HATP L 2 A_SpawnItemEx("Rabbit", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
-			HATP I 2   //A_StartSound("fire/flameexplosion")
-			HATP J 2  
-			HATP K 2  
-			HATP L 2 A_SpawnItemEx("Rabbit", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
-		    HATP I 2  //A_StartSound("fire/flameexplosion")
-			HATP J 2  
-			HATP K 2 
-			HATP L 2 A_SpawnItemEx("Rabbit", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
-			HATP I -1 
-			Stop
-		Death:
-			TNT1 A 0
-			Stop
-		XDeath:
-			HATP I 2   //A_StartSound("fire/flameexplosion")
-			HATP J 2  
-			HATP K 2  
-			HATP L 2 
-		    HATP I 2   //A_StartSound("fire/flameexplosion")
-			HATP J 2  
-			HATP K 2  
-			HATP L 2 
-			HATP I 2   //A_StartSound("fire/flameexplosion")
-			HATP J 2  
-			HATP K 2  
-			HATP L 2 
-		    HATP I 2  //A_StartSound("fire/flameexplosion")
-			HATP J 2  
-			HATP K 2 
-			HATP L 2 
-			HATP I -1 
-			Stop
+	Spawn:
+		HATP ABCDEFGH 1 Bright A_SpawnItem("DeckTrail")
+		HATP H 0 A_Stop
+		Goto SpawnDeath
+	SpawnDeath:
+		HATP I 2 //A_StartSound("fire/flameexplosion")
+		HATP J 2
+		HATP K 2
+		HATP L 2 A_SpawnItemEx("Rabbit", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
+		HATP I 2 //A_StartSound("fire/flameexplosion")
+		HATP J 2
+		HATP K 2
+		HATP L 2 A_SpawnItemEx("Rabbit", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
+		HATP I 2 //A_StartSound("fire/flameexplosion")
+		HATP J 2
+		HATP K 2
+		HATP L 2 A_SpawnItemEx("Rabbit", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
+		HATP I 2 //A_StartSound("fire/flameexplosion")
+		HATP J 2
+		HATP K 2
+		HATP L 2 A_SpawnItemEx("Rabbit", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
+		HATP I -1
+		Stop
+	Death:
+		TNT1 A 0
+		Stop
+	XDeath:
+		HATP I 2 //A_StartSound("fire/flameexplosion")
+		HATP J 2
+		HATP K 2
+		HATP L 2
+		HATP I 2 //A_StartSound("fire/flameexplosion")
+		HATP J 2
+		HATP K 2
+		HATP L 2
+		HATP I 2 //A_StartSound("fire/flameexplosion")
+		HATP J 2
+		HATP K 2
+		HATP L 2
+		HATP I 2//A_StartSound("fire/flameexplosion")
+		HATP J 2
+		HATP K 2
+		HATP L 2
+		HATP I -1
+		Stop
+	}
+}
+
+Actor DeckTrail
+{
+	Radius 8
+	States
+	{
+	Spawn:
+		CRDT ABCDEF 0
+		Stop
+	}
+}
+
+Actor SparkBase
+{
+	Projectile
+	Damage 0
+	Speed 5
+	Radius 8
+}
+
+Actor SparkSpades : SparkBase
+{
+	States
+	{
+	Spawn:
+		CSPK ABCDEFG 5
+		CDRP ABC 5
+		Goto Death
+	Death:
+		CSPK G 0 A_SpawnItemEx("CardSpades2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
+		Stop
+	}
+}
+
+Actor SparkDiamonds : SparkBase
+{
+	States
+	{
+	Spawn:
+		CSPK ABCDEFG 5
+		CDRP ABC 5
+		Goto Death
+	Death:
+		CSPK G 0 A_SpawnItemEx("CardDiamonds2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)//A_SpawnItemEx("CardSpades2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS
+		Stop
+	}
+}
+
+Actor SparkClubs : SparkBase
+{
+	States
+	{
+	Spawn:
+		CSPK ABCDEFG 5
+		CDRP ABC 5
+		Goto Death
+	Death:
+		CSPK G 0 A_SpawnItemEx("CardClubs2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
+		Stop
+	}
+}
+
+Actor SparkHearts : SparkBase
+{
+	States
+	{
+	Spawn:
+		CSPK ABCDEFG 5
+		CDRP ABC 5
+		Goto Death
+	Death:
+		CSPK G 0 A_SpawnItemEx("CardHearts2", 0, 0, 0, 0, 0, 0, 0, SXF_TRANSFERPOINTERS)
+		Stop
+	}
+}
+
+Actor CardSpawner : RandomSpawner 123
+{
+	DropItem "CardClubs"
+	DropItem "CardDiamonds"
+	DropItem "CardHearts"
+	DropItem "CardSpades"
+}
+
+Actor CardBase // Replaces the dead guard at the start of E1L1
+{
+	Health 100
+	PainChance 127 // Go to the pain state on about half of the hits
+	GibHealth 200
+	Height 56
+	Speed 35
+	DeathSound "guard/death"
+	PainSound "weapons/batswing"
+	AttackSound "weapons/batswing"
+	//DamageResistance "GasDamage", 10
+	//SeeSound "guard/sight"
+	+NOBLOOD
+	+LOOKALLAROUND
+	MONSTER
+}
+
+Actor CardClubs : CardBase
+{
+	States
+	{
+	Spawn:
+		CLUB A 1 A_Look
+		Loop
+	See:
+		CLUB B 5 A_Chase
+		CLUB B 1
+		CLUB C 4 A_Chase
+		CLUB D 5 A_Chase
+		CLUB D 1
+		CLUB E 4 A_Chase
+		Loop
+	Melee:
+		CLUB F 5 A_FaceTarget
+		CLUB G 5
+		CLUB H 5 A_SargAttack
+		CLUB G 5
+		CLUB H 5 A_SargAttack
+		CLUB G 5
+		CLUB F 5
+		Goto See
+	Pain:
+		CLUB I 5
+		CLUB J 5
+		CLUB K 5
+		CLUB L 5
+		CLUB M 5
+		CLUB A 5
+	Goto See
+	Death:
+		CLUB N 9 A_Fall
+		CLUB O 7 A_Scream
+		CLUB P 5
+		CLUB Q 5// A_DropItem("Clip", 256, 25)
+		CLUB R -1
+		Stop
+	}
+}
+
+Actor CardClubs2 : CardBase
+{
+	States
+	{
+	See:
+		CLUB B 5 A_Chase
+		CLUB B 1
+		CLUB C 4 A_Chase
+		CLUB D 5 A_Chase
+		CLUB D 1
+		CLUB E 4 A_Chase
+		Loop
+	Melee:
+		CLUB F 5 A_FaceTarget
+		CLUB G 5
+		CLUB H 5 A_SargAttack
+		CLUB G 5
+		CLUB H 5 A_SargAttack
+		CLUB G 5
+		CLUB F 5
+		Goto See
+	Pain:
+		CLUB I 5
+		CLUB J 5
+		CLUB K 5
+		CLUB L 5
+		CLUB M 5
+		CLUB A 5
+		Goto See
+	Death:
+		CLUB N 9 A_Fall
+		CLUB O 7 A_Scream
+		CLUB P 5
+		CLUB Q 5// A_DropItem("Clip", 256, 25)
+		CLUB R -1
+		Stop
+	}
+}
+
+Actor CardDiamonds : CardBase
+{
+	States
+	{
+	Spawn:
+		DIAM A 1 A_Look
+		Loop
+	See:
+		DIAM B 5 A_Chase
+		DIAM B 1
+		DIAM C 4 A_Chase
+		DIAM D 5 A_Chase
+		DIAM D 1
+		DIAM E 4 A_Chase
+		Loop
+	Melee:
+		DIAM F 5 A_FaceTarget
+		DIAM G 5
+		DIAM H 5 A_SargAttack
+		DIAM G 5
+		DIAM H 5 A_SargAttack
+		DIAM G 5
+		DIAM F 5
+		Goto See
+	Pain:
+		DIAM I 5 // A_Pain
+		DIAM J 5 // A_Pain
+		DIAM K 5 // A_Pain
+		DIAM L 5 // A_Pain
+		DIAM M 5 // A_Pain
+		DIAM A 5 // A_Pain
+		Goto See
+	Death:
+		DIAM N 9 A_Fall
+		DIAM O 7 A_Scream
+		DIAM P 5
+		DIAM Q 5// A_DropItem("Clip", 256, 25)
+		DIAM R -1
+		Stop
+	}
+}
+
+Actor CardDiamonds2 : CardBase
+{
+	States
+	{
+	See:
+		DIAM B 5 A_Chase
+		DIAM B 1
+		DIAM C 4 A_Chase
+		DIAM D 5 A_Chase
+		DIAM D 1
+		DIAM E 4 A_Chase
+		Loop
+	Melee:
+		DIAM F 5 A_FaceTarget
+		DIAM G 5
+		DIAM H 5 A_SargAttack
+		DIAM G 5
+		DIAM H 5 A_SargAttack
+		DIAM G 5
+		DIAM F 5
+		Goto See
+	Pain:
+		DIAM I 5 // A_Pain
+		DIAM J 5 // A_Pain
+		DIAM K 5 // A_Pain
+		DIAM L 5 // A_Pain
+		DIAM M 5 // A_Pain
+		DIAM A 5 // A_Pain
+		Goto See
+	Death:
+		DIAM N 9 A_Fall
+		DIAM O 7 A_Scream
+		DIAM P 5
+		DIAM Q 5// A_DropItem("Clip", 256, 25)
+		DIAM R -1
+		Stop
+	}
+}
+
+Actor CardHearts
+{
+	States
+	{
+	Spawn:
+		HART A 1 A_Look
+		Loop
+	See:
+		HART B 5 A_Chase
+		HART B 1
+		HART C 4 A_Chase
+		HART D 5 A_Chase
+		HART D 1
+		HART E 4 A_Chase
+		Loop
+	Melee:
+		HART F 5 A_FaceTarget
+		HART G 5
+		HART H 5 A_SargAttack
+		HART G 5
+		HART H 5 A_SargAttack
+		HART G 5
+		HART F 5
+		Goto See
+	Pain:
+		HART I 5
+		HART J 5
+		HART K 5
+		HART L 5
+		HART M 5
+		HART A 5
+		Goto See
+	Death:
+		HART N 9 A_Fall
+		HART O 7 A_Scream
+		HART P 5
+		HART Q 5// A_DropItem("Clip", 256, 25)
+		HART R -1
+		Stop
+	}
+}
+
+Actor CardHearts2 : CardBase
+{
+	States
+	{
+	See:
+		HART B 5 A_Chase
+		HART B 1
+		HART C 4 A_Chase
+		HART D 5 A_Chase
+		HART D 1
+		HART E 4 A_Chase
+		Loop
+	Melee:
+		HART F 5 A_FaceTarget
+		HART G 5
+		HART H 5 A_SargAttack
+		HART G 5
+		HART H 5 A_SargAttack
+		HART G 5
+		HART F 5
+		Goto See
+	Pain:
+		HART I 5
+		HART J 5
+		HART K 5
+		HART L 5
+		HART M 5
+		HART A 5
+		Goto See
+	Death:
+		HART N 9 A_Fall
+		HART O 7 A_Scream
+		HART P 5
+		HART Q 5// A_DropItem("Clip", 256, 25)
+		HART R -1
+		Stop
+	}
+}
+
+Actor CardSpades : CardBase
+{
+	States
+	{
+	Spawn:
+		SPAD A 1 A_Look
+		Loop
+	See:
+		SPAD B 5 A_Chase
+		SPAD B 1
+		SPAD C 4 A_Chase
+		SPAD D 5 A_Chase
+		SPAD D 1
+		SPAD E 4 A_Chase
+		Loop
+	Melee:
+		SPAD F 5 A_FaceTarget
+		SPAD G 5
+		SPAD H 5 A_SargAttack
+		SPAD G 5
+		SPAD H 5 A_SargAttack
+		SPAD G 5
+		SPAD F 5
+		Goto See
+	Pain:
+		SPAD I 5
+		SPAD J 5
+		SPAD K 5
+		SPAD L 5
+		SPAD M 5
+		SPAD A 5
+		Goto See
+	Death:
+		SPAD N 9 A_Fall
+		SPAD O 7 A_Scream
+		SPAD P 5
+		SPAD Q 5// A_DropItem("Clip", 256, 25)
+		SPAD R -1
+		Stop
+	}
+}
+
+Actor CardSpades2 : CardBase
+{
+	States
+	{
+	See:
+		SPAD B 5 A_Chase
+		SPAD B 1
+		SPAD C 4 A_Chase
+		SPAD D 5 A_Chase
+		SPAD D 1
+		SPAD E 4 A_Chase
+		Loop
+	Melee:
+		SPAD F 5 A_FaceTarget
+		SPAD G 5
+		SPAD H 5 A_SargAttack
+		SPAD G 5
+		SPAD H 5 A_SargAttack
+		SPAD G 5
+		SPAD F 5
+		Goto See
+	Pain:
+		SPAD I 5
+		SPAD J 5
+		SPAD K 5
+		SPAD L 5
+		SPAD M 5
+		SPAD A 5
+		Goto See
+	Death:
+		SPAD N 9 A_Fall
+		SPAD O 7 A_Scream
+		SPAD P 5
+		SPAD Q 5// A_DropItem("Clip", 256, 25)
+		SPAD R -1
+		Stop
 	}
 }

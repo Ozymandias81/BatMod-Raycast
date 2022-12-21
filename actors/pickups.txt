@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81
+ * Copyright (c) 2022 Ddadd, Ozymandias81
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -58,7 +58,7 @@ Actor Batbelt : Backpack Replaces Backpack { -COUNTITEM Inventory.PickupMessage 
 
 Actor BatSoda : Health replaces HealthBonus
 {
-	//hostages are items don't count this 
+	//hostages are items don't count this
 	-COUNTITEM
 	+INVENTORY.ALWAYSPICKUP
 	Inventory.Amount 3
@@ -150,8 +150,8 @@ Actor Hostage : SwitchableDecoration replaces BlurSphere
 
 Actor Girl : SwitchableDecoration replaces InvulnerabilitySphere
 {
-	Radius 16//makes it only killable by explosions and specific types of Damage
-	Height 32//don't want player accidently killing hostages
+	Radius 16
+	Height 32
 	Speed 3
 	PainChance 200
 	Scale 1.2
@@ -188,8 +188,8 @@ Actor Girl : SwitchableDecoration replaces InvulnerabilitySphere
 
 Actor Lady : SwitchableDecoration replaces Berserk
 {
-	Radius 16//makes it only killable by explosions and specific types of Damage
-	Height 32//don't want player accidently killing hostages
+	Radius 16
+	Height 32
 	Speed 3
 	PainChance 200
 	Scale 1.2
@@ -224,10 +224,10 @@ Actor Lady : SwitchableDecoration replaces Berserk
 	}
 }
 
-Actor Gordon : SwitchableDecoration replaces armorBonus
+Actor Gordon : SwitchableDecoration replaces ArmorBonus
 {
-	Radius 16//makes it only killable by explosions and specific types of Damage
-	Height 32//don't want player accidently killing hostages
+	Radius 16
+	Height 32
 	Speed 3
 	PainChance 200
 	Scale 1.2
@@ -262,7 +262,7 @@ Actor Gordon : SwitchableDecoration replaces armorBonus
 	}
 }
 
-Actor CopSpawner : RandomSpawner replaces infrared
+Actor CopSpawner : RandomSpawner replaces Infrared
 {
 	DropItem "Cop"
 	DropItem "CopNoHat"
@@ -274,10 +274,10 @@ Actor CopSpawner : RandomSpawner replaces infrared
 	}
 }
 
-Actor Cop : SwitchableDecoration //replaces infrared
+Actor Cop : SwitchableDecoration
 {
-	Radius 16//makes it only killable by explosions and specific types of Damage
-	Height 32//don't want player accidently killing hostages
+	Radius 16
+	Height 32
 	Speed 3
 	PainChance 200
 	Scale 1.2
@@ -313,10 +313,10 @@ Actor Cop : SwitchableDecoration //replaces infrared
 	}
 }
 
-Actor CopNoHat : SwitchableDecoration //replaces infrared
+Actor CopNoHat : SwitchableDecoration
 {
-	Radius 16//makes it only killable by explosions and specific types of Damage
-	Height 32//don't want player accidently killing hostages
+	Radius 16
+	Height 32
 	Speed 3
 	PainChance 200
 	Scale 1.2

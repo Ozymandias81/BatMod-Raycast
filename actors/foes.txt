@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81
+ * Copyright (c) 2022 Ddadd, Ozymandias81
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -964,7 +964,7 @@ Actor TwoFaceHenchmen replaces stealthchaingunguy
 	}
 }
 
-Actor Soilder replaces stealthzombieman
+Actor Soilder replaces StealthZombieman
 {
 	Health 80
 	Radius 20
@@ -1382,7 +1382,7 @@ Actor JokerGoonSpawner : RandomSpawner replaces wolfensteinss
 	}
 }
 
-Actor HatterGoon replaces stealthdoomimp
+Actor HatterGoon replaces StealthDoomimp
 {
 	Health 50
 	Radius 20
@@ -1463,7 +1463,7 @@ Actor HatterGoon replaces stealthdoomimp
 	}
 }
 
-Actor SladeGoon replaces marineChaingun
+Actor SladeGoon replaces MarineChaingun
 {
 	//$Category Monsters
 	Health 80
@@ -1544,7 +1544,7 @@ Actor SladeGoon replaces marineChaingun
 	}
 }
 
-Actor EvilDoctor replaces stealthShotgunguy
+Actor EvilDoctor replaces StealthShotgunguy
 {
 	Health 15
 	Radius 20
@@ -1630,7 +1630,7 @@ Actor EvilDoctor replaces stealthShotgunguy
 	}
 }
 
-Actor Zsasz replaces stealthdemon
+Actor Zsasz replaces StealthDemon
 {
 	Health 300
 	Radius 20
@@ -1675,7 +1675,7 @@ Actor Zsasz replaces stealthdemon
 	}
 }
 
-Actor ProfessorPyg replaces revenant
+Actor ProfessorPyg replaces Revenant
 {
 	Health 300
 	Radius 20
@@ -1731,7 +1731,7 @@ Actor ProfessorPyg replaces revenant
 	}
 }
 
-Actor KillerCrocLand replaces cacodemon
+Actor KillerCrocLand replaces Cacodemon
 {
 	Health 1000
 	Radius 20
@@ -1781,7 +1781,7 @@ Actor KillerCrocLand replaces cacodemon
 	}
 }
 
-Actor KillerCrocWater replaces stealthcacodemon
+Actor KillerCrocWater replaces StealthCacodemon
 {
 	Health 1000
 	Radius 20
@@ -1946,7 +1946,7 @@ Actor FireFlyAir replaces Archvile
 	}
 }
 
-Actor DeadShot replaces stealthrevenant
+Actor DeadShot replaces StealthRevenant
 {
 	Health 300
 	Height 56
@@ -1995,7 +1995,8 @@ Actor DeadShot replaces stealthrevenant
 		Stop
 	}
 }
-Actor ManBat 503
+
+Actor ManBat
 {
 	Health 700
 	Height 56
@@ -2027,14 +2028,14 @@ Actor ManBat 503
 	Melee:
 		MBAT FGH 1 A_FaceTarget
 		MBAT IJ 3 A_CustomMeleeAttack(random(1, 10) * 6, "imp/melee") // Does not make any sound when missing
-		MBAT K 3 
+		MBAT K 3
 		Goto See
 	Missile:
 		MBAT E 1 A_FaceTarget
 		MBAT EEE 4 A_SkullAttack
 		MBAT FGH 1 A_FaceTarget
 		MBAT IJ 3 A_CustomMeleeAttack(random(1, 10) * 6, "imp/melee") // Does not make any sound when missing
-		MBAT K 3 
+		MBAT K 3
 		MBAT ABCD 10 A_recoil(20)
 		Goto See
 	Pain:
@@ -2437,7 +2438,7 @@ Actor ElGhoul replaces StealthBaron //IDK about this dude, he is pretty lame wit
 	}
 }
 
-Actor HugoStrange replaces stealthfatso
+Actor HugoStrange replaces StealthFatso
 {
 	Health 600
 	Height 56
@@ -2627,7 +2628,7 @@ Actor Penguin replaces MarineBFG
 		PENG E 1 A_CposRefire
 		Goto Missile+1
 	Pain:
-		PENG G 2 
+		PENG G 2
 		PENG A 2 A_Pain
 		Goto See
 	Death:

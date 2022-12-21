@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2022 Sergeant Mark IV, Derrick, Ozymandias81
+ * Copyright (c) 2016-2022 Sergeant Mark IV, Ddadd, Ozymandias81
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -500,7 +500,7 @@ Actor BatCarHUD : DoomWeapon
 	Weapon.AmmoType "BatCarSpeed"
 	Obituary "$OB_MPPISTOL" //to be replaced? - ozy81
 	+WEAPON.WIMPY_WEAPON
-	Inventory.Pickupmessage "$PICKUP_PISTOL_DROPPED" //to be replaced? - ozy81
+	Inventory.PickupMessage "$PICKUP_PISTOL_DROPPED" //to be replaced? - ozy81
 	Tag "$TAG_PISTOL" //to be replaced? - ozy81
 	States
 	{
@@ -628,7 +628,7 @@ Actor RunningCar : CustomInventory
 	+NOBLOOD
 	+SOLID
 	+SHOOTABLE
-	Inventory.Pickupmessage "$PK_BATPOW"
+	Inventory.PickupMessage "$PK_BATPOW"
 	States
 	{
 	Spawn:

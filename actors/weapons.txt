@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81 (some snippets)
+ * Copyright (c) 2022 Ddadd, Ozymandias81 (some snippets)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -45,7 +45,7 @@ Actor BatFist : Weapon
 		FIST A 1 A_Raise
 		Loop
 	AltFire:
-		BKIK A 3 
+		BKIK A 3
 		BKIK B 3
 		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
@@ -59,7 +59,7 @@ Actor BatFist : Weapon
 	Uppercut:
 		FIST E 4 A_CustomPunch(6 * random(1, 5), FALSE, 0)
 		FIST F 3 A_CustomPunch(6 * random(1, 5), FALSE, 0)
-		FIST E 2 
+		FIST E 2
 		Goto Ready
 	}
 }
@@ -84,7 +84,7 @@ Actor GAFist : Weapon
 		GRNF A 1 A_Raise
 		Loop
 	AltFire:
-		GKIK A 3 
+		GKIK A 3
 		GKIK B 3
 		GKIK C 3 A_CustomPunch(4 * random(1, 5), TRUE)
 		GKIK DE 2 A_ReFire
@@ -120,13 +120,13 @@ Actor BowNormal : Weapon
 		BOWA A 1 A_Raise
 		Loop
 	Fire:
-		BOWA BCDEF 2 
+		BOWA BCDEF 2
 		BOWA G 3 A_FireCustomMissile ("ArrowProjectile",0,1)
-		BOWA H 2 
+		BOWA H 2
 		BOWA B 6 A_ReFire
 		Goto Ready
 	AltFire:
-		GKIK A 3 
+		GKIK A 3
 		GKIK B 3
 		GKIK C 3 A_CustomPunch(4 * random(1, 5), TRUE)
 		GKIK DE 2 A_ReFire
@@ -139,7 +139,7 @@ Actor BowFire : Weapon
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
-	
+
 	//Scale 3
 	+NoAlert
 	+WEAPON.MELEEWEAPON
@@ -156,13 +156,13 @@ Actor BowFire : Weapon
 		BOWF A 1 A_Raise
 		Loop
 	Fire:
-		BOWF CDEFG 2 
+		BOWF CDEFG 2
 		BOWF H 3 A_FireCustomMissile ("FireArrowProjectile",0,1)
-		BOWA H 2 
+		BOWA H 2
 		BOWF C 6 A_ReFire
 		Goto Ready
 	AltFire:
-		GKIK A 3 
+		GKIK A 3
 		GKIK B 3
 		GKIK C 3 A_CustomPunch(4 * random(1, 5), TRUE)
 		GKIK DE 2 A_ReFire
@@ -192,13 +192,13 @@ Actor BowIce : Weapon
 		BOWE A 1 A_Raise
 		Loop
 	Fire:
-		BOWE BCDEF 2 
+		BOWE BCDEF 2
 		BOWE G 3 A_FireCustomMissile ("IceArrowProjectile",0,1)
-		BOWA H 2 
+		BOWA H 2
 		BOWE B 6 A_ReFire
 		Goto Ready
 	AltFire:
-		GKIK A 3 
+		GKIK A 3
 		GKIK B 3
 		GKIK C 3 A_CustomPunch(4 * random(1, 5), TRUE)
 		GKIK DE 2 A_ReFire
@@ -209,7 +209,7 @@ Actor BowIce : Weapon
 Actor BolaAmmo : Ammo
 {
 	inventory.pickupsound "misc/ammo_pickup"
-	inventory.pickupmessage "Picked up some bolas"
+	inventory.PickupMessage "Picked up some bolas"
 	inventory.amount 5
 	inventory.maxamount 350
 	ammo.backpackamount 5
@@ -228,7 +228,7 @@ Actor Bola : Weapon
 	Weapon.Kickback 100
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
-	inventory.pickupmessage "You got some bolas!"
+	inventory.PickupMessage "You got some bolas!"
 	Weapon.AmmoUse1 1
 	Weapon.AmmoUse2 1
 	Weapon.AmmoGive 20
@@ -257,7 +257,7 @@ Actor Bola : Weapon
 	Fire:
 		BOLA B 3 A_AlertMonsters
 		BOLA C 3 A_FireCustomMissile ("bolaProjectile",0,1)
-		BOLA DEF 2 
+		BOLA DEF 2
 		BOLA A 2 A_ReFire
 		Goto Ready
 	AltFire:
@@ -268,7 +268,8 @@ Actor Bola : Weapon
 		Goto Ready
 	}
 }
-Actor bolaProjectile
+
+Actor BolaProjectile
 {
 	Radius 11
 	Height 8
@@ -293,10 +294,11 @@ Actor bolaProjectile
 		Stop
 	}
 }
+
 Actor BaterangAmmo : Ammo
 {
 	inventory.pickupsound "misc/ammo_pickup"
-	inventory.pickupmessage "Picked up some batarangs"
+	inventory.PickupMessage "Picked up some batarangs"
 	inventory.amount 10
 	inventory.maxamount 350
 	ammo.backpackamount 10
@@ -308,10 +310,11 @@ Actor BaterangAmmo : Ammo
 			Stop
 	}
 }
+
 Actor RECBaterangAmmo : Ammo
 {
 	inventory.pickupsound "misc/ammo_pickup"
-	inventory.pickupmessage "Picked up some REC Batarangs"
+	inventory.PickupMessage "Picked up some REC Batarangs"
 	inventory.amount 1
 	inventory.maxamount 250
 	ammo.backpackamount 5
@@ -323,6 +326,7 @@ Actor RECBaterangAmmo : Ammo
 			Stop
 	}
 }
+
 Actor Baterang : Weapon
 {
 	Weapon.SelectionOrder 10
@@ -333,7 +337,7 @@ Actor Baterang : Weapon
 	Weapon.AmmoUse 1
 	DamageType BatPuff
 	Weapon.AmmoGive 20
-	inventory.pickupmessage "You got some batarangs!"
+	inventory.PickupMessage "You got some batarangs!"
 	AttackSound "*fist"
 	Weapon.AmmoUse2 1
 	Weapon.AmmoType "BaterangAmmo"
@@ -341,7 +345,7 @@ Actor Baterang : Weapon
 	+NoAlert
 	+WEAPON.MELEEWEAPON
 	+WEAPON.NOAUTOAIM
-	
+
 	States
 	{
 	Spawn:
@@ -358,19 +362,20 @@ Actor Baterang : Weapon
 		RANG A 1 A_Raise
 		Loop
 	Fire:
-		RANG B 3 
+		RANG B 3
 		RANG C 3 A_FireCustomMissile ("baterangProjectile",0,1)
-		RANG DEF 2 
+		RANG DEF 2
 		RANG A 2 A_ReFire
 		Goto Ready
 	AltFire:
-		BKIK A 3 
+		BKIK A 3
 		BKIK B 3
 		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	}
 }
+
 Actor RemoteBaterang : Weapon
 {
 	Weapon.SelectionOrder 3700
@@ -379,7 +384,7 @@ Actor RemoteBaterang : Weapon
 	Tag "$TAG_FIST"
 	Weapon.AmmoUse 1
 	AttackSound "*fist"
-	inventory.pickupmessage "You got a remote batarang launcher!"
+	inventory.PickupMessage "You got a remote batarang launcher!"
 	Weapon.AmmoGive 10
 	Weapon.AmmoUse2 1
 	Weapon.AmmoType "RECBaterangAmmo"
@@ -409,13 +414,14 @@ Actor RemoteBaterang : Weapon
 		SHRP E 2 A_ReFire
 		Goto Ready
 	AltFire:
-		BKIK A 3 
+		BKIK A 3
 		BKIK B 3
 		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	}
 }
+
 Actor TriBaterang : Weapon
 {
 	Weapon.SelectionOrder 4000
@@ -427,7 +433,7 @@ Actor TriBaterang : Weapon
 	AttackSound "*fist"
 	Obituary "$OB_MPFIST"
 	Tag "$TAG_FIST"
-	inventory.pickupmessage "You got some batarangs!"
+	inventory.PickupMessage "You got some batarangs!"
 	Weapon.AmmoUse2 3
 	Weapon.AmmoType "BaterangAmmo"
 	Weapon.AmmoType2 "BaterangAmmo"
@@ -452,23 +458,24 @@ Actor TriBaterang : Weapon
 		BTRI A 1 A_Raise
 		Loop
 	Fire:
-		BTRI B 3 
+		BTRI B 3
 		BTRI C 1 A_FireCustomMissile ("baterangProjectile",15,1,3)
 		BTRI C 1 A_FireCustomMissile ("baterangProjectile",-15,1,-3)
 		BTRI C 3 A_FireCustomMissile ("baterangProjectile",0,1)
 		BTRI D 2
-		RANG EF 2 
+		RANG EF 2
 		BTRI A 2 A_ReFire
 		Goto Ready
 	AltFire:
-		BKIK A 3 
+		BKIK A 3
 		BKIK B 3
 		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
 	}
 }
-Actor baterangProjectile
+
+Actor BaterangProjectile
 {
 	Radius 8
 	Height 8
@@ -489,13 +496,14 @@ Actor baterangProjectile
 		BATT ABCDEFG 2 Bright
 		Loop
 	Crash:
-		tnt1 AB 1 Bright
+		TNT1 AB 1 Bright
 		Stop
 	Death:
 		BRNG EFG 3 Bright
 		Stop
 	}
 }
+
 Actor ArrowProjectile
 {
 	Radius 11
@@ -517,13 +525,14 @@ Actor ArrowProjectile
 		AROW A 2 Bright
 		Loop
 	Crash:
-		tnt1 AB 1 Bright
+		TNT1 AB 1 Bright
 		Stop
 	Death:
 		ABRK ABC 3 Bright
 		Stop
 	}
 }
+
 Actor FireArrowProjectile
 {
 	Radius 11
@@ -546,9 +555,9 @@ Actor FireArrowProjectile
 		AROW FG 2 Bright
 		Loop
 	Crash:
-		tnt1 A 1 Bright A_CustomMissile("FireDrop", 0, 0, 50, 0)
-		tnt1 B 1 Bright A_CustomMissile("FireDrop", 0, 0, -50, 0)
-		tnt1 A 1 Bright A_SpawnItem("FireBigDropped",0,3)
+		TNT1 A 1 Bright A_CustomMissile("FireDrop", 0, 0, 50, 0)
+		TNT1 B 1 Bright A_CustomMissile("FireDrop", 0, 0, -50, 0)
+		TNT1 A 1 Bright A_SpawnItem("FireBigDropped",0,3)
 		Stop
 	Death:
 		ABRK A 1 Bright A_CustomMissile("FireDrop", 0, 0, 50, 0)
@@ -557,6 +566,7 @@ Actor FireArrowProjectile
 		Stop
 	}
 }
+
 Actor IceArrowProjectile
 {
 	Radius 11
@@ -579,14 +589,15 @@ Actor IceArrowProjectile
 		AROW E 2 Bright
 		Loop
 	Crash:
-		tnt1 AB 1 Bright //A_SpawnItemEx("IceCloud",0,0,32)
+		TNT1 AB 1 Bright //A_SpawnItemEx("IceCloud",0,0,32)
 		Stop
 	Death:
 		ABRK A 3 Bright //A_SpawnItemEx("IceCloud",0,0,32)
 		Stop
 	}
 }
-Actor recbaterangProjectile : MageStaffFX2
+
+Actor RecBaterangProjectile : MageStaffFX2
 {
 	Radius 8
 	Height 8
@@ -634,6 +645,7 @@ Actor recbaterangProjectile : MageStaffFX2
 		Stop
 	}
 }
+
 Actor shockBaterangProjectile
 {
 	Radius 11
@@ -659,29 +671,31 @@ Actor shockBaterangProjectile
 		Stop
 	}
 }
-Actor darkness : PowerupGiver
+
+Actor Darkness : PowerupGiver
 {
-  +INVENTORY.ALWAYSPICKUP
-  +INVENTORY.AUTOACTIVATE
-  Powerup.Type "Shadow"
-  //Powerup.Type Frightener
-  +INVENTORY.NOSCREENBLINK
-  Powerup.Color Black 0.8
-  Powerup.Duration -2
-  Inventory.PickupMessage "Mask of Terror"
-  //Inventory.Icon "MTRRA0"
-  -CountItem
-  //RenderStyle Stencil
-  //+Inventory.InvBar
-  //+FloatBob
-  //+Inventory.PickupFlash
-  States
-  {
-  Spawn:
-    MTRR BBBBBBBBBCDC 3 Bright
-    Loop
-  }
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.AUTOACTIVATE
+	Powerup.Type "Shadow"
+	//Powerup.Type Frightener
+	+INVENTORY.NOSCREENBLINK
+	Powerup.Color Black 0.8
+	Powerup.Duration -2
+	Inventory.PickupMessage "Mask of Terror"
+	//Inventory.Icon "MTRRA0"
+	-CountItem
+	//RenderStyle Stencil
+	//+Inventory.InvBar
+	//+FloatBob
+	//+Inventory.PickupFlash
+	States
+	{
+	Spawn:
+		MTRR BBBBBBBBBCDC 3 Bright
+		Loop
+	}
 }
+
 Actor Tazer : Weapon Replaces PlasmaRifle
 {
 	//Weapon.SelectionOrder 100
@@ -717,7 +731,7 @@ Actor Tazer : Weapon Replaces PlasmaRifle
 		//TAZE A 5
 		Goto Ready
 	AltFire:
-		BKIK A 3 
+		BKIK A 3
 		BKIK B 3
 		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
@@ -749,86 +763,88 @@ Actor TazerPlasma
 		Stop
 	}
 }
-Actor EMPGun : weapon replaces bfg9000
+
+Actor EMPGun : Weapon replaces BFG9000
 {
-  //Height 20
-  Weapon.SlotNumber 7
-  Weapon.AmmoUse 40
-  Weapon.AmmoGive 40
-  Weapon.AmmoType2 "Cell"
-  AttackSound "*fist"
-  inventory.pickupmessage "You got the EMP rifle! No one will see you for several seconds after a blast."
-  Weapon.AmmoUse2 40
-  Weapon.AmmoType "Cell"
-  +WEAPON.NOAUTOFIRE
-  //Inventory.PickupMessage "$GOTBFG9000"
-  //Tag "$TAG_BFG9000"
-  +NoAlert
-  States
-  {
-  
-  Ready:
-    ELEC A 1 A_WeaponReady
-    Loop
-  Deselect:
-    ELEC A 1 A_Lower
-    Loop
-  Select:
-    ELEC A 1 A_Raise
-    Loop
-  Fire:
-	ELEC A 20
-    ELEC B 10 
-    ELEC C 10 A_FireCustomMissile("EMPBlast")
-	ELEC B 0 A_StartSound("ACT")
-	ELEC B 0 Acs_ExecuteAlways(34)
-	ELEC A 20 A_ReFire
-    Goto Ready
-  AltFire:
-		BKIK A 3 
+	//Height 20
+	Weapon.SlotNumber 7
+	Weapon.AmmoUse 40
+	Weapon.AmmoGive 40
+	Weapon.AmmoType2 "Cell"
+	AttackSound "*fist"
+	Inventory.PickupMessage "You got the EMP rifle! No one will see you for several seconds after a blast."
+	Weapon.AmmoUse2 40
+	Weapon.AmmoType "Cell"
+	+WEAPON.NOAUTOFIRE
+	//Inventory.PickupMessage "$GOTBFG9000"
+	//Tag "$TAG_BFG9000"
+	+NOALERT
+	States
+	{
+	Ready:
+		ELEC A 1 A_WeaponReady
+		Loop
+	Deselect:
+		ELEC A 1 A_Lower
+		Loop
+	Select:
+		ELEC A 1 A_Raise
+		Loop
+	Fire:
+		ELEC A 20
+		ELEC B 10
+		ELEC C 10 A_FireCustomMissile("EMPBlast")
+		ELEC B 0 A_StartSound("ACT")
+		ELEC B 0 Acs_ExecuteAlways(34)
+		ELEC A 20 A_ReFire
+		Goto Ready
+	AltFire:
+		BKIK A 3
 		BKIK B 3
 		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
 		BKIK DE 2 A_ReFire
 		Goto Ready
-  Spawn:
-	WPIC H 0
-    ELEP A -1
-    Stop
-  }
+	Spawn:
+		WPIC H 0
+		ELEP A -1
+		Stop
+	}
 }
+
 Actor EMPBlast
 {
-  Radius 13
-  Height 8
-  Speed 25
-  Damage 100
-  Projectile
-  +RANDOMIZE
-  RenderStyle Add
-  Alpha 0.75
-  SeeSound "Weapon/emp"
-  DeathSound "weapons/bfgx"
-  DamageType "Electricity"
-  States
-  {
-  Spawn:
-    BOLT AB 4 Bright
-    Loop
-  Death:
-    BOLT AB 8 Bright 
-    BOLT C 8 Bright A_Explode
-    BOLT D 8 Bright 
-    Stop
-  }
+	Radius 13
+	Height 8
+	Speed 25
+	Damage 100
+	Projectile
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 0.75
+	SeeSound "Weapon/emp"
+	DeathSound "weapons/bfgx"
+	DamageType "Electricity"
+	States
+	{
+	Spawn:
+		BOLT AB 4 Bright
+		Loop
+	Death:
+		BOLT AB 8 Bright
+		BOLT C 8 Bright A_Explode
+		BOLT D 8 Bright
+		Stop
+	}
 }
-Actor GasGun : Weapon 
+
+Actor GasGun : Weapon
 {
 	//inventory.icon "GATLGUN"
-	inventory.pickupmessage "You got the smoke bomb launcher!"
+	inventory.PickupMessage "You got the smoke bomb launcher!"
 	weapon.selectionorder 100
 	weapon.bobrangex 0.7
-    weapon.bobrangey 0.7
-    weapon.bobSpeed 1.8
+	weapon.bobrangey 0.7
+	weapon.bobSpeed 1.8
 	Weapon.BobStyle "Alpha"
 	-WEAPON.DONTBOB
 	//AttackSound "weapon/pistol/attack"
@@ -838,49 +854,44 @@ Actor GasGun : Weapon
 	Weapon.ammouse2 1
 	Weapon.ammogive1 5
 	//+WEAPON.NOGRIN
-	+NoAlert
+	+NOALERT
 	+WEAPON.NOAUTOFIRE
 	+WEAPON.NOAUTOAIM
-	 AttackSound "*fist"
-	
+	AttackSound "*fist"
 	States
 	{
-		Spawn:
-			WPIC C 0
-			GASP A -1
-			Loop
-		Deselect:
-			GASG A 1 A_Lower
-			Loop
-		Select:
-			GASG A 1 A_Raise
-			Loop
-		Ready:
-			GASG A 1 A_WeaponReady
-			Loop
-		Fire:
-			GASG B 3 Bright A_AlertMonsters
-			GASG C 3 A_FireCustomMissile("GasProj",0,1)
-			GASG D 5 
-			GASG E 5
-			Goto Ready
-		AltFire:
-			BKIK A 3 
-			BKIK B 3
-			BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
-			BKIK DE 2 A_ReFire
-			Goto Ready
-			//A_FireCustomMissile (string missiletype[, float angle[, bool useammo[, int Spawnoffset[, int SpawnHeight[, bool aim[, float pitch]]]]]]) 
-			// missiletype: Actor to use as Projectile.
-            //angle: Relative angle to fire the Projectile in.
-            //useammo: Sets whether the attack uses ammo or not.
-            //Spawnoffset: Horizontal offset of the attack.
+	Spawn:
+		WPIC C 0
+		GASP A -1
+		Loop
+	Deselect:
+		GASG A 1 A_Lower
+		Loop
+	Select:
+		GASG A 1 A_Raise
+		Loop
+	Ready:
+		GASG A 1 A_WeaponReady
+		Loop
+	Fire:
+		GASG B 3 Bright A_AlertMonsters
+		GASG C 3 A_FireCustomMissile("GasProj",0,1)
+		GASG D 5
+		GASG E 5
+		Goto Ready
+	AltFire:
+		BKIK A 3
+		BKIK B 3
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
+		BKIK DE 2 A_ReFire
+		Goto Ready
 	}
 }
-Actor GasGunGreen : Weapon 
+
+Actor GasGunGreen : Weapon
 {
 	//inventory.icon "GATLGUN"
-	inventory.pickupmessage "$BAT_GASGUN"
+	inventory.PickupMessage "$BAT_GASGUN"
 	weapon.selectionorder 100
 	weapon.bobrangex 0.7
     weapon.bobrangey 0.7
@@ -896,35 +907,35 @@ Actor GasGunGreen : Weapon
 	//+WEAPON.NOGRIN
 	+WEAPON.NOAUTOAIM
 	+WEAPON.NOAUTOFIRE
-	
 	States
 	{
-		Spawn:
-			BGGN A -1
-			Loop
-		Deselect:
-			BGAS A 1 A_Lower
-			Loop
-		Select:
-			BGAS A 1 A_Raise
-			Loop
-		Ready:
-			BGAS A 1 A_WeaponReady
-			Loop
-		Fire:
-			BGAS B 3 Bright
-			BGAS C 3 A_FireCustomMissile("GasProjAltFire",0,TRUE)
-			BGAS D 5 
-			BGAS E 5
-			Goto Ready
-		AltFire:
-			BKIK A 3 
-			BKIK B 3
-			BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
-			BKIK DE 2 A_ReFire
-			Goto Ready
+	Spawn:
+		BGGN A -1
+		Loop
+	Deselect:
+		BGAS A 1 A_Lower
+		Loop
+	Select:
+		BGAS A 1 A_Raise
+		Loop
+	Ready:
+		BGAS A 1 A_WeaponReady
+		Loop
+	Fire:
+		BGAS B 3 Bright
+		BGAS C 3 A_FireCustomMissile("GasProjAltFire",0,TRUE)
+		BGAS D 5
+		BGAS E 5
+		Goto Ready
+	AltFire:
+		BKIK A 3
+		BKIK B 3
+		BKIK C 3 A_CustomPunch(4 * random(1, 5), FALSE, 0)
+		BKIK DE 2 A_ReFire
+		Goto Ready
 	}
 }
+
 Actor GasCloud //: PoisonCloud
 {
 	Radius 30
@@ -945,22 +956,23 @@ Actor GasCloud //: PoisonCloud
 	+THRUACTORS
 	+PIERCEARMOR
 	+NOBLOCKMAP
-    +NOCLIP 
+    +NOCLIP
 	+NOGRAVITY
     +DROPOFF
 	DamageType "Smoke"
 	States
 	{
-		Spawn:
-             SMOK ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE 5 A_Explode(6,60,0,0,1)//A_PoisonBagDamage//
-			Goto Death
-			
-        Death:
-			SMOK F 7 A_Fall
-			SMOK GHI 7 A_FadeOut( 0.15 )
-			Stop
+	Spawn:
+		 SMOK ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE 5 A_Explode(6,60,0,0,1)//A_PoisonBagDamage//
+		Goto Death
+
+	Death:
+		SMOK F 7 A_Fall
+		SMOK GHI 7 A_FadeOut( 0.15 )
+		Stop
 	}
 }
+
 Actor IceCloud //: PoisonCloud
 {
 	Scale 2
@@ -981,17 +993,18 @@ Actor IceCloud //: PoisonCloud
 	DamageType "Ice"
 	States
 	{
-		Spawn:
-			 icdc A 5 A_FadeIn(0.15)
-             icdc BCDEABCDE 5 Bright A_Explode(20,60,0,0,1)//A_PoisonBagDamage//
-			Goto Death
-			
-        Death:
-			icdc A 7 Bright A_Fall 
-			icdc BCD 7 Bright A_FadeOut( 0.15 )
-			Stop
+	Spawn:
+		 ICDC A 5 A_FadeIn(0.15)
+		 ICDC BCDEABCDE 5 Bright A_Explode(20,60,0,0,1)//A_PoisonBagDamage//
+		Goto Death
+
+	Death:
+		ICDC A 7 Bright A_Fall
+		ICDC BCD 7 Bright A_FadeOut( 0.15 )
+		Stop
 	}
 }
+
 Actor GasProj
 {
 	Radius 8
@@ -1000,7 +1013,7 @@ Actor GasProj
 	Projectile
 	//+RANDOMIZE
 	-NOGRAVITY
-  //+DEHEXPLOSION
+	//+DEHEXPLOSION
 	Damage 10
 	// Scale 2.0
 	SeeSound "missile/fire"
@@ -1010,26 +1023,26 @@ Actor GasProj
 	+ADDITIVEPOISONDAMAGE
 	States
 	{
-		Spawn:
-             PELT ABCDEFGH 3
-			 Loop
-			
-        Death:
-			PELT B 0 A_Explode(20,24,0,0,0,0,0,"BulletPuff","GasDamage") //requires fitting new puff
-			PELT C 0 A_CustomMissile("GasSpark", 0, 0, 85, 0)
-			PELT D 0 A_CustomMissile("GasSpark", 0, 0, -85, 0)
-			PELT E 0 A_CustomMissile("GasSpark", 0, 0, 50, 0)
-			PELT F 0 A_CustomMissile("GasSpark", 0, 0, -50, 0)
-			PELT F 0 A_SpawnItem("GasSpark")
-			PELT F 1 A_SpawnItemEx("GasCloud",0,0,32)
-			Stop
+	Spawn:
+		 PELT ABCDEFGH 3
+		 Loop
+
+	Death:
+		PELT B 0 A_Explode(20,24,0,0,0,0,0,"BulletPuff","GasDamage") //requires fitting new puff
+		PELT C 0 A_CustomMissile("GasSpark", 0, 0, 85, 0)
+		PELT D 0 A_CustomMissile("GasSpark", 0, 0, -85, 0)
+		PELT E 0 A_CustomMissile("GasSpark", 0, 0, 50, 0)
+		PELT F 0 A_CustomMissile("GasSpark", 0, 0, -50, 0)
+		PELT F 0 A_SpawnItem("GasSpark")
+		PELT F 1 A_SpawnItemEx("GasCloud",0,0,32)
+		Stop
 	}
 }
 
 Actor GasGunAmmo : Ammo
 {
 	inventory.pickupsound "misc/ammo_pickup"
-	inventory.pickupmessage "$BAT_GASGUNAMMO"
+	inventory.PickupMessage "$BAT_GASGUNAMMO"
 	inventory.amount 5
 	inventory.maxamount 50
 	ammo.backpackamount 5
@@ -1050,20 +1063,20 @@ Actor GasProjAltFire
 	Speed 10
 	Damage 1
 	Speed 20
-  ReactionTime 115
-  -BOUNCEONACTORS
-  +EXPLODEONWATER
-  +NOEXTREMEDEATH
--NOGRAVITY
-  +RANDOMIZE
-  +DEHEXPLOSION
-  +GRENADETRAIL
-  BounceType "Doom"
-  Gravity 1.5
-  BounceCount 3
-  SeeSound "weapons/grenlf"
-  DeathSound "weapons/grenlx"
-  BounceSound "weapons/grbnce"
+	ReactionTime 115
+	-BOUNCEONACTORS
+	+EXPLODEONWATER
+	+NOEXTREMEDEATH
+	-NOGRAVITY
+	+RANDOMIZE
+	+DEHEXPLOSION
+	+GRENADETRAIL
+	BounceType "Doom"
+	Gravity 1.5
+	BounceCount 3
+	SeeSound "weapons/grenlf"
+	DeathSound "weapons/grenlx"
+	BounceSound "weapons/grbnce"
 	// Scale 2.0
 	//SeeSound "missile/fire"
 	//deathsound "weapons/gasbreak"
@@ -1071,25 +1084,24 @@ Actor GasProjAltFire
 	DamageType "Smoke"
 	States
 	{
-		Spawn:
-             PILL A 1
-			 Loop
-			
-        Death:
-			PILL B 1 A_Fall
-			//PILL CDE 5 
-			PILL B 5 A_Explode(20,24,0,0,0,0,0,"BulletPuff","GasDamage") //requires fitting new puff
-			PILL C 5 A_CustomMissile("GasSpark", 0, 0, 85, 0)
-			PILL D 5 A_CustomMissile("GasSpark", 0, 0, -85, 0)
-			PILL E 5 A_CustomMissile("GasSpark", 0, 0, 50, 0)
-			PILL F 5 A_CustomMissile("GasSpark", 0, 0, -50, 0)
-			PILL F 1 A_SpawnItem("GasSpark")
-			//PILL F  5 A_SpawnItem("GasCloudSmall",64)
-			//PILL F  5 A_SpawnItem("GasCloudSmall",-64)
-			//PILL F  5 A_SpawnItem("GasCloudSmall",32)
-			//PILL F  5 A_SpawnItem("GasCloudSmall",-32)
-			//PILL F  5 A_SpawnItem("GasCloudSmall",0)
-			Stop
+	Spawn:
+		PILL A 1
+		Loop
+	Death:
+		PILL B 1 A_Fall
+		//PILL CDE 5
+		PILL B 5 A_Explode(20,24,0,0,0,0,0,"BulletPuff","GasDamage") //requires fitting new puff
+		PILL C 5 A_CustomMissile("GasSpark", 0, 0, 85, 0)
+		PILL D 5 A_CustomMissile("GasSpark", 0, 0, -85, 0)
+		PILL E 5 A_CustomMissile("GasSpark", 0, 0, 50, 0)
+		PILL F 5 A_CustomMissile("GasSpark", 0, 0, -50, 0)
+		PILL F 1 A_SpawnItem("GasSpark")
+		//PILL F  5 A_SpawnItem("GasCloudSmall",64)
+		//PILL F  5 A_SpawnItem("GasCloudSmall",-64)
+		//PILL F  5 A_SpawnItem("GasCloudSmall",32)
+		//PILL F  5 A_SpawnItem("GasCloudSmall",-32)
+		//PILL F  5 A_SpawnItem("GasCloudSmall",0)
+		Stop
 	}
 }
 
@@ -1106,47 +1118,44 @@ Actor GasCloudSmall : PoisonCloud
 	// SeeSound "missile/fire"
 	// deathsound "missile/hit"
 	//Projectile
-
-+ADDITIVEPOISONDAMAGE
-+NOBLOCKMAP
+	+ADDITIVEPOISONDAMAGE
+	+NOBLOCKMAP
 	+NOGRAVITY
-    +DROPOFF
-    +NODAMAGETHRUST
+	+DROPOFF
+	+NODAMAGETHRUST
 	DamageType "Smoke"
 	States
 	{
-		Spawn:
-             SMOK ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE 5 A_Explode(20,24,0,0,1)
-			Goto Death
-			
-        Death:
-			SMOK F 7 A_Fall
-			SMOK GHI 7 A_FadeOut( 0.15 )
-			Stop
+	Spawn:
+		SMOK ABCDEABCDEABCDEABCDEABCDEABCDEABCDEABCDE 5 A_Explode(20,24,0,0,1)
+		Goto Death
+	Death:
+		SMOK F 7 A_Fall
+		SMOK GHI 7 A_FadeOut( 0.15 )
+		Stop
 	}
 }
 
 Actor GasSpark : PoisonCloud
 {
-Scale 0.5
-//Projectile
-Damage 0
-Speed 3
-Radius 8
-+ADDITIVEPOISONDAMAGE
-+NOBLOCKMAP
+	Scale 0.5
+	//Projectile
+	Damage 0
+	Speed 3
+	Radius 8
+	+ADDITIVEPOISONDAMAGE
+	+NOBLOCKMAP
 	+NOGRAVITY
-    +DROPOFF
-    +NODAMAGETHRUST
-DamageType "Smoke"
+	+DROPOFF
+	+NODAMAGETHRUST
+	DamageType "Smoke"
 	States
 	{
-		Spawn:
-			SMOK ABCDE 5 
-			Stop
-			
-		Death: 
-		    SMOK GHI 5
-			SMOK I 0 A_SpawnItem("GasCloudSmall")
+	Spawn:
+		SMOK ABCDE 5
+		Stop
+	Death:
+		SMOK GHI 5
+		SMOK I 0 A_SpawnItem("GasCloudSmall")
 	}
 }

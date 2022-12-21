@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81
+ * Copyright (c) 2022 Ddadd, Ozymandias81
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,6 +21,21 @@
 **/
 
 //Destroyables here//
+Actor SnookerTable
+{
+	//$Category New Obstacles (BatMod)
+	//$Title Snooker Table (destroyable)
+	//$Color 9
+	Radius 32
+	+SOLID
+	States
+	{
+		Spawn:
+			SNOO A -1
+			Stop
+	}
+}
+
 Actor DangerousBarrel replaces ExplosiveBarrel
 {
 	//$Category New Obstacles (BatMod)
@@ -47,8 +62,8 @@ Actor DangerousBarrel replaces ExplosiveBarrel
 		BOOM B 5 Bright A_Scream
 		BOOM C 5 Bright A_Explode
 		BOOM D 5 Bright A_NoBlocking
-		BOOM E 5 Bright 
-		BOOM F -1 
+		BOOM E 5 Bright
+		BOOM F -1
 		Wait
 	}
 }
@@ -72,7 +87,7 @@ Actor TrashCan replaces HangNoGuts
 	+SHOOTABLE
 	+SOLID
 	DropItem "baterang"
-	DeathSound "trashbreak"	
+	DeathSound "trashbreak"
 	States
 	{
 	Spawn:
@@ -85,8 +100,8 @@ Actor TrashCan replaces HangNoGuts
 		TBIN B 5 A_Scream
 		TBIN C 5
 		TBIN D 5 A_NoBlocking
-		TBIN EF 5 
-		TBIN G -1 
+		TBIN EF 5
+		TBIN G -1
 		Stop
 	}
 }
@@ -169,7 +184,7 @@ Actor ShoppingCart replaces ColonGibs
 	+SHOOTABLE
 	+SOLID
 	DropItem "Healthbonus"
-	DeathSound "trashbreak"	
+	DeathSound "trashbreak"
 	States
 	{
 	Spawn:
@@ -181,7 +196,7 @@ Actor ShoppingCart replaces ColonGibs
 		GROC B 5 A_Scream
 		GROC C 5
 		GROC D 5 A_NoBlocking
-		GROC E -1 
+		GROC E -1
 		Stop
 	}
 }
@@ -549,12 +564,12 @@ Actor TrafficLight replaces FloatingSkull
 	States
 	{
 		Spawn:
-			TRAF B 200 A_AttachLight("stop",2,"ff3a3a",8,64,0)//red 
-			TRAF B 1 A_RemoveLight("stop")//red 
+			TRAF B 200 A_AttachLight("stop",2,"ff3a3a",8,64,0)//red
+			TRAF B 1 A_RemoveLight("stop")//red
 			TRAF A 140 A_AttachLight("go",2,"4CFC54",8,64,0)
-			TRAF A 1 A_RemoveLight("go") 
+			TRAF A 1 A_RemoveLight("go")
 			TRAF C 70 A_AttachLight("yield",2,"yellow",8,64,0)
-			TRAF C 1 A_RemoveLight("yield") 
+			TRAF C 1 A_RemoveLight("yield")
 			loop
 	}
 }
@@ -683,7 +698,7 @@ Actor HoboTrashBin //TrashBinSpawner related
 			Loop
 		See:
 			BINH B 10
-			BINH BCDEF 12 
+			BINH BCDEF 12
 			BINH F 0 A_ChangeFlag("SOLID",false)
 			BINH F 1 A_CustomMissile("Hobo")
 			BINH A 12
@@ -702,10 +717,10 @@ Actor SewerLight replaces HeadOnAStick
 	States
 	{
 		Spawn:
-			SBUL A 27 Bright 
-			SBUL BAB 3 
-			SBUL A 56 Bright 
-			SBUL BABBAB 3 
+			SBUL A 27 Bright
+			SBUL BAB 3
+			SBUL A 56 Bright
+			SBUL BABBAB 3
 			Loop
 	}
 }
@@ -1278,7 +1293,7 @@ Actor BenchSpawner : RandomSpawner replaces MarinePistol
 	}
 }
 
-Actor Bench 
+Actor Bench
 {
 	Radius 32
 	Height 8
@@ -1291,7 +1306,7 @@ Actor Bench
 	}
 }
 
-Actor HoboBench 
+Actor HoboBench
 {
 	Radius 32
 	Height 8
@@ -1307,7 +1322,7 @@ Actor HoboBench
 			HOBB BBCC 16
 			HOBB D 0 A_ChangeFlag("SOLID", false)
 			HOBB D 1 A_CustomMissile("Hobo")
-			HOBB D 12 
+			HOBB D 12
 			HOBB D 0 A_ChangeFlag("SOLID", true)
 			HOBB D -1
 			Stop
@@ -1330,9 +1345,12 @@ Actor StreetLightTallOff //uses same DeNum of Meat3
 	}
 }
 
-//UNUSED ACTORS, SINCE THEY DONT HAVE ANY DENUM DEFINED//
-Actor StreetLight //unused
+//UNUSED ACTORS//
+Actor StreetLight
 {
+	//$Category New Lights (BatMod)
+	//$Title StreetLight
+	//$Color 14
 	Radius 32
 	+SOLID
 	States
@@ -1343,8 +1361,11 @@ Actor StreetLight //unused
 	}
 }
 
-Actor SmallBin //unused
+Actor SmallBin
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Small Bin
+	//$Color 9
 	Radius 32
 	+SOLID
 	States
@@ -1355,8 +1376,11 @@ Actor SmallBin //unused
 	}
 }
 
-Actor SewerColumn //unused
+Actor SewerColumn
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Sewer Column
+	//$Color 9
 	Radius 32
 	+SOLID
 	States
@@ -1367,8 +1391,11 @@ Actor SewerColumn //unused
 	}
 }
 
-Actor Scrap //unused
+Actor Scrap
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Scrap
+	//$Color 9
 	Radius 32
 	States
 	{
@@ -1378,20 +1405,11 @@ Actor Scrap //unused
 	}
 }
 
-Actor SnookerTable //unused
+Actor SewerCeilingPipe
 {
-	Radius 32
-	+SOLID
-	States
-	{
-		Spawn:
-			SNOO A -1
-			Stop
-	}
-}
-
-Actor SewerCeilingPipe //unused
-{
+	//$Category New Obstacles (BatMod)
+	//$Title Sewer Ceiling Pipe
+	//$Color 9
 	Radius 32
 	States
 	{
@@ -1401,8 +1419,11 @@ Actor SewerCeilingPipe //unused
 	}
 }
 
-Actor BatSuit //unused
+Actor BatSuit
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Bat Suit from Batman Doom
+	//$Color 9
 	Radius 32
 	+SOLID
 	States
@@ -1413,8 +1434,11 @@ Actor BatSuit //unused
 	}
 }
 
-Actor TinBarrel //unused
+Actor TinBarrel
 {
+	//$Category New Obstacles (BatMod)
+	//$Title Tin Barrel
+	//$Color 9
 	Radius 32
 	+SOLID
 	States
