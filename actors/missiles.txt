@@ -416,8 +416,9 @@ Actor ScareRocket
 		FEAR A 1 Bright A_SpawnItemEx("WolfRocketSmoke", 0, 0, -40)
 		Loop
 	Death:
+		"####" A 0 A_RadiusGive("PoisonIntensity", 48, RGF_PLAYERS | RGF_CUBE, 200)
+		"####" A 0 A_RadiusGive("PoisonStop", 48, RGF_PLAYERS | RGF_CUBE, 1) //atm not used yet
 		FEAR BCD 4 A_Explode(16, 32, 1)
-		//BAL3 CDE 4 A_Explode(16, 32, 1)
 		Stop
 	}
 }

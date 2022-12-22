@@ -92,6 +92,9 @@ Class Batman : BMovePlayer
 	Melee:
 		PLAY FE 6; //BRIGHT
 		Goto See;
+	Pain.Poison:
+		PLAY G 0 ACS_NamedExecuteAlways("PoisonEffect"); //should be PoisonCheck but not working yet
+		Goto Pain;
 	Pain:
 		PLAY G 4;
 		PLAY G 4 A_Pain;
@@ -279,3 +282,21 @@ Class Freedom : Health
 		}
 	}
 } 
+
+//Counters
+Class PoisonStop : Inventory
+{
+	Default
+	{
+		Inventory.MaxAmount 1;
+	}
+}
+
+Class PoisonIntensity : Inventory
+{
+	Default
+	{
+		Inventory.Amount 1;
+		Inventory.MaxAmount 400;
+	}
+}
