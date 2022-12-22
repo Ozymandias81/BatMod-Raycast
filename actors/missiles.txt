@@ -1031,7 +1031,7 @@ Actor CardDiamonds2 : CardBase
 	}
 }
 
-Actor CardHearts
+Actor CardHearts : CardBase
 {
 	States
 	{
