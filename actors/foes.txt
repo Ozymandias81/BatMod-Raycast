@@ -2063,7 +2063,7 @@ Actor Eraser replaces LostSoul
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	AttackSound "weapon/shotgun"
 	Obituary "$OB_ERASE"
 	States
@@ -2104,7 +2104,7 @@ Actor KillerMoth replaces BetaSkull
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	DeathSound "moth/die"
 	AttackSound "weapon/shotgun"
 	Obituary "$OB_KMOTH"
@@ -2249,7 +2249,7 @@ Actor Calculator replaces MarineRailgun
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	AttackSound "weapon/shotgun"
 	Obituary "$OB_CALCU"
 	States
@@ -2292,7 +2292,7 @@ Actor BlackMask replaces StealthHellKnight
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	SeeSound "bmak/see"
 	AttackSound "weapon/shotgun"
 	DeathSound "bmak/die"
@@ -2396,7 +2396,7 @@ Actor ElGhoul replaces StealthBaron //IDK about this dude, he is pretty lame wit
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	AttackSound "weapon/shotgun"
 	DamageFactor "Ice", 0
 	Obituary "$OB_RAHG"
@@ -2451,7 +2451,7 @@ Actor HugoStrange replaces StealthFatso
 	Tag "Hugo Strange"
 	+NOBLOOD
 	+FLOORCLIP
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	+LOOKALLAROUND
 	+BOSS
 	+JUSTHIT
@@ -2604,7 +2604,7 @@ Actor Penguin replaces MarineBFG
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	+AVOIDMELEE
 	SeeSound "peng/see"
 	AttackSound "weapon/shotgun"
@@ -2695,7 +2695,7 @@ Actor MadHatter Replaces PainElemental
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	+MISSILEEVENMORE
 	AttackSound "weapon/shotgun"
 	SeeSound "mhat/see"
@@ -2924,7 +2924,7 @@ Actor TwoFace replaces HellKnight
 	+BOSS
 	+FULLVOLACTIVE
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	+MISSILEMORE
 	SeeSound "tfac/see"
 	AttackSound "weapon/shotgun"
@@ -3050,7 +3050,7 @@ Actor DeathStroke replaces Cyberdemon
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	AttackSound "weapon/shotgun"
 	DeathSound "bmak/die"
 	Obituary "$OB_SLADE"
@@ -3094,7 +3094,7 @@ Actor DeathStrokeSwords
 	+NOBLOOD
 	+BOSS
 	+LOOKALLAROUND
-	+NORADIUSDMG
+	//+NORADIUSDMG
 	AttackSound "weapon/batthrow"
 	DeathSound "bmak/die"
 	Obituary "$OB_SLADE"

@@ -292,7 +292,7 @@ Class Debris_TeddyHead : Trashcan_Lid
 	}
 }
 
-class Debris_McDonald : Debris_Base2
+class Debris_McDonald : Debris_Base
 {
 	Default
 	{
