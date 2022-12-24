@@ -342,3 +342,84 @@ class Debris_McDonald : Debris_Base
 		Wait;
 	}
 }
+
+class Debris_Cart : Debris_Base
+{
+	Default
+	{
+		-FLATSPRITE
+		BounceFactor 0.5;
+		BounceType "Doom";
+	}
+	
+	States
+	{
+	Spawn:
+		GROC F 0 NODELAY A_Jump(256,"Set1","Set2","Set3","Set4","Set5","Set6","Set7","Set8","Set9","Set10","Set11","Set12","Set13","Set14","Set15","Set16","Set17");
+		GROC F 0 A_Jump(256,"Set1");
+		Set1:
+		"####" F 1 {A_SetRoll(roll + 25, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set2:
+		"####" G 1 {A_SetRoll(roll - 25, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set3:
+		"####" H 1 {A_SetRoll(roll + 30, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set4:
+		"####" I 1 {A_SetRoll(roll - 30, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set5:
+		"####" J 1 {A_SetRoll(roll + 35, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set6:
+		"####" K 1 {A_SetRoll(roll - 35, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set7:
+		"####" L 1 {A_SetRoll(roll + 40, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set8:
+		"####" M 1 {A_SetRoll(roll - 40, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set9:
+		"####" N 1 {A_SetRoll(roll + 35, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set10:
+		"####" O 1 {A_SetRoll(roll - 35, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set11:
+		"####" P 1 {A_SetRoll(roll + 30, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set12:
+		"####" Q 1 {A_SetRoll(roll - 30, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set13:
+		"####" R 1 {A_SetRoll(roll + 25, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set14:
+		"####" S 1 {A_SetRoll(roll - 25, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set15:
+		"####" T 1 {A_SetRoll(roll + 40, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set16:
+		"####" U 1 {A_SetRoll(roll + 30, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set17:
+		"####" V 1 {A_SetRoll(roll + 20, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+	AdjustMass:
+		GROC "#" 0 A_SetMass(750);
+		GROC "#" 0 A_Jump(256,"Swim");
+	Swim:
+		GROC "#" 2 A_ScaleVelocity(0.7);
+		Loop;
+	Death:
+		GROC "#" 0 {A_SetRoll(0); A_SetAngle(0); A_SetPitch(0); bRollCenter = FALSE; bRollSprite = FALSE; bBounceOnActors = FALSE;}
+		GROC "#" 1 A_SetTics(35*5);
+		GROC "#" 0 A_Jump(256,"DeathWait");
+	DeathWait:
+		"####" "#" 1 A_FadeOut(0.09);
+		Wait;
+	}
+}
