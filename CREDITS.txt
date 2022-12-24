@@ -38,7 +38,7 @@ MrWolf (enemy bases)
 Aurora (some scenery, textures)
 DoomJuan (textures, some mapping, etc)
 AstroCreep - Music
-WSJ
+WSJ & MajikMonkee - Various sprites as base (bosses mainly)
 r&r (Batman sprites) 
 MaxED (debris system)
 Custom BIGFONT by AFADoomer, Talon1024 and DoomJedi

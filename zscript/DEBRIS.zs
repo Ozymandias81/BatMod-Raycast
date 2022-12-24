@@ -292,7 +292,7 @@ Class Debris_TeddyHead : Trashcan_Lid
 	}
 }
 
-class Debris_McDonald : Debris_Base
+class Debris_McDonald : Debris_Base2
 {
 	Default
 	{
@@ -348,6 +348,7 @@ class Debris_Cart : Debris_Base
 	Default
 	{
 		-FLATSPRITE
+		Scale 0.5;
 		BounceFactor 0.5;
 		BounceType "Doom";
 	}
