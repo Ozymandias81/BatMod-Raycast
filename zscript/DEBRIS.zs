@@ -291,3 +291,54 @@ Class Debris_TeddyHead : Trashcan_Lid
 		Wait;
 	}
 }
+
+class Debris_McDonald : Debris_Base
+{
+	Default
+	{
+		-FLATSPRITE
+		BounceFactor 0.5;
+		BounceType "Doom";
+	}
+	
+	States
+	{
+	Spawn:
+		DRNK B 0 NODELAY A_Jump(256,"Set1","Set2","Set3","Set4","Set5","Set6","Set7");
+		DRNK B 0 A_Jump(256,"Set1");
+		Set1:
+		"####" B 1 {A_SetRoll(roll + 25, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set2:
+		"####" C 1 {A_SetRoll(roll - 25, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set3:
+		"####" D 1 {A_SetRoll(roll + 30, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set4:
+		"####" E 1 {A_SetRoll(roll - 30, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set5:
+		"####" F 1 {A_SetRoll(roll + 35, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set6:
+		"####" G 1 {A_SetRoll(roll - 35, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass");}
+		Loop;
+		Set7:
+		"####" H 1 {A_SetRoll(roll + 40, SPF_INTERPOLATE); A_JumpIf(waterlevel == 3, "AdjustMass"); bFlatSprite = TRUE;}
+		Loop;
+	AdjustMass:
+		DRNK "#" 0 A_SetMass(750);
+		DRNK "#" 0 A_Jump(256,"Swim");
+	Swim:
+		DRNK "#" 2 A_ScaleVelocity(0.7);
+		Loop;
+	Death:
+		DRNK "#" 0 {A_SetRoll(0); A_SetAngle(0); A_SetPitch(0); bRollCenter = FALSE; bRollSprite = FALSE; bBounceOnActors = FALSE;}
+		DRNK "#" 1 A_SetTics(35*5);
+		DRNK "#" 0 A_Jump(256,"DeathWait");
+	DeathWait:
+		"####" "#" 1 A_FadeOut(0.09);
+		Wait;
+	}
+}
