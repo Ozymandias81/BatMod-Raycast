@@ -189,9 +189,9 @@ Class BMovePlayer : PlayerPawn
 		
 		BMPlayer = self.player;
 		ActualSpeed = Speed * GetPowerSpeed();
-		MaxGroundSpeed = zm_maxgroundspeed * ActualSpeed;
+		MaxGroundSpeed = bat_zm_maxgroundspeed * ActualSpeed;
 		MoveFactor = ScaleMovement();
-		MoveType = zm_movetype;
+		MoveType = bat_zm_movetype;
 		Pain = InStateSequence(CurState, FindState("Pain"));
 		BMPlayer.OnGround = Pos.Z <= FloorZ || bONMOBJ || bMBFBOUNCER || (BMPlayer.Cheats & CF_NOCLIP2);
 		
@@ -270,7 +270,7 @@ Class BMovePlayer : PlayerPawn
 	Override void DeathThink()
 	{
 		bNOFRICTION = False;
-		Gravity = zm_setgravity;
+		Gravity = bat_zm_setgravity;
 		
 		Super.DeathThink();
 	}
@@ -337,7 +337,7 @@ Class BMovePlayer : PlayerPawn
 		//=======================================
 		// Customizable Landing
 		
-		if(zm_landing || MoveType == 1)
+		if(bat_zm_landing || MoveType == 1)
 		{
 			if(BMPlayer.playerstate == PST_LIVE)
 			{
@@ -346,7 +346,7 @@ Class BMovePlayer : PlayerPawn
 					if(Vel.Z >= 0)
 					{
 						BMPlayer.viewheight += BMPlayer.deltaviewheight;
-						BMPlayer.deltaviewheight += zm_landingspeed * 2.f; //ensure a speedy recovery while in the air
+						BMPlayer.deltaviewheight += bat_zm_landingspeed * 2.f; //ensure a speedy recovery while in the air
 						if(BMPlayer.viewheight >= defaultviewheight)
 						{
 							BMPlayer.deltaviewheight = 0;
@@ -356,7 +356,7 @@ Class BMovePlayer : PlayerPawn
 					else
 					{
 						LandingVelZ = abs(Vel.Z);
-						BMPlayer.deltaviewheight = Vel.Z / zm_landingsens;
+						BMPlayer.deltaviewheight = Vel.Z / bat_zm_landingsens;
 						BMPlayer.viewheight = defaultviewheight;
 					}
 				}
@@ -369,15 +369,15 @@ Class BMovePlayer : PlayerPawn
 						BMPlayer.viewheight = defaultviewheight;
 						BMPlayer.deltaviewheight = 0;
 					}
-					else if(BMPlayer.viewheight < defaultviewheight * zm_minlanding && !BuildJumpDelay)
+					else if(BMPlayer.viewheight < defaultviewheight * bat_zm_minlanding && !BuildJumpDelay)
 					{
-						BMPlayer.viewheight = defaultviewheight * zm_minlanding;
+						BMPlayer.viewheight = defaultviewheight * bat_zm_minlanding;
 						if(BMPlayer.deltaviewheight <= 0) { BMPlayer.deltaviewheight = 1 / 65536.f; }
 					}
 					
 					if(BMPlayer.deltaviewheight)	
 					{
-						BMPlayer.deltaviewheight += zm_landingspeed;
+						BMPlayer.deltaviewheight += bat_zm_landingspeed;
 						if(!BMPlayer.deltaviewheight) { BMPlayer.deltaviewheight = 1 / 65536.f; }
 					}
 				}
@@ -487,7 +487,7 @@ Class BMovePlayer : PlayerPawn
 			
 			//========================================
 			//Acrobatics triggers
-			if(CVar.GetCVar("zm_doubletap", Player).GetBool()) { DoubleTapCheck(); }
+			if(CVar.GetCVar("bat_zm_doubletap", Player).GetBool()) { DoubleTapCheck(); }
 			//Dashing parameters reset
 			if(DashCooler)
 			{
@@ -502,7 +502,7 @@ Class BMovePlayer : PlayerPawn
 				}
 			}
 			//Air Dash
-			if(zm_airdash || zm_wjump)
+			if(bat_zm_airdash || bat_zm_wjump)
 			{
 				if(ADashCooler) { ADashCooler--; }
 				if(ADashTargetSpeed) { AirDashFriction(); }
@@ -512,7 +512,7 @@ Class BMovePlayer : PlayerPawn
 			//Wall Slide
 			if(CheckForWSlide) { WallSlideInitiator(); }
 			//Crouchsliding
-			if(zm_crouchslide) { CSlideInitiator(); }
+			if(bat_zm_crouchslide) { CSlideInitiator(); }
 			
 			//========================================
 			//Gravity
@@ -555,7 +555,7 @@ Class BMovePlayer : PlayerPawn
 				else if(MoveType == 5)
 					UTWaterMove();
 				
-				if(zm_ledgegrab) { LedgeGrabInitiator(); }
+				if(bat_zm_ledgegrab) { LedgeGrabInitiator(); }
 			}
 			else if(bNOGRAVITY)
 			{
@@ -572,7 +572,7 @@ Class BMovePlayer : PlayerPawn
 			}
 			else if(CanCSlide)
 			{
-				if(zm_crouchslide == 2)
+				if(bat_zm_crouchslide == 2)
 					QSlideMove();
 				else
 					CSlideMove();
@@ -713,16 +713,16 @@ Class BMovePlayer : PlayerPawn
 		Int SecIndex = FloorSector.Index();
 		Bool CheckForElevator = BMPlayer.OnGround && SecIndex == OldSecIndex && !SlopedFloor;
 		
-		if(zm_elevatorjump)
+		if(bat_zm_elevatorjump)
 		{
 			if(CheckForElevator && FloorZ > OldFloorZ) //no accidental elevator jump boost on slopes
-				ElevatorJumpBoost = (FloorZ - OldFloorZ) * zm_ejumpmultiplier;
+				ElevatorJumpBoost = (FloorZ - OldFloorZ) * bat_zm_ejumpmultiplier;
 			else
 				ElevatorJumpBoost = 0;
 		}
 		else
 		{
-			if(CheckForElevator && FloorZ - OldFloorZ >= zm_jumpheight / 2.f) { BlockJump = True; } //floor is raising too fast to not spam jump
+			if(CheckForElevator && FloorZ - OldFloorZ >= bat_zm_jumpheight / 2.f) { BlockJump = True; } //floor is raising too fast to not spam jump
 			ElevatorJumpBoost = 0;
 		}
 		
@@ -744,7 +744,7 @@ Class BMovePlayer : PlayerPawn
 		}
 		else
 		{
-			Gravity = zm_setgravity;
+			Gravity = bat_zm_setgravity;
 		}
 	}
 	
@@ -776,11 +776,11 @@ Class BMovePlayer : PlayerPawn
 			}
 			else if(BMPlayer.OnGround && !BlockJump)
 			{
-				Float JumpVelZ = zm_jumpheight + ElevatorJumpBoost;
+				Float JumpVelZ = bat_zm_jumpheight + ElevatorJumpBoost;
 				Float JumpFac = GetPowerJump();
 				if(JumpFac) { JumpVelZ *= JumpFac; }
 				
-				Vel.Z += (Vel.Z > 0 ? zm_rjumpmulti : 1) * JumpVelZ;
+				Vel.Z += (Vel.Z > 0 ? bat_zm_rjumpmulti : 1) * JumpVelZ;
 				
 				bONMOBJ = false;
 				Jumped = True;
@@ -792,12 +792,12 @@ Class BMovePlayer : PlayerPawn
 				}
 				
 				//if autojump is off set BlockJump true until jump key is unpressed
-				BlockJump = zm_autojump ? False : True;
+				BlockJump = bat_zm_autojump ? False : True;
 				DoubleJumpCooler = 5;
 			}
-			else if(!BMPlayer.OnGround && CanDoubleJump && !BlockDoubleJump && !DoubleJumpCooler && ((zm_doublejump == 1 && Vel.Z > 0) || zm_doublejump == 2))
+			else if(!BMPlayer.OnGround && CanDoubleJump && !BlockDoubleJump && !DoubleJumpCooler && ((bat_zm_doublejump == 1 && Vel.Z > 0) || bat_zm_doublejump == 2))
 			{
-				Float DoubleJumpVelZ = zm_jumpheight * zm_doublejumpheight;
+				Float DoubleJumpVelZ = bat_zm_jumpheight * bat_zm_doublejumpheight;
 				Float JumpFac = GetPowerJump();
 				if(JumpFac) { DoubleJumpVelZ *= JumpFac; }
 				Vel.Z = DoubleJumpVelZ;
@@ -822,7 +822,7 @@ Class BMovePlayer : PlayerPawn
 	void BuildGravity()
 	{
 		if(!bNOGRAVITY && !WaterLevel < 2 && !GrappleVel.Length())
-			Gravity = zm_setgravity;
+			Gravity = bat_zm_setgravity;
 		else
 			Gravity = 0.f;
 	}
@@ -866,7 +866,7 @@ Class BMovePlayer : PlayerPawn
 					BuildJumpDelay++;
 					if(BuildJumpDelay == 1)
 					{
-						BMPlayer.viewheight -= be_jumpanim;
+						BMPlayer.viewheight -= bat_be_jumpanim;
 						return;
 					}
 					else
@@ -876,11 +876,11 @@ Class BMovePlayer : PlayerPawn
 					}
 				}
 				
-				Float JumpVelZ = zm_jumpheight + ElevatorJumpBoost;
+				Float JumpVelZ = bat_zm_jumpheight + ElevatorJumpBoost;
 				Float JumpFac = GetPowerJump();
 				if(JumpFac) { JumpVelZ *= JumpFac; }
 				
-				Vel.Z += (Vel.Z > 0 ? zm_rjumpmulti : 1) * JumpVelZ;
+				Vel.Z += (Vel.Z > 0 ? bat_zm_rjumpmulti : 1) * JumpVelZ;
 					
 				bONMOBJ = false;
 				Jumped = True;
@@ -891,16 +891,16 @@ Class BMovePlayer : PlayerPawn
 					JumpSoundCooler = 4;
 				}
 				
-				BlockJump = zm_autojump ? False : True;
+				BlockJump = bat_zm_autojump ? False : True;
 				DoubleJumpCooler = 5;
 			}
 			else if(!BMPlayer.OnGround)
 			{
 				if(BuildJumpDelay) { BuildJumpDelay = 0; }
 				
-				if(CanDoubleJump && !BlockDoubleJump && !DoubleJumpCooler && ((zm_doublejump == 1 && Vel.Z > 0) || zm_doublejump == 2))
+				if(CanDoubleJump && !BlockDoubleJump && !DoubleJumpCooler && ((bat_zm_doublejump == 1 && Vel.Z > 0) || bat_zm_doublejump == 2))
 				{
-					Float DoubleJumpVelZ = zm_jumpheight * zm_doublejumpheight;
+					Float DoubleJumpVelZ = bat_zm_jumpheight * bat_zm_doublejumpheight;
 					Float JumpFac = GetPowerJump();
 					if(JumpFac) { DoubleJumpVelZ *= JumpFac; }
 					Vel.Z = DoubleJumpVelZ;
@@ -939,7 +939,7 @@ Class BMovePlayer : PlayerPawn
 		}
 		else
 		{
-			Gravity = zm_setgravity;
+			Gravity = bat_zm_setgravity;
 		}
 	}
 	
@@ -971,11 +971,11 @@ Class BMovePlayer : PlayerPawn
 			}
 			else if(BMPlayer.OnGround && !BlockJump)
 			{
-				Float JumpVelZ = zm_jumpheight + ElevatorJumpBoost;
+				Float JumpVelZ = bat_zm_jumpheight + ElevatorJumpBoost;
 				Float JumpFac = GetPowerJump();
 				if(JumpFac) { JumpVelZ *= JumpFac; }
 				
-				Vel.Z += (Vel.Z > 0 ? zm_rjumpmulti : 1) * JumpVelZ;
+				Vel.Z += (Vel.Z > 0 ? bat_zm_rjumpmulti : 1) * JumpVelZ;
 				
 				bONMOBJ = false;
 				Jumped = True;
@@ -987,12 +987,12 @@ Class BMovePlayer : PlayerPawn
 				}
 				
 				//if autojump is on set Blockjump false while jump key is pressed
-				BlockJump = zm_autojump ? False : True;
+				BlockJump = bat_zm_autojump ? False : True;
 				DoubleJumpCooler = 5;
 			}
-			else if(!BMPlayer.OnGround && zm_doublejump && CanDoubleJump && !BlockDoubleJump && !DoubleJumpCooler && Vel.Z > 0)
+			else if(!BMPlayer.OnGround && bat_zm_doublejump && CanDoubleJump && !BlockDoubleJump && !DoubleJumpCooler && Vel.Z > 0)
 			{
-				Float DoubleJumpVelZ = zm_jumpheight * zm_doublejumpheight;
+				Float DoubleJumpVelZ = bat_zm_jumpheight * bat_zm_doublejumpheight;
 				Float JumpFac = GetPowerJump();
 				if(JumpFac) { DoubleJumpVelZ *= JumpFac; }
 				Vel.Z = DoubleJumpVelZ;
@@ -1028,9 +1028,9 @@ Class BMovePlayer : PlayerPawn
 			Bool IsWalking = (CVar.GetCVar("cl_run", Player).GetBool() && (cmd.buttons & BT_SPEED)) || (!CVar.GetCVar("cl_run", Player).GetBool() && !(cmd.buttons & BT_SPEED));
 			
 			if(BMPlayer.CrouchFactor == 0.5)
-				MoveMulti = min(zm_crouchspeed, zm_walkspeed);
+				MoveMulti = min(bat_zm_crouchspeed, bat_zm_walkspeed);
 			else if(IsWalking)
-				MoveMulti = zm_walkspeed;
+				MoveMulti = bat_zm_walkspeed;
 			else
 				MoveMulti = 1;
 		}
@@ -1044,12 +1044,12 @@ Class BMovePlayer : PlayerPawn
 	
 	float SpeedMulti()
 	{
-		return MoveFactor * (BMPlayer.cmd.forwardmove && BMPlayer.cmd.sidemove ? zm_strafemodifier : 1);
+		return MoveFactor * (BMPlayer.cmd.forwardmove && BMPlayer.cmd.sidemove ? bat_zm_strafemodifier : 1);
 	}
 	
 	float AccelMulti()
 	{
-		return ActualSpeed * (BMPlayer.cmd.forwardmove && BMPlayer.cmd.sidemove ? zm_strafemodifier : 1);
+		return ActualSpeed * (BMPlayer.cmd.forwardmove && BMPlayer.cmd.sidemove ? bat_zm_strafemodifier : 1);
 	}
 	
 	void DropPrevention()
@@ -1103,14 +1103,14 @@ Class BMovePlayer : PlayerPawn
 		if(!BMPlayer.OnGround || (BMPlayer.OnGround && DashNumber))
 		{
 			DoomAirMove();
-			if(zm_ledgegrab) { LedgeGrabInitiator(); }
+			if(bat_zm_ledgegrab) { LedgeGrabInitiator(); }
 		}
 		else
 		{
 			MaxGroundSpeed *= SpeedMulti();
 			DoomGroundMove();
 			Grappled = False;
-			if(zm_dropprevention) { DropPrevention(); }
+			if(bat_zm_dropprevention) { DropPrevention(); }
 		}
 	}
 	
@@ -1145,8 +1145,8 @@ Class BMovePlayer : PlayerPawn
 		}
 		else
 		{
-			Acceleration.XY *= zm_friction;
-			Vel.XY *= 1 - zm_friction / 10.f;
+			Acceleration.XY *= bat_zm_friction;
+			Vel.XY *= 1 - bat_zm_friction / 10.f;
 		}
 	}
 	
@@ -1283,13 +1283,13 @@ Class BMovePlayer : PlayerPawn
 		if(!BMPlayer.OnGround || (BMPlayer.OnGround && DashNumber))
 		{
 			BuildAirMove();
-			if(zm_ledgegrab) { LedgeGrabInitiator(); }
+			if(bat_zm_ledgegrab) { LedgeGrabInitiator(); }
 		}
 		else
 		{
 			BuildGroundMove();
 			Grappled = False;
-			if(zm_dropprevention) { DropPrevention(); }
+			if(bat_zm_dropprevention) { DropPrevention(); }
 		}
 	}
 	
@@ -1366,7 +1366,7 @@ Class BMovePlayer : PlayerPawn
 		else if(bNOGRAVITY)
 			Friction = 0;
 		else
-			Friction = (8 - zm_friction) * 2 * 0x0200;
+			Friction = (8 - bat_zm_friction) * 2 * 0x0200;
 		
 		//Applying the friction on the length of the vector instead of the single components fixed the Build engine directional distortion
 		Int FrictionedVel = Int((!bNOGRAVITY && WaterLevel < 2 ? Vel.XY.Length() : Vel.Length()) * (0xCFD0 + Friction)) >> 16;
@@ -1535,14 +1535,14 @@ Class BMovePlayer : PlayerPawn
 		if(!BMPlayer.OnGround || (BMPlayer.OnGround && (((cmd.buttons & BT_JUMP) && !BlockJump) || DashNumber)))
 		{
 			DuskAirMove();
-			if(zm_ledgegrab) { LedgeGrabInitiator(); }
+			if(bat_zm_ledgegrab) { LedgeGrabInitiator(); }
 		}
 		else
 		{
 			MaxGroundSpeed *= SpeedMulti();
 			DuskGroundMove();
 			Grappled = False;
-			if(zm_dropprevention) { DropPrevention(); }
+			if(bat_zm_dropprevention) { DropPrevention(); }
 		}
 	}
 	
@@ -1580,7 +1580,7 @@ Class BMovePlayer : PlayerPawn
 		//Actual Movement
 		
 		//Top Speed Penalty
-		if(!CanAccelerate && BMPlayer.OnGround) { MaxAirSpeed = max(MaxAirSpeed - dsk_acceleration * ActualSpeed / 2.f, MaxGroundSpeed); }
+		if(!CanAccelerate && BMPlayer.OnGround) { MaxAirSpeed = max(MaxAirSpeed - bat_dsk_acceleration * ActualSpeed / 2.f, MaxGroundSpeed); }
 		
 		//Directional inputs
 		Acceleration.XY = RotateVector((cmd.forwardmove, - cmd.sidemove), Angle);
@@ -1591,8 +1591,8 @@ Class BMovePlayer : PlayerPawn
 			//Top Speed
 			if(!ADashTargetSpeed)
 			{
-				if(BMPlayer.OnGround && CanAccelerate) { MaxAirSpeed += dsk_acceleration * ActualSpeed; }
-				MaxAirSpeed = clamp(MaxAirSpeed, MaxGroundSpeed, zm_maxhopspeed);
+				if(BMPlayer.OnGround && CanAccelerate) { MaxAirSpeed += bat_dsk_acceleration * ActualSpeed; }
+				MaxAirSpeed = clamp(MaxAirSpeed, MaxGroundSpeed, bat_zm_maxhopspeed);
 			}
 		}
 		
@@ -1691,14 +1691,14 @@ Class BMovePlayer : PlayerPawn
 		if(!BMPlayer.OnGround || (BMPlayer.OnGround && (((cmd.buttons & BT_JUMP) && !BlockJump) || DashNumber)))
 		{
 			QuakeAirMove();
-			if(zm_ledgegrab) { LedgeGrabInitiator(); }
+			if(bat_zm_ledgegrab) { LedgeGrabInitiator(); }
 		}
 		else
 		{
 			MaxGroundSpeed *= SpeedMulti();
 			QuakeGroundMove();
 			Grappled = False;
-			if(zm_dropprevention) { DropPrevention(); }
+			if(bat_zm_dropprevention) { DropPrevention(); }
 		}
 	}
 	
@@ -1738,7 +1738,7 @@ Class BMovePlayer : PlayerPawn
 		{
 			if(!Pain)
 			{
-				Control = Velocity < StopSpeed ? zm_friction : Velocity;
+				Control = Velocity < StopSpeed ? bat_zm_friction : Velocity;
 				Drop = Control * Friction / TICRATE;
 			}
 		}
@@ -1793,24 +1793,24 @@ Class BMovePlayer : PlayerPawn
 		//Acceleration
 		if(!ADashTargetSpeed)
 		{
-			if(!q_strafetype)
+			if(!bat_q_strafetype)
 			{
-				QuakeAcceleration((SafeUnit2(Acceleration.XY), 0), MaxGroundSpeed, q_3airaccel);
+				QuakeAcceleration((SafeUnit2(Acceleration.XY), 0), MaxGroundSpeed, bat_q_3airaccel);
 			}
-			else if(q_strafetype == 1)
+			else if(bat_q_strafetype == 1)
 			{
-				QuakeAcceleration((SafeUnit2(Acceleration.XY), 0), q_1airaccel, 106.f);
+				QuakeAcceleration((SafeUnit2(Acceleration.XY), 0), bat_q_1airaccel, 106.f);
 			}
 			else
 			{
 				if(cmd.sidemove && !cmd.forwardmove && Vel.Length() >= MaxGroundSpeed)
-					QuakeAcceleration((SafeUnit2(Acceleration.XY), 0), q_1airaccel, 106.f);
+					QuakeAcceleration((SafeUnit2(Acceleration.XY), 0), bat_q_1airaccel, 106.f);
 				else
-					QuakeAcceleration((SafeUnit2(Acceleration.XY), 0), MaxGroundSpeed, q_3airaccel);
+					QuakeAcceleration((SafeUnit2(Acceleration.XY), 0), MaxGroundSpeed, bat_q_3airaccel);
 			}
 			
 			//Limiter
-			Vel.XY = min(Vel.XY.Length(), zm_maxhopspeed) * SafeUnit2(Vel.XY);
+			Vel.XY = min(Vel.XY.Length(), bat_zm_maxhopspeed) * SafeUnit2(Vel.XY);
 		}
 		
 		//Sprite Animation
@@ -1897,14 +1897,14 @@ Class BMovePlayer : PlayerPawn
 		if(!BMPlayer.OnGround || (BMPlayer.OnGround && DashNumber))
 		{
 			UTAirMove();
-			if(zm_ledgegrab) { LedgeGrabInitiator(); }
+			if(bat_zm_ledgegrab) { LedgeGrabInitiator(); }
 		}
 		else
 		{
 			MaxGroundSpeed *= SpeedMulti();
 			UTGroundMove();
 			Grappled = False;
-			if(zm_dropprevention) { DropPrevention(); }
+			if(bat_zm_dropprevention) { DropPrevention(); }
 		}
 	}
 	
@@ -1943,20 +1943,20 @@ Class BMovePlayer : PlayerPawn
 		//Dash recovery
 		if(DashCooler >= 13)
 		{
-			UTFriction(3.f * zm_friction); //stronger friction after landing from a dash/walldash
+			UTFriction(3.f * bat_zm_friction); //stronger friction after landing from a dash/walldash
 			BlockJump = True;
 		}
 		else
 		{
 			//Directional inputs
 			Acceleration.XY = RotateVector((cmd.forwardmove, - cmd.sidemove), Angle);
-			Acceleration.XY = 200.f * SafeUnit2(Acceleration.XY) * AccelMulti() / zm_friction;
+			Acceleration.XY = 200.f * SafeUnit2(Acceleration.XY) * AccelMulti() / bat_zm_friction;
 			
 			//Friction
 			if(Acceleration.XY.Length())
 				Vel.XY = Vel.XY - (Vel.XY - Acceleration.XY * Vel.XY.Length()) / TICRATE;
 			else
-				UTFriction(1.5f * zm_friction); //this feels good
+				UTFriction(1.5f * bat_zm_friction); //this feels good
 			
 			//Acceleration
 			Vel.XY += Acceleration.XY / TICRATE;
@@ -2142,7 +2142,7 @@ Class BMovePlayer : PlayerPawn
 	{
 		double defaultheight = FullHeight;
 		double savedheight = Height;
-		double crouchspeed = (CanCSlide && zm_crouchslide == 1 ? - 1.5 : direction) * CROUCHSPEED;
+		double crouchspeed = (CanCSlide && bat_zm_crouchslide == 1 ? - 1.5 : direction) * CROUCHSPEED;
 		double oldheight = BMPlayer.viewheight;
 
 		BMPlayer.crouchdir = direction;
@@ -2189,9 +2189,9 @@ Class BMovePlayer : PlayerPawn
 			CSlideStartTime = 0;
 			return;
 		}
-		else if(!BMPlayer.OnGround && zm_crouchslide == 2)
+		else if(!BMPlayer.OnGround && bat_zm_crouchslide == 2)
 		{
-			QSlideDuration = abs(Vel.Z) * zm_qslideduration;
+			QSlideDuration = abs(Vel.Z) * bat_zm_qslideduration;
 		}
 		
 		if(BMPlayer.OnGround)
@@ -2202,10 +2202,10 @@ Class BMovePlayer : PlayerPawn
 				{
 					//Not enough space for a slide
 					Double SlideAngle = Angle - VectorAngle(cmd.forwardmove, cmd.sidemove);
-					MaximumSlideSpeed = min(zm_cslidestrength * MaxGroundSpeed, zm_maxhopspeed);
+					MaximumSlideSpeed = min(bat_zm_cslidestrength * MaxGroundSpeed, bat_zm_maxhopspeed);
 					if(!CheckMove(Pos.XY + MaximumSlideSpeed * AngleToVector(SlideAngle))) { return; }
 					
-					if(zm_crouchslide == 1)
+					if(bat_zm_crouchslide == 1)
 					{
 						CanCSlide = True;
 						A_StartSound("slide",CHAN_BODY);
@@ -2242,7 +2242,7 @@ Class BMovePlayer : PlayerPawn
 		Acceleration.XY = 2.f * SafeUnit2(Acceleration.XY);
 		
 		//Friction if time has run out
-		if(Level.MapTime > CSlideStartTime + zm_cslideduration)
+		if(Level.MapTime > CSlideStartTime + bat_zm_cslideduration)
 		{
 			Int FrictionDiv = abs(FloorZ - Pos.Z) > 16 ? 500 : 100;
 			MaximumSlideSpeed *= 1 - Vel.XY.Length() / FrictionDiv;
@@ -2283,7 +2283,7 @@ Class BMovePlayer : PlayerPawn
 		
 		//Acceleration
 		Vector2 PreAccelVel = Vel.XY;
-		QuakeAcceleration((RotateVector(SafeUnit2(Acceleration.XY), Angle), 0), max(MaximumSlideSpeed, MaxGroundSpeed), zm_qslideaccel);
+		QuakeAcceleration((RotateVector(SafeUnit2(Acceleration.XY), Angle), 0), max(MaximumSlideSpeed, MaxGroundSpeed), bat_zm_qslideaccel);
 		
 		//Decrease slide duration depending on how tight turns are
 		QSlideDuration--;
@@ -2311,7 +2311,7 @@ Class BMovePlayer : PlayerPawn
 	{
 		Usercmd cmd = BMPlayer.cmd;
 		
-		Int	MaxTapTime = CVar.GetCVar("zm_maxtaptime", Player).GetInt();
+		Int	MaxTapTime = CVar.GetCVar("bat_zm_maxtaptime", Player).GetInt();
 		Int TapValue = (cmd.buttons & BT_FORWARD) + (cmd.buttons & BT_BACK) + (cmd.buttons & BT_MOVERIGHT) + (cmd.buttons & BT_MOVELEFT);
 		Int	SecondTapValue;
 		
@@ -2357,9 +2357,9 @@ Class BMovePlayer : PlayerPawn
 		///////////////////////////////////////////////////////
 		
 		//Ground Dash
-		if(zm_dash && BMPlayer.OnGround && !((cmd.buttons & BT_JUMP) & !BlockJump) && !DashCooler && (cmd.sidemove || cmd.forwardmove) && !CheckForWJump && !BlockJump)
+		if(bat_zm_dash && BMPlayer.OnGround && !((cmd.buttons & BT_JUMP) & !BlockJump) && !DashCooler && (cmd.sidemove || cmd.forwardmove) && !CheckForWJump && !BlockJump)
 		{
-			Vector2 ProjectedVelXY = zm_dashboost * MaxGroundSpeed * AngleToVector(Angle - VectorAngle(cmd.forwardmove , cmd.sidemove));
+			Vector2 ProjectedVelXY = bat_zm_dashboost * MaxGroundSpeed * AngleToVector(Angle - VectorAngle(cmd.forwardmove , cmd.sidemove));
 			if(CheckMove(Pos.XY + ProjectedVelXY)) { Dash(ProjectedVelXY); }
 			return;
 		}
@@ -2367,7 +2367,7 @@ Class BMovePlayer : PlayerPawn
 		if(ADashCooler) { return; }
 		
 		//Wall Jump
-		if(!BMPlayer.OnGround && zm_wjump)
+		if(!BMPlayer.OnGround && bat_zm_wjump)
 		{
 			if(!CheckForWJump)
 			{
@@ -2410,9 +2410,9 @@ Class BMovePlayer : PlayerPawn
 					if(DirDelta > 5)
 					{
 						//No obstacles near player check
-						Float EstimatedWJumpSpeed1 = zm_wjumpboost * MaxGroundSpeed;
-						Float EstimatedWJumpSpeed2 = zm_multipledashes + max(WJumpSpeed, Vel.XY.Length());
-						WJumpSpeed = min(max(EstimatedWJumpSpeed1, EstimatedWJumpSpeed2), zm_maxhopspeed);
+						Float EstimatedWJumpSpeed1 = bat_zm_wjumpboost * MaxGroundSpeed;
+						Float EstimatedWJumpSpeed2 = bat_zm_multipledashes + max(WJumpSpeed, Vel.XY.Length());
+						WJumpSpeed = min(max(EstimatedWJumpSpeed1, EstimatedWJumpSpeed2), bat_zm_maxhopspeed);
 						Vector2 WJumpVector = WJumpSpeed * AngleToVector(WJumpAngle);
 						
 						if(CheckMove(Pos.XY + WJumpVector))
@@ -2435,12 +2435,12 @@ Class BMovePlayer : PlayerPawn
 		}
 		
 		//Air Dash
-		if(zm_airdash && !BMPlayer.OnGround && (cmd.sidemove || cmd.forwardmove) && !ADashTargetSpeed)
+		if(bat_zm_airdash && !BMPlayer.OnGround && (cmd.sidemove || cmd.forwardmove) && !ADashTargetSpeed)
 		{
 			Vector2 ADashVector;
 			if(Vel.XY.Length() <= MaxGroundSpeed)
 			{
-				ADashVector = (MaxGroundSpeed + zm_adashboost) * AngleToVector(Angle - VectorAngle(cmd.forwardmove , cmd.sidemove));		
+				ADashVector = (MaxGroundSpeed + bat_zm_adashboost) * AngleToVector(Angle - VectorAngle(cmd.forwardmove , cmd.sidemove));		
 				if(CheckMove(Pos.XY + ADashVector))
 				{
 					AirDash(ADashVector);
@@ -2449,7 +2449,7 @@ Class BMovePlayer : PlayerPawn
 			}
 			else
 			{
-				ADashVector = zm_adashboost * AngleToVector(Angle - VectorAngle(cmd.forwardmove , cmd.sidemove));
+				ADashVector = bat_zm_adashboost * AngleToVector(Angle - VectorAngle(cmd.forwardmove , cmd.sidemove));
 				if(CheckMove(Pos.XY + Vel.XY + ADashVector))
 				{
 					AirDash(ADashVector);
@@ -2476,7 +2476,7 @@ Class BMovePlayer : PlayerPawn
 		DashCommon();
 		ADashCooler = 8;
 		
-		Float DashVelZ = zm_jumpheight * zm_dashheight + ElevatorJumpBoost;
+		Float DashVelZ = bat_zm_jumpheight * bat_zm_dashheight + ElevatorJumpBoost;
 		Float JumpFac = GetPowerJump();
 		if(JumpFac) { DashVelZ *= JumpFac; }
 		Vel.Z = DashVelZ;
@@ -2484,7 +2484,7 @@ Class BMovePlayer : PlayerPawn
 		if(!(BMPlayer.cheats & CF_PREDICTING)) { A_StartSound("*jump", CHAN_BODY); }
 		
 		Vel.XY = DashVector;
-		MaxAirSpeed = min(Vel.XY.Length(), zm_maxhopspeed);
+		MaxAirSpeed = min(Vel.XY.Length(), bat_zm_maxhopspeed);
 	}
 	
 	void AirDash(Vector2 ADashVector)
@@ -2508,11 +2508,11 @@ Class BMovePlayer : PlayerPawn
 			Float PreAirDashSpeed = Vel.XY.Length();
 			Vel.XY += ADashVector;
 			
-			ADashTargetSpeed = min(PreAirDashSpeed + (MoveType == 2 || MoveType == 3 || MoveType == 4 ? (Vel.XY.Length() - PreAirDashSpeed) / 4 : 0), zm_maxhopspeed);
+			ADashTargetSpeed = min(PreAirDashSpeed + (MoveType == 2 || MoveType == 3 || MoveType == 4 ? (Vel.XY.Length() - PreAirDashSpeed) / 4 : 0), bat_zm_maxhopspeed);
 			
 			//if going above the speed limit your speed will start decaying immediately
 			Float Velocity = Vel.XY.Length();
-			if(Velocity > PreAirDashSpeed && Velocity <= zm_maxhopspeed) { ADashFrictionDelay = 8; }
+			if(Velocity > PreAirDashSpeed && Velocity <= bat_zm_maxhopspeed) { ADashFrictionDelay = 8; }
 		}
 			
 		MaxAirSpeed = Vel.XY.Length();
@@ -2524,7 +2524,7 @@ Class BMovePlayer : PlayerPawn
 		{
 			if(Vel.XY.Length() > ADashTargetSpeed)
 			{
-				Vel.XY *= 1 - Vel.Length() / (1000 * zm_adashfriction); //just like in real life air friction is proportional to the speed
+				Vel.XY *= 1 - Vel.Length() / (1000 * bat_zm_adashfriction); //just like in real life air friction is proportional to the speed
 				MaxAirSpeed = Vel.XY.Length();
 			}
 			else
@@ -2551,17 +2551,17 @@ Class BMovePlayer : PlayerPawn
 		ADashCooler = 8;
 		if(DashNumber <= 3)
 		{
-			Float DashVelZ = zm_jumpheight * zm_dashheight;
+			Float DashVelZ = bat_zm_jumpheight * bat_zm_dashheight;
 			Float JumpFac = GetPowerJump();
 			if(JumpFac) { DashVelZ *= JumpFac; }
 			Vel.Z = DashVelZ;
 		}
 		
-		if(zm_wjdoublejumprenew) { CanDoubleJump = True; }
+		if(bat_zm_wjdoublejumprenew) { CanDoubleJump = True; }
 		if(!(BMPlayer.cheats & CF_PREDICTING) && !JumpSoundCooler) { A_StartSound("*jump", CHAN_BODY); }
 		
 		Vel.XY = WJumpVector;
-		MaxAirSpeed = min(Vel.XY.Length(), zm_maxhopspeed);
+		MaxAirSpeed = min(Vel.XY.Length(), bat_zm_maxhopspeed);
 	}
 	
 	//////////////////////////////////////
@@ -2667,7 +2667,7 @@ Class BMovePlayer : PlayerPawn
 		//==============================================
 		
 		Vel.XY = WSlideVelocity;
-		Vel.Z *= zm_wslidevelz;
+		Vel.Z *= bat_zm_wslidevelz;
 		A_StartSound("WallSlide", CHAN_BODY, CHANF_LOOP, 0.3);
 		
 		//Sprite animation
@@ -2798,14 +2798,14 @@ Class BMovePlayer : PlayerPawn
 		if(WaterLevel >= 2 || bNOGRAVITY) { return; }
 		
 		//Third click, detach hook
-		if(PendulumLength || (GrappleVel.Length() && zm_hook == 1))
+		if(PendulumLength || (GrappleVel.Length() && bat_zm_hook == 1))
 		{
 			StopHook();
 			return;
 		}
 		
 		//Second click, activate pendulum physics
-		if(GrappleVel.Length() && zm_hook == 2)
+		if(GrappleVel.Length() && bat_zm_hook == 2)
 		{
 			Float RopePitch = atan2(Rope.XY.Length(), Rope.Z);
 			//Trust me, it's better if you do not see what happens otherwise
@@ -2873,11 +2873,11 @@ Class BMovePlayer : PlayerPawn
 			Vector3 SwingVel;
 			if(Vel.Z < 0)
 			{
-				SwingVel = (GrappleVel.X, GrappleVel.Y, GrappleVel.Z - zm_setgravity);
+				SwingVel = (GrappleVel.X, GrappleVel.Y, GrappleVel.Z - bat_zm_setgravity);
 			}
 			else
 			{
-				SwingVel = (GrappleVel.X, GrappleVel.Y, GrappleVel.Z - zm_setgravity / 2.f);
+				SwingVel = (GrappleVel.X, GrappleVel.Y, GrappleVel.Z - bat_zm_setgravity / 2.f);
 				RopePitch *= -1;
 			}
 			Float SwingPitch = RopePitch + 90;
@@ -2889,7 +2889,7 @@ Class BMovePlayer : PlayerPawn
 			if(Tension) { Vel += Tension * SafeUnit3(Rope); }
 			
 			//Limiter
-			MaxAirSpeed = min(Vel.XY.Length(), zm_maxhopspeed);
+			MaxAirSpeed = min(Vel.XY.Length(), bat_zm_maxhopspeed);
 			Vel.XY = MaxAirSpeed * SafeUnit2(Vel.XY);
 			
 			GrappleVel = Vel;
@@ -2919,7 +2919,7 @@ Class BMovePlayer : PlayerPawn
 	{
 		Usercmd cmd = BMPlayer.cmd;
 		
-		Float Velocity = min(Vel.XY.Length(), zm_maxgroundspeed);
+		Float Velocity = min(Vel.XY.Length(), bat_zm_maxgroundspeed);
 		Bool  InTheAirNoOffset = CanWSlide || CanCSlide || GrappleVel.Length() || bNOGRAVITY || WaterLevel >= 2;
 		Bool  InTheAir = Jumped || abs(FloorZ - Pos.Z) > 16 || InTheAirNoOffset || (MoveType == 5 && DashCooler > 13 && DashCooler <= 100);
 		
@@ -2929,7 +2929,7 @@ Class BMovePlayer : PlayerPawn
 		
 		DoBob = (cmd.forwardmove || cmd.sidemove) && Velocity > 1.f && !InTheAir && !VerticalOffset;
 		if(DoBob || BobRange)
-			BobTime += Velocity / zm_maxgroundspeed;
+			BobTime += Velocity / bat_zm_maxgroundspeed;
 		else
 			BobTime = 0;
 		
@@ -2950,11 +2950,11 @@ Class BMovePlayer : PlayerPawn
 		//=========================================
 		//Horizontal Sway
 		
-		if(CVar.GetCVar("zm_sway", Player).GetBool())
+		if(CVar.GetCVar("bat_zm_sway", Player).GetBool())
 		{
-			HorizontalSway += (CVar.GetCVar("zm_swaydirection", Player).GetBool() ? -1 : 1) *
-						       ViewAngleDelta * CVar.GetCVar("zm_swayspeed", Player).GetFloat() / 10;
-			Int SwayRange = CVar.GetCVar("zm_swayrange", Player).GetInt();
+			HorizontalSway += (CVar.GetCVar("bat_zm_swaydirection", Player).GetBool() ? -1 : 1) *
+						       ViewAngleDelta * CVar.GetCVar("bat_zm_swayspeed", Player).GetFloat() / 10;
+			Int SwayRange = CVar.GetCVar("bat_zm_swayrange", Player).GetInt();
 			HorizontalSway = clamp(HorizontalSway, -SwayRange, SwayRange);
 			
 			if(HorizontalSway)
@@ -2969,15 +2969,15 @@ Class BMovePlayer : PlayerPawn
 		//=========================================
 		//Vertical offset
 		
-		if(CVar.GetCVar("zm_offset", Player).GetBool())
+		if(CVar.GetCVar("bat_zm_offset", Player).GetBool())
 		{
-			Int	OffsetRange = CVar.GetCVar("zm_offsetrange", Player).GetInt();
+			Int	OffsetRange = CVar.GetCVar("bat_zm_offsetrange", Player).GetInt();
 			
 			if(InTheAir && !InTheAirNoOffset)
 			{
-				Float OffsetSpeed = CVar.GetCVar("zm_offsetspeed", Player).GetFloat();
+				Float OffsetSpeed = CVar.GetCVar("bat_zm_offsetspeed", Player).GetFloat();
 				
-				if(!CVar.GetCVar("zm_offsetdirection", Player).GetBool())
+				if(!CVar.GetCVar("bat_zm_offsetdirection", Player).GetBool())
 				{
 					if(Vel.Z >= 0)
 						VerticalOffset += OffsetSpeed * Vel.Z * (1. - abs(VerticalOffset) / OffsetRange);
@@ -3007,13 +3007,13 @@ Class BMovePlayer : PlayerPawn
 	{
 		if(DoBob)
 		{
-			Double BobRangeCandidate = zm_maxgroundspeed * MoveFactor;
+			Double BobRangeCandidate = bat_zm_maxgroundspeed * MoveFactor;
 			if(BobRangeCandidate == BobRange) { return; }
 			
 			if(BobRangeCandidate > BobRange)
-				BobRange = min(BobRange + abs(OldTicFrac - ticfrac) * abs(BobRangeCandidate - BobRange) / zm_maxgroundspeed, BobRangeCandidate); //make transitions proportional to frame time for fps consistency
+				BobRange = min(BobRange + abs(OldTicFrac - ticfrac) * abs(BobRangeCandidate - BobRange) / bat_zm_maxgroundspeed, BobRangeCandidate); //make transitions proportional to frame time for fps consistency
 			else
-				BobRange = max(BobRange - abs(OldTicFrac - ticfrac) * abs(BobRangeCandidate - BobRange) / zm_maxgroundspeed, BobRangeCandidate); //and make the transition proportional to the value difference
+				BobRange = max(BobRange - abs(OldTicFrac - ticfrac) * abs(BobRangeCandidate - BobRange) / bat_zm_maxgroundspeed, BobRangeCandidate); //and make the transition proportional to the value difference
 		}
 		else if(BobRange)
 		{
@@ -3039,11 +3039,11 @@ Class BMovePlayer : PlayerPawn
 			switch(bobstyle)
 			{
 			case Bob_Dusk:
-				r.Y = zm_maxgroundspeed * RangeY;
+				r.Y = bat_zm_maxgroundspeed * RangeY;
 				break;
 					
 			case Bob_UT:
-				r.Y = zm_maxgroundspeed * RangeY;
+				r.Y = bat_zm_maxgroundspeed * RangeY;
 			}
 			return r;
 		}
@@ -3095,12 +3095,12 @@ Class BMovePlayer : PlayerPawn
 			
 			case Bob_Dusk:
 				r.X = bobx * cos((BobAngle * 2.) / 3.);
-				r.Y = boby * (cos(2.2 * BobAngle)) + zm_maxgroundspeed * RangeY;
+				r.Y = boby * (cos(2.2 * BobAngle)) + bat_zm_maxgroundspeed * RangeY;
 				break;
 							
 			case Bob_UT:
 				r.X = 1.5 * bobx * cos(BobAngle);	
-				r.Y = boby * sin(2. * BobAngle) + zm_maxgroundspeed * RangeY;
+				r.Y = boby * sin(2. * BobAngle) + bat_zm_maxgroundspeed * RangeY;
 			}
 			
 			if (i == 0) p1 = r; else p2 = r;
@@ -3146,12 +3146,12 @@ Class SpeedoMeterHandler : EventHandler
 {
 	override void renderOverlay(RenderEvent e)
 	{
-		if(CVar.FindCVar("zm_speedometer").GetInt() && Level.MapName != "TITLEMAP")
+		if(CVar.FindCVar("bat_zm_speedometer").GetInt() && Level.MapName != "TITLEMAP")
 		{
 			Actor mo = players[consoleplayer].mo;
 			if(mo != NULL && PlayerInGame[consoleplayer])
 			{
-				Int Value = (CVar.FindCVar("zm_speedometer").GetInt() == 2 ? 32 : 10) * mo.Vel.XY.Length();
+				Int Value = (CVar.FindCVar("bat_zm_speedometer").GetInt() == 2 ? 32 : 10) * mo.Vel.XY.Length();
 				Int OffsetX = Confont.StringWidth(String.Format("%d", Value)) / 2;
 				Int VScreenX = 768, VScreenY = 480;
 				Screen.DrawText(Confont, Font.CR_WHITE, VScreenX / 2 - OffsetX, VScreenY / 2 + 16, String.format("%i", Value),
@@ -3180,7 +3180,7 @@ Class WallSlideHandler : EventHandler
 {
     Override void NetworkProcess(ConsoleEvent e)
     {
-		if(!zm_wslide) { return; }
+		if(!bat_zm_wslide) { return; }
 		
         if(e.Player >= 0 && PlayerInGame[e.Player] && Players[e.Player].Mo)
         {
@@ -3197,7 +3197,7 @@ Class GrapplingHookHandler : EventHandler
 {
     Override void NetworkProcess(ConsoleEvent e)
     {
-		if(!zm_hook) { return; }
+		if(!bat_zm_hook) { return; }
 		
         if(e.Player >= 0 && PlayerInGame[e.Player] && Players[e.Player].Mo)
         {
@@ -3289,7 +3289,7 @@ Class Hook : Actor
 	{
 		Let HookOwner = BMovePlayer(Target);
 		
-		Float	PushLength = HookOwner.MaxGroundSpeed * zm_hookboost;
+		Float	PushLength = HookOwner.MaxGroundSpeed * bat_zm_hookboost;
 		Vector3 HookPush = SafeUnit3(HookToPlayer) * PushLength;
 		Float 	HookSpeed = max((HookOwner.Vel + HookPush).Length(), PushLength);
 		HookOwner.Rope = HookToPlayer; //needed for the LOS check
@@ -3308,7 +3308,7 @@ Class Hook : Actor
 		HookOwner.ADashCooler = HookOwner.ADashTargetSpeed = 0;
 		
 		//Initiate hook
-		HookSpeed = HookOwner.MaxAirSpeed = min(HookSpeed, zm_maxhopspeed);
+		HookSpeed = HookOwner.MaxAirSpeed = min(HookSpeed, bat_zm_maxhopspeed);
 		HookOwner.Vel = HookOwner.GrappleVel = HookSpeed * SafeUnit3(HookPush);
 		
 		//Hooking monsters specific

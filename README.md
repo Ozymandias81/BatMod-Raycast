@@ -12,7 +12,7 @@ Write a description.
 ## CREDITS:
 
 MAIN TEAM:
-- Derrick: Main Programmer & Mapper, Resources Handler
+- DdadD: Main Programmer & Mapper, Resources Handler
 - Ozymandias81: Programmer, Resources Coordinator, Repository Master
 - DoomJedi: Sprites, Graphics & Textures Artist
 
