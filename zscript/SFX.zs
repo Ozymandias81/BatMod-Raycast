@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Derrick, Ozymandias81
+ * Copyright (c) 2021, 2022 AFADoomer, Ddadd, Ozymandias81, Tormentor667
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -74,5 +74,33 @@ Class RainDrop : Actor
 	Death:
 		RNDR BCDEFGH 3 A_FadeOut(0.15);
 		Stop;
+	}
+}
+
+Class HealingParticle: Actor
+{
+	Default
+	{
+		+DONTSPLASH
+		+FORCEXYBILLBOARD
+		+MISSILE
+		+NOBLOCKMAP
+		+NOGRAVITY
+		Radius 0;
+		Height 0;
+		RenderStyle "Add";
+		Alpha 0.01;
+		Scale 0.4;
+	}
+	
+	States
+	{
+	Spawn:
+		HELX A 0 NODELAY A_SetScale(frandom(0.2, 0.6));
+		"####" AAAAAAAAAA 1 A_FadeIn(0.07);
+		"####" AAAAAAAAAA 8 A_FadeOut(0.08);
+	Death:
+		"####" A 1 BRIGHT A_FadeOut(0.1);
+		Loop;
 	}
 }

@@ -134,8 +134,9 @@ Actor Hostage : SwitchableDecoration replaces BlurSphere
 		TNT1 A 0 A_ChangeFlag("CountItem", 0)
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
-		HOST B 2 A_StartSound("hostage/free1")
-		HOST B 1 A_GiveToTarget("Health", 10)
+		HOST B 2 { A_StartSound("hostage/free1"); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		HOST B 1 { A_GiveToTarget("Health", 10); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		"####" BBBBBB 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
 		HOST B -1
 		Stop
 	Death:
@@ -179,8 +180,9 @@ Actor Girl : SwitchableDecoration replaces InvulnerabilitySphere
 		TNT1 A 0 A_ChangeFlag("CountItem", 0)
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
-		GIRL B 2 A_StartSound("hostage/free3")
-		GIRL B 1 A_GiveToTarget("Health", 15)
+		GIRL B 2 { A_StartSound("hostage/free3"); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		GIRL B 1 { A_GiveToTarget("Health", 15); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		"####" BBBBBB 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
 		GIRL B -1
 		Stop
 	}
@@ -217,8 +219,9 @@ Actor Lady : SwitchableDecoration replaces Berserk
 		TNT1 A 0 A_ChangeFlag("CountItem", 0)
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
-		LADY B 2 A_StartSound("hostage/free2")
-		LADY B 1 A_GiveToTarget("Health", 15)
+		LADY B 2 { A_StartSound("hostage/free2"); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		LADY B 1 { A_GiveToTarget("Health", 15); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		"####" BBBBBB 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
 		LADY B -1
 		Stop
 	}
@@ -255,8 +258,9 @@ Actor Gordon : SwitchableDecoration replaces ArmorBonus
 		TNT1 A 0 A_ChangeFlag("CountItem", 0)
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
-		GORD B 2 A_StartSound("gordon/Save")
-		GORD B 1 A_GiveToTarget("Health", 50)
+		GORD B 2 { A_StartSound("gordon/Save"); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		GORD B 1 { A_GiveToTarget("Health", 50); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		"####" BBBBBB 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
 		GORD B -1
 		Stop
 	}
@@ -305,9 +309,10 @@ Actor Cop : SwitchableDecoration
 		TNT1 A 0 A_ChangeFlag("CountItem", 0)
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
-		COPP C 2 A_StartSound("hostage/cop2")
+		COPP C 2 { A_StartSound("hostage/cop2"); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
 		COPP CCCCCCCCCC 0 A_GiveToTarget("ArmorBonus", 1)//done this way because armor bonus are special
-		COPP C 1 A_GiveToTarget("Health", 10)
+		COPP C 1 { A_GiveToTarget("Health", 10); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		"####" BBBBBB 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
 		COPP C -1
 		Stop
 	}
@@ -344,9 +349,10 @@ Actor CopNoHat : SwitchableDecoration
 		TNT1 A 0 A_ChangeFlag("CountItem", 0)
 		TNT1 A 0 A_FaceTarget
 		TNT1 A 0 A_SpawnItemEx("Freedom", 48)
-		COPP C 2 A_StartSound("hostage/cop1")
+		COPP C 2 { A_StartSound("hostage/cop1"); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
 		COPP CCCCCCCCCC 0 A_GiveToTarget("ArmorBonus", 1)//done this way because armor bonus are special
-		COPP C 1 A_GiveToTarget("Health", 10)
+		COPP C 1 { A_GiveToTarget("Health", 10); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
+		"####" BBBBBB 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
 		COPP C -1
 		Stop
 	}
