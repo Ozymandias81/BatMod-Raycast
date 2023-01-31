@@ -312,7 +312,7 @@ Actor Cop : SwitchableDecoration
 		COPP C 2 { A_StartSound("hostage/cop2"); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
 		COPP CCCCCCCCCC 0 A_GiveToTarget("ArmorBonus", 1)//done this way because armor bonus are special
 		COPP C 1 { A_GiveToTarget("Health", 10); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
-		"####" BBBBBB 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
+		"####" CCCCCC 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
 		COPP C -1
 		Stop
 	}
@@ -352,7 +352,7 @@ Actor CopNoHat : SwitchableDecoration
 		COPP C 2 { A_StartSound("hostage/cop1"); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
 		COPP CCCCCCCCCC 0 A_GiveToTarget("ArmorBonus", 1)//done this way because armor bonus are special
 		COPP C 1 { A_GiveToTarget("Health", 10); A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0); }
-		"####" BBBBBB 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
+		"####" CCCCCC 3 A_SpawnItemEx("HealingParticle", random(10,-10), random(10,-10), random(16,64), 0, 0, random(1, 2), 0)
 		COPP C -1
 		Stop
 	}
