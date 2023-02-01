@@ -1785,7 +1785,7 @@ Actor KillerCrocWater replaces StealthCacodemon
 {
 	Health 1000
 	Radius 20
-	Height 15
+	Height 14
 	Speed 12
 	PainChance 150
 	Scale 1.2
@@ -1809,13 +1809,13 @@ Actor KillerCrocWater replaces StealthCacodemon
 		KROC E 10 A_Look
 		Loop
 	See:
-		KROC AAAAABBBBBBCCCCCDDDDDD 1 A_Chase
-		TNT1 AAAAAAAAAAAAA 1 A_Chase
+		KROC DDDDDAAAAABBBBBBCCCCCDDDDDD 1 Fast A_Chase
+		TNT1 AAAAAAAAAAAAA 1 Fast A_Chase
 		Loop
 	Melee:
-		KROC EF 4 A_FaceTarget
-		KROC G 3 A_Recoil(-15)
-		KROC HI 3 A_SargAttack
+		KROC EF 4 Fast A_FaceTarget
+		KROC G 3 Fast A_Recoil(-15)
+		KROC HI 3 Fast A_SargAttack
 		KROC J 3 A_FaceTarget
 		Goto See
 	Pain:

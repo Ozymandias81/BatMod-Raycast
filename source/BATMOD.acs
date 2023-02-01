@@ -223,7 +223,7 @@ Script "PoisonEffect" (void)
 	dizzyAng3 = dizzyTilt;
 	TakeInventory("PoisonIntensity", 1);
 	Delay(1);
-	if (CheckInventory("PoisonIntensity") < 1 )
+	if (CheckInventory("PoisonIntensity") <= 1 )
 		{
 			ACS_NamedExecute("PoisonCheck", 0);
 			terminate;
